@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" type="image/png" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Time is a choice.">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  <title>笔记：转移百毒云文件（研究失败） - Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：转移百毒云文件（研究失败）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-12-15 22:44" pubdate>
+        2019-12-15
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：转移百毒云文件（研究失败）</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-05-09
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>准备彻底弃用百毒云了，研究一下怎么把文件转移到谷歌云盘上。</p>
+<blockquote>
+<p>2019/12/24 更新：下载百度网盘文件失败，发动钞能力</p>
+</blockquote>
+<a id="more"></a> 
+<h4 id="Aria2-Rclone"><a href="#Aria2-Rclone" class="headerlink" title="Aria2+Rclone"></a>Aria2+Rclone</h4><p>P3TERX有一个Aria2+Rclone的方案，写了一系列教程</p>
+<p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/rclone-installation-and-configuration-tutorial.html" title="link">Rclone 安装配置教程 - 连接 OneDrive 和 Google Drive</a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/rclone-advanced-user-manual-common-command-parameters.html" title="link">Rclone 进阶使用教程 - 常用命令参数详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2-started-guide.html" title="link">Aria2 入门使用教程 - 玩转最强 BT、磁力、HTTP、FTP、离线下载工具 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/offline-download-of-onedrive-gdrive.html" title="link">Aria2 + Rclone 实现 OneDrive、Google Drive 等网盘离线下载 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2-frontend-ariang-tutorial.html" title="link">Aria2 前端面板(GUI) AriaNg 使用教程 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2_perfect_config-faq.html" title="link">Aria2 相关项目常见问题及解决方案（FAQ）</a></p>
+<p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/baidunetdisk-transfer-to-onedrive-and-google-drive.html" title="link">百度网盘转存到 OneDrive 、Google Drive 等其他网盘</a></p>
+<hr>
+<p>目前Aria2、Rclone已经安装配置好了，但是卡在Aria2使用上面了…<br>VPS Ubuntu 18.04，使用大佬提供的Aria2 完美配置，AriaNG Native可以连接到VPS<br>但是Aria2不能正常下载，在命令行里下载，提示错误</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros">12/15 22:11:31 [<span class="hljs-builtin-name">ERROR</span>] IPv4 RPC: failed <span class="hljs-keyword">to</span> bind TCP<span class="hljs-built_in"> port </span>6800<br>Exception: [SocketCore.cc:312] <span class="hljs-attribute">errorCode</span>=1 Failed <span class="hljs-keyword">to</span> bind a socket, cause:<span class="hljs-built_in"> Address </span>already <span class="hljs-keyword">in</span> use<br><br>12/15 22:11:31 [<span class="hljs-builtin-name">ERROR</span>]<span class="hljs-built_in"> IPv6 </span>RPC: failed <span class="hljs-keyword">to</span> bind TCP<span class="hljs-built_in"> port </span>6800<br>Exception: [SocketCore.cc:312] <span class="hljs-attribute">errorCode</span>=1 Failed <span class="hljs-keyword">to</span> bind a socket, cause:<span class="hljs-built_in"> Address </span>already <span class="hljs-keyword">in</span> use<br><br>12/15 22:11:31 [<span class="hljs-builtin-name">ERROR</span>] Exception caught<br>Exception: [DownloadEngineFactory.cc:219] <span class="hljs-attribute">errorCode</span>=1 Failed <span class="hljs-keyword">to</span> setup RPC server.<br></code></pre></td></tr></table></figure>
+<p>查了一下，网上有不少说法，有说换端口、启动参数不对、重复启动，这个帖子：<a target="_blank" rel="noopener" href="https://godiy.net/thread-13536-1-1.html" title="link">aria2端口问题</a><br>但是换了几个端口，都不行<br><code>netstat -ntlp</code>看一看进程，重启一下，还是有问题<br>还有说换Debian的，这个就不考虑了</p>
+<p>再看看日志</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-number">12</span>/<span class="hljs-number">15</span> <span class="hljs-number">23</span>:<span class="hljs-number">17</span>:<span class="hljs-number">31</span> [[<span class="hljs-number">1</span>;<span class="hljs-number">32</span>mNOTICE[<span class="hljs-number">0</span>m] Serialized <span class="hljs-keyword">session</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&#x27;/root/.aria2/aria2.session&#x27;</span> successfully.<br><br><span class="hljs-number">12</span>/<span class="hljs-number">15</span> <span class="hljs-number">23</span>:<span class="hljs-number">17</span>:<span class="hljs-number">31</span> [[<span class="hljs-number">1</span>;<span class="hljs-number">31</span>mERROR[<span class="hljs-number">0</span>m] CUID#<span class="hljs-number">29</span> - <span class="hljs-keyword">Exception</span> caught <span class="hljs-keyword">while</span> allocating file space.<br><span class="hljs-keyword">Exception</span>: [AbstractDiskWriter.cc:<span class="hljs-number">561</span>] errNum=<span class="hljs-number">95</span> errorCode=<span class="hljs-number">17</span> fallocate failed. cause: Operation <span class="hljs-keyword">not</span> supported<br><br><span class="hljs-number">12</span>/<span class="hljs-number">15</span> <span class="hljs-number">23</span>:<span class="hljs-number">17</span>:<span class="hljs-number">31</span> [[<span class="hljs-number">1</span>;<span class="hljs-number">31</span>mERROR[<span class="hljs-number">0</span>m] CUID#<span class="hljs-number">29</span> - Download <span class="hljs-keyword">not</span> complete: /root/Download/Beastars - Arc <span class="hljs-number">04</span><br><br><span class="hljs-number">12</span>/<span class="hljs-number">15</span> <span class="hljs-number">23</span>:<span class="hljs-number">17</span>:<span class="hljs-number">31</span> [[<span class="hljs-number">1</span>;<span class="hljs-number">32</span>mNOTICE[<span class="hljs-number">0</span>m] Download GID#a0132bd3b81c8046 <span class="hljs-keyword">not</span> complete: /root/Download/Beastars - Arc <span class="hljs-number">04</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04.aria2&#x27;</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04/Beastars - Vol. 07.cbz&#x27;</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04/Beastars - Vol. 08.cbz&#x27;</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04/Beastars - Vol. 10.cbz&#x27;</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04/Beastars - Vol. 11.cbz&#x27;</span><br>removed <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04/Beastars - Vol. 09.cbz&#x27;</span><br>removed directory <span class="hljs-string">&#x27;/root/Download/Beastars - Arc 04&#x27;</span><br><br><br><br><br><br><br><br><br><span class="hljs-number">12</span>/<span class="hljs-number">15</span> <span class="hljs-number">23</span>:<span class="hljs-number">17</span>:<span class="hljs-number">38</span> [[<span class="hljs-number">1</span>;<span class="hljs-number">32</span>mNOTICE[<span class="hljs-number">0</span>m] Serialized <span class="hljs-keyword">session</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&#x27;/root/.aria2/aria2.session&#x27;</span> successfully.<br><br></code></pre></td></tr></table></figure>
+
+<p>卡在这里了 (好菜</p>
+<blockquote>
+<p>2019/12/19 更新<br>想起来前两天研究的Aria2，不死心，打开AriaNG看看，居然能用了<br>玄学 （这两天安装Trojan，操作VPS有点多，对这个有影响吗？完全不懂诶</p>
+</blockquote>
+<hr>
+<h4 id="BaiduPCS-Go"><a href="#BaiduPCS-Go" class="headerlink" title="BaiduPCS-Go"></a>BaiduPCS-Go</h4><p>2019/12/19 更新</p>
+<p>今天又在研究百度云，试试BaiduPCS-Go，还不错，虽然不稳定，速度随缘，快的时候跑满带宽<br>看讨论区有人说可能被封号，慎用</p>
+<p>BaiduPCS-Go资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/iikira/BaiduPCS-Go" title="link">BaiduPCS-Go 百度网盘客户端</a> （官方文档，写的很详细</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/iikira/BaiduPCS-Go/wiki/%E5%85%B3%E4%BA%8E%E4%B8%8B%E8%BD%BD%E7%9A%84%E7%AE%80%E5%8D%95%E8%AF%B4%E6%98%8E" title="link">关于下载的简单说明</a> （文档补充</li>
+<li><a target="_blank" rel="noopener" href="https://lala.im/5330.html" title="link">目前可用的百度云不限速下载方法</a> （从他的博客里知道这个小工具的</li>
+</ul>
+<hr>
+<h4 id="GoIndex"><a href="#GoIndex" class="headerlink" title="GoIndex"></a>GoIndex</h4><p>2019/12/24 更新</p>
+<blockquote>
+<p>GoIn­dex 全称 Google Drive Di­rec­tory In­dex，它是一款可以部署在 Cloud­flare Work­ers 上的无服务器架构 (Server­less) Google Drive 目录索引程序，它可以将 Google Drive 文件以目录形式列出，并且可以通过直链进行下载，如果视频是 MP4 格式还可以在线观看。由于流量是通过 Cloud­flare 中转，所以即使在被限制的网络环境下也能自由的使用。</p>
+</blockquote>
+<p>引用自P3TERX大佬的博客 <a target="_blank" rel="noopener" href="https://p3terx.com/archives/goindex-google-drive-directory-index.html" title="link">GoIndex - 无服务器架构 Google Drive 目录索引程序 </a><br>这篇教程写的不错，按照大佬的教程，一次就搭建成功了</p>
+<hr>
+<h4 id="OndDrive-Index"><a href="#OndDrive-Index" class="headerlink" title="OndDrive Index"></a>OndDrive Index</h4><p>2020/04/11 更新</p>
+<blockquote>
+<p>与<code>GoIndex</code>类似，这个也是基于Cloudflare Worker，可以索引OneDrive文件</p>
+</blockquote>
+<p>项目地址 <a target="_blank" rel="noopener" href="https://github.com/heymind/OneDrive-Index-Cloudflare-Worker" title="link">Github - OneDrive Index ( Cloudflare Worker )</a><br>创作者录制的视频版操作过程 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av89209298/" title="link">bilibili - Cloudflare Worker + OneDrive = ☆</a><br>遇到问题可以看看这个issue，也许有帮助 <a target="_blank" rel="noopener" href="https://github.com/heymind/OneDrive-Index-Cloudflare-Worker/issues/2" title="link">没有api权限的教育版5T帐号，是不是无法用这个啊？</a></p>
+<hr>
+<h4 id="More-index"><a href="#More-index" class="headerlink" title="More *index"></a>More *index</h4><p>2020/05/09 更新</p>
+<p>GoIndex出现奇奇怪怪的小问题，换了GDIndex，也有小问题，多找几个js脚本试一试，总有一款能用<br><a target="_blank" rel="noopener" href="https://github.com/maple3142/GDIndex" title="link">maple3142- GDIndex</a><br><a target="_blank" rel="noopener" href="https://github.com/kulokenci/goindex-drive" title="link">kulokenci - goindex-drive</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/12/21/031-deploy-trojan/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：部署trojan（靠运气）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/12/03/029-Remote-Desktop-2-by-router/">
+                        <span class="hidden-mobile">笔记：远程桌面2 -- 路由器 （玩不转）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.waitElementVisible('gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
+        var gitalk = new Gitalk({
+          clientID: 'b6acc8d36d2719ad692b',
+          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
+          repo: 'blog_comment',
+          owner: 'KassadinL',
+          admin: ["KassadinL"],
+          id: '0babf527b74891b0031404b5cae0af69',
+          language: 'en',
+          labels: ["Gitalk"],
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: false,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    document.addEventListener('DOMContentLoaded', function() {
+      window.NProgress && window.NProgress.inc();
+    })
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
