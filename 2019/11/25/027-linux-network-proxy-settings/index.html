@@ -174,7 +174,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      281 字
+      327 字
     </span>
   
 
@@ -184,7 +184,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      5
        分钟
     </span>
   
@@ -218,7 +218,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2020-07-28
+                  本文最后更新于：2021-02-24
                 
               </p>
             
@@ -238,12 +238,17 @@
 </li>
 <li><p>sudo命令继承代理<br>参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Sudo#Environment_variables" title="link">Sudo Environment variables</a><br>在<code>/etc/sudoers</code>添加</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Defaults</span> env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>2021/02/24 update<br>不要直接更改<code>sudoers</code>文件，而是在<code>/etc/sudoers.d/</code>下增加一个文件比较好</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ sudo visudo <span class="hljs-regexp">/etc/</span>sudoers.d/env_proxy<br><br><span class="hljs-comment"># Add following line </span><br>Defaults env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>Snap下载使用代理<br>参考 <a target="_blank" rel="noopener" href="https://askubuntu.com/a/1146047/1027773" title="link">How to install snap packages behind web proxy on Ubuntu 16.04</a><br>命令行敲</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs routeros">$ sudo snap <span class="hljs-builtin-name">set</span><span class="hljs-built_in"> system </span>proxy.<span class="hljs-attribute">http</span>=<span class="hljs-string">&quot;http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;&quot;</span><br>$ sudo snap <span class="hljs-builtin-name">set</span><span class="hljs-built_in"> system </span>proxy.<span class="hljs-attribute">https</span>=<span class="hljs-string">&quot;http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;&quot;</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>ubuntu sudo继承代理<br>参考 <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/8636711">How to keep environment variables when using sudo</a><br>ubuntu的似乎还有一点区别，不能写在一行里面</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gams">sudo visudo<br><br># <span class="hljs-keyword">For</span> Ubuntu <span class="hljs-number">14</span>, you need to specify in separate lines as it returns the errors <span class="hljs-keyword">for</span> multi-<span class="hljs-keyword">variable</span> lines:<br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;http_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;https_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTP_PROXY&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTPS_PROXY&quot;</span><br><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gams">sudo visudo<br><br># <span class="hljs-keyword">For</span> Ubuntu <span class="hljs-number">14</span>, you need to specify in separate lines as it returns the errors <span class="hljs-keyword">for</span> multi-<span class="hljs-keyword">variable</span> lines:<br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;http_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;https_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTP_PROXY&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTPS_PROXY&quot;</span><br><br></code></pre></td></tr></table></figure>
+</li>
 </ul>
 
             </div>
