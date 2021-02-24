@@ -174,7 +174,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.3k 字
     </span>
   
 
@@ -184,7 +184,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      21
+      25
        分钟
     </span>
   
@@ -218,7 +218,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2020-12-16
+                  本文最后更新于：2021-02-24
                 
               </p>
             
@@ -309,10 +309,17 @@ and log out, log in again, work on every application (except telegram…</li>
 <p>After creating/editing /etc/pacman.d/mirrorlist, issue the following command:<br><code>pacman -Syyu</code></p>
 </blockquote>
 <hr>
-<p>2020/12/16 update</p>
-<p>The search function of <code>Dlophin</code> which is the default file manager in Manjaro KDE is tooooooooooo weak to use.</p>
+<p><code>2020/12/16 update</code></p>
+<h4 id="Search-function"><a href="#Search-function" class="headerlink" title="Search function"></a>Search function</h4><p>The search function of <code>Dlophin</code> which is the default file manager in Manjaro KDE is tooooooooooo weak to use.</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/cboxdoerfer/fsearch">FSearch</a> and <a target="_blank" rel="noopener" href="https://github.com/DoTheEvo/ANGRYsearch">ANGRYsearch</a> are good search tools with GUI, <a target="_blank" rel="noopener" href="https://github.com/junegunn/fzf">fzf</a> is a choice in command line.</p>
 <p>Ref: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4a62c38bec7e">Linux下快速搜索文件（类似Everything）</a></p>
+<hr>
+<p><code>2021/02/24 update</code></p>
+<h4 id="reinstall-system-aaaaaagain"><a href="#reinstall-system-aaaaaagain" class="headerlink" title="reinstall system aaaaaagain"></a>reinstall system aaaaaagain</h4><p>Breaking my Linux system one/two/three/…etc time(s)<br>:(</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment"># 1. :(</span><br>[FAILED] Failed to <span class="hljs-keyword">start</span> <span class="hljs-keyword">Load</span> Kernel Modules.<br>[<span class="hljs-keyword">FAILED</span>] <span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">mount</span> /boot/efi.<br>[DEPEND] Dependency <span class="hljs-keyword">failed</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">Local</span> <span class="hljs-keyword">File</span> Systems.<br><br><span class="hljs-comment"># 2. &quot;journalctl -xb&quot; </span><br><span class="hljs-keyword">mount</span>: /boot/efi: <span class="hljs-literal">unknown</span> filesystem <span class="hljs-keyword">type</span> <span class="hljs-string">&#x27;vfat&#x27;</span>.<br>boot-efi.mount: <span class="hljs-keyword">Mount</span> process exited, code=exited, <span class="hljs-keyword">status</span>=<span class="hljs-number">32</span>/n/a<br>boot-efi.mount: Fialed <span class="hljs-keyword">with</span> <span class="hljs-keyword">result</span> <span class="hljs-string">&#x27;exit-code&#x27;</span>.<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">mount</span> /boot/efi.<br>Dependency <span class="hljs-keyword">failed</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">Local</span> <span class="hljs-keyword">File</span> Systems.<br><br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;crypto_user&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;sg&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;msr&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxdrv&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxnetadp&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxnetflt&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;uinput&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxguest&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxsf&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxvideo&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><br>systemcd-modules-load.service: <span class="hljs-keyword">Failed</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">result</span> <span class="hljs-string">&#x27;exit-code&#x27;</span>.<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">start</span> <span class="hljs-keyword">Load</span> Kernel Modules.<br></code></pre></td></tr></table></figure>
+
+<p>try to fix, but failed :(</p>
+<p>A similar post: <a target="_blank" rel="noopener" href="https://www.linuxquestions.org/questions/linux-newbie-8/error-%3D-%27failed-failed-to-start-load-kernel-modules%27-4175654997/">Error = ‘FAILED. Failed to start Load Kernel Modules’</a></p>
 
             </div>
             <hr>
