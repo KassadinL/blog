@@ -174,7 +174,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      1.4k 字
     </span>
   
 
@@ -184,7 +184,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      25
+      26
        分钟
     </span>
   
@@ -218,7 +218,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-02-24
+                  本文最后更新于：2021-02-25
                 
               </p>
             
@@ -271,7 +271,9 @@
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-comment">&quot; When editing a file, always jump to the last known cursor position.</span><br><span class="hljs-comment">&quot; Don&#x27;t do it when the position is invalid, when inside an event handler</span><br><span class="hljs-comment">&quot; (happens when dropping a file on gvim) and for a commit message (it&#x27;s</span><br><span class="hljs-comment">&quot; likely a different one than last time).</span><br><span class="hljs-keyword">autocmd</span> BufReadPost *<br>  \ <span class="hljs-keyword">if</span> <span class="hljs-built_in">line</span>(<span class="hljs-string">&quot;&#x27;\&quot;&quot;</span>) &gt;= <span class="hljs-number">1</span> &amp;&amp; <span class="hljs-built_in">line</span>(<span class="hljs-string">&quot;&#x27;\&quot;&quot;</span>) &lt;= <span class="hljs-built_in">line</span>(<span class="hljs-string">&quot;$&quot;</span>) &amp;&amp; &amp;ft !~# <span class="hljs-string">&#x27;commit&#x27;</span><br>  \ |   <span class="hljs-keyword">exe</span> <span class="hljs-string">&quot;normal! g`\&quot;&quot;</span><br>  \ | <span class="hljs-keyword">endif</span><br></code></pre></td></tr></table></figure>
 
 <hr>
-<h4 id="Ubuntu-Boot-Partition-Full"><a href="#Ubuntu-Boot-Partition-Full" class="headerlink" title="Ubuntu Boot Partition Full"></a>Ubuntu Boot Partition Full</h4><p><a target="_blank" rel="noopener" href="https://linuxhint.com/ubuntu_boot_partition_full/">Ubuntu Boot Partition Full</a></p>
+<h4 id="Ubuntu-Boot-Partition-Full"><a href="#Ubuntu-Boot-Partition-Full" class="headerlink" title="Ubuntu Boot Partition Full"></a>Ubuntu Boot Partition Full</h4><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-comment"># 1. check drive useage</span><br><span class="hljs-variable">$ </span>df -h<br><br><span class="hljs-comment"># 2. check current kernel version </span><br><span class="hljs-variable">$ </span>uname -r<br><br><span class="hljs-comment"># 3. list all the installed kernel packages</span><br><span class="hljs-variable">$ </span>dpkg -l | grep linux-image<br><br><span class="hljs-comment"># 4. remove useless kernel packages</span><br><span class="hljs-variable">$ </span>apt remove --purge linux-image-*.**.*-**-generic<br><br><span class="hljs-comment"># 5. clean up the dependencies of removed kernel packages</span><br><span class="hljs-variable">$ </span>apt autoremove --purge<br></code></pre></td></tr></table></figure>
+
+<p>Ref: <a target="_blank" rel="noopener" href="https://linuxhint.com/ubuntu_boot_partition_full/">Ubuntu Boot Partition Full</a></p>
 <hr>
 <p>2020/11/28 update</p>
 <h4 id="Telegram-Desktop-can’t-input-Chinese-characters"><a href="#Telegram-Desktop-can’t-input-Chinese-characters" class="headerlink" title="Telegram Desktop can’t input Chinese characters"></a>Telegram Desktop can’t input Chinese characters</h4><ul>
