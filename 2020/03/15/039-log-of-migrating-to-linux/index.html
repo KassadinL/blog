@@ -174,7 +174,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.6k 字
     </span>
   
 
@@ -184,7 +184,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      26
+      31
        分钟
     </span>
   
@@ -218,7 +218,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-02-25
+                  本文最后更新于：2021-03-14
                 
               </p>
             
@@ -317,11 +317,43 @@ and log out, log in again, work on every application (except telegram…</li>
 <p>Ref: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4a62c38bec7e">Linux下快速搜索文件（类似Everything）</a></p>
 <hr>
 <p><code>2021/02/24 update</code></p>
-<h4 id="reinstall-system-aaaaaagain"><a href="#reinstall-system-aaaaaagain" class="headerlink" title="reinstall system aaaaaagain"></a>reinstall system aaaaaagain</h4><p>Breaking my Linux system one/two/three/…etc time(s)<br>:(</p>
+<h4 id="Reinstall-system-aaaaaagain"><a href="#Reinstall-system-aaaaaagain" class="headerlink" title="Reinstall system aaaaaagain"></a>Reinstall system aaaaaagain</h4><p>Breaking my Linux system one/two/three/…etc time(s)<br>:(</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment"># 1. :(</span><br>[FAILED] Failed to <span class="hljs-keyword">start</span> <span class="hljs-keyword">Load</span> Kernel Modules.<br>[<span class="hljs-keyword">FAILED</span>] <span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">mount</span> /boot/efi.<br>[DEPEND] Dependency <span class="hljs-keyword">failed</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">Local</span> <span class="hljs-keyword">File</span> Systems.<br><br><span class="hljs-comment"># 2. &quot;journalctl -xb&quot; </span><br><span class="hljs-keyword">mount</span>: /boot/efi: <span class="hljs-literal">unknown</span> filesystem <span class="hljs-keyword">type</span> <span class="hljs-string">&#x27;vfat&#x27;</span>.<br>boot-efi.mount: <span class="hljs-keyword">Mount</span> process exited, code=exited, <span class="hljs-keyword">status</span>=<span class="hljs-number">32</span>/n/a<br>boot-efi.mount: Fialed <span class="hljs-keyword">with</span> <span class="hljs-keyword">result</span> <span class="hljs-string">&#x27;exit-code&#x27;</span>.<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">mount</span> /boot/efi.<br>Dependency <span class="hljs-keyword">failed</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">Local</span> <span class="hljs-keyword">File</span> Systems.<br><br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;crypto_user&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;sg&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;msr&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxdrv&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxnetadp&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxnetflt&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;uinput&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxguest&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxsf&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> look up <span class="hljs-keyword">module</span> <span class="hljs-keyword">alias</span> <span class="hljs-string">&#x27;vboxvideo&#x27;</span>: <span class="hljs-keyword">Function</span> <span class="hljs-keyword">not</span> implemented<br><br>systemcd-modules-load.service: <span class="hljs-keyword">Failed</span> <span class="hljs-keyword">with</span> <span class="hljs-keyword">result</span> <span class="hljs-string">&#x27;exit-code&#x27;</span>.<br><span class="hljs-keyword">Failed</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">start</span> <span class="hljs-keyword">Load</span> Kernel Modules.<br></code></pre></td></tr></table></figure>
 
 <p>try to fix, but failed :(</p>
 <p>A similar post: <a target="_blank" rel="noopener" href="https://www.linuxquestions.org/questions/linux-newbie-8/error-%3D-%27failed-failed-to-start-load-kernel-modules%27-4175654997/">Error = ‘FAILED. Failed to start Load Kernel Modules’</a></p>
+<hr>
+<p><code>2021/03/06 update</code></p>
+<h4 id="Enable-BBR-in-Ubuntu"><a href="#Enable-BBR-in-Ubuntu" class="headerlink" title="Enable BBR in Ubuntu"></a>Enable BBR in Ubuntu</h4><ol>
+<li><p>check if BBR in use</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"># output <span class="hljs-keyword">nothing</span> shows that BBR <span class="hljs-keyword">is</span> <span class="hljs-keyword">off</span> <br>lsmod | grep bbr<br></code></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># By default, Linux uses the Reno and CUBIC congestion control algorithm. To check available congestion control algorithms, run the following command: </span><br><span class="hljs-attribute">sysctl</span> net.ipv<span class="hljs-number">4</span>.tcp_available_congestion_control<br><br><span class="hljs-comment"># Output: </span><br><span class="hljs-attribute">net</span>.ipv<span class="hljs-number">4</span>.tcp_available_congestion_control = cubic reno<br><br><span class="hljs-comment"># To check the current congestion control algorithm in use, run:</span><br><span class="hljs-attribute">sysctl</span> net.ipv<span class="hljs-number">4</span>.tcp_congestion_control<br><br><span class="hljs-comment"># Output: </span><br><span class="hljs-attribute">net</span>.ipv<span class="hljs-number">4</span>.tcp_congestion_control = cubic<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>enable BBR</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros">vim /etc/sysctl.d/local-bbr.conf<br><br><span class="hljs-comment"># add following two lines</span><br>net.core.<span class="hljs-attribute">default_qdisc</span>=fq<br>net.ipv4.<span class="hljs-attribute">tcp_congestion_control</span>=bbr<br><br><span class="hljs-comment"># apply change by </span><br>deb-systemd-invoke restart procps.service<br></code></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>Ref:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.linuxbabe.com/ubuntu/enable-google-tcp-bbr-ubuntu">Easily Boost Ubuntu Network Performance by Enabling TCP BBR</a></li>
+<li>sysctl mannual: <code>/etc/sysctl.d/README.sysctl</code></li>
+</ul>
+<hr>
+<p><code>2021/03/14 update</code></p>
+<h4 id="Install-nvidia-driver"><a href="#Install-nvidia-driver" class="headerlink" title="Install nvidia driver"></a>Install nvidia driver</h4><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># install packages</span><br><span class="hljs-attribute">sudo</span> pacman -S nvidia-utils lib<span class="hljs-number">32</span>-nvidia-utils linux<span class="hljs-number">59</span>-nvidia<br><br><span class="hljs-comment"># block nouveau</span><br><span class="hljs-attribute">vim</span> /etc/modprobe.d/blacklist-nvidia-nouveau.conf<br><span class="hljs-comment"># add following lines</span><br><span class="hljs-attribute">blacklist</span> nouveau<br><span class="hljs-attribute"><span class="hljs-nomarkup">options</span></span> nouveau modeset=<span class="hljs-number">0</span><br><br><span class="hljs-comment"># reboot </span><br></code></pre></td></tr></table></figure>
+
+<p>Ref:<br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/NVIDIA">NVIDIA - ArchWiki</a><br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Nouveau">Nouveau - ArchWiki</a><br><a target="_blank" rel="noopener" href="https://linuxconfig.org/how-to-disable-blacklist-nouveau-nvidia-driver-on-ubuntu-20-04-focal-fossa-linux">How to disable/blacklist Nouveau nvidia driver on Ubuntu 20.04 Focal Fossa Linux</a></p>
+<hr>
+<p><code>2021/03/14 update</code></p>
+<h4 id="Downgrade-a-package"><a href="#Downgrade-a-package" class="headerlink" title="Downgrade a package"></a>Downgrade a package</h4><ul>
+<li><p>Search the old package in <a target="_blank" rel="noopener" href="https://archive.org/details/archlinuxarchive">“Arch Linux Historical Archive” on archive.org</a></p>
+</li>
+<li><p>For instance, install qbittorrent-4.1.9<br><code>sudo pacman -U https://archive.org/download/archlinux_pkg_qbittorrent/qbittorrent-4.1.9-1-x86_64.pkg.tar.xz</code></p>
+</li>
+</ul>
+<p>Ref: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Arch_Linux_Archive#Historical_Archive">ArchWiki - Arch Linux Archive: How to downgrade one package</a></p>
 
             </div>
             <hr>
