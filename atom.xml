@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog</title>
+  <title>Blog - Kassadin</title>
   <icon>https://kassadin.moe/public/img/ghost_icon.png</icon>
   <subtitle>森同学的博客</subtitle>
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
