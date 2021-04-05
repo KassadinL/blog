@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2021-01-24T05:36:04.601Z</updated>
+  <updated>2021-04-05T03:00:11.567Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://kassadin.moe/2021/01/24/051-MoCha-Offical/"/>
     <id>https://kassadin.moe/2021/01/24/051-MoCha-Offical/</id>
     <published>2021-01-24T04:35:41.000Z</published>
-    <updated>2021-01-24T05:36:04.601Z</updated>
+    <updated>2021-04-05T03:00:11.567Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;21号晚上在贴吧了解到&lt;code&gt;墨茶&lt;/code&gt;的事情，去他的&lt;a</summary>
-        
-      
+    <summary type="html">&lt;p&gt;21号晚上在贴吧了解到&lt;code&gt;墨茶&lt;/code&gt;的事情，去他的&lt;a href=&quot;https://space.bilibili.com/212535360/dynamic&quot;&gt;主页&lt;/a&gt;看了看。&lt;br&gt;想说点什么，但……说不出话。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;留下一点&lt;code&gt;不正确记忆&lt;/code&gt;吧&lt;/p&gt;</summary>
     
     
     
@@ -44,7 +40,7 @@
     <link href="https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/"/>
     <id>https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/</id>
     <published>2020-09-15T07:53:20.000Z</published>
-    <updated>2020-12-11T15:09:53.816Z</updated>
+    <updated>2021-04-05T03:02:49.790Z</updated>
     
     
     <summary type="html">&lt;p&gt;仿MacOS多栏式文件浏览器&lt;/p&gt;</summary>
@@ -63,7 +59,7 @@
     <link href="https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/"/>
     <id>https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/</id>
     <published>2020-09-14T14:13:50.000Z</published>
-    <updated>2020-12-11T15:09:43.349Z</updated>
+    <updated>2021-04-05T03:27:02.727Z</updated>
     
     
     <summary type="html">&lt;p&gt;Pop!_OS 20.04 LTS 安装 DaVinci Resolve 16.2.6，无法启动软件&lt;/p&gt;</summary>
@@ -82,7 +78,7 @@
     <link href="https://kassadin.moe/2020/09/11/048-Openwrt-build-log/"/>
     <id>https://kassadin.moe/2020/09/11/048-Openwrt-build-log/</id>
     <published>2020-09-11T10:58:53.000Z</published>
-    <updated>2020-12-11T15:09:44.769Z</updated>
+    <updated>2021-04-05T03:32:21.790Z</updated>
     
     
     <summary type="html">&lt;p&gt;尝试编译Openwrt，困难重重(对我来说&lt;/p&gt;</summary>
@@ -101,7 +97,7 @@
     <link href="https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/"/>
     <id>https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/</id>
     <published>2020-09-11T10:58:20.000Z</published>
-    <updated>2020-12-11T15:09:25.802Z</updated>
+    <updated>2021-04-05T03:40:13.943Z</updated>
     
     
     <summary type="html">&lt;p&gt;尝试自建Nextcloud网盘，记录一下参考资料&lt;/p&gt;</summary>
@@ -120,7 +116,7 @@
     <link href="https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/"/>
     <id>https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/</id>
     <published>2020-08-03T10:27:11.000Z</published>
-    <updated>2020-08-03T11:04:29.400Z</updated>
+    <updated>2021-04-05T02:57:43.163Z</updated>
     
     
     <summary type="html">&lt;p&gt;Usage of Japanese Mozc on Ubuntu Gnome&lt;/p&gt;</summary>
@@ -139,7 +135,7 @@
     <link href="https://kassadin.moe/2020/08/01/045-centos-local-repo/"/>
     <id>https://kassadin.moe/2020/08/01/045-centos-local-repo/</id>
     <published>2020-08-01T11:19:58.000Z</published>
-    <updated>2020-08-01T11:59:04.953Z</updated>
+    <updated>2021-04-05T03:11:27.107Z</updated>
     
     
     <summary type="html">&lt;p&gt;设置iso镜像文件为本地仓库，遇到的问题&lt;/p&gt;</summary>
@@ -158,7 +154,7 @@
     <link href="https://kassadin.moe/2020/07/28/044-installed-softwares/"/>
     <id>https://kassadin.moe/2020/07/28/044-installed-softwares/</id>
     <published>2020-07-27T23:34:27.000Z</published>
-    <updated>2021-02-24T07:01:14.043Z</updated>
+    <updated>2021-04-05T02:57:19.920Z</updated>
     
     
     <summary type="html">&lt;p&gt;重装系统了，记录一下常用软件&lt;/p&gt;</summary>
@@ -177,7 +173,7 @@
     <link href="https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/"/>
     <id>https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/</id>
     <published>2020-07-27T10:45:47.000Z</published>
-    <updated>2020-08-03T05:28:06.948Z</updated>
+    <updated>2021-04-05T02:56:28.450Z</updated>
     
     
     <summary type="html">&lt;p&gt;人作死，就会死&lt;/p&gt;</summary>
