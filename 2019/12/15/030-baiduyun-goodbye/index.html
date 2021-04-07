@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
-  <link rel="icon" type="image/png" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,9 +16,15 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="Time is a choice.">
+  
+    <meta name="description" content="准备彻底弃用百毒云了，研究一下怎么把文件转移到谷歌云盘上。
+
+2019/12/24 更新：下载百度网盘文件失败，发动钞能力
+">
+  
   <meta name="author" content="森同学">
   <meta name="keywords" content="">
+  
   <title>笔记：转移百毒云文件（研究失败） - Blog - Kassadin</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
@@ -57,11 +63,11 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.6","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"copy_btn":true,"image_zoom":{"enable":true},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
 </head>
 
 
@@ -159,7 +165,7 @@
   </div>
 </nav>
 
-    <div class="banner intro-2" id="background" parallax=true
+    <div class="banner" id="banner" parallax=true
          style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
@@ -219,11 +225,11 @@
     
       
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
     <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
@@ -240,7 +246,7 @@
 <blockquote>
 <p>2019/12/24 更新：下载百度网盘文件失败，发动钞能力</p>
 </blockquote>
-<a id="more"></a> 
+<span id="more"></span> 
 <h4 id="Aria2-Rclone"><a href="#Aria2-Rclone" class="headerlink" title="Aria2+Rclone"></a>Aria2+Rclone</h4><p>P3TERX有一个Aria2+Rclone的方案，写了一系列教程</p>
 <p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/rclone-installation-and-configuration-tutorial.html" title="link">Rclone 安装配置教程 - 连接 OneDrive 和 Google Drive</a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/rclone-advanced-user-manual-common-command-parameters.html" title="link">Rclone 进阶使用教程 - 常用命令参数详解</a></p>
 <p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2-started-guide.html" title="link">Aria2 入门使用教程 - 玩转最强 BT、磁力、HTTP、FTP、离线下载工具 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/offline-download-of-onedrive-gdrive.html" title="link">Aria2 + Rclone 实现 OneDrive、Google Drive 等网盘离线下载 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2-frontend-ariang-tutorial.html" title="link">Aria2 前端面板(GUI) AriaNg 使用教程 </a><br><a target="_blank" rel="noopener" href="https://p3terx.com/archives/aria2_perfect_config-faq.html" title="link">Aria2 相关项目常见问题及解决方案（FAQ）</a></p>
@@ -298,10 +304,14 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！</p>
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
               
               
-                <div class="post-prevnext row">
+                <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
                     
@@ -330,6 +340,8 @@
               <!-- Comments -->
               <article class="comments" id="comments">
                 
+                  
+                
                 
   <div id="gitalk-container"></div>
   <script type="text/javascript">
@@ -348,7 +360,8 @@
           perPage: 15,
           pagerDirection: 'last',
           createIssueManually: false,
-          distractionFreeMode: false
+          distractionFreeMode: false,
+          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
         });
         gitalk.render('gitalk-container');
       });
@@ -432,9 +445,6 @@
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":200})
     NProgress.start()
-    document.addEventListener('DOMContentLoaded', function() {
-      window.NProgress && window.NProgress.inc();
-    })
     window.addEventListener('load', function() {
       NProgress.done();
     })
@@ -496,11 +506,12 @@
   <script>
     (function () {
       var path = "/local-search.xml";
-      var inputArea = document.querySelector("#local-search-input");
-      inputArea.onclick = function () {
+      $('#local-search-input').on('click', function() {
         searchFunc(path, 'local-search-input', 'local-search-result');
-        this.onclick = null
-      }
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
     })()
   </script>
 
