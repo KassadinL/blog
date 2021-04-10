@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2021-04-05T03:00:11.567Z</updated>
+  <updated>2021-04-10T02:16:10.390Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记：主板静电</title>
+    <link href="https://kassadin.moe/2021/04/10/052-Static-Electricity-on-Motherboard/"/>
+    <id>https://kassadin.moe/2021/04/10/052-Static-Electricity-on-Motherboard/</id>
+    <published>2021-04-10T01:35:20.000Z</published>
+    <updated>2021-04-10T02:16:10.390Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;几周前看到一篇博客 &lt;a href=&quot;https://lala.im/7769.html&quot;&gt;LALA - 微星B360M迫击炮主板没声音关不了机解决办法&lt;/a&gt;，提到主板静电可能导致电脑突然很卡，直到死机；电脑关机后不断电…等问题&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>转载：墨茶Offical</title>
@@ -365,25 +382,6 @@
     
     
     <summary type="html">&lt;p&gt;Telegram 他不香吗？&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：VirtualBox自动调整屏幕大小</title>
-    <link href="https://kassadin.moe/2019/12/29/032-VirtualBox-auto-screen-size/"/>
-    <id>https://kassadin.moe/2019/12/29/032-VirtualBox-auto-screen-size/</id>
-    <published>2019-12-29T09:36:43.000Z</published>
-    <updated>2020-01-03T18:25:08.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;尝试&lt;code&gt;Manjaro - KDE&lt;/code&gt;桌面，在虚拟机装好之后无法调整屏幕分辨率，去网上搜了搜，才发现之前一直都没有设置妥当&lt;/p&gt;</summary>
     
     
     
