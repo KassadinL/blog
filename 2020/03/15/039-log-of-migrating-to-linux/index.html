@@ -234,7 +234,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-03-22
+                  本文最后更新于：2021-04-09
                 
               </p>
             
@@ -375,6 +375,9 @@ and log out, log in again, work on every application (except telegram…</li>
 <h4 id="Creat-Disk-Partition-with-parted"><a href="#Creat-Disk-Partition-with-parted" class="headerlink" title="Creat Disk Partition with parted"></a>Creat Disk Partition with parted</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 1. creat partition</span><br>parted <span class="hljs-regexp">/dev/</span>sdb<br>(parted) mklabel gpt<br><br>(parted) mkpart<br>File system type? ext4<br>Start? <span class="hljs-number">1</span><br>End? <span class="hljs-number">5000</span><br><span class="hljs-comment"># the Unit of End is &quot;MB&quot;</span><br><br><span class="hljs-comment"># 2. build filesystem</span><br>mkfs.ext4 <span class="hljs-regexp">/dev/</span>sdb1<br><br><span class="hljs-comment"># 3. mount it</span><br></code></pre></td></tr></table></figure>
 
 <p>Ref:<br><a target="_blank" rel="noopener" href="https://www.linuxtechi.com/create-disk-partitions-parted-command-linux/">How to Create Disk Partitions with Parted Command in Linux</a><br><a target="_blank" rel="noopener" href="https://www.techrepublic.com/article/how-to-properly-automount-a-drive-in-ubuntu-linux/">How to properly automount a drive in Ubuntu Linux</a></p>
+<hr>
+<p><code>2021/04/09 update</code></p>
+<h4 id="Update-Pacman-Mirrorlist"><a href="#Update-Pacman-Mirrorlist" class="headerlink" title="Update Pacman Mirrorlist"></a>Update Pacman Mirrorlist</h4><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">pacman-mirrors -<span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>

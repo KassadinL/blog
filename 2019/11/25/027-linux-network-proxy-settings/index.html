@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      343 字
+      383 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      6
        分钟
     </span>
   
@@ -234,7 +234,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-02-24
+                  本文最后更新于：2021-04-10
                 
               </p>
             
@@ -242,16 +242,18 @@
               <p>Linux下设置代理问题</p>
 <span id="more"></span> 
 
-<p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Proxy_server" title="link">Proxy server - ArchWiki</a><br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Environment_variables#Examples" title="link">Environment variables - ArchWiki</a><br>这两篇文档基本可以解决Linux下设置代理的各种问题</p>
+<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h3><p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Proxy_server" title="link">Proxy server - ArchWiki</a><br><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Environment_variables#Examples" title="link">Environment variables - ArchWiki</a><br>这两篇文档基本可以解决Linux下设置代理的各种问题</p>
 <p><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/linux-unix-set-proxy-environment-variable" title="link">How To Use Proxy Server To Access Internet at Shell Prompt With http_proxy Variable</a><br>这篇是简单操作版</p>
 <hr>
 <p>之前找了好多教程，都没搞清楚<br>到头来，发现还是好文档最靠谱</p>
 <hr>
-<p>2019/12/23 更新</p>
-<ul>
-<li><p>环境变量设置代理<br>在<code>~/.bashrc</code>添加</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">http_proxy</span>=http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;/<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">https_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ftp_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">rsync_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">no_proxy</span>=<span class="hljs-string">&quot;localhost,127.0.0.1,localaddress,.localdomain.com&quot;</span><br></code></pre></td></tr></table></figure>
+<h3 id="2019-12-23-更新"><a href="#2019-12-23-更新" class="headerlink" title="2019/12/23 更新"></a>2019/12/23 更新</h3><ul>
+<li>环境变量设置代理<br>在<code>~/.bashrc</code>添加<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">http_proxy</span>=http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;/<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">https_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">ftp_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">rsync_proxy</span>=<span class="hljs-variable">$http_proxy</span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">no_proxy</span>=<span class="hljs-string">&quot;localhost,127.0.0.1,localaddress,.localdomain.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+
 </li>
+</ul>
+<ul>
 <li><p>sudo命令继承代理<br>参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Sudo#Environment_variables" title="link">Sudo Environment variables</a><br>在<code>/etc/sudoers</code>添加</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Defaults</span> env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></td></tr></table></figure>
 <blockquote>
@@ -265,8 +267,15 @@
 </li>
 <li><p>ubuntu sudo继承代理<br>参考 <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/8636711">How to keep environment variables when using sudo</a><br>ubuntu的似乎还有一点区别，不能写在一行里面</p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gams">sudo visudo<br><br># <span class="hljs-keyword">For</span> Ubuntu <span class="hljs-number">14</span>, you need to specify in separate lines as it returns the errors <span class="hljs-keyword">for</span> multi-<span class="hljs-keyword">variable</span> lines:<br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;http_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;https_proxy&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTP_PROXY&quot;</span><br>Defaults  <span class="hljs-comment">env_keep +=</span> <span class="hljs-comment">&quot;HTTPS_PROXY&quot;</span><br><br></code></pre></td></tr></table></figure>
+
 </li>
 </ul>
+<hr>
+<h3 id="2021-04-10-update"><a href="#2021-04-10-update" class="headerlink" title="2021/04/10 update"></a>2021/04/10 update</h3><p>curl and pacman </p>
+<p>Ref: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Proxy_server#curl_and_pacman">ArchWiki - Proxy server - crul and pacman </a></p>
+<blockquote>
+<p>You may set the all_proxy environment variable to let curl and pacman (which uses curl) use your socks5 proxy:<br><code>$ export all_proxy=&quot;socks5://your.proxy:1080&quot;</code></p>
+</blockquote>
 
             </div>
             <hr>
