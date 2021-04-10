@@ -246,19 +246,19 @@
 <h5 id="iBus开机启动，常驻后台"><a href="#iBus开机启动，常驻后台" class="headerlink" title="iBus开机启动，常驻后台"></a>iBus开机启动，常驻后台</h5><p>在Linux上安装好rime输入法之后，需要ibus支持<br>但是在ibus里一顿设置，关掉窗口，ibus就退出了…</p>
 <p>查文档 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/IBus#Initial_setup" title="link">iBus Initial setup - Archlinux</a></p>
 <p>在<code>~/.bashrc</code>最后添加</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
 
 <hr>
 <p>上面的方法在虚拟机里成功了，但是在笔记本上又不灵了</p>
 <p>还是文档里的方法，创建 <code>~/.xprofile</code> 文件，添加</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
 
 <hr>
-<h5 id="安装输入法全过程"><a href="#安装输入法全过程" class="headerlink" title="安装输入法全过程"></a>安装输入法全过程</h5><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"># install plum : https://github.com/rime/plum<br>curl -fsSL https://git.io/rime-install | bash<br><br># install <span class="hljs-type">double</span>-pinyin<br>cd plum<br>bash rime-install <span class="hljs-type">double</span>-pinyin<br><br># install ibus-rime<br>pacman -S ibus-rime<br><br># modify home/<span class="hljs-keyword">user</span>/.config/ibus/rime/<span class="hljs-keyword">default</span>.yaml, <span class="hljs-keyword">add</span> <span class="hljs-type">double</span>-pinyin <span class="hljs-keyword">schema</span><br><br># <span class="hljs-keyword">create</span> home/<span class="hljs-keyword">user</span>/.xprofile, <span class="hljs-keyword">add</span> <span class="hljs-keyword">following</span> commands<br># iBus <span class="hljs-keyword">always</span> <span class="hljs-keyword">on</span> <br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br># <span class="hljs-keyword">log</span> <span class="hljs-keyword">out</span>, <span class="hljs-keyword">and</span> <span class="hljs-keyword">log</span> <span class="hljs-keyword">in</span> <br></code></pre></td></tr></table></figure>
+<h5 id="安装输入法全过程"><a href="#安装输入法全过程" class="headerlink" title="安装输入法全过程"></a>安装输入法全过程</h5><figure class="highlight pgsql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs pgsql"># install plum : https://github.com/rime/plum<br>curl -fsSL https://git.io/rime-install | bash<br><br># install <span class="hljs-type">double</span>-pinyin<br>cd plum<br>bash rime-install <span class="hljs-type">double</span>-pinyin<br><br># install ibus-rime<br>pacman -S ibus-rime<br><br># modify home/<span class="hljs-keyword">user</span>/.config/ibus/rime/<span class="hljs-keyword">default</span>.yaml, <span class="hljs-keyword">add</span> <span class="hljs-type">double</span>-pinyin <span class="hljs-keyword">schema</span><br><br># <span class="hljs-keyword">create</span> home/<span class="hljs-keyword">user</span>/.xprofile, <span class="hljs-keyword">add</span> <span class="hljs-keyword">following</span> commands<br># iBus <span class="hljs-keyword">always</span> <span class="hljs-keyword">on</span> <br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br># <span class="hljs-keyword">log</span> <span class="hljs-keyword">out</span>, <span class="hljs-keyword">and</span> <span class="hljs-keyword">log</span> <span class="hljs-keyword">in</span> <br></code></pre></div></td></tr></table></figure>
 
 <hr>
 <h5 id="2020-03-08-更新"><a href="#2020-03-08-更新" class="headerlink" title="2020/03/08 更新"></a>2020/03/08 更新</h5><p>又安装了一遍，优化了一下步骤</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># install plum bash: https://github.com/rime/plum</span><br>git clone https:<span class="hljs-comment">//github.com/rime/plum.git</span><br><br><span class="hljs-meta"># install double-pinyin</span><br>cd plum<br>bash rime-install <span class="hljs-keyword">double</span>-pinyin<br><br><span class="hljs-meta"># install ibus-rime</span><br>pacman -S ibus-rime<br><br><span class="hljs-meta"># modify ~/.config/ibus/rime/build/default.yaml</span><br><span class="hljs-meta"># add double-pinyin to `schema_list`</span><br><br><span class="hljs-meta"># create ~/.xprofile, add following </span><br><span class="hljs-meta"># iBus always on </span><br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br><span class="hljs-meta"># log out, and log in </span><br><span class="hljs-meta"># iBus will autostart</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vala"><span class="hljs-meta"># install plum bash: https://github.com/rime/plum</span><br>git clone https:<span class="hljs-comment">//github.com/rime/plum.git</span><br><br><span class="hljs-meta"># install double-pinyin</span><br>cd plum<br>bash rime-install <span class="hljs-keyword">double</span>-pinyin<br><br><span class="hljs-meta"># install ibus-rime</span><br>pacman -S ibus-rime<br><br><span class="hljs-meta"># modify ~/.config/ibus/rime/build/default.yaml</span><br><span class="hljs-meta"># add double-pinyin to `schema_list`</span><br><br><span class="hljs-meta"># create ~/.xprofile, add following </span><br><span class="hljs-meta"># iBus always on </span><br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br><span class="hljs-meta"># log out, and log in </span><br><span class="hljs-meta"># iBus will autostart</span><br></code></pre></div></td></tr></table></figure>
 
 <p>修改：</p>
 <ul>
@@ -285,7 +285,7 @@
 <h5 id="2020-04-12-更新-xprofile启动iBus"><a href="#2020-04-12-更新-xprofile启动iBus" class="headerlink" title="2020/04/12 更新 . .xprofile启动iBus"></a>2020/04/12 更新 <code>. .xprofile</code>启动iBus</h5><p>之前都是登出，再登入，读取<code>.xprofile</code>配置<br>今天iBus崩溃掉了，不是很想登出再登入<br>想了想，既然可以用<code>. .bashrc</code> or <code>source .bashrc</code>更新shell环境，那<code>. .xprofile</code>是不是也可以呢？<br>执行一下，确实可以</p>
 <hr>
 <h5 id="2020-11-28-update"><a href="#2020-11-28-update" class="headerlink" title="2020/11/28 update"></a>2020/11/28 update</h5><p>manjaro-kde-20.1.2-201019-linux58 kde desktop crash when using <code>.xprofile</code><br>edit <code>~/.bashrc</code> is ok</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
 
 <p><del><code>default.yaml</code> file at <code>/usr/share/rime-data/default.yaml</code></del></p>
 <blockquote>
@@ -295,11 +295,11 @@
 <h5 id="2021-02-21-update-DIY-ibus-rime"><a href="#2021-02-21-update-DIY-ibus-rime" class="headerlink" title="2021/02/21 update DIY ibus-rime"></a>2021/02/21 update DIY ibus-rime</h5><p>推荐的方法是在<code>~/.config/ibus/rime/</code>路径下新增<code>patch</code>文件</p>
 <ul>
 <li><p>添加双拼方案<br><a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">Github -  rime/rime-double-pinyin</a><br>找到自己需要的方案下载下来，复制到<code>~/.config/ibus/rime/</code>路径下，我的是<code>double_pinyin_flypy.schema.yaml</code><br>然后打补丁</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">vim ~<span class="hljs-regexp">/.config/i</span>bus<span class="hljs-regexp">/rime/</span>default.custom.yaml<br><br><span class="hljs-comment"># add following lines</span><br>patch:<br>  schema_list:<br>    - schema: double_pinyin_flypy<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">vim ~<span class="hljs-regexp">/.config/i</span>bus<span class="hljs-regexp">/rime/</span>default.custom.yaml<br><br><span class="hljs-comment"># add following lines</span><br>patch:<br>  schema_list:<br>    - schema: double_pinyin_flypy<br></code></pre></div></td></tr></table></figure>
 <p>重新部署一下，就生效了<br>这个补丁会覆盖默认的<code>schema_list</code>参数，需要其他输入法的话，请在补丁里添加（写的时候注意遵守yaml语法规范</p>
 </li>
 <li><p>输入选单横排<br>今天升级后，<code>ibus</code>里设置横排不管用了，上网找了找，解决方法是</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">vim</span> <span class="hljs-string">~/.config/ibus/rime/ibus_rime.custom.yaml</span><br><br><span class="hljs-comment"># add following lines</span><br><span class="hljs-attr">patch:</span><br>  <span class="hljs-attr">style:</span><br>    <span class="hljs-attr">horizontal:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-string">vim</span> <span class="hljs-string">~/.config/ibus/rime/ibus_rime.custom.yaml</span><br><br><span class="hljs-comment"># add following lines</span><br><span class="hljs-attr">patch:</span><br>  <span class="hljs-attr">style:</span><br>    <span class="hljs-attr">horizontal:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure>
 
 </li>
 </ul>
@@ -361,29 +361,29 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.waitElementVisible('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'b6acc8d36d2719ad692b',
-          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
-          repo: 'blog_comment',
-          owner: 'KassadinL',
-          admin: ["KassadinL"],
-          id: '6e118f5c5a7ae72c2cb34a1c04e5e05e',
-          language: 'en',
-          labels: ["Gitalk"],
-          perPage: 15,
-          pagerDirection: 'last',
-          createIssueManually: false,
-          distractionFreeMode: false,
-          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

@@ -277,16 +277,16 @@
 <p>今天偶然发现自己乱配置的config file似乎有点过时了，命令行运行时提示几个选项找不到<br>瞅了一眼这篇帖子 <a target="_blank" rel="noopener" href="http://bbs.vcb-s.com/thread-2730-1-1.html" title="link">VCB bbs - 分享一下自己的mpv配置</a>，官方似乎更新了不少功能，可以更简洁的实现楼主写的配置</p>
 <p>思来想去，还是不那么折腾了，佛系配置一下，能用就行，做最少的改动</p>
 <h3 id="lua-scripts"><a href="#lua-scripts" class="headerlink" title="lua scripts"></a>lua scripts</h3><p>先看了看<code>scripts</code>文件夹，官方更新的在<code>/usr/share/mpv/scripts/</code>下，似乎比我用的少一个，备份一下我之前用的lua脚本</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/mpv/</span>scripts<span class="hljs-regexp">/* ~/</span>.config<span class="hljs-regexp">/mpv/</span>scripts/<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">cp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/mpv/</span>scripts<span class="hljs-regexp">/* ~/</span>.config<span class="hljs-regexp">/mpv/</span>scripts/<br></code></pre></div></td></tr></table></figure>
 
 <h3 id="config-file"><a href="#config-file" class="headerlink" title="config file"></a>config file</h3><p>备份一下我的<code>mpv.conf</code></p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/doc/m</span>pv<span class="hljs-regexp">/mpv.conf ~/</span>.config<span class="hljs-regexp">/mpv/</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">cp <span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/doc/m</span>pv<span class="hljs-regexp">/mpv.conf ~/</span>.config<span class="hljs-regexp">/mpv/</span><br></code></pre></div></td></tr></table></figure>
 
 <p>然后打开看看，根据个人喜好改改<br>文件最后有一个<code>include</code>，可以包含其他配置文件，这样自定义的配置可以放在另一个文件里，方便一些<br>加了一个<code>mpv.conf.custom</code></p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gradle"># You can also <span class="hljs-keyword">include</span> other configuration files.<br>#<span class="hljs-keyword">include</span>=<span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/the/</span><span class="hljs-keyword">file</span><span class="hljs-regexp">/you/</span>want<span class="hljs-regexp">/to/i</span>nclude<br><span class="hljs-keyword">include</span>=~<span class="hljs-regexp">/.config/m</span>pv/mpv.conf.custom<br></code></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gradle"># You can also <span class="hljs-keyword">include</span> other configuration files.<br>#<span class="hljs-keyword">include</span>=<span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/the/</span><span class="hljs-keyword">file</span><span class="hljs-regexp">/you/</span>want<span class="hljs-regexp">/to/i</span>nclude<br><span class="hljs-keyword">include</span>=~<span class="hljs-regexp">/.config/m</span>pv/mpv.conf.custom<br></code></pre></div></td></tr></table></figure>
 
 <p>把我的自定义配置放到<code>mpv.conf.custom</code>里了</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs clean">###################<br># Custom settings #<br>###################<br># ref: http:<span class="hljs-comment">//bbs.vcb-s.com/thread-2730-1-1.html</span><br><br>save-position-on-quit<br><br>icc-profile-auto<br>icc<span class="hljs-number">-3</span>dlut-size=<span class="hljs-number">256</span>x256x256<br><br>sub-auto=fuzzy<br>sub-file-paths=subs<br>slang=chi,zh-CN,sc,chs<br><br>audio-file-auto=fuzzy<br>#audio-file-paths=audio<br>alang=jpn,ja,eng,en<br><br>screenshot-format=png<br>screenshot-template=mpv-shot-%F-%p-%n<br># This option is not set by default, and thus will write screenshots to the directory <span class="hljs-keyword">from</span> which mpv was started.<br># https:<span class="hljs-comment">//mpv.io/manual/stable/#options-screenshot-directory</span><br>screenshot-tag-colorspace=yes<br>screenshot-high-bit-depth=yes<br>screenshot-png-compression=<span class="hljs-number">0</span><br>screenshot-png-filter=<span class="hljs-number">0</span><br>screenshot-directory=~/Pictures/mpv_cap/<br><br># 在mpv.conf所在目录下建一个 shaders_cache 空文件夹，以存放编译好的GPU shaders，加速启动。<br># 注意！如果不放APPDATA下，确保该文件夹有用户写入权限。<br>gpu-shader-cache-dir=<span class="hljs-string">&quot;~/.config/mpv/shaders_cache&quot;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs clean">###################<br># Custom settings #<br>###################<br># ref: http:<span class="hljs-comment">//bbs.vcb-s.com/thread-2730-1-1.html</span><br><br>save-position-on-quit<br><br>icc-profile-auto<br>icc<span class="hljs-number">-3</span>dlut-size=<span class="hljs-number">256</span>x256x256<br><br>sub-auto=fuzzy<br>sub-file-paths=subs<br>slang=chi,zh-CN,sc,chs<br><br>audio-file-auto=fuzzy<br>#audio-file-paths=audio<br>alang=jpn,ja,eng,en<br><br>screenshot-format=png<br>screenshot-template=mpv-shot-%F-%p-%n<br># This option is not set by default, and thus will write screenshots to the directory <span class="hljs-keyword">from</span> which mpv was started.<br># https:<span class="hljs-comment">//mpv.io/manual/stable/#options-screenshot-directory</span><br>screenshot-tag-colorspace=yes<br>screenshot-high-bit-depth=yes<br>screenshot-png-compression=<span class="hljs-number">0</span><br>screenshot-png-filter=<span class="hljs-number">0</span><br>screenshot-directory=~/Pictures/mpv_cap/<br><br># 在mpv.conf所在目录下建一个 shaders_cache 空文件夹，以存放编译好的GPU shaders，加速启动。<br># 注意！如果不放APPDATA下，确保该文件夹有用户写入权限。<br>gpu-shader-cache-dir=<span class="hljs-string">&quot;~/.config/mpv/shaders_cache&quot;</span><br></code></pre></div></td></tr></table></figure>
 <blockquote>
 <p>上面配置第21、22行<br>#This option is not set by default, and thus will write screenshots to the directory from which mpv was started.<br>#<a target="_blank" rel="noopener" href="https://mpv.io/manual/stable/#options-screenshot-directory">https://mpv.io/manual/stable/#options-screenshot-directory</a><br>原本有个bug，自定义截屏路径会导致打开mpv时自动截两张图<br>但这次配置好之后似乎没这个bug了</p>
 </blockquote>
@@ -300,7 +300,7 @@
 </blockquote>
 <h3 id="mpv播放油管视频-直播"><a href="#mpv播放油管视频-直播" class="headerlink" title="mpv播放油管视频/直播"></a>mpv播放油管视频/直播</h3><p>用mpv看油管直播也不错，<code>mpv https://.....</code>命令行贴link，或者开一个mpv窗口，直接把地址扔上去</p>
 <p>我摸索半天，改了一条自选分辨率、不飙命令行信息、后台bash的命令</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">mpv --ytdl-raw-options=format=<span class="hljs-number">48</span> https:<span class="hljs-regexp">//</span>www.youtube.com<span class="hljs-regexp">/watch?v=xxxxxxxxxx &gt; /</span>dev/null <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> &amp;<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">mpv --ytdl-raw-options=format=<span class="hljs-number">48</span> https:<span class="hljs-regexp">//</span>www.youtube.com<span class="hljs-regexp">/watch?v=xxxxxxxxxx &gt; /</span>dev/null <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> &amp;<br></code></pre></div></td></tr></table></figure>
 <ul>
 <li><code>--ytdl-raw-options=format=48</code> 1080p分辨率有点费梯子，还是降低一下画质（fucking GFW），<code>48</code>是分辨率的<code>format id</code>，可以运行<code>youtube-dl -F https://www.youtube.com/watch?v=xxxxxxxxxx</code>列出视频所有格式</li>
 <li><code>&gt; /dev/null 2&gt;&amp;1</code> 把命令行输出的信息都扔掉</li>
@@ -365,29 +365,29 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.waitElementVisible('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'b6acc8d36d2719ad692b',
-          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
-          repo: 'blog_comment',
-          owner: 'KassadinL',
-          admin: ["KassadinL"],
-          id: '4095ad3fba542d1c860c08b92ceba6c4',
-          language: 'en',
-          labels: ["Gitalk"],
-          perPage: 15,
-          pagerDirection: 'last',
-          createIssueManually: false,
-          distractionFreeMode: false,
-          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

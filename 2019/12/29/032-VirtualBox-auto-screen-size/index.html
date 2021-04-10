@@ -247,7 +247,7 @@
 <h4 id="正常流程"><a href="#正常流程" class="headerlink" title="正常流程"></a>正常流程</h4><ul>
 <li>安装<code>Manjaro</code>虚拟机</li>
 <li>设置好代理，方法详见 <a href="/2019/11/25/027-linux-network-proxy-settings/" title="笔记：Linux系统代理设置">笔记：Linux系统代理设置</a></li>
-<li>安装VirtualBox增强补丁，参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/VirtualBox#Install_the_Guest_Additions" title="link">ArchWiki - VirtualBox - 2.2 Install the Guest Additions</a> 这一节<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> pacman -S virtualbox-guest-utils<br><span class="hljs-attribute">sudo</span> pacman -S xf<span class="hljs-number">86</span>-video-vmware<br><span class="hljs-attribute">sudo</span> pacman -S linux-lts-headers<br></code></pre></td></tr></table></figure>
+<li>安装VirtualBox增强补丁，参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/VirtualBox#Install_the_Guest_Additions" title="link">ArchWiki - VirtualBox - 2.2 Install the Guest Additions</a> 这一节<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> pacman -S virtualbox-guest-utils<br><span class="hljs-attribute">sudo</span> pacman -S xf<span class="hljs-number">86</span>-video-vmware<br><span class="hljs-attribute">sudo</span> pacman -S linux-lts-headers<br></code></pre></div></td></tr></table></figure>
 <ul>
 <li>第一个命令要选择模块，没看到Wiki上说的<code>virtualbox-guest-modules-arch</code>，选了<code>12</code><img src="/2019/12/29/032-VirtualBox-auto-screen-size/01mod.png" srcset="/img/loading.gif" class=""></li>
 </ul>
@@ -270,7 +270,7 @@
 <h4 id="Tips-虚拟机切换回宿主机"><a href="#Tips-虚拟机切换回宿主机" class="headerlink" title="Tips 虚拟机切换回宿主机"></a>Tips 虚拟机切换回宿主机</h4><p><code>Alt Tab</code>可以从宿主机切换到虚拟机，但是一直不知道怎么切换回来<br>今天终于想起来，查了查<br>方法：先按一下右边的<code>Ctrl</code>，取消键盘映射，这时<code>Alt Tab</code>就是在宿主机里进行的了<br>参考自 <a target="_blank" rel="noopener" href="https://askubuntu.com/a/1109553/1027773" title="link">How to switch between host and guest OSes in virtual box</a></p>
 <hr>
 <p>2020/01/04 更新<br>想设置一下文件共享，没有成功，似乎是缺少<code>vboxsf</code>这个模块<br>查询<code>vboxservice</code>进程，第7行<code>(code=exited, status=1/FAILURE)</code>标红</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ systemctl status vboxservice.service <br>● vboxservice.service - VirtualBox Guest Service<br>   Loaded: loaded (<span class="hljs-regexp">/usr/</span>lib<span class="hljs-regexp">/systemd/</span>system/vboxservice.service; enabled; vendor preset: disabled)<br>   Active: active (running) since Sat <span class="hljs-number">2020</span>-<span class="hljs-number">01</span>-<span class="hljs-number">04</span> <span class="hljs-number">18</span>:<span class="hljs-number">06</span>:<span class="hljs-number">58</span> CST; <span class="hljs-number">3</span>s ago<br>  Process: <span class="hljs-number">1522</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxguest (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1523</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxvideo (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1524</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxsf (code=exited, status=1/</span>FAILURE)<br> Main PID: <span class="hljs-number">1525</span> (VBoxService)<br>    Tasks: <span class="hljs-number">9</span> (limit: <span class="hljs-number">4915</span>)<br>   Memory: <span class="hljs-number">1.4</span>M<br>   CGroup: <span class="hljs-regexp">/system.slice/</span>vboxservice.service<br>           └─<span class="hljs-number">1525</span> <span class="hljs-regexp">/usr/</span>bin/VBoxService -f<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">$ systemctl status vboxservice.service <br>● vboxservice.service - VirtualBox Guest Service<br>   Loaded: loaded (<span class="hljs-regexp">/usr/</span>lib<span class="hljs-regexp">/systemd/</span>system/vboxservice.service; enabled; vendor preset: disabled)<br>   Active: active (running) since Sat <span class="hljs-number">2020</span>-<span class="hljs-number">01</span>-<span class="hljs-number">04</span> <span class="hljs-number">18</span>:<span class="hljs-number">06</span>:<span class="hljs-number">58</span> CST; <span class="hljs-number">3</span>s ago<br>  Process: <span class="hljs-number">1522</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxguest (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1523</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxvideo (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1524</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxsf (code=exited, status=1/</span>FAILURE)<br> Main PID: <span class="hljs-number">1525</span> (VBoxService)<br>    Tasks: <span class="hljs-number">9</span> (limit: <span class="hljs-number">4915</span>)<br>   Memory: <span class="hljs-number">1.4</span>M<br>   CGroup: <span class="hljs-regexp">/system.slice/</span>vboxservice.service<br>           └─<span class="hljs-number">1525</span> <span class="hljs-regexp">/usr/</span>bin/VBoxService -f<br></code></pre></div></td></tr></table></figure>
 <p><code>modinfo vboxguest</code>和<code>modinfo vboxvideo</code>都能查到模块信息，只有<code>modinfo vboxsf</code>找不到文件，奇怪<br>还没搞定</p>
 
             </div>
@@ -329,29 +329,29 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.waitElementVisible('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'b6acc8d36d2719ad692b',
-          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
-          repo: 'blog_comment',
-          owner: 'KassadinL',
-          admin: ["KassadinL"],
-          id: '37f2ec78537300c9c67e4cffbd79fbb2',
-          language: 'en',
-          labels: ["Gitalk"],
-          perPage: 15,
-          pagerDirection: 'last',
-          createIssueManually: false,
-          distractionFreeMode: false,
-          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

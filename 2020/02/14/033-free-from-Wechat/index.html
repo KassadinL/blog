@@ -257,17 +257,17 @@
 <p>不过还没用热乎呢，重新登录了两次就上不去了，发现是微信把网页端接口封了…</p>
 <p>简单记录一下配置过程</p>
 <hr>
-<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sql">apt <span class="hljs-keyword">update</span><br><br><span class="hljs-comment"># 安装依赖</span><br>apt <span class="hljs-keyword">install</span> libwebp-dev libmagic-dev git screen ffmpeg -y<br><br><span class="hljs-comment"># 安装python3</span><br>apt <span class="hljs-keyword">install</span> python3-pip python3-setuptools python3-dev -y<br><br><span class="hljs-comment"># 安装开发版框架</span><br>pip3 <span class="hljs-keyword">install</span> git+https://github.com/blueset/ehforwarderbot.git<br><br><span class="hljs-comment"># 安装tg、wechat模块</span><br>pip3 <span class="hljs-keyword">install</span> efb-telegram-<span class="hljs-keyword">master</span> efb-wechat-<span class="hljs-keyword">slave</span><br></code></pre></td></tr></table></figure>
+<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">apt <span class="hljs-keyword">update</span><br><br><span class="hljs-comment"># 安装依赖</span><br>apt <span class="hljs-keyword">install</span> libwebp-dev libmagic-dev git screen ffmpeg -y<br><br><span class="hljs-comment"># 安装python3</span><br>apt <span class="hljs-keyword">install</span> python3-pip python3-setuptools python3-dev -y<br><br><span class="hljs-comment"># 安装开发版框架</span><br>pip3 <span class="hljs-keyword">install</span> git+https://github.com/blueset/ehforwarderbot.git<br><br><span class="hljs-comment"># 安装tg、wechat模块</span><br>pip3 <span class="hljs-keyword">install</span> efb-telegram-<span class="hljs-keyword">master</span> efb-wechat-<span class="hljs-keyword">slave</span><br></code></pre></div></td></tr></table></figure>
 
 <h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="框架配置文件"><a href="#框架配置文件" class="headerlink" title="框架配置文件"></a>框架配置文件</h5><ul>
 <li>启用tg和wechat模块</li>
 </ul>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk">mkdir -p ~<span class="hljs-regexp">/.ehforwarderbot/</span>profiles/default<br>vim ~<span class="hljs-regexp">/.ehforwarderbot/</span>profiles<span class="hljs-regexp">/default/</span>config.yaml<br><br><span class="hljs-comment"># 配置文件内容如下</span><br>master_channel: blueset.telegram<br>slave_channels:<br>- blueset.wechat<br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">mkdir -p ~<span class="hljs-regexp">/.ehforwarderbot/</span>profiles/default<br>vim ~<span class="hljs-regexp">/.ehforwarderbot/</span>profiles<span class="hljs-regexp">/default/</span>config.yaml<br><br><span class="hljs-comment"># 配置文件内容如下</span><br>master_channel: blueset.telegram<br>slave_channels:<br>- blueset.wechat<br></code></pre></div></td></tr></table></figure>
 
 <h5 id="tg配置文件"><a href="#tg配置文件" class="headerlink" title="tg配置文件"></a>tg配置文件</h5><ul>
 <li>设置机器人和tg账号<br>申请机器人、获取tg id的方法，这篇 <a target="_blank" rel="noopener" href="https://medium.com/cnhinata/%E7%94%A8-telegram-%E6%94%B6%E5%8F%91%E5%BE%AE%E4%BF%A1%E6%B6%88%E6%81%AF-906517d10cd1%22link%22">用 Telegram 收发微信消息</a> 说的很详细</li>
 </ul>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs clean">mkdir ~/.ehforwarderbot/profiles/default/blueset.telegram<br>vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml<br><br># 内容如下，bot_token和tg_id改成自己的就可以了，还想进一步定制的可以看文档<br>##################<br># Required items #<br>##################<br><br># [Bot Token]<br># This is the token you obtained <span class="hljs-keyword">from</span> @BotFather<br>token: <span class="hljs-string">&quot;bot_token&quot;</span><br><br># [List <span class="hljs-keyword">of</span> Admin User IDs]<br># ETM will only process messages and commands <span class="hljs-keyword">from</span> users<br># listed below. This ID can be obtained <span class="hljs-keyword">from</span> various ways<br># on Telegram.<br>admins:<br>- tg_id<br><br>##################<br># Optional items #<br>##################<br># [Experimental Flags]<br># This section can be used to toggle experimental functionality.<br># These features may be changed or removed at any time.<br># Options <span class="hljs-keyword">in</span> this section is explained afterward.<br>flags:<br>    chats_per_page: <span class="hljs-number">10</span><br><br># [Network Configurations]<br># [RPC Interface]<br># Refer to relevant sections afterwards for details.<br></code></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs clean">mkdir ~/.ehforwarderbot/profiles/default/blueset.telegram<br>vim ~/.ehforwarderbot/profiles/default/blueset.telegram/config.yaml<br><br># 内容如下，bot_token和tg_id改成自己的就可以了，还想进一步定制的可以看文档<br>##################<br># Required items #<br>##################<br><br># [Bot Token]<br># This is the token you obtained <span class="hljs-keyword">from</span> @BotFather<br>token: <span class="hljs-string">&quot;bot_token&quot;</span><br><br># [List <span class="hljs-keyword">of</span> Admin User IDs]<br># ETM will only process messages and commands <span class="hljs-keyword">from</span> users<br># listed below. This ID can be obtained <span class="hljs-keyword">from</span> various ways<br># on Telegram.<br>admins:<br>- tg_id<br><br>##################<br># Optional items #<br>##################<br># [Experimental Flags]<br># This section can be used to toggle experimental functionality.<br># These features may be changed or removed at any time.<br># Options <span class="hljs-keyword">in</span> this section is explained afterward.<br>flags:<br>    chats_per_page: <span class="hljs-number">10</span><br><br># [Network Configurations]<br># [RPC Interface]<br># Refer to relevant sections afterwards for details.<br></code></pre></div></td></tr></table></figure>
 
 <h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p><code>ehforwarderbot</code>启动服务，初始化成功后会出来一个二维码，微信扫一下登录</p>
 <blockquote>
@@ -333,29 +333,29 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.waitElementVisible('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'b6acc8d36d2719ad692b',
-          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
-          repo: 'blog_comment',
-          owner: 'KassadinL',
-          admin: ["KassadinL"],
-          id: '6b46f70d894858405afb51c54d6f7db5',
-          language: 'en',
-          labels: ["Gitalk"],
-          perPage: 15,
-          pagerDirection: 'last',
-          createIssueManually: false,
-          distractionFreeMode: false,
-          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 

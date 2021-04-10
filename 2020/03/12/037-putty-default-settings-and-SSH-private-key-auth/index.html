@@ -296,7 +296,7 @@
 <p><code>ssh-keygen -t ed25519 -b 2048</code>，这样就可以用<code>ed25519</code>类型的密钥</p>
 <h4 id="2020-09-17-update"><a href="#2020-09-17-update" class="headerlink" title="2020/09/17 update"></a>2020/09/17 update</h4><p><a target="_blank" rel="noopener" href="https://www.centlinux.com/2020/08/how-to-change-default-ssh-port-in-centos-8.html">How to Change Default SSH Port in CentOS 8 </a><br><a target="_blank" rel="noopener" href="https://www.liberiangeek.net/2014/11/change-openssh-port-centos-7/">How To Change OpenSSH Port On CentOS 7</a></p>
 <p>Need to allow SSH port(eg.2244) through the firewall</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --remove-service=ssh</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --add-port=2244/tcp</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --reload</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dockerfile">sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --remove-service=ssh</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --add-port=2244/tcp</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --reload</span><br></code></pre></div></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -353,29 +353,29 @@
                   
                 
                 
-  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.waitElementVisible('gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', function () {
-        var gitalk = new Gitalk({
-          clientID: 'b6acc8d36d2719ad692b',
-          clientSecret: '737050eabd1e9c1af31fcb39f56e60bb5b51f853',
-          repo: 'blog_comment',
-          owner: 'KassadinL',
-          admin: ["KassadinL"],
-          id: '4ac7ebbe10dc4ae5e4c668acd99869a1',
-          language: 'en',
-          labels: ["Gitalk"],
-          perPage: 15,
-          pagerDirection: 'last',
-          createIssueManually: false,
-          distractionFreeMode: false,
-          proxy: '&lt;your own proxy&gt;/https://github.com/login/oauth/access_token'
-        });
-        gitalk.render('gitalk-container');
-      });
-    });
+    Fluid.utils.waitElementVisible('comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
   </script>
   <noscript>Please enable JavaScript to view the comments</noscript>
 
