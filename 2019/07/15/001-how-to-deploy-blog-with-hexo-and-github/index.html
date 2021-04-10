@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.5k 字
+      6.7k 字
     </span>
   
 
@@ -200,7 +200,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      79
+      81
        分钟
     </span>
   
@@ -234,7 +234,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-04-05
+                  本文最后更新于：2021-04-10
                 
               </p>
             
@@ -547,6 +547,10 @@
 <p>设置好之后没有显示RSS图标，可能是用<code>Fluid</code>主题的问题，在配置文件里找了找，在<code>Navigation bar menu</code>部分，增加一行RSS配置就行了</p>
 <figure class="highlight perl"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs perl"><span class="hljs-comment"># 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称</span><br><span class="hljs-comment"># Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name</span><br>menu:<br>  - &#123; key: <span class="hljs-string">&quot;home&quot;</span>, <span class="hljs-keyword">link</span>: <span class="hljs-string">&quot;/&quot;</span>, icon: <span class="hljs-string">&quot;iconfont icon-home-fill&quot;</span> &#125;<br>  - &#123; key: <span class="hljs-string">&quot;archive&quot;</span>, <span class="hljs-keyword">link</span>: <span class="hljs-string">&quot;/archives/&quot;</span>, icon: <span class="hljs-string">&quot;iconfont icon-archive-fill&quot;</span> &#125;<br>  - &#123; key: <span class="hljs-string">&quot;tag&quot;</span>, <span class="hljs-keyword">link</span>: <span class="hljs-string">&quot;/tags/&quot;</span>, icon: <span class="hljs-string">&quot;iconfont icon-tags-fill&quot;</span> &#125;<br>  - &#123; key: <span class="hljs-string">&quot;about&quot;</span>, <span class="hljs-keyword">link</span>: <span class="hljs-string">&quot;/about/&quot;</span>, icon: <span class="hljs-string">&quot;iconfont icon-user-fill&quot;</span> &#125;<br>  - &#123; key: <span class="hljs-string">&quot;rss&quot;</span>, <span class="hljs-keyword">link</span>: <span class="hljs-string">&quot;/atom.xml&quot;</span>, icon: <span class="hljs-string">&quot;iconfont icon-rss&quot;</span>, name: <span class="hljs-string">&quot;RSS&quot;</span> &#125;<br></code></pre></div></td></tr></table></figure>
 <p>最后一行是RSS配置</p>
+<hr>
+<h5 id="2021-04-10-更新"><a href="#2021-04-10-更新" class="headerlink" title="2021/04/10 更新"></a>2021/04/10 更新</h5><p>更换评论系统</p>
+<p>最近<code>npm update</code>升级一下，<code>gitalk</code>好像不能用了，报<code>Error: Request failed with status code 405</code>错误<br>看了看Github上的讨论，只有一两个帖子，<code>Error 403</code>倒是有很多讨论<br>似乎和<code>proxy</code>参数有关，感觉设置起来好复杂，弃疗</p>
+<p>换成<code>Fluid</code>主题支持的<code>utterances</code>，和<code>gitalk</code>一样是基于Github Issue的评论系统<br>设置教程 <a target="_blank" rel="noopener" href="https://utteranc.es/">utterances</a><br>比设置<code>gitalk</code>简单不少，使用也更简单，不用自己<code>初始化Issue</code>（但是似乎没有匿名评论的功能，必须用Github帐号</p>
 
             </div>
             <hr>
