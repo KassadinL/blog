@@ -190,7 +190,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      383 字
+      405 字
     </span>
   
 
@@ -234,7 +234,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-04-10
+                  本文最后更新于：2021-05-09
                 
               </p>
             
@@ -254,14 +254,19 @@
 </li>
 </ul>
 <ul>
-<li><p>sudo命令继承代理<br>参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Sudo#Environment_variables" title="link">Sudo Environment variables</a><br>在<code>/etc/sudoers</code>添加</p>
-<figure class="highlight nginx"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">Defaults</span> env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></div></td></tr></table></figure>
+<li>sudo命令继承代理<br>参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Sudo#Environment_variables" title="link">Sudo Environment variables</a><br>在<code>/etc/sudoers</code>添加<figure class="highlight nginx"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">Defaults</span> env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></div></td></tr></table></figure>
 <blockquote>
 <p>2021/02/24 update<br>不要直接更改<code>sudoers</code>文件，而是在<code>/etc/sudoers.d/</code>下增加一个文件比较好</p>
 </blockquote>
 <figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">$ sudo visudo <span class="hljs-regexp">/etc/</span>sudoers.d/env_proxy<br><br><span class="hljs-comment"># Add following line </span><br>Defaults env_keep += <span class="hljs-string">&quot;ftp_proxy http_proxy https_proxy no_proxy&quot;</span><br></code></pre></div></td></tr></table></figure>
-<p>Ref:<a target="_blank" rel="noopener" href="https://askubuntu.com/questions/930768/adding-local-content-in-etc-sudoers-d-instead-of-directly-modifying-sodoers-fi">adding local content in /etc/sudoers.d/ instead of directly modifying sodoers file via visudo</a></p>
-</li>
+Ref:<a target="_blank" rel="noopener" href="https://askubuntu.com/questions/930768/adding-local-content-in-etc-sudoers-d-instead-of-directly-modifying-sodoers-fi">adding local content in /etc/sudoers.d/ instead of directly modifying sodoers file via visudo</a></li>
+</ul>
+<blockquote>
+<p>2021/05/09 update</p>
+</blockquote>
+<figure class="highlight gradle"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gradle"># vim <span class="hljs-regexp">/etc/</span>sudoers.d/<span class="hljs-number">05</span>_proxy<br><br>Defaults env_keep += <span class="hljs-string">&quot;*_proxy *_PROXY&quot;</span><br></code></pre></div></td></tr></table></figure>
+<p>Ref: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Proxy_server#Keep_proxy_through_sudo">ArchWiki - Proxy server: Keep proxy through sudo</a></p>
+<ul>
 <li><p>Snap下载使用代理<br>参考 <a target="_blank" rel="noopener" href="https://askubuntu.com/a/1146047/1027773" title="link">How to install snap packages behind web proxy on Ubuntu 16.04</a><br>命令行敲</p>
 <figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros">$ sudo snap <span class="hljs-builtin-name">set</span><span class="hljs-built_in"> system </span>proxy.<span class="hljs-attribute">http</span>=<span class="hljs-string">&quot;http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;&quot;</span><br>$ sudo snap <span class="hljs-builtin-name">set</span><span class="hljs-built_in"> system </span>proxy.<span class="hljs-attribute">https</span>=<span class="hljs-string">&quot;http://&lt;proxy_addr&gt;:&lt;proxy_port&gt;&quot;</span><br></code></pre></div></td></tr></table></figure>
 </li>
@@ -272,7 +277,7 @@
 </ul>
 <hr>
 <h3 id="2021-04-10-update"><a href="#2021-04-10-update" class="headerlink" title="2021/04/10 update"></a>2021/04/10 update</h3><p>curl and pacman </p>
-<p>Ref: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Proxy_server#curl_and_pacman">ArchWiki - Proxy server - crul and pacman </a></p>
+<p>Ref: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Proxy_server#curl_and_pacman">ArchWiki - Proxy server: crul and pacman </a></p>
 <blockquote>
 <p>You may set the all_proxy environment variable to let curl and pacman (which uses curl) use your socks5 proxy:<br><code>$ export all_proxy=&quot;socks5://your.proxy:1080&quot;</code></p>
 </blockquote>
