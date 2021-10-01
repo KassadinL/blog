@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+<html lang="en" data-default-color-scheme=auto>
 
 
 
@@ -9,8 +9,7 @@
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
   <link rel="icon" href="/img/ghost_icon.png">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -19,6 +18,19 @@
   <meta name="description" content="重装系统了，记录一下常用软件 (In Linux, Web browser and Android)">
   <meta name="author" content="森同学">
   <meta name="keywords" content="">
+  <meta name="description" content="重装系统了，记录一下常用软件 (In Linux, Web browser and Android)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用软件">
+<meta property="og:url" content="https://kassadin.moe/2020/07/28/044-installed-softwares/index.html">
+<meta property="og:site_name" content="Blog - Kassadin">
+<meta property="og:description" content="重装系统了，记录一下常用软件 (In Linux, Web browser and Android)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-27T23:34:27.000Z">
+<meta property="article:modified_time" content="2021-08-19T16:34:46.688Z">
+<meta property="article:author" content="森同学">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary_large_image">
   
   <title>常用软件 - Blog - Kassadin</title>
 
@@ -41,7 +53,6 @@
   
 
 
-
 <!-- 主题依赖的图标库，不要自行修改 -->
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
@@ -58,7 +69,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -70,8 +81,9 @@
   <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+    <a class="navbar-brand" href="/">
+      <strong>Blog - Kassadin</strong>
+    </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -145,13 +157,14 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
           </li>
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self">&nbsp;<i
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
                 class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
@@ -185,21 +198,18 @@
 
 <div class="mt-1">
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      3.5k 字
     </span>
   
 
   
-    
     <span class="post-meta mr-2">
       <i class="iconfont icon-clock-fill"></i>
       
       
-      20
-       分钟
+      11 分钟
     </span>
   
 
@@ -275,15 +285,15 @@
 </li>
 <li><h3 id="qBittorrent"><a href="#qBittorrent" class="headerlink" title="qBittorrent"></a><a target="_blank" rel="noopener" href="https://www.qbittorrent.org/">qBittorrent</a></h3><p>  BT/PT<br>  迁移qBittorrent数据：<a target="_blank" rel="noopener" href="https://github.com/qbittorrent/qBittorrent/wiki/Frequently-Asked-Questions#where-does-qbittorrent-save-its-settings">Where does qBittorrent save its settings?</a><br>  但是把数据拷过去，qBittorrent开始自动校验资源<br>  太费时间（也费硬盘了），想跳过这步，在网上找了找，没找到特别简便的办法<br>  只能用苯方法，大概思路：找到qb准备校验的种子的torrent文件，删掉qb里的任务，用torrent文件重新添加任务，添加时选择<code>skip hash check</code>（也可以用magnet link，只是这个需要看网络状况，torrent文件就不用</p>
 <ul>
-<li><code>~/.local/share/data/qBittorrent/BT_backup/</code>这个目录里保存qb里任务的种子，但是文件名是种子的hash</li>
-<li>在qb里选中需要的任务，右键<code>copy hash</code>，打开bash复制这些种子到一个方便的目录，删掉qb里的任务，重新添加<br>（太难了，下载的资源分散在三个目录，BT/PT混杂，tag分了一堆，不然任务量会小很多</li>
-</ul>
+<li><p><code>~/.local/share/data/qBittorrent/BT_backup/</code>这个目录里保存qb里任务的种子，但是文件名是种子的hash</p>
 </li>
-</ul>
+<li><p>在qb里选中需要的任务，右键<code>copy hash</code>，打开bash复制这些种子到一个方便的目录，删掉qb里的任务，重新添加<br>（太难了，下载的资源分散在三个目录，BT/PT混杂，tag分了一堆，不然任务量会小很多</p>
 <blockquote>
 <p>2021/01/03 update<br>Install qbittorrent-nox on Ubuntu server: <a target="_blank" rel="noopener" href="https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server">How to Install qBittorrent on Ubuntu 18.04 Desktop or Server</a></p>
 </blockquote>
-<ul>
+</li>
+</ul>
+</li>
 <li><h3 id="Rime"><a href="#Rime" class="headerlink" title="Rime"></a><a target="_blank" rel="noopener" href="https://rime.im/">Rime</a></h3><p>  ibus-rime中文输入<br>  不过ubuntu似乎自带，不用手动安装了，之前的帖子 <a href="/2019/11/25/028-ibus-initial-setup/" title="笔记：配置ibus-rime中文输入法">笔记：配置ibus-rime中文输入法</a></p>
 </li>
 <li><h3 id="Joplin"><a href="#Joplin" class="headerlink" title="Joplin"></a><a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin">Joplin</a></h3><p>  笔记软件<br>  随便找了一个支持markdown预览的笔记软件</p>
@@ -450,7 +460,7 @@
     
 
     
-      <a id="scroll-top-button" href="#" role="button">
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
         <i class="iconfont icon-arrowup" aria-hidden="true"></i>
       </a>
     
@@ -516,6 +526,10 @@
 <!-- Plugins -->
 
 
+  <script  src="/js/local-search.js" ></script>
+
+
+
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -526,23 +540,18 @@
 
 
 
-  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
-
-
-
-  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
 
 
 
