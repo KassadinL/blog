@@ -1,0 +1,593 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="最近GFW是年底冲业绩吗，网络波动频繁，都不能愉快地刷推特了，被迫试试之前看过但觉得有点麻烦的trojan。">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：部署trojan（靠运气） - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：部署trojan（靠运气）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-12-21 19:32" pubdate>
+        2019-12-21
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      27
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：部署trojan（靠运气）</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-02-24
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>最近GFW是年底冲业绩吗，网络波动频繁，都不能愉快地刷推特了，被迫试试之前看过但觉得有点麻烦的<code>trojan</code>。</p>
+<span id="more"></span> 
+<blockquote>
+<p>2019/12/25 更新：太难了，运气好搭成功一次，结果reboot就挂了<br>2019/12/26 更新：又试了试，勉强能用了，搞不懂</p>
+</blockquote>
+<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan" title="link">trojan - Github</a><br>与大部分代理走强加密、带混淆的思路不同，<code>trojan</code>伪装成常见的<code>HTTPS</code>流量<br>既然要伪装<code>HTTPS</code>，就需要一个域名和证书<br>对于我这样的小白来说，这些步骤里最难的是前期准备工作，最后配置<code>trojan</code>反而是最简单的</p>
+<p>这次部署参考了七八篇教程，其中比较有用的:<br><a target="_blank" rel="noopener" href="https://trojan-gfw.github.io/trojan/" title="link">Trojan Documentation</a><br><a target="_blank" rel="noopener" href="https://scaleya.netlify.com/posts/1/" title="link">Trojan搭建教程 - Scaleya</a><br><a target="_blank" rel="noopener" href="https://trojan-tutor.github.io/2019/04/10/p41.html" title="link">自建梯子教程 –Trojan版本</a><br><a target="_blank" rel="noopener" href="https://lala.im/4346.html" title="link">Trojan：一个伪装成HTTPS的代理工具 - 荒岛</a><br><a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" title="link">Certbot instructions - Let’s Encrypt</a> </p>
+<p>搭建步骤：</p>
+<ul>
+<li>申请域名</li>
+<li>解析DNS</li>
+<li>生成证书</li>
+<li>安装配置trojan</li>
+</ul>
+<p>要求：<br>一台VPS，要开放80、443端口</p>
+<hr>
+<h4 id="申请域名"><a href="#申请域名" class="headerlink" title="申请域名"></a>申请域名</h4><p>这个简单，网上免费的、付费的都有<br>知乎上这个回答有一定参考价值：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19551906/answer/31986656" title="link">现在去哪里买 .com 域名最便宜？ - 范进的回答 - 知乎</a><br>域名比价网站：<a target="_blank" rel="noopener" href="https://www.domcomp.com/" title="link">domcomp</a></p>
+<p>找个便宜的或者喜欢的域名就可以了</p>
+<h4 id="解析DNS"><a href="#解析DNS" class="headerlink" title="解析DNS"></a>解析DNS</h4><p>这里我是用 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/" title="link">CloudFlare</a> ，免费版完全ok</p>
+<ul>
+<li>第一步，申请账号，完成之后它会让你添加域名，把你刚才申请的域名填上去</li>
+<li>第二步，要使用CloudFlare的服务，需要去你的域名后台更改<code>nameservers</code><br>改成CloudFlare指定的，如下图（可能每个人的都不一样）<img src="/2019/12/21/031-deploy-trojan/01ns.png" srcset="/img/loading.gif" lazyload class="">
+（更改之后需要一段时间生效，休息一下（我这里大概不到10分钟就ok了</li>
+<li>第三步，在CloudFlare的面板里，设置你的域名解析<br>上面一排设置，点<code>DNS</code>，<code>Add record</code>，添加一条<code>A Type</code>记录<br><code>Name</code>为你的域名，<code>Content</code>是做代理的VPS主机IP，后面的<code>Proxy status</code>那个小云朵一定要设置灰色的<code>DNS only</code>，只解析DNS就可以（橙色云朵的话trojan会有问题<img src="/2019/12/21/031-deploy-trojan/02record.png" srcset="/img/loading.gif" lazyload class="">
+
+</li>
+</ul>
+<p>这样，解析DNS就完成了</p>
+<h4 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h4><p>目前为止，虽然可以连通，但还是<code>HTTP</code>，需要在VPS上生成一张证书才能升级<code>HTTPS</code><br>这里使用 <a target="_blank" rel="noopener" href="https://letsencrypt.org/" title="link">Let’s Encrypt</a> 的证书，因为这个证书开源免费，可以自己签<br>用到的工具是 <a target="_blank" rel="noopener" href="https://certbot.eff.org/about/" title="link">Certbot</a>，这部分完全不懂，全靠 <a target="_blank" rel="noopener" href="https://scaleya.netlify.com/posts/1/" title="link">Trojan搭建教程 - Scaleya</a> 和 <a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" title="link">Certbot instructions - Let’s Encrypt</a> 这两个教程，一步步来</p>
+<ul>
+<li><p>添加Certbot源</p>
+<figure class="highlight smali"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs smali">sudo apt-get update<br>sudo apt-get install software-properties-common<br>sudo<span class="hljs-built_in"> add-apt-repository </span>universe<br>sudo<span class="hljs-built_in"> add-apt-repository </span>ppa:certbot/certbot<br>sudo apt-get update<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>安装</p>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros">sudo apt-<span class="hljs-builtin-name">get</span> install certbot<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>Certbot运行类型？（它问你要给什么服务上证书，五个选项里我只见过且仅限于见过nginx，完全不清楚选哪个，跟着教程选了nginx，还好能用</p>
+<figure class="highlight ada"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ada">sudo certbot certonly <span class="hljs-comment">--nginx</span><br></code></pre></div></td></tr></table></figure>
+<p>选择只生成证书<br>敲完这个命令它会问你邮箱多少、同意我家的用户协议吗、能订阅一下我家的新闻吗，最后问要给哪个域名上证书啊，一一回答就好了</p>
+</li>
+<li><p>然后<code>certbot</code>会告诉你：真棒，你的证书已经签好了<br>仔细看输出，你得到两个pem文件，一个证书，一个key</p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk"><span class="hljs-regexp">/etc/</span>letsencrypt<span class="hljs-regexp">/live/</span>domain/fullchain.pem<br><span class="hljs-regexp">/etc/</span>letsencrypt<span class="hljs-regexp">/live/</span>domain/privkey.pem<br></code></pre></div></td></tr></table></figure>
+<p>记住key是私钥，不能给别人看<br>记下来这两个文件的路径，一会要用到</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" title="link">Certbot instructions - Let’s Encrypt</a> 这个教程后面还让你测试一下<code>Certbot</code>自动刷新证书的功能是否正常，因为证书有保质期的，过期作废</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dockerfile">sudo certbot renew --dry-<span class="hljs-keyword">run</span><br></code></pre></div></td></tr></table></figure>
+<p>看输出有没有问题，一般应该ok</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx" title="link">Certbot instructions - Let’s Encrypt</a> 这个教程 <del>真长</del> 最后还跟你说：让我们确认一下证书效果怎么样吧<br>你可以去 <a target="_blank" rel="noopener" href="https://www.ssllabs.com/ssltest/" title="link">SSL Labs</a> 输入你的域名测试一下，all green，ok</p>
+</li>
+</ul>
+<p>有点啰嗦，但终于完了<br>下一步，安装trojan</p>
+<blockquote>
+<p>2019/12/25 更新<br>不知道VPS上什么时候装了nginx，那就顺便上个证书吧<br>Certbot运行类型那里，敲<code>sudo certbot --nginx</code><br>按照提示操作<br>完成后，打开浏览器访问一下，确实变成<code>HTTPS</code>了，地址栏的小锁点开看看，证书由<code>Let’s Encrypt</code>确认,ok</p>
+</blockquote>
+<blockquote>
+<p>2019/12/26 更新<br><code>sudo certbot certonly --standalone</code>似乎也可以，如果只需要证书的话</p>
+</blockquote>
+<h4 id="安装配置trojan"><a href="#安装配置trojan" class="headerlink" title="安装配置trojan"></a>安装配置trojan</h4><p><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/wiki/Binary-&-Package-Distributions" title="link">官方安装指南</a> 给了各个系统的安装方法<br>有两个快速安装脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">sudo bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)</span>&quot;</span><br>sudo bash -c <span class="hljs-string">&quot;<span class="hljs-subst">$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)</span>&quot;</span><br></code></pre></div></td></tr></table></figure>
+
+<p>随便安一个，脚本显示如下</p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">Installing trojan <span class="hljs-number">1.13</span>.<span class="hljs-number">0</span> to <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/</span>trojan...<br>Installing trojan server config to <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/etc/</span>trojan/config.json...<br>Installing trojan systemd service to <span class="hljs-regexp">/etc/</span>systemd<span class="hljs-regexp">/system/</span>trojan.service...<br>Reloading systemd daemon...<br>Deleting temp directory <span class="hljs-regexp">/tmp/</span>tmp.eqeWyvKmjN...<br>Done!<br></code></pre></div></td></tr></table></figure>
+
+<p>它说<code>config.json</code>在这个路径：<code>/usr/local/etc/trojan/config.json</code><br><code>nano /usr/local/etc/trojan/config.json</code>打开它，大概内容应该是这样：</p>
+<figure class="highlight json"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs json">&#123;<br>    <span class="hljs-attr">&quot;run_type&quot;</span>: <span class="hljs-string">&quot;server&quot;</span>,<br>    <span class="hljs-attr">&quot;local_addr&quot;</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>    <span class="hljs-attr">&quot;local_port&quot;</span>: <span class="hljs-number">443</span>,<br>    <span class="hljs-attr">&quot;remote_addr&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>    <span class="hljs-attr">&quot;remote_port&quot;</span>: <span class="hljs-number">80</span>,<br>    <span class="hljs-attr">&quot;password&quot;</span>: [<br>        <span class="hljs-string">&quot;password1&quot;</span>,<br>        <span class="hljs-string">&quot;password2&quot;</span><br>    ],<br>    <span class="hljs-attr">&quot;log_level&quot;</span>: <span class="hljs-number">1</span>,<br>    <span class="hljs-attr">&quot;ssl&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;cert&quot;</span>: <span class="hljs-string">&quot;/path/to/certificate.crt&quot;</span>,<br>        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;/path/to/private.key&quot;</span>,<br>        <span class="hljs-attr">&quot;key_password&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>        <span class="hljs-attr">&quot;cipher&quot;</span>: <span class="hljs-string">&quot;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256&quot;</span>,<br>        <span class="hljs-attr">&quot;prefer_server_cipher&quot;</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">&quot;alpn&quot;</span>: [<br>            <span class="hljs-string">&quot;http/1.1&quot;</span><br>        ],<br>        <span class="hljs-attr">&quot;reuse_session&quot;</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">&quot;session_ticket&quot;</span>: <span class="hljs-literal">false</span>,<br>        <span class="hljs-attr">&quot;session_timeout&quot;</span>: <span class="hljs-number">600</span>,<br>        <span class="hljs-attr">&quot;plain_http_response&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>        <span class="hljs-attr">&quot;curves&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<br>        <span class="hljs-attr">&quot;dhparam&quot;</span>: <span class="hljs-string">&quot;&quot;</span><br>    &#125;,<br>    <span class="hljs-attr">&quot;tcp&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;prefer_ipv4&quot;</span>: <span class="hljs-literal">false</span>,<br>        <span class="hljs-attr">&quot;no_delay&quot;</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">&quot;keep_alive&quot;</span>: <span class="hljs-literal">true</span>,<br>        <span class="hljs-attr">&quot;fast_open&quot;</span>: <span class="hljs-literal">false</span>,<br>        <span class="hljs-attr">&quot;fast_open_qlen&quot;</span>: <span class="hljs-number">20</span><br>    &#125;,<br>    <span class="hljs-attr">&quot;mysql&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;enabled&quot;</span>: <span class="hljs-literal">false</span>,<br>        <span class="hljs-attr">&quot;server_addr&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>        <span class="hljs-attr">&quot;server_port&quot;</span>: <span class="hljs-number">3306</span>,<br>        <span class="hljs-attr">&quot;database&quot;</span>: <span class="hljs-string">&quot;trojan&quot;</span>,<br>        <span class="hljs-attr">&quot;username&quot;</span>: <span class="hljs-string">&quot;trojan&quot;</span>,<br>        <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;&quot;</span><br>    &#125;<br>&#125;<br><br></code></pre></div></td></tr></table></figure>
+<p>更改如下</p>
+<ul>
+<li>第5行，<code>127.0.0.1</code>换成你的域名，例如这样：<code>&quot;remote_addr&quot;: &quot;996.icu&quot;,</code></li>
+<li>第7行，设置<code>password</code>，我只用一个密码，就删了第8行，改<code>password2</code></li>
+<li>第13、14行，证书和key，分别改成之前生成的证书和key的路径</li>
+</ul>
+<p>改好之后敲个<code>trojan</code>命令，测试配置文件有没有问题，有错纠错</p>
+<p><code>systemctl start trojan</code>启动trojan</p>
+<p>日常使用命令：</p>
+<figure class="highlight smali"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs smali">systemctl start trojan  <br>systemctl restart trojan<br>systemctl stop trojan<br>systemctl status trojan<br>systemctl enable trojan<br></code></pre></div></td></tr></table></figure>
+
+<p>终于，部署完成</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在项目的 <a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/releases" title="link">releases</a> 界面找对应系统的软件包，下载下来，改一下<code>config.json</code>的<code>remote_addr</code>、<code>password</code>，和服务器的参数保持一致<br>双击<code>.exe</code>，即可运行</p>
+<p>完结撒花</p>
+<hr>
+<p>（经过两天的使用，发现<code>trojan</code>相较于<code>v2ray</code>速度上并没有显著的提升（至少在我这里</p>
+<hr>
+<h4 id="2019-12-25-更新"><a href="#2019-12-25-更新" class="headerlink" title="2019/12/25 更新"></a>2019/12/25 更新</h4><p>reboot一下VPS，v2ray和trojan都炸了…</p>
+<p>v2ray改了改配置文件，只保留最精简的配置，活过来了</p>
+<p>trojan瞎折腾两小时，还是救不过来<br><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/issues/68" title="link">macOS: [FATAL] fatal: config.json: cannot open file</a> 里的<code>./trojan config.json</code>命令也没有用</p>
+<figure class="highlight css"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs css">./<span class="hljs-selector-tag">trojan</span> <span class="hljs-selector-tag">config</span><span class="hljs-selector-class">.json</span><br><span class="hljs-selector-tag">Welcome</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">trojan</span> 1.13.0<br><span class="hljs-selector-attr">[2019-12-25 00:06:21]</span> <span class="hljs-selector-attr">[FATAL]</span> <span class="hljs-selector-tag">fatal</span>: <span class="hljs-selector-tag">config</span><span class="hljs-selector-class">.json</span>: <span class="hljs-selector-tag">cannot</span> <span class="hljs-selector-tag">open</span> <span class="hljs-selector-tag">file</span><br><span class="hljs-selector-attr">[2019-12-25 00:06:21]</span> <span class="hljs-selector-attr">[FATAL]</span> <span class="hljs-selector-tag">exiting</span>. . .<br></code></pre></div></td></tr></table></figure>
+<p>看文件权限都是755，是什么问题呢？</p>
+<p>（trojna一周体验卡<br>（为什么搬瓦工的<code>Snapshots</code>功能reboot一下就炸了两个服务呢？奇怪</p>
+<blockquote>
+<p>   半天后更新<br>又折腾了几个小时，在另一台VPS上装也失败了，卡在<code>Certbot</code>那里<br>看来上面成功的那次纯粹是运气好<br>放着吧，以后有机会再研究这个trojan</p>
+</blockquote>
+<hr>
+<h4 id="2019-12-26-更新"><a href="#2019-12-26-更新" class="headerlink" title="2019/12/26 更新"></a>2019/12/26 更新</h4><p>又试了一下</p>
+<ul>
+<li><p>把<code>config.json</code>改成<code>777</code>，运行<code>trojan</code></p>
+<figure class="highlight prolog"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs prolog"><span class="hljs-symbol">Welcome</span> to trojan <span class="hljs-number">1.13</span><span class="hljs-number">.0</span><br>[<span class="hljs-number">2019</span><span class="hljs-number">-12</span><span class="hljs-number">-26</span> <span class="hljs-number">09</span>:<span class="hljs-number">38</span>:<span class="hljs-number">29</span>] [<span class="hljs-symbol">FATAL</span>] fatal: bind: <span class="hljs-symbol">Address</span> already in use<br>[<span class="hljs-number">2019</span><span class="hljs-number">-12</span><span class="hljs-number">-26</span> <span class="hljs-number">09</span>:<span class="hljs-number">38</span>:<span class="hljs-number">29</span>] [<span class="hljs-symbol">FATAL</span>] exiting. . .<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>关闭<code>nginx</code>，再次运行</p>
+<figure class="highlight prolog"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs prolog"><span class="hljs-symbol">Welcome</span> to trojan <span class="hljs-number">1.13</span><span class="hljs-number">.0</span><br>[<span class="hljs-number">2019</span><span class="hljs-number">-12</span><span class="hljs-number">-26</span> <span class="hljs-number">09</span>:<span class="hljs-number">40</span>:<span class="hljs-number">02</span>] [<span class="hljs-symbol">FATAL</span>] fatal: use_private_key_file: key values mismatch<br>[<span class="hljs-number">2019</span><span class="hljs-number">-12</span><span class="hljs-number">-26</span> <span class="hljs-number">09</span>:<span class="hljs-number">40</span>:<span class="hljs-number">02</span>] [<span class="hljs-symbol">FATAL</span>] exiting. . .<br></code></pre></div></td></tr></table></figure>
+</li>
+<li><p>上网查，不太懂，试着把<code>config.json</code>里的证书从<code>fullchain.pem</code>改成<code>cert.pem</code>，运行成功了…</p>
+</li>
+<li><p><code>nginx</code>和<code>trojan</code>冲突，只好不用<code>nginx</code>了（所以之前是怎么一块用的呢？搞不懂</p>
+</li>
+<li><p>把<code>config.json</code>里的证书从<code>cert.pem</code>又改回<code>fullchain.pem</code>，运行<code>trojan</code>也成功了</p>
+</li>
+<li><p>把<code>config.json</code>改成<code>755</code>，也能运行</p>
+</li>
+<li><p>（所以之前的<code>cannot open file</code>和<code>key values mismatch</code>是什么鬼</p>
+</li>
+</ul>
+<p>就这样，能用了</p>
+<blockquote>
+<p>   搬瓦工这个<code>Snapshots</code>功能太搞心态了</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/12/29/032-VirtualBox-auto-screen-size/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：VirtualBox自动调整屏幕大小</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/12/15/030-baiduyun-goodbye/">
+                        <span class="hidden-mobile">笔记：转移百毒云文件（研究失败）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

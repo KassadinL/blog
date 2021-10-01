@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="刷屏禁止~">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：Telegram - 禁止转发特定频道机器人 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：Telegram - 禁止转发特定频道机器人">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-02-23 16:41" pubdate>
+        2020-02-23
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      666 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：Telegram - 禁止转发特定频道机器人</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-02-27
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>刷屏禁止~</p>
+<span id="more"></span> 
+<hr>
+<h4 id="刷屏好烦"><a href="#刷屏好烦" class="headerlink" title="刷屏好烦"></a>刷屏好烦</h4><p>群里总有从其他频道转发消息的，一条消息就能占一屏，转发还勤快，刷屏太多，不胜其烦<br>看了看转发的消息，大部分就是那两三个账户在转发，转的也都是一两个频道的信息，大概率是机器人</p>
+<p>解决办法：账号和频道，总得ban一个</p>
+<p>本着不怕麻烦的原则，我选择折腾一个telegram机器人，删除转发特定频道的消息</p>
+<h4 id="找轮子"><a href="#找轮子" class="headerlink" title="找轮子"></a>找轮子</h4><p>先在google上搜，找半天没找到<br>后来才想起来，直接去github搜，找到一个 <a target="_blank" rel="noopener" href="https://github.com/Tooruchan/Anti-Forward-Bot" title="link">Tooruchan / Anti-Forward-Bot</a></p>
+<p>作者很贴心，给了使用方法<br>只是说明书寥寥数语，对我这个小白还是有点难，经过一点钻研，总算部署完成</p>
+<p>以下是部署过程</p>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><h5 id="申请机器人"><a href="#申请机器人" class="headerlink" title="申请机器人"></a>申请机器人</h5><p>在tg私聊 <a target="_blank" rel="noopener" href="https://t.me/BotFather" title="tg">@BotFather</a>，申请一个机器人<br>按照提示，一步步输入信息就可以了，最后会得到一个token（这个和密码一样重要，不能外传）<br>在群组里使用机器人，需要关闭隐私模式，github页面有方法</p>
+<h5 id="申请app"><a href="#申请app" class="headerlink" title="申请app"></a>申请app</h5><p>（我不清楚这个是干嘛用的，照做</p>
+<p>在 <a target="_blank" rel="noopener" href="https://my.telegram.org/apps" title="link">Telegram - API Settings</a> 申请一个application<br>有一个表单，里面的 <code>URL</code> 和 <code>platform</code> 不知道是什么意思，随便填了<br>填好之后可以看到 <code>API Hash</code> 和 <code>API ID</code></p>
+<h5 id="部署服务"><a href="#部署服务" class="headerlink" title="部署服务"></a>部署服务</h5><p><a target="_blank" rel="noopener" href="https://github.com/Tooruchan/Anti-Forward-Bot" title="link">Tooruchan / Anti-Forward-Bot</a><br>按照这个部署</p>
+<ul>
+<li><p><code>pip3 install -U pyrogram tgcrypto</code><br>安装这个telegram出品（不知道是做什么的）框架</p>
+</li>
+<li><p><code>git clone https://github.com/Tooruchan/Anti-Forward-Bot.git</code><br>clone这个<code>Anti-Forward-Bot</code>，<code>cd</code>进文件夹</p>
+</li>
+<li><p><code>vim config.json</code><br>修改配置文件，把前面申请的<code>bot Token</code> <code>API Hash</code> <code>API ID</code>填进去</p>
+</li>
+<li><p><code>vim channels.json</code><br>在网上看了几个获取<code>channel id</code>的办法，不是很好用<br>最后在调试阶段发现一个方法：</p>
+<ul>
+<li>先<code>python3 bot.py</code>运行服务（Pyrogram教程 <a target="_blank" rel="noopener" href="https://docs.pyrogram.org/intro/quickstart" title="link">Get Pyrogram Real Fast</a>）</li>
+<li>在tg拉一个小群，把机器人加进去</li>
+<li>把想要屏蔽的频道消息转发进群</li>
+<li>服务端命令行收到消息进行解析，其中有一个<code>forward_from_chat</code>字段<figure class="highlight jboss-cli"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs jboss-cli"><span class="hljs-string">&quot;forward_from_chat&quot;</span>: &#123;<br>	<span class="hljs-string">&quot;_&quot;</span>: <span class="hljs-string">&quot;pyrogram.Chat&quot;</span>,<br>	<span class="hljs-string">&quot;id&quot;</span>: -1001232395606,<br>	<span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;channel&quot;</span>,<br>	<span class="hljs-string">&quot;is_verified&quot;</span>: <span class="hljs-literal">false</span>,<br>	<span class="hljs-string">&quot;is_restricted&quot;</span>: <span class="hljs-literal">false</span>,<br>	<span class="hljs-string">&quot;is_scam&quot;</span>: <span class="hljs-literal">false</span>,<br>	<span class="hljs-string">...</span><br>	&#125;<br></code></pre></div></td></tr></table></figure></li>
+<li><code>&quot;id&quot;: -1001232395606</code> 就是 <code>channel id</code>，填入配置文件</li>
+</ul>
+</li>
+</ul>
+<h5 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h5><p><code>screen -dmS anti_forward_bot python3 bot.py</code><br>测试没问题，后台运行进程</p>
+<hr>
+<p>技术力过低，中间踩了一些坑，好在最后搭建成功<br>赞~</p>
+<hr>
+<h4 id="screen常用命令"><a href="#screen常用命令" class="headerlink" title="screen常用命令"></a>screen常用命令</h4><p>最近用了几次<code>screen</code>后台运行进程<br>简单记一下命令，方便以后查找</p>
+<figure class="highlight gauss"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs gauss"><span class="hljs-keyword">screen</span> -ls<br><span class="hljs-keyword">screen</span> -r process_id<br><span class="hljs-keyword">screen</span> -dmS session_name command<br></code></pre></div></td></tr></table></figure>
+
+<p>参考资料： <a target="_blank" rel="noopener" href="https://linuxize.com/post/how-to-use-linux-screen/" title="link">How To Use Linux Screen</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/06/035-multi-instances-telegram-in-linux/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：Linux下运行多个Telegram实例</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/02/14/033-free-from-Wechat/">
+                        <span class="hidden-mobile">笔记：淡化微信（被狙击了）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

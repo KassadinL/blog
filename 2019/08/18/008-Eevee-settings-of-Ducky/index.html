@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Blender的Eevee渲染引擎是2.80版本的核心新功能，实时预览、超快渲染，就是快快快">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：Eevee渲染器设置（Ducky版） - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：Eevee渲染器设置（Ducky版）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-08-18 08:51" pubdate>
+        2019-08-18
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：Eevee渲染器设置（Ducky版）</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2019-11-26
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>Blender的Eevee渲染引擎是2.80版本的核心新功能，实时预览、超快渲染，就是快快快 <span id="more"></span> （有多快？出图如果超过5秒我就会怀疑电脑有问题，超过10秒我就开任务管理器了）<br>但是速度快的代价是牺牲准确性，Eevee使用许多近似方法来模拟Cycle这类路径追踪引擎的结果，比如3S材质，就是通过模糊像素实现的</p>
+<p>因此，相对于Cycle引擎，Eevee的设置其实是比较多的（但这也不一定是坏事</p>
+<p>想了解关于Eevee的具体细节，可以阅读手册 <a target="_blank" rel="noopener" href="https://docs.blender.org/manual/zh-hans/2.80/render/eevee/index.html" title="Eevee">Eevee</a> 这一章，查看Eevee的原理、使用、限制</p>
+<hr>
+<p>（说了一堆废话，进入正题</p>
+<p>最近做<code>Ducky 3D</code>的教程，前两天做到了 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=iZkdtV0OA2U" title="link">Blender - My Eevee Settings (Blender 2.8)</a> 这个视频，他介绍了自己在使用Eevee时的设置经验，感觉非常有用<br>因此，结合视频、评论、还有一点我自己的经验，记下来，希望对你有所帮助</p>
+<hr>
+<p>下图是Blender默认的Eevee设置</p>
+<div style="width: 50%; margin: auto"><img src="/2019/08/18/008-Eevee-settings-of-Ducky/01default.png" srcset="/img/loading.gif" lazyload class=""></div>
+
+
+<p>一个一个介绍</p>
+<ul>
+<li><p>Ambient Occlusion（环境吸收）<br>  <strong>勾选上</strong><br>  <code>Distance</code>可以控制环境吸收的强度，用来给场景/模型添加立体感很方便</p>
+</li>
+<li><p>Bloom（辉光）<br>  <strong>勾选上</strong><br>  <code>Threshold</code>阈值，低于这个强度的发光物体没有辉光<br>  <code>Radius</code>辉光半径<br>  <code>Intensity</code>可以控制辉光的程度</p>
+</li>
+<li><p>Depth of Field（景深）<br>  <strong>不用动</strong><br>  算是一个小技巧吧，用空物体作为对焦点，在摄像机设置里调光圈</p>
+</li>
+<li><p>Subsurface Scattering(次表面散射/3S)<br>  <strong>不用动</strong><br>  3S材质，做树叶、玉石、皮肤等有一点透光的材质会用到</p>
+</li>
+<li><p>Screen Space Reflections(屏幕空间反射)<br>  <strong>勾选 重要</strong><br>  （需要注意，Eevee的反射、折射受限于工作原理，有比较大的限制，具体可以看手册）<br>  <code>Refraction</code>折射，勾选上，除了这里，还需要在<code>材质&gt;&gt;&gt;设置</code>中勾选折射，不然没有折射效果<br>  <code>Half Res Trace</code>半精度追踪，取消勾选，这个功能是用来减少资源消耗的<br>  <code>Trace Precision</code>追踪精度，默认的太低了，直接拉到1，如果出现错误可以再降回来一点<br>  <code>Max Roughness</code>最大糙度，暂时没发现怎么用，只看见视频下面评论说拉到0.85 “get nice diffuse reflections”</p>
+</li>
+<li><p>Motion Blur（运动模糊）<br>  <strong>按需勾选</strong><br>  Eevee仅支持相机运动模糊，就是说相机动起来才会有效果<br>  <code>Shutter</code>控制快门时间，值越大，快门时间越长，运动模糊效果越强</p>
+</li>
+<li><p>Volumetrics（体积）<br>  <strong>参数默认</strong><br>  <code>Volumetrics Shadows</code>勾选上</p>
+</li>
+<li><p>Hair（毛发）<br>  没用过</p>
+</li>
+<li><p>Shadows（阴影）<br>  <strong>重要</strong><br>  “Eevee使用阴影贴图技术创建直接来自光源光线的正确阴影”（源自<a target="_blank" rel="noopener" href="https://docs.blender.org/manual/zh-hans/2.80/render/eevee/render_settings/shadows.html" title="link">手册</a>）<br>  <code>High Bitdepth</code>高位深，勾选，提高阴影质量<br>  <code>Soft Shadows</code>柔和阴影，勾选，提高阴影质量</p>
+<p>  <code>Method</code>里<code>ESM</code>和<code>VSM</code>是两种计算方式，前者快，后者质量好，按需选择<br>  <code>Cube Size</code>，数值越大，阴影精度越高，按需改变<br>  这两个选项按需改动，如果觉得阴影质量不好，可以改改试一下</p>
+</li>
+<li><p><code>Indirect Lighting</code>（间接光）<br>  用Eevee光照探头时，用这个烘焙间接光，没怎么用过，不清楚</p>
+</li>
+<li><p><code>Film</code>（胶片）<br>  勾选<code>Transparent</code>可以剔除背景，不用抠图了，按需勾选</p>
+</li>
+<li><p><code>Simplify</code>简化场景，<code>Freestyle</code>渲染线条，这里跳过</p>
+</li>
+<li><p><code>Color Management</code>（色彩管理）<br>  （这个严格来说并不是Eevee的设置，而且这个东西也困扰了我（森同学）很久，等搞明白了会单开一篇文章）<br>  这里就当作一个简单后期，<code>Look</code>调调对比，<code>Exposure</code>调亮度，<code>Gamma</code>随便<br>  （Gamma比较复杂，但Blender这里这个Gamma只是用来调整艺术效果。如果想了解Gamma的真正作用，可以看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av38607808" title="link">韩世麟 - Gamma校正与线性工作流入门讲解</a>）</p>
+<blockquote>
+<p>  2019/11/19 更新<br>  韩世麟在动态里推荐了一个up主： <a target="_blank" rel="noopener" href="https://space.bilibili.com/157159707" title="link">韦找谁</a>，从事影视工作，每天发布一个vlog，看他的视频，解答了我一些色彩管理方面的疑惑<br>  关键词： Gamma，ACES，色卡</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>本来计划的是一篇对Ducky视频的简单总结，结果太啰嗦，写的有点繁琐了</p>
+<p>总而言之，一张图总结本文，Ducky比较推荐的Eevee设置如下：</p>
+<div style="width: 70%; margin: auto"><img src="/2019/08/18/008-Eevee-settings-of-Ducky/02settings.png" srcset="/img/loading.gif" lazyload class=""></div>
+
+<hr>
+<p>（时间过得好快，感觉没多久，但其实上一篇文章已经是将近3个星期之前发的了<br>（前一段参加了Blender手册翻译组，为Blender本地化做一点微薄的贡献</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Blender/">Blender</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/08/18/009-Change-language-quickly/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：快速切换Blender语言</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/08/01/007-Ducky-3D-Tutorials-Practice-Project/">
+                        <span class="hidden-mobile">练习： Ducky 3D 教程补完计划 [已完成]</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

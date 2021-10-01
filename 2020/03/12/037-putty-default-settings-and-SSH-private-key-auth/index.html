@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="迁移Linux系列">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：Putty设置及使用公钥验证登录 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：Putty设置及使用公钥验证登录">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-12 16:43" pubdate>
+        2020-03-12
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      967 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：Putty设置及使用公钥验证登录</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-09-17
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>迁移Linux系列</p>
+<span id="more"></span>
+
+<h3 id="Putty设置"><a href="#Putty设置" class="headerlink" title="Putty设置"></a>Putty设置</h3><p>Putty for Linux<br>刚开始没搞懂怎么用</p>
+<p>后面终于会用了，给我的感觉就是把<code>config</code>文件图形界面化</p>
+<ul>
+<li>打开软件，中间一大栏，是选择<code>config</code>文件，可以<code>Load</code> <code>Save</code> <code>Delete</code></li>
+<li>有一个<code>Default Settings</code>，这个是Putty启动时默认加载的，也是创建其他<code>config</code>文件的模板</li>
+<li>添加SSH配置，需要填好<code>Host Name/IP address</code> <code>Port</code>等参数，然后在<code>Saved Sessions</code>下面的空白栏输入这个配置的名称，最后点击<code>Save</code>按钮保存</li>
+<li>后面如果要更改配置，需要先点击这个配置文件，点<code>Load</code>加载（相当于打开这个配置文件），更改完成之后，点击<code>Save</code>（相当于保存文件）</li>
+</ul>
+<p>先把<code>Default Settings</code>配置好，之后创建新SSH配置会减少很多工作量</p>
+<p>下面是我的一些基础配置</p>
+<ul>
+<li>Window<br>改窗口大小<br>默认的SSH窗口太小，在<code>Columns</code> <code>Rows</code>改成合适的大小</li>
+<li>Window -&gt;&gt; Selection<br><code>Ctrl Shift C/V</code>用<code>Clipboard</code>，和终端一致</li>
+<li>Connetction<br><code>TCP keepalives</code><br>勾选这个，保持SSH登录始终在线<br>只勾选这个还不行，需要把上面的<code>Sending of null packets to keep sessions active</code>，发送空数据包间隔时间填一个数值，比如4秒</li>
+<li>Connetction -&gt;&gt; Data<br><code>Auto-login username</code>填上登录用的用户名，登录时就不用手敲了</li>
+<li>Connetction -&gt;&gt; Proxy<br>这个墙国必备，不多说了</li>
+</ul>
+<p>这些是我在Putty里的基础设置，剩下字体、颜色之类的随喜好来<br>（费了点时间才整好，不写下来太亏了</p>
+<h3 id="公钥验证登录"><a href="#公钥验证登录" class="headerlink" title="公钥验证登录"></a>公钥验证登录</h3><p>如果要实现真正的“一键登录”，可以设置公钥验证登录，既方便又安全，何乐不为</p>
+<h4 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h4><p><a target="_blank" rel="noopener" href="https://lala.im/6051.html" title="link">荒岛 - SSH那点事：公钥验证/两步验证/Fail2ban</a><br><a target="_blank" rel="noopener" href="https://support.rackspace.com/how-to/log-into-a-linux-server-with-an-ssh-private-key-on-windows/" title="link">Log in to a Linux server with an SSH private key on a Windows client</a><br><a target="_blank" rel="noopener" href="https://www.cnx-software.com/2012/07/20/how-use-putty-with-an-ssh-private-key-generated-by-openssh/" title="link">How To Use Putty with an SSH Private Key Generated by OpenSSH</a></p>
+<blockquote>
+<p>我太菜了，看第一篇荒岛的教程没搞懂到底哪台是本地机，哪台是远程机，看了第二篇教程才搞懂</p>
+</blockquote>
+<h4 id="大概思路："><a href="#大概思路：" class="headerlink" title="大概思路："></a>大概思路：</h4><p>本地电脑生成一对密钥，私钥自己存好，公钥放到远程机器上，远程机器开启公钥认证功能<br>这样你用本地电脑登录的时候，远程电脑用公钥一看，这个电脑是熟人，放行</p>
+<h4 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h4><ul>
+<li>本地电脑生成密钥对<ul>
+<li><code>ssh-keygen -b 4096</code>一路回车，生成一对密钥<code>id_rsa</code> <code>id_rsa.pub</code><br>第一个是私钥，保存好，第二个公钥，给别人</li>
+</ul>
+</li>
+<li>远程电脑开公钥认证功能<ul>
+<li><code>mkdir -p ~/.ssh &amp;&amp; touch ~/.ssh/authorized_keys</code> 在远程电脑上创建文件，记录密钥</li>
+<li><code>chmod 700 ~/.ssh &amp;&amp; chmod 600 ~/.ssh/authorized_keys</code> 改权限，不让别人看</li>
+<li><code>vim ~/.ssh/authorized_keys</code> 把本地电脑的公钥写进去</li>
+<li><code>vim /etc/ssh/sshd_config</code> 编辑sshd配置文件<ul>
+<li><code>PubkeyAuthentication yes</code> 开启公钥认证功能</li>
+<li><code>PasswordAuthentication no</code> (optional) 如果需要，可以关闭密码登录</li>
+</ul>
+</li>
+<li><code>systemctl restart sshd</code> 重启sshd服务</li>
+</ul>
+</li>
+<li>Putty配置密钥登录<ul>
+<li><code>puttygen</code>转换密钥<br>Putty不能直接使用RSA密钥文件，需要转为Putty专用格式，安装Putty时已经安装了转换工具，命令为<code>puttygen inputfile -o ouputfile</code><br>在命令行输入<code>puttygen ~/.ssh/id_rsa -o ~/.ssh/id_rsa_putty</code>转换本地电脑私钥文件</li>
+<li>验证方式选择密钥<br>Connetction -&gt;&gt; SSH -&gt;&gt; Auth<br><code>Private key file for authentication</code> 选刚才转换好的<code>id_rsa_putty</code>，保存一下</li>
+</ul>
+</li>
+</ul>
+<p>现在就可以“一键登录”远程主机了</p>
+<p>完结撒花</p>
+<hr>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><h4 id="2020-09-16-更新"><a href="#2020-09-16-更新" class="headerlink" title="2020/09/16 更新"></a>2020/09/16 更新</h4><p>本地电脑生成密钥对，这个步骤默认使用RSA算法<br>看网上说似乎<code>ed25519</code>算法似乎安全性更高</p>
+<p><code>ssh-keygen -t ed25519 -b 2048</code>，这样就可以用<code>ed25519</code>类型的密钥</p>
+<h4 id="2020-09-17-update"><a href="#2020-09-17-update" class="headerlink" title="2020/09/17 update"></a>2020/09/17 update</h4><p><a target="_blank" rel="noopener" href="https://www.centlinux.com/2020/08/how-to-change-default-ssh-port-in-centos-8.html">How to Change Default SSH Port in CentOS 8 </a><br><a target="_blank" rel="noopener" href="https://www.liberiangeek.net/2014/11/change-openssh-port-centos-7/">How To Change OpenSSH Port On CentOS 7</a></p>
+<p>Need to allow SSH port(eg.2244) through the firewall</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dockerfile">sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --remove-service=ssh</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --permanent --add-port=2244/tcp</span><br>sudo firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --reload</span><br></code></pre></div></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/12/038-MPV-configuration/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">038 MPV configuration</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/12/036-Ai-Fen/">
+                        <span class="hidden-mobile">转载：发哨子的人</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="尝试Manjaro - KDE桌面，在虚拟机装好之后无法调整屏幕分辨率，去网上搜了搜，才发现之前一直都没有设置妥当">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：VirtualBox自动调整屏幕大小 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：VirtualBox自动调整屏幕大小">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-12-29 17:36" pubdate>
+        2019-12-29
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      613 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：VirtualBox自动调整屏幕大小</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-01-04
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>尝试<code>Manjaro - KDE</code>桌面，在虚拟机装好之后无法调整屏幕分辨率，去网上搜了搜，才发现之前一直都没有设置妥当</p>
+<span id="more"></span> 
+
+<p>记下来操作过程</p>
+<hr>
+<h4 id="正常流程"><a href="#正常流程" class="headerlink" title="正常流程"></a>正常流程</h4><ul>
+<li>安装<code>Manjaro</code>虚拟机</li>
+<li>设置好代理，方法详见 <a href="/2019/11/25/027-linux-network-proxy-settings/" title="笔记：Linux系统代理设置">笔记：Linux系统代理设置</a></li>
+<li>安装VirtualBox增强补丁，参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/VirtualBox#Install_the_Guest_Additions" title="link">ArchWiki - VirtualBox - 2.2 Install the Guest Additions</a> 这一节<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> pacman -S virtualbox-guest-utils<br><span class="hljs-attribute">sudo</span> pacman -S xf<span class="hljs-number">86</span>-video-vmware<br><span class="hljs-attribute">sudo</span> pacman -S linux-lts-headers<br></code></pre></div></td></tr></table></figure>
+<ul>
+<li>第一个命令要选择模块，没看到Wiki上说的<code>virtualbox-guest-modules-arch</code>，选了<code>12</code><img src="/2019/12/29/032-VirtualBox-auto-screen-size/01mod.png" srcset="/img/loading.gif" lazyload class=""></li>
+</ul>
+</li>
+<li>设置VirtualBox自动调整屏幕大小，参考 <a target="_blank" rel="noopener" href="https://unix.stackexchange.com/a/536056" title="link">Manjaro guest on VirtualBox not able to get the full resolution</a><ul>
+<li>shutdown虚拟机</li>
+<li>虚拟机设置，显示，图形控制，选择<code>VBoxVGA</code>，保存<img src="/2019/12/29/032-VirtualBox-auto-screen-size/02vga.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>启动虚拟机，窗口跑一跑，然后就黑屏了</li>
+<li><code>Ctrl Alt F2</code>再开一个控制台，登录账号</li>
+<li><code>sudo mhwd -r pci video-vmware</code></li>
+<li><code>reboot</code></li>
+</ul>
+</li>
+</ul>
+<p>这样就可以随意改变虚拟机窗口大小</p>
+<p>（Manjaro这三个桌面环境，<code>xfce</code>最轻量，安装快，外观没有其他两个好看，<code>KDE</code>和<code>Gnome</code>安装都在<code>93% Misc postinstall configurations</code>停住10多分钟，差点以为电脑有问题</p>
+<hr>
+<h4 id="简单-一点的-方法"><a href="#简单-一点的-方法" class="headerlink" title="简单(一点的)方法"></a>简单(一点的)方法</h4><p>又试了试在安装虚拟机的时候就选择<code>VBoxVGA</code><br>发现这样直接就是自动调整屏幕大小了，不用开控制台改设置<br>共享剪贴板也可以用，但是拖拽文件不行，还是需要安装增强补丁</p>
+<hr>
+<h4 id="Tips-虚拟机切换回宿主机"><a href="#Tips-虚拟机切换回宿主机" class="headerlink" title="Tips 虚拟机切换回宿主机"></a>Tips 虚拟机切换回宿主机</h4><p><code>Alt Tab</code>可以从宿主机切换到虚拟机，但是一直不知道怎么切换回来<br>今天终于想起来，查了查<br>方法：先按一下右边的<code>Ctrl</code>，取消键盘映射，这时<code>Alt Tab</code>就是在宿主机里进行的了<br>参考自 <a target="_blank" rel="noopener" href="https://askubuntu.com/a/1109553/1027773" title="link">How to switch between host and guest OSes in virtual box</a></p>
+<hr>
+<p>2020/01/04 更新<br>想设置一下文件共享，没有成功，似乎是缺少<code>vboxsf</code>这个模块<br>查询<code>vboxservice</code>进程，第7行<code>(code=exited, status=1/FAILURE)</code>标红</p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">$ systemctl status vboxservice.service <br>● vboxservice.service - VirtualBox Guest Service<br>   Loaded: loaded (<span class="hljs-regexp">/usr/</span>lib<span class="hljs-regexp">/systemd/</span>system/vboxservice.service; enabled; vendor preset: disabled)<br>   Active: active (running) since Sat <span class="hljs-number">2020</span>-<span class="hljs-number">01</span>-<span class="hljs-number">04</span> <span class="hljs-number">18</span>:<span class="hljs-number">06</span>:<span class="hljs-number">58</span> CST; <span class="hljs-number">3</span>s ago<br>  Process: <span class="hljs-number">1522</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxguest (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1523</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxvideo (code=exited, status=0/</span>SUCCESS)<br>  Process: <span class="hljs-number">1524</span> ExecStartPre=<span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/modprobe vboxsf (code=exited, status=1/</span>FAILURE)<br> Main PID: <span class="hljs-number">1525</span> (VBoxService)<br>    Tasks: <span class="hljs-number">9</span> (limit: <span class="hljs-number">4915</span>)<br>   Memory: <span class="hljs-number">1.4</span>M<br>   CGroup: <span class="hljs-regexp">/system.slice/</span>vboxservice.service<br>           └─<span class="hljs-number">1525</span> <span class="hljs-regexp">/usr/</span>bin/VBoxService -f<br></code></pre></div></td></tr></table></figure>
+<p><code>modinfo vboxguest</code>和<code>modinfo vboxvideo</code>都能查到模块信息，只有<code>modinfo vboxsf</code>找不到文件，奇怪<br>还没搞定</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/02/14/033-free-from-Wechat/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：淡化微信（被狙击了）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/12/21/031-deploy-trojan/">
+                        <span class="hidden-mobile">笔记：部署trojan（靠运气）</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

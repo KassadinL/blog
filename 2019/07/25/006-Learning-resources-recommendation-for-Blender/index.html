@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="注：本文初稿写于2019/07/25，一些内容可能已经不太准确">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>推荐：Blender学习资源推荐 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/index_img/006.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="推荐：Blender学习资源推荐">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-07-25 07:35" pubdate>
+        2019-07-25
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">推荐：Blender学习资源推荐</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-08-03
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>注：本文初稿写于2019/07/25，一些内容可能已经不太准确</p>
+<span id="more"></span>
+
+<hr>
+<h4 id="什么是Blender"><a href="#什么是Blender" class="headerlink" title="什么是Blender"></a>什么是Blender</h4><p>引用<a target="_blank" rel="noopener" href="https://www.blendercn.org/" title="斑斓中国">斑斓中国</a>的介绍：</p>
+<blockquote>
+<p>BLENDER是一款开源免费的多平台全能三维动画制作软件<br>Blender集建模、雕刻、绑定、粒子、动力学、动画、交互、材质、渲染、音频处理、视频剪辑以及运动跟踪、后期合成等等的一系列动画短片制作解决方案，以python为内建脚本，支持yafaray渲染器，商业创作永久免费</p>
+</blockquote>
+<p>引用<a target="_blank" rel="noopener" href="https://www.blender.org/" title="Blender官网">Blender官网</a>的介绍：</p>
+<blockquote>
+<p>Blender is the free and open source 3D creation suite. It supports the entirety of the 3D pipeline—modeling, rigging, animation, simulation, rendering, compositing and motion tracking, even video editing and game creation.</p>
+</blockquote>
+<p>想要了解更多Blender的信息，可以看官方手册中 <a target="_blank" rel="noopener" href="https://docs.blender.org/manual/zh-hans/dev/getting_started/about/history.html" title="关于Blender">关于Blender</a> 这一节的介绍<br>（这里的介绍是最全面的，看Blender的历史，你可以发现它与其他同行业商业软件不同的地方</p>
+<hr>
+<h4 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h4><p>Blender提供了详细的<a target="_blank" rel="noopener" href="https://docs.blender.org/manual/zh-hans/dev/index.html" title="官方文档">官方文档</a>，关于Blender的一切功能你都能在文档里找到介绍<br>并且，<code>BLenderCN汉化组</code>正在翻译中文手册，目前（2019/08/05）已经汉化了73%的2.80手册内容<br>(2019/09/14更新，官方文档汉化工作已完成</p>
+<p>遇到问题首先查阅官方文档，或许比在群里提问更快速高效哦</p>
+<div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/11manul.png" srcset="/img/loading.gif" lazyload class=""></div>
+
+<hr>
+<h4 id="中文资源"><a href="#中文资源" class="headerlink" title="中文资源"></a>中文资源</h4><p>如果想要入门BLender，可以从中文资源看起</p>
+<ul>
+<li><p>斑斓中国 <a target="_blank" rel="noopener" href="https://www.blendercn.org/" title="斑斓中国">链接</a><br>  Blender官方认证的社区，致力于Blender的本地化和推广<br>  组织翻译Blender的UI和文档，制作教程，制作电子杂志（月刊-斑斓视界，目前已经出到第9期）<br>  <a target="_blank" rel="noopener" href="https://tutorial.blendercn.org/" title="link">作品/教程</a> 是发布教程的地方<br>  <a target="_blank" rel="noopener" href="https://www.blendercn.org/blendercn%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97" title="link">斑斓视界</a> 是他们制作的电子杂志，介绍Blender的资讯、作品、教程</p>
+<p>  斑斓中国社区可以说是Blender的中文资源基地了</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/13blcnorg.png" srcset="/img/loading.gif" lazyload class=""></div>
+
+<p>  在b站搜索用户名“BLenderCN”，这些都是斑斓中国社区的同学</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/01cn.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>只剩一瓶辣椒酱 <a target="_blank" rel="noopener" href="https://space.bilibili.com/35723238" title="只剩一瓶辣椒酱">链接</a><br>  b站<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av55550709" title="link">《黑铁骑士》</a>系列教程，定位是Blender 2.80入门课程（截至07/25，已经连续40多天更新教程<br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av55557051" title="link">《每日技巧》</a>是使用Blender时的一些小技巧，有时候不知道如何操作，可以来这里搜一下</p>
+<p>  这个up主的计划是出一系列从基础到高级的Blender开源教程，敬请期待</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/02lj.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>顺子老师 <a target="_blank" rel="noopener" href="https://space.bilibili.com/38988725" title="顺子老师">链接</a><br>  <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av44803831" title="link">【跟顺子老师学3D】blender 2.8 零基础入门教程</a> 也适合入门Blender</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/03shun.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>韩世麟 <a target="_blank" rel="noopener" href="https://space.bilibili.com/25481171" title="韩世麟">链接</a><br>  这个up（虽然不是用Blender）是玩V-Ray的，对各种参数原理了解的比较透彻，讲的也易懂，力荐</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/04han.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>DIGITALMAN <a target="_blank" rel="noopener" href="https://www.jianshu.com/u/70a05c15418f" title="DIGITALMAN">链接</a><br>  这位老师写了一系列CG方面的文章，涵盖原理、建模、材质、渲染、动画，市面上常见的建模软件、渲染器均有研究</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/12digiman.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>VFXinfo官方账号 <a target="_blank" rel="noopener" href="https://space.bilibili.com/35637" title="VFXinfo">链接</a><br>  搬运各种CG相关的教程，质量高</p>
+</li>
+</ul>
+<hr>
+<h4 id="英文资源"><a href="#英文资源" class="headerlink" title="英文资源"></a>英文资源</h4><p>Blender的教程还是英文的比较多，学好英语很重要</p>
+<blockquote>
+<p>   08/15更新<br>    Curtis Holt昨天刚更新了<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mdcs8uf7UOs" title="link">“The BEST Way to Learn Blender 2.8”</a>，非常全面的介绍了Blender入门、建模、雕刻、全流程等各个方面的优质教程，还做了一个路线图，告诉你学习这些资源的先后顺序<br>    不管你想自学、报课程、免费、付费，在这个视频里都能找到相关的资源<br>    <strong>强烈推荐</strong></p>
+</blockquote>
+<blockquote>
+<p>   09/14更新<br>    Curtis Holt又更新了一个视频 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=n200UjAArCI" title="New FREE Courses for Blender 2.8">“New FREE Courses for Blender 2.8”</a>，这个是对上面那个视频的补充，介绍了一些YouTube上免费的Blender教程<br>    （因为2.8正式版终于发布了，各路大佬也抓紧推出了2.8的(翻)新教程</p>
+</blockquote>
+<hr>
+<p>以下是原内容</p>
+<hr>
+<ul>
+<li><p>Blender Fundamentals 2.8 <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6" title="Blender Fundamentals 2.8">链接</a><br>  Blender官方出品的基础教程<br>  足够详细、权威</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/10bl_v.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>Curtis Holt <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCzghqpGuEmk4YdVewxA79GA/videos" title="Curtis Holt">链接</a><br>  大佬既会编程，又会Blender，不仅做免费教程，工程文件也能免费下载研究，还自己开发插件免费给大家用<br>  不说了，快去看教程吧</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/05curtis.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>Ducky 3D <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCuNhGhbemBkdflZ1FGJ0lUQ/videos" title="Ducky 3D">链接</a><br>  这个up做了很多简短的小案例，建模、材质、动画都有，跟着做出来会很有成就感</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/06ducky.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>String Fairy <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCOawmp0CsDHtQzotefGzKug/videos" title="String Fairy">链接</a><br>  研究程序化材质，用其他网友的评论就是“Black Magic”，感觉大佬用的才是节点编辑器，我用的只是连连看</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/07string.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>CG Geek <a target="_blank" rel="noopener" href="https://www.youtube.com/user/Blenderfan93/videos" title="CG Geek">链接</a><br>  全能型大佬，各方面都做，视频教程30分钟起步（最近的教程时长有所降低，可能是怕大家学不过来了</p>
+  <div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/08cggeek.png" srcset="/img/loading.gif" lazyload class=""></div>
+</li>
+<li><p>剩下还有很多，YanSculpts、blenderBinge、Blender Guru等等，太多了<br>你只要在油管多看Blender教程，他自然会多给你推送这方面的视频，根本不用刻意找</p>
+</li>
+</ul>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>这些只是我经常看的一些学习资源，肯定有遗漏</p>
+<p>我会不定期更新这篇文章，放上我觉得有价值的Blender学习资源</p>
+<ul>
+<li>08/05更新<ul>
+<li><code>什么是Blender</code>章节补充对Blender的介绍</li>
+<li>增加<code>官方文档</code>章节</li>
+<li><code>英文资源</code>章节增加 Blender官方基础教程</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>08/11更新<ul>
+<li><code>中文资源</code>章节增加 DIGITALMAN简书</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>08/15更新<ul>
+<li><code>什么是Blender</code>章节补充对Blender的介绍</li>
+<li><code>中文资源</code>章节增加 部分资源的链接，方便跳转</li>
+<li><code>英文资源</code>章节增加 Curtis Holt的Blender学习指南</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>09/14更新</p>
+<ul>
+<li><code>官方文档</code>章节更新 汉化进度</li>
+<li><code>英文资源</code>章节更新 Curtis Holt的Blender学习指南</li>
+</ul>
+</li>
+<li><p>2020/08/03更新</p>
+<ul>
+<li><code>中文资源</code>章节增加 VFXinfo</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="题外话：为什么用Blender"><a href="#题外话：为什么用Blender" class="headerlink" title="题外话：为什么用Blender"></a>题外话：为什么用Blender</h4><ul>
+<li>开源</li>
+<li>free（自由、免费）</li>
+<li>功能强大</li>
+<li>EEVEE实时渲染</li>
+<li>节点编辑器</li>
+<li>2.80版本界面美观</li>
+<li>活跃的社区</li>
+<li>（想到再补充</li>
+</ul>
+<p>以下是一个刚接触建模领域不到半年的零基础小白极度主观的Blender与其他软件对比环节</p>
+<ul>
+<li>Blender VS C4D ： <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/288361117" title="c4d和Blender哪个好用，有什么区别吗？ -知乎">c4d和Blender哪个好用，有什么区别吗？ -知乎</a></li>
+<li>Blender VS Maya ： <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av51344293" title="Blender制作《流浪地球》创意总监采访 CG世界特邀嘉宾-王磊">Blender制作《流浪地球》创意总监采访 CG世界特邀嘉宾-王磊</a></li>
+</ul>
+<p>当然，软件只是工具，学习一周就可以入门，建模（单体、场景、生物）、材质、灯光、渲染这些才是这个领域从业人员的核心本领</p>
+<p>我只是选一个我最喜欢的软件来开始我的学习之旅</p>
+<hr>
+<p>希望这篇文章能给想要学习3D的同学一点帮助<br>共勉</p>
+<div style="width: 80%; margin: auto"><img src="/2019/07/25/006-Learning-resources-recommendation-for-Blender/09startup.png" srcset="/img/loading.gif" lazyload class=""></div>
+2019/07/25
+
+
+<h4 id="2020-08-03更新-Nodevember"><a href="#2020-08-03更新-Nodevember" class="headerlink" title="2020/08/03更新 Nodevember"></a>2020/08/03更新 Nodevember</h4><p>感受blender节点的魅力(?)</p>
+<a href="/2019/11/19/026-Amazing-nodevember/" title="推荐：nodevember活动">推荐：nodevember活动</a>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Blender/">Blender</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8E%A8%E8%8D%90/">推荐</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/08/01/007-Ducky-3D-Tutorials-Practice-Project/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">练习： Ducky 3D 教程补完计划 [已完成]</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/07/19/005-Nichijou-ha-kiseki/">
+                        <span class="hidden-mobile">我们所经历的每个平凡的日常，也许就是连续发生的奇迹。</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

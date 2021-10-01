@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog - Kassadin</title>
+  <icon>https://kassadin.moe/public/img/ghost_icon.png</icon>
+  <subtitle>森同学的博客</subtitle>
+  <link href="https://kassadin.moe/atom.xml" rel="self"/>
+  
+  <link href="https://kassadin.moe/"/>
+  <updated>2021-09-24T08:10:30.139Z</updated>
+  <id>https://kassadin.moe/</id>
+  
+  <author>
+    <name>森同学</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pixel 3 开启电信SIM卡支持</title>
+    <link href="https://kassadin.moe/2021/08/18/053-Enable-China-Telecom-Support-for-Pixel-3/"/>
+    <id>https://kassadin.moe/2021/08/18/053-Enable-China-Telecom-Support-for-Pixel-3/</id>
+    <published>2021-08-18T13:49:01.000Z</published>
+    <updated>2021-09-24T08:10:30.139Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2021年，我准备把 Pixel 3 当主力机&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：主板静电</title>
+    <link href="https://kassadin.moe/2021/04/10/052-Static-Electricity-on-Motherboard/"/>
+    <id>https://kassadin.moe/2021/04/10/052-Static-Electricity-on-Motherboard/</id>
+    <published>2021-04-10T01:35:20.000Z</published>
+    <updated>2021-04-10T02:16:10.390Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;几周前看到一篇博客 &lt;a href=&quot;https://lala.im/7769.html&quot;&gt;LALA - 微星B360M迫击炮主板没声音关不了机解决办法&lt;/a&gt;，提到主板静电可能导致电脑突然很卡，直到死机；电脑关机后不断电…等问题&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转载：墨茶Offical</title>
+    <link href="https://kassadin.moe/2021/01/24/051-MoCha-Offical/"/>
+    <id>https://kassadin.moe/2021/01/24/051-MoCha-Offical/</id>
+    <published>2021-01-24T04:35:41.000Z</published>
+    <updated>2021-04-05T03:00:11.567Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;21号晚上在贴吧了解到&lt;code&gt;墨茶&lt;/code&gt;的事情，去他的&lt;a href=&quot;https://space.bilibili.com/212535360/dynamic&quot;&gt;主页&lt;/a&gt;看了看。&lt;br&gt;想说点什么，但……说不出话。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;留下一点&lt;code&gt;不正确记忆&lt;/code&gt;吧&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>050 Pantheon files install log</title>
+    <link href="https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/"/>
+    <id>https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/</id>
+    <published>2020-09-15T07:53:20.000Z</published>
+    <updated>2021-04-05T03:02:49.790Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;仿MacOS多栏式文件浏览器&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>049 Davinci Resolve install log</title>
+    <link href="https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/"/>
+    <id>https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/</id>
+    <published>2020-09-14T14:13:50.000Z</published>
+    <updated>2021-04-05T03:27:02.727Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Pop!_OS 20.04 LTS 安装 DaVinci Resolve 16.2.6，无法启动软件&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>048 Openwrt build log</title>
+    <link href="https://kassadin.moe/2020/09/11/048-Openwrt-build-log/"/>
+    <id>https://kassadin.moe/2020/09/11/048-Openwrt-build-log/</id>
+    <published>2020-09-11T10:58:53.000Z</published>
+    <updated>2021-04-05T03:32:21.790Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;尝试编译Openwrt，困难重重(对我来说&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>047 Nextcloud build log</title>
+    <link href="https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/"/>
+    <id>https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/</id>
+    <published>2020-09-11T10:58:20.000Z</published>
+    <updated>2021-04-05T03:40:13.943Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;尝试自建Nextcloud网盘，记录一下参考资料&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>046 Janpanese input on Ubuntu</title>
+    <link href="https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/"/>
+    <id>https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/</id>
+    <published>2020-08-03T10:27:11.000Z</published>
+    <updated>2021-04-05T02:57:43.163Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Usage of Japanese Mozc on Ubuntu Gnome&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
+    
+    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS从镜像文件安装软件</title>
+    <link href="https://kassadin.moe/2020/08/01/045-centos-local-repo/"/>
+    <id>https://kassadin.moe/2020/08/01/045-centos-local-repo/</id>
+    <published>2020-08-01T11:19:58.000Z</published>
+    <updated>2021-04-05T03:11:27.107Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;设置iso镜像文件为本地仓库，遇到的问题&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用软件</title>
+    <link href="https://kassadin.moe/2020/07/28/044-installed-softwares/"/>
+    <id>https://kassadin.moe/2020/07/28/044-installed-softwares/</id>
+    <published>2020-07-27T23:34:27.000Z</published>
+    <updated>2021-08-19T16:34:46.688Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;重装系统了，记录一下常用软件 (In Linux, Web browser and Android)&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux boot文件损坏</title>
+    <link href="https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/"/>
+    <id>https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/</id>
+    <published>2020-07-27T10:45:47.000Z</published>
+    <updated>2021-04-05T02:56:28.450Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;人作死，就会死&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>042 Miners the horsekeeper and Pneumoconiosis</title>
+    <link href="https://kassadin.moe/2020/05/04/042-Miners-the-horsekeeper-and-Pneumoconiosis/"/>
+    <id>https://kassadin.moe/2020/05/04/042-Miners-the-horsekeeper-and-Pneumoconiosis/</id>
+    <published>2020-05-04T03:58:31.000Z</published>
+    <updated>2021-01-24T04:31:16.435Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;2019-公益-纪录片《矿民、马夫、尘肺病》&quot;&gt;&lt;a href=&quot;#2019-公益-纪录片《矿民、马夫、尘肺病》&quot; class=&quot;headerlink&quot; title=&quot;2019 公益-纪录片《矿民、马夫、尘肺病》&quot;&gt;&lt;/a&gt;2019 公益-纪录片《矿民、马夫、尘肺病》&lt;/h3&gt;</summary>
+    
+    
+    
+    
+    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转载：国王的名字</title>
+    <link href="https://kassadin.moe/2020/04/04/041-404-not-found/"/>
+    <id>https://kassadin.moe/2020/04/04/041-404-not-found/</id>
+    <published>2020-04-04T02:14:19.000Z</published>
+    <updated>2021-04-05T04:16:39.150Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;原文由&lt;code&gt;@粟添&lt;/code&gt;发表于微博，已被404&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>040 change vim comment color</title>
+    <link href="https://kassadin.moe/2020/03/31/040-change-vim-comment-color/"/>
+    <id>https://kassadin.moe/2020/03/31/040-change-vim-comment-color/</id>
+    <published>2020-03-31T04:12:00.000Z</published>
+    <updated>2020-04-17T06:56:48.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Default color scheme is hurting my eyes.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
+    
+    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>039 Log of migrating to Linux</title>
+    <link href="https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/"/>
+    <id>https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/</id>
+    <published>2020-03-15T04:31:13.000Z</published>
+    <updated>2021-10-01T11:54:18.432Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Newbie&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
+    
+    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>038 MPV configuration</title>
+    <link href="https://kassadin.moe/2020/03/12/038-MPV-configuration/"/>
+    <id>https://kassadin.moe/2020/03/12/038-MPV-configuration/</id>
+    <published>2020-03-12T08:43:32.000Z</published>
+    <updated>2021-04-06T11:21:06.053Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;See you later.&lt;/p&gt;
+&lt;p&gt;2021/04/06 update &lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
+    
+    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：Putty设置及使用公钥验证登录</title>
+    <link href="https://kassadin.moe/2020/03/12/037-putty-default-settings-and-SSH-private-key-auth/"/>
+    <id>https://kassadin.moe/2020/03/12/037-putty-default-settings-and-SSH-private-key-auth/</id>
+    <published>2020-03-12T08:43:02.000Z</published>
+    <updated>2020-09-17T09:45:27.768Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;迁移Linux系列&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转载：发哨子的人</title>
+    <link href="https://kassadin.moe/2020/03/12/036-Ai-Fen/"/>
+    <id>https://kassadin.moe/2020/03/12/036-Ai-Fen/</id>
+    <published>2020-03-12T07:22:22.000Z</published>
+    <updated>2021-01-24T04:31:13.893Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;不能，不明白&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：Linux下运行多个Telegram实例</title>
+    <link href="https://kassadin.moe/2020/03/06/035-multi-instances-telegram-in-linux/"/>
+    <id>https://kassadin.moe/2020/03/06/035-multi-instances-telegram-in-linux/</id>
+    <published>2020-03-06T07:59:18.000Z</published>
+    <updated>2020-07-27T16:11:40.731Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录在Linxu里运行多个Telegram的方法。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2020/07/28  更新：&lt;br&gt;桌面版Telegram 2.2版本支持多账户切换了&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：Telegram - 禁止转发特定频道机器人</title>
+    <link href="https://kassadin.moe/2020/02/23/034-anti-forward-bot-in-telegram/"/>
+    <id>https://kassadin.moe/2020/02/23/034-anti-forward-bot-in-telegram/</id>
+    <published>2020-02-23T08:41:56.000Z</published>
+    <updated>2020-02-27T10:46:14.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;刷屏禁止~&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+</feed>

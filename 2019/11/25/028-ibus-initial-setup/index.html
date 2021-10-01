@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="iBus-rime初步设置">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>笔记：配置ibus-rime中文输入法 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="笔记：配置ibus-rime中文输入法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-11-25 15:37" pubdate>
+        2019-11-25
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">笔记：配置ibus-rime中文输入法</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021-05-09
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>iBus-rime初步设置</p>
+<span id="more"></span> 
+
+<hr>
+<h5 id="iBus开机启动，常驻后台"><a href="#iBus开机启动，常驻后台" class="headerlink" title="iBus开机启动，常驻后台"></a>iBus开机启动，常驻后台</h5><p>在Linux上安装好rime输入法之后，需要ibus支持<br>但是在ibus里一顿设置，关掉窗口，ibus就退出了…</p>
+<p>查文档 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/IBus#Initial_setup" title="link">iBus Initial setup - Archlinux</a></p>
+<p>在<code>~/.bashrc</code>最后添加</p>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
+
+<hr>
+<p>上面的方法在虚拟机里成功了，但是在笔记本上又不灵了</p>
+<p>还是文档里的方法，创建 <code>~/.xprofile</code> 文件，添加</p>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
+
+<hr>
+<h5 id="安装输入法全过程"><a href="#安装输入法全过程" class="headerlink" title="安装输入法全过程"></a>安装输入法全过程</h5><figure class="highlight pgsql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs pgsql"># install plum : https://github.com/rime/plum<br>curl -fsSL https://git.io/rime-install | bash<br><br># install <span class="hljs-type">double</span>-pinyin<br>cd plum<br>bash rime-install <span class="hljs-type">double</span>-pinyin<br><br># install ibus-rime<br>pacman -S ibus-rime<br><br># modify home/<span class="hljs-keyword">user</span>/.config/ibus/rime/<span class="hljs-keyword">default</span>.yaml, <span class="hljs-keyword">add</span> <span class="hljs-type">double</span>-pinyin <span class="hljs-keyword">schema</span><br><br># <span class="hljs-keyword">create</span> home/<span class="hljs-keyword">user</span>/.xprofile, <span class="hljs-keyword">add</span> <span class="hljs-keyword">following</span> commands<br># iBus <span class="hljs-keyword">always</span> <span class="hljs-keyword">on</span> <br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br># <span class="hljs-keyword">log</span> <span class="hljs-keyword">out</span>, <span class="hljs-keyword">and</span> <span class="hljs-keyword">log</span> <span class="hljs-keyword">in</span> <br></code></pre></div></td></tr></table></figure>
+
+<hr>
+<h5 id="2020-03-08-更新"><a href="#2020-03-08-更新" class="headerlink" title="2020/03/08 更新"></a>2020/03/08 更新</h5><p>又安装了一遍，优化了一下步骤</p>
+<figure class="highlight vala"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vala"><span class="hljs-meta"># install plum bash: https://github.com/rime/plum</span><br>git clone https:<span class="hljs-comment">//github.com/rime/plum.git</span><br><br><span class="hljs-meta"># install double-pinyin</span><br>cd plum<br>bash rime-install <span class="hljs-keyword">double</span>-pinyin<br><br><span class="hljs-meta"># install ibus-rime</span><br>pacman -S ibus-rime<br><br><span class="hljs-meta"># modify ~/.config/ibus/rime/build/default.yaml</span><br><span class="hljs-meta"># add double-pinyin to `schema_list`</span><br><br><span class="hljs-meta"># create ~/.xprofile, add following </span><br><span class="hljs-meta"># iBus always on </span><br>export GTK_IM_MODULE=ibus<br>export XMODIFIERS=@im=ibus<br>export QT_IM_MODULE=ibus<br>ibus-daemon -drx<br><br><span class="hljs-meta"># log out, and log in </span><br><span class="hljs-meta"># iBus will autostart</span><br></code></pre></div></td></tr></table></figure>
+
+<p>修改：</p>
+<ul>
+<li>使用<code>git clone</code>下载plum脚本，原来那个命令会直接运行脚本，安装一堆输入方案，但安装的那些我都不需要</li>
+<li>rime的<code>default.yaml</code>路径有变化，内容似乎没变，改就是了</li>
+</ul>
+<p>避坑：</p>
+<ul>
+<li>最好先修改rime的<code>default.yaml</code>文件，再启动ibus，切换rime输入法</li>
+<li>因为第一次启动rime时，会根据<code>default.yaml</code>配置文件部署输入方案（把<code>.yaml</code>输入方案文件转成<code>.bin</code>，方便电脑用)</li>
+<li>先改配置文件，就可以一次部署完，不用再专门部署<blockquote>
+<p>我因为这个问题卡了三四天…<br>先启动了rime，后面修改完配置文件，找不到在哪里重新部署<br>网上查，说有部署的按钮，可是怎么都找不到，命令行也找了几个，都不管用<br>最后才发现<br>原来左键单击rime的托盘图标，就有部署选项…（我都是右键那个图标，出来的是iBus的选项<br>我太菜了</p>
+</blockquote>
+</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>目前发现一个问题，命令行下，rime的候选菜单位置不在游标处，到处乱跑，眼睛有点累…<blockquote>
+<p>2020/03/10 更新<br>发现不只是命令行下有问题，网页编辑谷歌文档也是这样…</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h5 id="2020-04-12-更新-xprofile启动iBus"><a href="#2020-04-12-更新-xprofile启动iBus" class="headerlink" title="2020/04/12 更新 . .xprofile启动iBus"></a>2020/04/12 更新 <code>. .xprofile</code>启动iBus</h5><p>之前都是登出，再登入，读取<code>.xprofile</code>配置<br>今天iBus崩溃掉了，不是很想登出再登入<br>想了想，既然可以用<code>. .bashrc</code> or <code>source .bashrc</code>更新shell环境，那<code>. .xprofile</code>是不是也可以呢？<br>执行一下，确实可以</p>
+<hr>
+<h5 id="2020-11-28-update"><a href="#2020-11-28-update" class="headerlink" title="2020/11/28 update"></a>2020/11/28 update</h5><p>manjaro-kde-20.1.2-201019-linux58 kde desktop crash when using <code>.xprofile</code><br>edit <code>~/.bashrc</code> is ok</p>
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># iBus always on </span><br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=@im=ibus<br><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=ibus<br>ibus-daemon -drx<br></code></pre></div></td></tr></table></figure>
+
+<p><del><code>default.yaml</code> file at <code>/usr/share/rime-data/default.yaml</code></del></p>
+<blockquote>
+<p>2021/02/21 update<br>现在<code>~/.config/ibus/rime/</code>路径下没有<code>default.yaml</code>，在网上看了看文档，不建议直接修改<code>/usr/share/rime-data/default.yaml</code>文件（因为每次升级都会丢失自定义配置</p>
+</blockquote>
+<hr>
+<h5 id="2021-02-21-update-DIY-ibus-rime"><a href="#2021-02-21-update-DIY-ibus-rime" class="headerlink" title="2021/02/21 update DIY ibus-rime"></a>2021/02/21 update DIY ibus-rime</h5><p>推荐的方法是在<code>~/.config/ibus/rime/</code>路径下新增<code>patch</code>文件</p>
+<ul>
+<li><p>添加双拼方案<br><a target="_blank" rel="noopener" href="https://github.com/rime/rime-double-pinyin">Github -  rime/rime-double-pinyin</a><br>找到自己需要的方案下载下来，复制到<code>~/.config/ibus/rime/</code>路径下，我的是<code>double_pinyin_flypy.schema.yaml</code><br>然后打补丁</p>
+<figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk">vim ~<span class="hljs-regexp">/.config/i</span>bus<span class="hljs-regexp">/rime/</span>default.custom.yaml<br><br><span class="hljs-comment"># add following lines</span><br>patch:<br>  schema_list:<br>    - schema: double_pinyin_flypy<br></code></pre></div></td></tr></table></figure>
+<p>重新部署一下，就生效了<br>这个补丁会覆盖默认的<code>schema_list</code>参数，需要其他输入法的话，请在补丁里添加（写的时候注意遵守yaml语法规范</p>
+</li>
+<li><p>输入选单横排<br>今天升级后，<code>ibus</code>里设置横排不管用了，上网找了找，解决方法是</p>
+<figure class="highlight yaml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs yaml"><span class="hljs-string">vim</span> <span class="hljs-string">~/.config/ibus/rime/ibus_rime.custom.yaml</span><br><br><span class="hljs-comment"># add following lines</span><br><span class="hljs-attr">patch:</span><br>  <span class="hljs-attr">style:</span><br>    <span class="hljs-attr">horizontal:</span> <span class="hljs-literal">true</span><br></code></pre></div></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>Ref:</strong><br><a target="_blank" rel="noopener" href="https://rime.im/docs/">RIME | 中州韻輸入法引擎 幫助文檔</a><br><a target="_blank" rel="noopener" href="https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E6%96%B9%E6%A1%88%E9%81%B8%E5%96%AE">Rime 定製指南 - 定製方案選單</a><br><a target="_blank" rel="noopener" href="https://github.com/rime/ibus-rime/issues/42#issuecomment-727666959">Cannot get ibus_rime.yaml to work - unable to set my style/horizontal to true</a><br><a target="_blank" rel="noopener" href="https://sh.alynx.one/posts/My-RIME/">可能只适合我自己的 RIME 配置</a> &lt;&lt;&lt; 这个赞</p>
+<hr>
+<p>2021/05/09 update</p>
+<h5 id="Install-ibus-mozc-ut-Japanese-Input-Method"><a href="#Install-ibus-mozc-ut-Japanese-Input-Method" class="headerlink" title="Install ibus-mozc-ut Japanese Input Method"></a>Install ibus-mozc-ut Japanese Input Method</h5><p>Manjaro下的ibus框架，安装日语输入法，看了看应该是<code>ibus-mozc-ut</code>这个AUR包<br>编译20分钟，安装好之后怎么调都调不出来，浪费半个小时<br>发现是没有<code>log out &amp; log in</code>的原因………（对不起，我应该谨遵教程，不该偷懒省略<code>log out</code>这一步<br>重新进来就有<code>Japanese - Mozc</code>这个输入法了，然后设置<code>Romaji Input Method</code>和<code>Hiragana</code>之类的<br>更多的输入法技巧正在学习中~</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/12/03/029-Remote-Desktop-2-by-router/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：远程桌面2 -- 路由器 （玩不转）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/11/25/027-linux-network-proxy-settings/">
+                        <span class="hidden-mobile">笔记：Linux系统代理设置</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

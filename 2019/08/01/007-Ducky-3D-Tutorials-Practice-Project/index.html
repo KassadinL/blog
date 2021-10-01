@@ -1,0 +1,1022 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+2019/09/14Ducky的教程已经做完了
+">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>练习： Ducky 3D 教程补完计划 [已完成] - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/index_img/007.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="练习： Ducky 3D 教程补完计划 [已完成]">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-08-01 12:29" pubdate>
+        2019-08-01
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      26
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">练习： Ducky 3D 教程补完计划 [已完成]</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020-04-04
+                
+              </p>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>2019/09/14<br>Ducky的教程已经做完了</p>
+</blockquote>
+<span id="more"></span>
+
+<hr>
+<p>在<a target="_blank" rel="noopener" href="https://kassadinl.github.io/2019/07/25/006-Learning-resources-recommendation-for-Blender/" title="Blender学习资源推荐">Blender学习资源推荐</a>中，我提到了<code>Ducky 3D</code>这位youtuber，他的教程比较简单</p>
+<p>准备把他发出来的所有教程都做一遍，作为练习<br>把进度放在这个帖子中，督促自己不要偷懒</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCuNhGhbemBkdflZ1FGJ0lUQ/videos" title="Ducky 3D&#39;s Youtube Channel">Ducky 3D’s Youtube Channel</a></p>
+<hr>
+<hr>
+<table>
+<thead>
+<tr>
+<th>完成时间</th>
+<th>视频标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>09/10</td>
+<td>Blender - Glitching Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Blender - Abstract Animation Loop in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Blender - Easy Asteroid or Meteor Animation in Eevee and Cycles</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Blender - Abstract Animation Loop in Eevee Blender 2.8</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Blender - Sci-Fi Particle Simulation in Eevee Blender 2.8</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Blender - 5 FREE Add-ons for Blender 2.8</td>
+</tr>
+<tr>
+<td>09/10</td>
+<td>Ducky 3D Patreon, More Tutorials and assets!</td>
+</tr>
+<tr>
+<td>09/12</td>
+<td>Blender - Colorful Space Animation in Eevee Blender 2.8</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Sci-fi Hologram Material in Blender 2.8 Eevee</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Stylized Glass Shader in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Easy Blinking Lights Animation in Cycles and Eevee</td>
+</tr>
+<tr>
+<td>08/21</td>
+<td>Blender - Cinematic Movie Text Animation In Eevee</td>
+</tr>
+<tr>
+<td>09/12</td>
+<td>Blender - Abstract Tunnel Animation Loop In Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Easy LEGO Animation in Eevee Blender 2.8</td>
+</tr>
+<tr>
+<td>07/22</td>
+<td>Blender - Stylized Emission Shader (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/22</td>
+<td>Blender - Cool Sci-fi Text Animation/Intro Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/19</td>
+<td>Blender - Energy Pulse Explosion Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/28</td>
+<td>Blender - Glowing Rock Material (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/22</td>
+<td>Blender - My Eevee Settings (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/13</td>
+<td>Blender - Glitching Effects in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Free Blender Materials (Eevee &amp; Cycles)</td>
+</tr>
+<tr>
+<td>07/28</td>
+<td>Blender - Easy Intro Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/27</td>
+<td>Blender - Easy Sci-fi Style Animation Loop in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/14</td>
+<td>Blender - Modern Home Design in Blender 2.8 (Modern Architecture)</td>
+</tr>
+<tr>
+<td>09/14</td>
+<td>Blender - Abstract Design in Blender 2.8 (Beginner Tutorial)</td>
+</tr>
+<tr>
+<td>09/12</td>
+<td>Blender - Easy Light Sign in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/29</td>
+<td>Blender - 80’s Style Sunset Animation loop in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Rust Growth Animation in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/14</td>
+<td>Blender - Advanced Text in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/11</td>
+<td>Blender - Abstract Animation Loop in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/12</td>
+<td>Blender - 80’s Style Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>07/28</td>
+<td>Blender - Easy Particle Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/13</td>
+<td>Blender - Easy Sci-fi City Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/13</td>
+<td>Blender - Simple Abstract Design in Blender 2.8 (design theory)</td>
+</tr>
+<tr>
+<td>09/07</td>
+<td>Blender - Amazing procedural shaders for blender 2.8</td>
+</tr>
+<tr>
+<td>09/07</td>
+<td>Blender - Easy Logo Reveal in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/07</td>
+<td>Answering Your Questions, Ducky 3D Q&amp;A</td>
+</tr>
+<tr>
+<td>09/07</td>
+<td>Blender - Simple Motion Graphics in Blender 2.8 (Seamless loop in Eevee)</td>
+</tr>
+<tr>
+<td>09/07</td>
+<td>Blender Fantasy Crystals in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/09</td>
+<td>Blender - Easy Low Poly Environment in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/09</td>
+<td>Blender - Easy Interior with Rainy window in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/09</td>
+<td>Blender - Easy Sci-fi Hallway Design in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/09</td>
+<td>Blender - Abstract Volumes in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/09</td>
+<td>Blender - Easy Sci-fi Environment Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>05/15</td>
+<td>Blender - Procedural Rust in Blender 2.8 Nodes</td>
+</tr>
+<tr>
+<td>07/07</td>
+<td>Blender - Basic 3D Lighting Tricks in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/03</td>
+<td>Blender - Simple Motion Graphics in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/31</td>
+<td>Blender - Procedural Dented Metal shader (Blender 2.8)</td>
+</tr>
+<tr>
+<td>05/13</td>
+<td>Blender - Procedural Lava Shader in Blender 2.8</td>
+</tr>
+<tr>
+<td>09/03</td>
+<td>Blender - Eevee Alien Landscape Environment (Blender 2.8)</td>
+</tr>
+<tr>
+<td>09/03</td>
+<td>Blender - Simple Eevee Environment For Beginners! (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/31</td>
+<td>How to Use the Material Pack</td>
+</tr>
+<tr>
+<td>08/31</td>
+<td>Blender - 100% PROCEDURAL MATERIAL PACK FOR BLENDER 2.8</td>
+</tr>
+<tr>
+<td>08/31</td>
+<td>Blender 2.8 - Satisfying Animation In Eevee</td>
+</tr>
+<tr>
+<td>08/30</td>
+<td>Blender - Easy Eevee Environment for Beginners (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/30</td>
+<td>Blender - Simple Abstract Design In Blender 2.8</td>
+</tr>
+<tr>
+<td>08/29</td>
+<td>Blender - 10 Free Paint Abstract Textures (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/29</td>
+<td>Blender - Easy Audio Visualizer in eevee Blender 2.8</td>
+</tr>
+<tr>
+<td>08/30</td>
+<td>Blender - Easy Eevee Environment Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/29</td>
+<td>Blender - Simple Sci-fi Tentacle-like Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blender - Iridescent Material in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/29</td>
+<td>Blender - Easy Environment Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blender - Sci-fi Alien Animation in Eevee (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blender - Simple Logo Design Technique (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blenders New Voronoi Node Features (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blender - Abstract Text Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/25</td>
+<td>Blender - 80’s Style Animation Loop in Eevee</td>
+</tr>
+<tr>
+<td>08/22</td>
+<td>Blender - Sci-Fi Animation Loop in Eevee</td>
+</tr>
+<tr>
+<td>08/21</td>
+<td>Blender - Organic Eevee Animation Loop (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/20</td>
+<td>Blender - 3 AMAZING places for FREE Assets for Blender</td>
+</tr>
+<tr>
+<td>08/20</td>
+<td>Blender Quick Tip - Looping Displacement (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/21</td>
+<td>Blender - Simple Eevee Animation (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/20</td>
+<td>Blender - Free Procedural Fire Shader</td>
+</tr>
+<tr>
+<td>08/20</td>
+<td>Blender - Text/Type Design Tutorial (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/19</td>
+<td>Blender - 4 add-ons in Blender 2.8 to jump start your designs</td>
+</tr>
+<tr>
+<td>08/19</td>
+<td>Bender - Abstract Design Tutorial (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/19</td>
+<td>Blender - 3 Interesting Objects with the Array Modifier</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>Blender - Simple Abstract Eevee Animation (blender 2.8)</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>Blender - My Eevee Settings (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>The Future OF Ducky 3D</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>Blender - Abstract Eevee Animation Loop</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>Blender - Easy Sci-Fi Landscapes (JS Placement)</td>
+</tr>
+<tr>
+<td>08/16</td>
+<td>Blender - Abstract Design Tutorial (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/12</td>
+<td>Blender - Free Procedural Cloth Shader for Blender</td>
+</tr>
+<tr>
+<td>08/14</td>
+<td>Blender - Sci-Fi Project Breakdown 2 (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/13</td>
+<td>Blender - Abstract Still life (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Quick Text Topology Fix</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Using Color Pallets in Blender</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Abstract Design Tutorial (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Material/Shader Tutorial in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Material/Shader Tutorial in blender 2.8</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Material/Shader Tutorial in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Material/Shader Tutorial in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/11</td>
+<td>Blender - Material/Shader Tutorial 1</td>
+</tr>
+<tr>
+<td>08/10</td>
+<td>Free Blender Materials for blender 2.8 (Eevee and Cycles)</td>
+</tr>
+<tr>
+<td>08/10</td>
+<td>Blender - Sci-Fi Project Breakdown (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/09</td>
+<td>Blender - Abstract Design Tutorial</td>
+</tr>
+<tr>
+<td>08/09</td>
+<td>Blender - Easy Focusing Trick</td>
+</tr>
+<tr>
+<td>08/10</td>
+<td>Blender - Loop Any Texture</td>
+</tr>
+<tr>
+<td>08/10</td>
+<td>Blender - VJ Loop Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/07</td>
+<td>Cinema 4D Style in Blender (C4D vs Blender)</td>
+</tr>
+<tr>
+<td>08/09</td>
+<td>Blender - Abstract Geometric Design (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/03</td>
+<td>Blender - Make anything React to Music\Audio (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/08</td>
+<td>Blender - Abstract Design in Blender</td>
+</tr>
+<tr>
+<td>08/08</td>
+<td>Blender - Seamless Tube\VJ Loop in Blender 2.8</td>
+</tr>
+<tr>
+<td>08/07</td>
+<td>Blender - Eevee Volumetric Smoke</td>
+</tr>
+<tr>
+<td>08/07</td>
+<td>Blender - Easy Syfy Landscape</td>
+</tr>
+<tr>
+<td>08/07</td>
+<td>Blender - Quick Abstract Wallpaper Animation (Eevee) (Blender 2.8)</td>
+</tr>
+<tr>
+<td>08/07</td>
+<td>Blender - Abstract Geometric Design (easy)</td>
+</tr>
+<tr>
+<td>08/06</td>
+<td>Blender - Abstract Shader (easy)</td>
+</tr>
+<tr>
+<td>08/02</td>
+<td>Blender - Transition Square to Sphere</td>
+</tr>
+<tr>
+<td>08/06</td>
+<td>Blender - Liquify\Paint Style Displacement Tutorial</td>
+</tr>
+<tr>
+<td>08/06</td>
+<td>Blender - Shrinkwrap Trick</td>
+</tr>
+<tr>
+<td>08/02</td>
+<td>800 Free Blender Materials and Textures</td>
+</tr>
+<tr>
+<td>08/02</td>
+<td>Blender - Hex Pattern On any Model (One Click)</td>
+</tr>
+<tr>
+<td>08/05</td>
+<td>Blender - Easy Lines/Tubes with particles</td>
+</tr>
+<tr>
+<td>07/31</td>
+<td>Blender - Quick Kaleidoscope Model</td>
+</tr>
+<tr>
+<td>08/01</td>
+<td>Blender - Dissolving Box Tutorial</td>
+</tr>
+<tr>
+<td>08/02</td>
+<td>Blender Project Breakdown 001</td>
+</tr>
+<tr>
+<td>08/01</td>
+<td>Blender - Displacement Tricks</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Mountain Spikes Easy</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Easy Tunnel Hallway</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Flat Patterns (Easy)</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Easy Slime Tutorial</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Abstract Sphere Tutorial (easy)</td>
+</tr>
+<tr>
+<td>07/30</td>
+<td>Blender - Glowing Spikes tutorial (easy)</td>
+</tr>
+</tbody></table>
+<hr>
+<p>进度：</p>
+<p><code>日期</code> | <code>完成</code> | <code>总计</code></p>
+<ul>
+<li><code>07/31</code> | <code>19</code> | <code>113</code></li>
+<li><code>08/04</code> | <code>26</code> | <code>115</code></li>
+<li><code>08/07</code> | <code>35</code> | <code>115</code></li>
+<li><code>08/10</code> | <code>44</code> | <code>115</code></li>
+<li><code>08/14</code> | <code>55</code> | <code>116</code></li>
+<li><code>08/17</code> | <code>61</code> | <code>117</code></li>
+<li><code>08/21</code> | <code>71</code> | <code>119</code></li>
+<li><code>08/25</code> | <code>77</code> | <code>122</code></li>
+<li><code>08/29</code> | <code>82</code> | <code>123</code></li>
+<li><code>08/31</code> | <code>89</code> | <code>123</code></li>
+<li><code>09/03</code> | <code>92</code> | <code>125</code></li>
+<li><code>09/07</code> | <code>97</code> | <code>125</code></li>
+<li><code>09/09</code> | <code>102</code> | <code>126</code></li>
+<li><code>09/10</code> | <code>109</code> | <code>126</code></li>
+<li><code>09/14</code> | <code>126</code> | <code>126</code></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Blender/">Blender</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BB%83%E4%B9%A0/">练习</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/08/18/008-Eevee-settings-of-Ducky/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：Eevee渲染器设置（Ducky版）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/07/25/006-Learning-resources-recommendation-for-Blender/">
+                        <span class="hidden-mobile">推荐：Blender学习资源推荐</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

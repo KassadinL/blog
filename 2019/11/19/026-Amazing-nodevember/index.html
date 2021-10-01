@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="nodevember是推特 @NodevemberIO 发起的一项活动，名字取自node和November结合。目的是 用大佬们雄厚的节点之力碾碎我等渣渣">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  
+  <title>推荐：nodevember活动 - Blog - Kassadin</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/hybrid.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":1},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Blog - Kassadin" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Blog - Kassadin</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="推荐：nodevember活动">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-11-19 09:24" pubdate>
+        2019-11-19
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      627 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">推荐：nodevember活动</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2019-12-18
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>nodevember是推特 <a target="_blank" rel="noopener" href="https://twitter.com/NodevemberIO" title="Nodevember">@NodevemberIO</a> 发起的一项活动，名字取自node和November结合。<br>目的是 <del>用大佬们雄厚的节点之力碾碎我等渣渣</del> <span id="more"></span> 向大家展示使用节点进行程序化生成模型的魅力</p>
+<p>官方日程表</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> is coming. The prompts are here. Get ready! <a target="_blank" rel="noopener" href="https://t.co/TzxzkTRBr2">pic.twitter.com/TzxzkTRBr2</a></p>&mdash; Nodevember (@NodevemberIO) <a target="_blank" rel="noopener" href="https://twitter.com/NodevemberIO/status/1189364910234447872?ref_src=twsrc%5Etfw">October 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<p>在这里记几个震撼到我的巨佬（这些巨佬每一个作品都很强，我只展示一部分</p>
+<blockquote>
+<p>2019/12/04 更新<br>Curtis Holt做了个视频，介绍他发现的大佬</p>
+</blockquote>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JhLVzcCl1ug" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<h4 id="Simon-Thommes"><a href="#Simon-Thommes" class="headerlink" title="Simon Thommes"></a>Simon Thommes</h4><blockquote>
+<p>2019/12/18 更新<br>大佬把30个题目都做完了 （<del>节点怪</del></p>
+</blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Wow, this has been quite the month (and a half)!<br>I&#39;m finally done with all 30 <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> prompts!<br><br>Each is made from a sphere primitive with a procedural shader in Blender.<br><br>Thanks to everyone for the amazing support and overwhelmingly positive feedback! :)<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://t.co/qOR8kxQqq6">pic.twitter.com/qOR8kxQqq6</a></p>&mdash; Simon Thommes (@simonthommes) <a target="_blank" rel="noopener" href="https://twitter.com/simonthommes/status/1206981436408049671?ref_src=twsrc%5Etfw">December 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 9 of <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> - Microbe 🦠<br><br>I&#39;m really happy with this little guy! Very much enjoyed creating him :)<br><br>This is, again, just a sphere with a completely procedural shader, using vector displacement.<br>All animation is also procedural and done in the shader.<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://t.co/0wUo0Ix4OL">pic.twitter.com/0wUo0Ix4OL</a></p>&mdash; Simon Thommes (@simonthommes) <a target="_blank" rel="noopener" href="https://twitter.com/simonthommes/status/1193374769829351428?ref_src=twsrc%5Etfw">November 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+
+
+<blockquote>
+<p>12/02 更新<br>大佬最近在YouTube上直播，手把手教你玩节点，录屏在这里： <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLNTda6bf4XyyOyZSxqIkiZDW3wJst_0BY" title="看了也学不会">Streams - Chilling with Blender</a></p>
+</blockquote>
+<hr>
+<h4 id="Luca-Rood"><a href="#Luca-Rood" class="headerlink" title="Luca Rood"></a>Luca Rood</h4><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 12: Paper<br>This on was tough! Those compound, non-coaxial folds were a real mind bender. It took a while, but it&#39;s finally finished.<br><br>Default scene, one cube, one shader, one single driven value node controls the whole animation!<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/NodevemberIO?ref_src=twsrc%5Etfw">@NodevemberIO</a> <a target="_blank" rel="noopener" href="https://t.co/wMGaVw16MO">pic.twitter.com/wMGaVw16MO</a></p>&mdash; Luca Rood (@LucaRood) <a target="_blank" rel="noopener" href="https://twitter.com/LucaRood/status/1196083028201742336?ref_src=twsrc%5Etfw">November 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 17: Hologram<br>For hologram I figured it would be nice to use the crane, as it&#39;s interesting to see all the folded paper layers through it.<br>Default scene, and a mix of surface and volume shading.<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/NodevemberIO?ref_src=twsrc%5Etfw">@NodevemberIO</a> <a target="_blank" rel="noopener" href="https://t.co/FKILIUah82">pic.twitter.com/FKILIUah82</a></p>&mdash; Luca Rood (@LucaRood) <a target="_blank" rel="noopener" href="https://twitter.com/LucaRood/status/1197299728976957440?ref_src=twsrc%5Etfw">November 20, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 19: Circuit Board<br>Deadbug circuit designs have always fascinated me! So what better than this amazing Arduino design by <a target="_blank" rel="noopener" href="https://twitter.com/kimio_kosaka?ref_src=twsrc%5Etfw">@kimio_kosaka</a>!?<br>Default scene, just a displacement shader on the cube and a single driven value for the anim.<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/NodevemberIO?ref_src=twsrc%5Etfw">@NodevemberIO</a> <a target="_blank" rel="noopener" href="https://t.co/3itlF9kzDD">pic.twitter.com/3itlF9kzDD</a></p>&mdash; Luca Rood (@LucaRood) <a target="_blank" rel="noopener" href="https://twitter.com/LucaRood/status/1201095042175291393?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<h4 id="Hans-Chiu"><a href="#Hans-Chiu" class="headerlink" title="Hans Chiu"></a>Hans Chiu</h4><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Making Zipper🤔<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/timelapse?src=hash&amp;ref_src=twsrc%5Etfw">#timelapse</a> <br>It&#39;s a geometry problem right? <a target="_blank" rel="noopener" href="https://t.co/8P02w2ZeiQ">pic.twitter.com/8P02w2ZeiQ</a></p>&mdash; Hans Chiu (@chiu_hans) <a target="_blank" rel="noopener" href="https://twitter.com/chiu_hans/status/1196448192746815488?ref_src=twsrc%5Etfw">November 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<h4 id="izuix"><a href="#izuix" class="headerlink" title="izuix"></a>izuix</h4><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Nodevember Day 10: Flower<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://t.co/Boow0Vct3V">pic.twitter.com/Boow0Vct3V</a></p>&mdash; izuix (@izutionix) <a target="_blank" rel="noopener" href="https://twitter.com/izutionix/status/1193602789013938178?ref_src=twsrc%5Etfw">November 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<h4 id="Jonas-Dichelle"><a href="#Jonas-Dichelle" class="headerlink" title="Jonas Dichelle"></a>Jonas Dichelle</h4><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Day 12 (I know, very late):<br>Paper<br><br>This is the default cube with one procedural shader, using only vector dispacement to deform it.<br>Proof in the thread :)<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember2019?src=hash&amp;ref_src=twsrc%5Etfw">#nodevember2019</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://t.co/BFOXKdoINa">pic.twitter.com/BFOXKdoINa</a></p>&mdash; Jonas Dichelle (@JonasDichelle) <a target="_blank" rel="noopener" href="https://twitter.com/JonasDichelle/status/1199448244339781633?ref_src=twsrc%5Etfw">November 26, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<h4 id="100drips"><a href="#100drips" class="headerlink" title="100drips"></a>100drips</h4><blockquote class="twitter-tweet"><p lang="en" dir="ltr">i collected all of the files i&#39;ve made for <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/Nodevember?src=hash&amp;ref_src=twsrc%5Etfw">#Nodevember</a> <br>you can get them on my gumroad <a target="_blank" rel="noopener" href="https://t.co/HwqgpDRglX">https://t.co/HwqgpDRglX</a><br>I&#39;ve put a pricetag on them, because (besides other cool stuff) there is the hexagon nodegroup included that i normally sell with another package. Enjoy!<a target="_blank" rel="noopener" href="https://twitter.com/hashtag/b3d?src=hash&amp;ref_src=twsrc%5Etfw">#b3d</a> <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/Blender3d?src=hash&amp;ref_src=twsrc%5Etfw">#Blender3d</a> <a target="_blank" rel="noopener" href="https://t.co/kKR7n6vbhg">pic.twitter.com/kKR7n6vbhg</a></p>&mdash; 100drips (@100drips) <a target="_blank" rel="noopener" href="https://twitter.com/100drips/status/1202618148207370240?ref_src=twsrc%5Etfw">December 5, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<hr>
+<h4 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h4><p>在推特搜索 <a target="_blank" rel="noopener" href="https://twitter.com/hashtag/nodevember" title="nodevember">#nodevember</a> 标签，即可感受节点的力量（<del>awsl</del></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Blender/">Blender</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8E%A8%E8%8D%90/">推荐</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/11/25/027-linux-network-proxy-settings/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">笔记：Linux系统代理设置</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/11/08/025-exe-to-service/">
+                        <span class="hidden-mobile">笔记：使用NSSM封装程序为Windows服务</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
