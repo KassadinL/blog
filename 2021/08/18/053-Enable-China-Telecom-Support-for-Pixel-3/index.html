@@ -26,7 +26,7 @@
 <meta property="og:description" content="2021年，我准备把 Pixel 3 当主力机">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-18T13:49:01.000Z">
-<meta property="article:modified_time" content="2021-10-22T18:05:10.699Z">
+<meta property="article:modified_time" content="2021-10-26T18:58:52.223Z">
 <meta property="article:author" content="森同学">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="技术">
@@ -200,7 +200,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7.1k 字
+      8.3k 字
     </span>
   
 
@@ -209,7 +209,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      22 分钟
+      26 分钟
     </span>
   
 
@@ -242,7 +242,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-10-23
+                  本文最后更新于：2021-10-27
                 
               </p>
             
@@ -384,6 +384,27 @@
 <figure class="highlight crmsh"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs crmsh"><span class="hljs-comment"># https://forum.xda-developers.com/t/uninstall-bloatwares-no-root.4321387/</span><br><br><span class="hljs-comment"># Here is a list of packages identified as bloatware / ads / junks / useless / optional.</span><br><span class="hljs-comment"># Please read comments and remove the lines where you want to keep the package.</span><br><span class="hljs-comment"># Uninstall at your own risks.</span><br><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.google.android.apps.googleassistant<br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.google.android.googlequicksearchbox<br><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.google.android.apps.subscriptions.red<br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.midrop<br><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.miplay_client  <span class="hljs-comment"># Mi Play. This is an unnecessary process that hasn&#x27;t really been used for years.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> cn.wps.xiaomi.abroad.lite <span class="hljs-comment"># WPS Office. Has been flagged for years for malware. This was banned in India for a reason.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.msa.global       <span class="hljs-comment"># MSA. This is the main service that displays ads in Xiaomi phones. This is already removed in Xiaomi.EU.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.payment        <span class="hljs-comment"># Unless you live in China or India, Xiaomi&#x27;s own payment service is redundant and unnecessary.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.ebay.carrier          <span class="hljs-comment"># In case bloatware from Ebay is installed.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.android.browser       <span class="hljs-comment"># Mi Browser. It&#x27;s a buggy unnecessary mess. Recommend you use other browsers like Chrome.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.mi.globalbrowser      <span class="hljs-comment"># Also part of Mi Browser.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.videoplayer      <span class="hljs-comment"># Mi Video player. Uninstall if you prefer to use MX Player or VLC that actually support more formats.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.micloudsync      <span class="hljs-comment"># Include if you don&#x27;t use Mi Cloud.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.hybrid           <span class="hljs-comment"># Found to be a data mining app that unnecesarily uses your phone&#x27;s resources.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.hybrid.accessory <span class="hljs-comment"># Also a data mining app. Very recommend that you get rid of this.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.player           <span class="hljs-comment"># Include if you don&#x27;t use Xiaomi&#x27;s music app.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.facebook.services     <span class="hljs-comment"># In case Facebook bloatware was preinstalled.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.facebook.system       <span class="hljs-comment"># Also Facebook bloat.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.facebook.appmanager   <span class="hljs-comment"># Also Facebook bloat.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.glgm           <span class="hljs-comment"># Mi Games. Very unncessary.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.mipicks        <span class="hljs-comment"># Very unnecessary. Xiaomi&#x27;s way to advertise their own apps.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.xiaomi.joyose         <span class="hljs-comment"># Junk and safe to remove.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.notes            <span class="hljs-comment"># Include if you use other notes apps.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.cleanmaster      <span class="hljs-comment"># Together with WPS Office, Cleaner Master was found to be affiliated with Cheetah Mobile, that included spyware and adware in their software.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.miui.weather2         <span class="hljs-comment"># Include if you use other apps to get the weather like Google or Yahoo.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.micredit.<span class="hljs-keyword">in</span>           <span class="hljs-comment"># Mi Credit. Basically useless if you live outside India.</span><br>pm uninstall -k --<span class="hljs-keyword">user</span> <span class="hljs-title">0</span> com.mipay.wallet.<span class="hljs-keyword">in</span>       <span class="hljs-comment"># Part of Mi Credit.</span><br></code></pre></div></td></tr></table></figure>
 
 </details>
+
+
+<hr>
+<p>2021/10/27 update</p>
+<p>最近收了个Google Pixel C平板玩玩，记录一下遇到的问题</p>
+<ul>
+<li><code>adb</code>可以正确识别设备，<code>fastboot</code>报错<code>no permission</code>，网上找了找有<code>lspci</code>手动添加usb设备的，但是更简单的是<code>sudo fastboot</code>…</li>
+<li>在<code>TWRP</code>里安装第三方ROM一定按照步骤来，清除<code>SYSTEM</code>和<code>DATA</code>分区，刚开始看漏这步，刷完重启，卡在开机动画，强制关机重  新进<code>TWRP</code>清除<code>DATA</code>分区还清不掉，又卡在<code>formatting data using make_ext4fs</code>不动了，仔细看了看，还有两个报错<code>failed to mount data</code>、<code>failed to mount system</code>，这两个分区都出问题了<br>解决办法参考 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/how-to-fix-unable-to-mount-data-internal-storage-0mb-in-twrp-permanently.3830897/">XDA - How to fix unable to mount data internal storage 0mb in twrp permanently</a>，在<code>TWRP</code>里点<code>Advance Wipe</code>，再点<code>Repair File System</code>，<code>Change File System</code>先改成<code>Ext2</code>，刷好之后再改回来<code>Ext4</code>，两个分区都这么改<br>接下来就按照刷机步骤一步步来，重新刷一遍，顺利开机</li>
+<li>刷好之后进系统试一试，虽然有点卡顿，<del>但也不是不能用</del><br>比较蛋疼的是，第三方ROM对<a target="_blank" rel="noopener" href="https://support.google.com/pixel/answer/6326992">原配键盘的组合键支持</a>没了，原配键盘没有<code>ESC</code>键，于是用<code>...</code>+<code>1</code>模拟<code>ESC</code>键，第三方ROM把这些扬了<br>不知道能不能通过Magisk挂载模块remap keyboard（我要是有技术该多好.jpg</li>
+</ul>
+<p>一些XDA论坛的链接，记下来，方便以后用</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/c/google-pixel-c.4832/">XDA - Google Pixel C</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/recovery-twrp-dragon-3-5-2-2021-04-07.3400503/">XDA - [RECOVERY][TWRP][dragon][3.5.2] -&gt; 2021-04-07</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/rom-unofficial-lineageos-18-1-dragon-2021-10-06.3591152/">XDA - [ROM][UNOFFICIAL][LineageOS][18.1][dragon] -&gt; 2021-10-06</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/rom-unofficial-pixel-experience-11-dragon-2021-09-26.4206015/">XDA - [ROM][UNOFFICIAL][Pixel Experience 11][Dragon][2021/09/26]</a></li>
+<li><a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/hidden-escape-key-on-pixel-c-physical-keyboard-keys-for-too.3707455/">XDA - Hidden escape key on Pixel C Physical Keyboard! Keys for “[ ] { } | ~” too!</a></li>
+</ul>
+<p>感慨一下，一个2015年的设备，直到2021年还有开发者维护，能用上Android 11，甚至开发者还打算<a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/rom-unofficial-pixel-experience-11-dragon-2021-09-26.4206015/post-85819607">支持Android 12</a><br>这个平板的使用寿命不可谓不长</p>
+<p>当然，这里也有运气的成分，本来官方支持只是从Android 6到8，然后Google就开始玩Chorme OS，把这个产品线扔了…<br>而且因为这个平板用Nvidia的<code>Tegra X1</code>芯片，不是常见的高通芯片，似乎还有其他奇奇怪怪我没看懂的限制，导致开发者都想弃坑了<br>结果Nvidia正好推出了自家的<code>Nvidia Shield TV</code>电视盒子，用的同款芯片，开发者就把电视盒子的内核移植过来，继续填坑了（似乎是这么个发展，详情可以看XDA帖子 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/future-of-our-pixel-c-goal-reached.4123463/">Future of our Pixel C - Goal reached</a></p>
+<p>感谢开源~<br>感谢开发者~</p>
 
             </div>
             <hr>
