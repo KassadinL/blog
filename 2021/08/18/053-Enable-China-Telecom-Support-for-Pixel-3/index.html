@@ -26,7 +26,7 @@
 <meta property="og:description" content="2021年，我准备把 Pixel 3 当主力机">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-18T13:49:01.000Z">
-<meta property="article:modified_time" content="2021-10-30T18:03:05.702Z">
+<meta property="article:modified_time" content="2021-10-31T05:16:38.443Z">
 <meta property="article:author" content="森同学">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="技术">
@@ -200,7 +200,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      8.3k 字
+      8.4k 字
     </span>
   
 
@@ -250,6 +250,7 @@
               <p>2021年，我准备把 Pixel 3 当主力机</p>
 <span id="more"></span>
 
+<hr>
 <p>先在网上看了几篇教程，似乎不是特别复杂</p>
 <p>Ref:<br><a target="_blank" rel="noopener" href="https://blog.isteed.cc/post/pixel-3-crack-ct/">水深火热的电信用户自救指南 —— Pixel 3 破解电信</a><br><a target="_blank" rel="noopener" href="https://blog.isteed.cc/post/pixel-3-install-magisk/">玩机的必备操作 —— Pixel3 安装 Magisk</a><br><a target="_blank" rel="noopener" href="https://www.gushiciku.cn/pl/p0sF/zh-hk">Pixel 3 完美支持中國電信</a></p>
 <p>方法大概就是：<br>解锁手机 –&gt; 刷Magisk来root手机 –&gt; 开启电信模块<br>Pixel 3 硬件是支持电信的，所以只需要稍微修改设置就可以</p>
@@ -274,7 +275,7 @@
 <p>2021/10/07 update<br><code>adb restore &lt;filepath&gt;/backup.ab</code>不好用，恢复备份失败了…<br>在网上查了查，说是有的应用不遵守<code>adb backup</code>的标准，备份的时候会有错误，但是命令行界面不会报告错误<br>恢复了两三次，数据都没回来，幸好这次数据不是特别重要<br>需要换个备份方法，待定</p>
 </blockquote>
 <hr>
-<h3 id="升级到最新系统"><a href="#升级到最新系统" class="headerlink" title="升级到最新系统"></a>升级到最新系统</h3><p>手上这台 Pixel 3 是捡的二手，曾经root过，清除数据的时候可能是忘记卸载Magisk了，手机验证通不过，没办法自动安装更新</p>
+<h3 id="升级到最新系统"><a href="#升级到最新系统" class="headerlink" title="升级到最新系统"></a>升级到最新系统</h3><p>手上这台 Pixel 3 是捡的二手，已经root了，清除数据时沒有卸载Magisk，手机验证通不过，没办法自动安装更新</p>
 <p>去网上看了看怎么手动安装更新包，<a target="_blank" rel="noopener" href="https://www.xda-developers.com/flash-monthly-security-update-google-pixel/">How to flash a monthly security update on Google Pixel without wiping data</a><br>这篇的方法是下载最新的整机固件包，改一下<code>flash-all.sh</code></p>
 <blockquote>
 <p>  Near the end of the text, remove ‘-w’ (it’s written without quotes) and save the file.</p>
@@ -283,8 +284,8 @@
 <p>但是总觉得有点担心</p>
 <p>去google下载固件的网站，看到官方推荐的方法是通过<code>Full OTA Images</code>升级： <a target="_blank" rel="noopener" href="https://developers.google.com/android/ota#instructions">Full OTA Images for Nexus and Pixel Devices - Updating instructions</a><br>步骤非常详细，按照官方指南，顺利升级到最新系统</p>
 <hr>
-<h3 id="刷Magisk"><a href="#刷Magisk" class="headerlink" title="刷Magisk"></a>刷Magisk</h3><p>我这台手机已经解锁<code>Bootloader</code>了，可以直接刷Magisk</p>
-<p><strong>如果还没解锁，注意解锁后手机会清除所有数据，记得备份</strong></p>
+<h3 id="刷Magisk"><a href="#刷Magisk" class="headerlink" title="刷Magisk"></a>刷Magisk</h3><p>我这台手机已经解锁<code>Bootloader</code>，可以直接刷Magisk</p>
+<p>如果还没解锁，可以参考google的教程 <a target="_blank" rel="noopener" href="https://developers.google.com/android/images#instructions">Factory Images for Nexus and Pixel Devices - Flashing instructions</a><br><strong>注意解锁后，手机会清除所有数据，记得备份</strong></p>
 <p>刷Magisk参考了好几篇教程，交叉比对<br><a target="_blank" rel="noopener" href="https://blog.isteed.cc/post/pixel-3-install-magisk/">玩机的必备操作 —— Pixel3 安装 Magisk</a><br><a target="_blank" rel="noopener" href="https://www.gushiciku.cn/pl/p0sF/zh-hk">Pixel 3 完美支持中國電信</a><br><a target="_blank" rel="noopener" href="https://topjohnwu.github.io/Magisk/install.html">Magisk官方文档 - Github - Magisk - Installation</a><br><a target="_blank" rel="noopener" href="https://www.xda-developers.com/google-pixel-3-unlock-bootloader-root-magisk/">How to Unlock the Bootloader and Root the Google Pixel 3 with Magisk</a></p>
 <ul>
 <li><h4 id="install-magisk-apk"><a href="#install-magisk-apk" class="headerlink" title="install magisk.apk"></a>install magisk.apk</h4><ul>
@@ -292,7 +293,7 @@
 </ul>
 </li>
 <li><h4 id="patch-boot-image"><a href="#patch-boot-image" class="headerlink" title="patch boot image"></a>patch boot image</h4><ul>
-<li>从google官方下载和手机版本对应的整机固件包： <a target="_blank" rel="noopener" href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></li>
+<li>从google官方下载和手机型号对应的 <code>Factory Images</code> - 整机固件包： <a target="_blank" rel="noopener" href="https://developers.google.com/android/images">https://developers.google.com/android/images</a></li>
 <li>解压固件包，出来3个<code>flash-***</code>脚本，<code>bootloader</code>和<code>radio</code>两个<code>.img</code>镜像，还有一个体积最大的<code>image-***.zip</code>压缩包</li>
 <li>再次解压最大的<code>image-***.zip</code>压缩包，找到<code>boot.img</code>，上传到手机（可以用<code>adb push boot.img /sdcard/Download/</code>）</li>
 <li>打开Magisk，点击上面的那个<code>Install</code>，选择<code>Select and Patch a File</code>，找到刚才传到手机上的<code>boot.img</code></li>
@@ -391,7 +392,7 @@
 <p>最近收了个Google Pixel C平板玩玩，记录一下遇到的问题</p>
 <ul>
 <li><code>adb</code>可以正确识别设备，<code>fastboot</code>报错<code>no permission</code>，网上找了找有<code>lspci</code>手动添加usb设备的，但是更简单的是<code>sudo fastboot</code>…</li>
-<li>在<code>TWRP</code>里安装第三方ROM一定按照步骤来，清除<code>SYSTEM</code>和<code>DATA</code>分区，刚开始看漏这步，刷完重启，卡在开机动画，强制关机重  新进<code>TWRP</code>清除<code>DATA</code>分区还清不掉，又卡在<code>formatting data using make_ext4fs</code>不动了，仔细看了看，还有两个报错<code>failed to mount data</code>、<code>failed to mount system</code>，这两个分区都出问题了<br>解决办法参考 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/how-to-fix-unable-to-mount-data-internal-storage-0mb-in-twrp-permanently.3830897/">XDA - How to fix unable to mount data internal storage 0mb in twrp permanently</a>，在<code>TWRP</code>里点<code>Advance Wipe</code>，再点<code>Repair File System</code>，<code>Change File System</code>先改成<code>Ext2</code>，刷好之后再改回来<code>Ext4</code>，两个分区都这么改<br>接下来就按照刷机步骤一步步来，重新刷一遍，顺利开机</li>
+<li>在<code>TWRP</code>里安装第三方ROM一定按照步骤来，清除<code>SYSTEM</code>和<code>DATA</code>分区，刚开始看漏这步，刷完重启，卡在开机动画，强制关机重 新进<code>TWRP</code>清除<code>DATA</code>分区还清不掉，又卡在<code>formatting data using make_ext4fs</code>不动了，仔细看了看，还有两个报错<code>failed to mount data</code>、<code>failed to mount system</code>，这两个分区都出问题了<br>解决办法参考 <a target="_blank" rel="noopener" href="https://forum.xda-developers.com/t/how-to-fix-unable-to-mount-data-internal-storage-0mb-in-twrp-permanently.3830897/">XDA - How to fix unable to mount data internal storage 0mb in twrp permanently</a>，在<code>TWRP</code>里点<code>Advance Wipe</code>，再点<code>Repair File System</code>，<code>Change File System</code>先改成<code>Ext2</code>，刷好之后再改回来<code>Ext4</code>，两个分区都这么改<br>接下来就按照刷机步骤一步步来，重新刷一遍，顺利开机</li>
 <li>刷好之后进系统试一试，虽然有点卡顿，<del>但也不是不能用</del><br>比较蛋疼的是，第三方ROM对<a target="_blank" rel="noopener" href="https://support.google.com/pixel/answer/6326992">原配键盘的组合键支持</a>没了，原配键盘没有<code>ESC</code>键，于是用<code>...</code>+<code>1</code>模拟<code>ESC</code>键，第三方ROM把这些扬了<br>不知道能不能通过Magisk挂载模块remap keyboard（我要是有技术该多好.jpg</li>
 </ul>
 <p>一些XDA论坛的链接，记下来，方便以后用</p>
