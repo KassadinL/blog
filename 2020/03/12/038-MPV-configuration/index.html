@@ -28,7 +28,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kassadin.moe/2020/03/12/038-MPV-configuration/01lua.jpg">
 <meta property="article:published_time" content="2020-03-12T08:43:32.000Z">
-<meta property="article:modified_time" content="2021-12-07T16:42:48.482Z">
+<meta property="article:modified_time" content="2023-08-12T13:27:40.431Z">
 <meta property="article:author" content="森同学">
 <meta property="article:tag" content="notebook">
 <meta property="article:tag" content="Linux">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.9k 字
+      3.6k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9 分钟
+      11 分钟
     </span>
   
 
@@ -245,7 +245,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021-12-08
+                  本文最后更新于：2023-08-12
                 
               </p>
             
@@ -323,6 +323,17 @@
 <li><a target="_blank" rel="noopener" href="https://github.com/hooke007/MPV_lazy">Github - hooke007 - MPV_lazy</a></li>
 <li><a target="_blank" rel="noopener" href="https://hooke007.github.io/##%E6%96%87%E6%A1%A3%E9%9B%86">hooke007 - 文档集</a><br><code>MPV_lazy</code>这套懒人包&amp;教程似乎不错，大概看了一遍，<del>改天再配置一下我的mpv（咕咕咕</del></li>
 </ul>
+<hr>
+<h2 id="2023-08-12-update"><a href="#2023-08-12-update" class="headerlink" title="2023/08/12 update"></a>2023/08/12 update</h2><h3 id="Mpv-Playlistmanager"><a href="#Mpv-Playlistmanager" class="headerlink" title="Mpv-Playlistmanager"></a>Mpv-Playlistmanager</h3><p>稍微折腾了一下 mpv，默认 <code>F8</code> 显示的播放列表字体太大了，一屏显示不了 5 条<br>上网找了找怎么缩小字体，但好像没有特别好的方法，似乎改字体大小会应用到所有控件上</p>
+<p>没办法，只好换一个播放列表脚本，<a target="_blank" rel="noopener" href="https://github.com/jonniek/mpv-playlistmanager">Github - Mpv-Playlistmanager</a>，这个似乎不错<br>不需要特别配置，把 <code>.lua</code> 和 <code>.conf</code> 放到对应的文件夹里面就行了</p>
+<p>但刚开始用的时候有一点问题，只有当前视频，文件夹里其他视频没有加载出来<br>看了看 <code>playlistmanager.conf</code> 文件</p>
+<figure class="highlight ini"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs ini"><span class="hljs-comment">#loadfiles at startup if 1 or more items in playlist</span><br><span class="hljs-attr">loadfiles_on_start</span>=<span class="hljs-literal">yes</span><br></code></pre></div></td></tr></table></figure>
+<p><code>loadfiles_on_start</code> 改成 <code>yes</code> 就可以加载文件夹里所有视频了</p>
+<p>这个脚本默认还会把图片文件也加载进来，在 <code>loadfiles_filetypes</code> 这个项目里，我不需要加载图片文件，删掉对应的后缀名就行了</p>
+<h3 id="mpv-osc-modern-f"><a href="#mpv-osc-modern-f" class="headerlink" title="mpv-osc-modern-f"></a>mpv-osc-modern-f</h3><p>看到一个不错的屏幕控件，比自带的好看多了，顺便换了一下，链接是这个 <a target="_blank" rel="noopener" href="https://github.com/FinnRaze/mpv-osc-modern-f">Github - mpv-osc-modern-f</a><br>也不用特别配置，按照项目的说明做，再自己按喜好调一下就 ok</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/po5/thumbfast">Github - thumbfast</a>，这个进度条缩略图脚本也不错，一块安装上了</p>
+<hr>
+<p>还有好多有意思的脚本，有时间再折腾<del>（咕咕咕</del><br><a target="_blank" rel="noopener" href="https://github.com/stax76/awesome-mpv">Github - Awesome mpv</a>，一堆有用的 mpv 资源导航<br><a target="_blank" rel="noopener" href="https://github.com/jonniek/mpv-scripts">Github -  mpv-scripts</a>，<code>Mpv-Playlistmanager</code> 作者的脚本合集</p>
 
             </div>
             <hr>

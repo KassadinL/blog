@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2023-05-26T17:00:14.232Z</updated>
+  <updated>2023-09-03T08:56:55.306Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Linux 下配置 Magic Trackpad 2</title>
+    <link href="https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/"/>
+    <id>https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/</id>
+    <published>2023-08-26T16:48:29.000Z</published>
+    <updated>2023-09-03T08:56:55.306Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;为了我的手腕健康&lt;/p&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Pixel 3 开启电信SIM卡支持</title>
@@ -281,7 +301,7 @@
     <link href="https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/"/>
     <id>https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/</id>
     <published>2020-03-15T04:31:13.000Z</published>
-    <updated>2023-05-26T17:15:11.703Z</updated>
+    <updated>2023-08-26T15:42:17.945Z</updated>
     
     
     <summary type="html">&lt;p&gt;Newbie&lt;/p&gt;</summary>
@@ -300,7 +320,7 @@
     <link href="https://kassadin.moe/2020/03/12/038-MPV-configuration/"/>
     <id>https://kassadin.moe/2020/03/12/038-MPV-configuration/</id>
     <published>2020-03-12T08:43:32.000Z</published>
-    <updated>2021-12-07T16:42:48.482Z</updated>
+    <updated>2023-08-12T13:27:40.431Z</updated>
     
     
     <summary type="html">&lt;p&gt;See you later.&lt;/p&gt;
@@ -363,25 +383,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;2020/07/28  更新：&lt;br&gt;桌面版Telegram 2.2版本支持多账户切换了&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：Telegram - 禁止转发特定频道机器人</title>
-    <link href="https://kassadin.moe/2020/02/23/034-anti-forward-bot-in-telegram/"/>
-    <id>https://kassadin.moe/2020/02/23/034-anti-forward-bot-in-telegram/</id>
-    <published>2020-02-23T08:41:56.000Z</published>
-    <updated>2020-02-27T10:46:14.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;刷屏禁止~&lt;/p&gt;</summary>
     
     
     
