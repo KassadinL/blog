@@ -27,7 +27,7 @@
 <meta property="og:description" content="为了我的手腕健康">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-08-26T16:48:29.000Z">
-<meta property="article:modified_time" content="2023-09-03T13:43:02.166Z">
+<meta property="article:modified_time" content="2023-09-04T17:01:26.238Z">
 <meta property="article:author" content="森同学">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="技术">
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      33 分钟
+      34 分钟
     </span>
   
 
@@ -243,7 +243,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2023-09-03
+                  本文最后更新于：2023-09-05
                 
               </p>
             
@@ -348,7 +348,10 @@
 <p>去网上找了找设置方法，参考了<br><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/345355/xinput-list-shows-same-device-twice-device-ids-change-how-to-use-set-prop">Stack Overflow - ‘xinput list’ shows same device twice &amp; device IDs change: how to use ‘set-prop’ in a script?</a><br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18755967/how-to-make-a-program-that-finds-ids-of-xinput-devices-and-sets-xinput-some-set">Stack Overflow - How to make a program that finds id’s of xinput devices and sets xinput some settings</a></p>
 <p>最后缝合出来一段能用的脚本</p>
 <figure class="highlight dsconfig"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dsconfig"><span class="hljs-comment">## Setup Apple Magic Trackpad 2</span><br><br><span class="hljs-comment"># get all trackpad devices id</span><br><span class="hljs-string">ids</span>=$(<span class="hljs-string">xinput</span> <span class="hljs-built_in">--list</span> | <span class="hljs-string">grep</span> <span class="hljs-string">&quot;Trackpad&quot;</span> | <span class="hljs-string">cut</span> -<span class="hljs-string">d</span> <span class="hljs-string">&#x27;=&#x27;</span> -<span class="hljs-string">f</span> <span class="hljs-string">2</span> | <span class="hljs-string">cut</span> -<span class="hljs-string">f</span> <span class="hljs-string">1</span>)<br><br><span class="hljs-string">for</span> <span class="hljs-string">id</span> <span class="hljs-string">in</span> $<span class="hljs-string">ids</span><br><span class="hljs-string">do</span><br>        <span class="hljs-string">xinput</span> <span class="hljs-built_in">set-prop</span> $<span class="hljs-string">id</span> <span class="hljs-string">&quot;libinput Accel Speed&quot;</span> <span class="hljs-string">0</span>.<span class="hljs-string">5</span><br>        <span class="hljs-string">xinput</span> <span class="hljs-built_in">set-prop</span> $<span class="hljs-string">id</span> <span class="hljs-string">&quot;libinput Natural Scrolling Enabled&quot;</span> <span class="hljs-string">1</span><br><span class="hljs-string">done</span><br><br><span class="hljs-comment"># libinput-gestures-setup restart</span><br><span class="hljs-string">systemctl</span> <span class="hljs-built_in">--user</span> <span class="hljs-string">restart</span> <span class="hljs-string">libinput-gestures</span>.<span class="hljs-string">service</span><br></code></pre></div></td></tr></table></figure>
-<p>加到 <code>.bashrc</code> 里，只要发现触控板不对劲，<code>Ctrl+Alt+T</code> 开一个 <code>Terminal</code> 窗口就能再次设置，让触控板顺滑如初<br>（脚本最后 2 行是因为 <code>libinput-gestures</code> 服务有时会挂掉，需要偶尔重启一下</p>
+<p>加到 <code>.bashrc</code> 里，只要发现触控板不对劲，<code>Ctrl+Alt+T</code> 开一个 <code>Terminal</code> 窗口就能再次设置，让触控板顺滑如初</p>
+<blockquote>
+<p>脚本最后 2 行是因为 <code>libinput-gestures</code> 服务有时会挂掉，需要偶尔重启一下<br>可以用 <code>libinput-gestures-setup restart</code> 重启<br>也可以把 <code>libinput-gestures</code> 注册到 <code>systemd</code> 里，用脚本里的命令重启<br>设置 <code>systemd</code> 可以参考官方文档 <a target="_blank" rel="noopener" href="https://github.com/bulletmark/libinput-gestures#systemd-user-service">Github - bulletmark/libinput-gestures - SYSTEMD USER SERVICE</a></p>
+</blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>所以这次的问题就是，<code>libinput</code> 识别到 2 个触控板，<code>libinput-gestures</code> 默认使用那个不存在的触控板，导致所有配置都不起作用<br>查了一圈，最后发现解决方法就写在文档里，清清楚楚，只是我刚开始没仔细看…悲，花了好多时间<br>以后还是应该仔细看文档，不能图省事</p>
 <h4 id="Trackpad-2-使用体验"><a href="#Trackpad-2-使用体验" class="headerlink" title="Trackpad 2 使用体验"></a>Trackpad 2 使用体验</h4><p>总体还是不错的，蓝牙连接电脑，使用一周大概掉电 20% 的样子，或者更少（没有仔细计算，好像是这个水平），电池还是比较耐用的<br>蓝牙连接的延迟似乎会高一些，而且不如有线稳定，偶尔会没有反应，要等几秒重新连<br>除此之外，还是很满意的，<del>钱没白花</del></p>
 <h4 id="托盘图标消失"><a href="#托盘图标消失" class="headerlink" title="托盘图标消失"></a>托盘图标消失</h4><p>使用触控板一段时间之后，发现有时托盘图标会莫名少几个，键盘 layout 变回默认的 US 样式，没办法更改，不知道和触控板掉线重连有没有关系<br>在网上找了找重启托盘图标的命令，在 <code>.bashrc</code> 里加一个别名 </p>
