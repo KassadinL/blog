@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2023-09-03T09:21:19.028Z</updated>
+  <updated>2023-09-04T16:04:55.732Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>055 Samsung Galaxy SCR01</title>
+    <link href="https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/"/>
+    <id>https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/</id>
+    <published>2023-09-03T14:42:35.000Z</published>
+    <updated>2023-09-04T16:04:55.732Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近拿到一台三星 &lt;code&gt;Galaxy SCR01&lt;/code&gt; 随身 Wi-Fi，折腾一下&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在 Linux 下配置 Magic Trackpad 2</title>
     <link href="https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/"/>
     <id>https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/</id>
     <published>2023-08-26T16:48:29.000Z</published>
-    <updated>2023-09-03T09:21:19.028Z</updated>
+    <updated>2023-09-03T13:43:02.166Z</updated>
     
     
     <summary type="html">&lt;p&gt;为了我的手腕健康&lt;/p&gt;
@@ -30,9 +49,9 @@
     
     
     
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="教程" scheme="https://kassadin.moe/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -368,28 +387,6 @@
     
     
     <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：Linux下运行多个Telegram实例</title>
-    <link href="https://kassadin.moe/2020/03/06/035-multi-instances-telegram-in-linux/"/>
-    <id>https://kassadin.moe/2020/03/06/035-multi-instances-telegram-in-linux/</id>
-    <published>2020-03-06T07:59:18.000Z</published>
-    <updated>2020-07-27T16:11:40.731Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;记录在Linxu里运行多个Telegram的方法。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2020/07/28  更新：&lt;br&gt;桌面版Telegram 2.2版本支持多账户切换了&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
