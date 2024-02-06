@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2023-09-04T16:10:36.867Z</updated>
+  <updated>2024-02-06T13:09:14.913Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>三星 Galaxy SCR01 随身 Wi-Fi</title>
+    <title>笔记：带猫出国过程</title>
+    <link href="https://kassadin.moe/2023/12/09/056-Fly-my-cat-to-Japan/"/>
+    <id>https://kassadin.moe/2023/12/09/056-Fly-my-cat-to-Japan/</id>
+    <published>2023-12-09T13:47:56.000Z</published>
+    <updated>2024-02-06T13:09:14.913Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;出国也不能落下我的小猫咪😼&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：三星 Galaxy SCR01 随身 Wi-Fi</title>
     <link href="https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/"/>
     <id>https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/</id>
     <published>2023-09-03T14:42:35.000Z</published>
-    <updated>2023-09-04T16:10:36.867Z</updated>
+    <updated>2023-12-14T15:33:42.777Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近拿到一台三星 &lt;code&gt;Galaxy SCR01&lt;/code&gt; 随身 Wi-Fi，折腾一下&lt;/p&gt;</summary>
@@ -36,11 +55,11 @@
   </entry>
   
   <entry>
-    <title>在 Linux 下配置 Magic Trackpad 2</title>
+    <title>笔记：在 Linux 下配置 Magic Trackpad 2</title>
     <link href="https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/"/>
     <id>https://kassadin.moe/2023/08/27/054-Config-Magic-Trackpad-in-Linux/</id>
     <published>2023-08-26T16:48:29.000Z</published>
-    <updated>2023-09-04T17:01:26.238Z</updated>
+    <updated>2024-01-15T13:24:48.226Z</updated>
     
     
     <summary type="html">&lt;p&gt;为了我的手腕健康&lt;/p&gt;
@@ -52,6 +71,8 @@
     <category term="教程" scheme="https://kassadin.moe/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -320,7 +341,7 @@
     <link href="https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/"/>
     <id>https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/</id>
     <published>2020-03-15T04:31:13.000Z</published>
-    <updated>2023-08-26T15:42:17.945Z</updated>
+    <updated>2024-01-15T13:30:42.007Z</updated>
     
     
     <summary type="html">&lt;p&gt;Newbie&lt;/p&gt;</summary>
@@ -370,23 +391,6 @@
     <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转载：发哨子的人</title>
-    <link href="https://kassadin.moe/2020/03/12/036-Ai-Fen/"/>
-    <id>https://kassadin.moe/2020/03/12/036-Ai-Fen/</id>
-    <published>2020-03-12T07:22:22.000Z</published>
-    <updated>2021-01-24T04:31:13.893Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;不能，不明白&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
     
   </entry>
   
