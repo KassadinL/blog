@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog - Kassadin</title>
+  <title>Kassadin&#39;s Blog</title>
   <icon>https://kassadin.moe/public/img/ghost_icon.png</icon>
   <subtitle>森同学的博客</subtitle>
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-02-06T13:09:14.913Z</updated>
+  <updated>2024-02-18T11:09:43.850Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月记：2024-01</title>
+    <link href="https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/"/>
+    <id>https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/</id>
+    <published>2024-02-12T08:27:54.000Z</published>
+    <updated>2024-02-18T11:09:43.850Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;全新系列之 &lt;code&gt;月度总结&lt;/code&gt;，堂堂连载！&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记：带猫出国过程</title>
@@ -372,25 +389,6 @@
     <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
     
     <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：Putty设置及使用公钥验证登录</title>
-    <link href="https://kassadin.moe/2020/03/12/037-putty-default-settings-and-SSH-private-key-auth/"/>
-    <id>https://kassadin.moe/2020/03/12/037-putty-default-settings-and-SSH-private-key-auth/</id>
-    <published>2020-03-12T08:43:02.000Z</published>
-    <updated>2020-09-17T09:45:27.768Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;迁移Linux系列&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
