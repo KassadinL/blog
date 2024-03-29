@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-03-24T16:39:42.070Z</updated>
+  <updated>2024-03-29T17:12:28.207Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记： 配置 Keychron 键盘</title>
+    <link href="https://kassadin.moe/2024/03/29/059-Keychron-Keyboard-Setup/"/>
+    <id>https://kassadin.moe/2024/03/29/059-Keychron-Keyboard-Setup/</id>
+    <published>2024-03-28T16:39:11.000Z</published>
+    <updated>2024-03-29T17:12:28.207Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;简单记录一下配置 Keychron 键盘的过程&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>月记：2024-02</title>
@@ -360,25 +377,6 @@
     
     
     <summary type="html">&lt;p&gt;Default color scheme is hurting my eyes.&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
-    
-    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>039 Log of migrating to Linux</title>
-    <link href="https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/"/>
-    <id>https://kassadin.moe/2020/03/15/039-log-of-migrating-to-linux/</id>
-    <published>2020-03-15T04:31:13.000Z</published>
-    <updated>2024-01-15T13:30:42.007Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Newbie&lt;/p&gt;</summary>
     
     
     
