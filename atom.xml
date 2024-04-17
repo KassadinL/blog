@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-03-29T17:12:28.207Z</updated>
+  <updated>2024-04-17T17:31:24.189Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阅读：人月神话</title>
+    <link href="https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/"/>
+    <id>https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/</id>
+    <published>2024-04-17T17:58:55.000Z</published>
+    <updated>2024-04-17T17:31:24.189Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2 月份看完一遍《人月神话》，划了一堆笔记，时隔两个月，终于稍微整理了一下笔记，专门开一篇 blog，推荐这本书&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="推荐" scheme="https://kassadin.moe/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="阅读" scheme="https://kassadin.moe/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记： 配置 Keychron 键盘</title>
@@ -38,7 +59,7 @@
     <link href="https://kassadin.moe/2024/03/20/058-Log-of-Month-2024-02/"/>
     <id>https://kassadin.moe/2024/03/20/058-Log-of-Month-2024-02/</id>
     <published>2024-03-20T09:39:18.000Z</published>
-    <updated>2024-03-24T16:39:42.070Z</updated>
+    <updated>2024-04-17T17:32:36.138Z</updated>
     
     
     <summary type="html">&lt;p&gt;第一篇月度总结拖了半个月，第二篇再接再厉，3 月快过完才开始动笔（&lt;/p&gt;</summary>
@@ -365,25 +386,6 @@
     
     
     <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>040 change vim comment color</title>
-    <link href="https://kassadin.moe/2020/03/31/040-change-vim-comment-color/"/>
-    <id>https://kassadin.moe/2020/03/31/040-change-vim-comment-color/</id>
-    <published>2020-03-31T04:12:00.000Z</published>
-    <updated>2020-04-17T06:56:48.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Default color scheme is hurting my eyes.&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
-    
-    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
     
   </entry>
   
