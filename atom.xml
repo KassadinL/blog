@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-04-17T17:31:24.189Z</updated>
+  <updated>2024-05-23T11:27:17.551Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,97 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聖地巡礼：GIRLS BAND CRY</title>
+    <link href="https://kassadin.moe/2024/05/23/065-Junrei-GIRLS-BAND-CRY/"/>
+    <id>https://kassadin.moe/2024/05/23/065-Junrei-GIRLS-BAND-CRY/</id>
+    <published>2024-05-23T04:03:02.000Z</published>
+    <updated>2024-05-23T11:27:17.551Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;圣地降临我身边，&lt;code&gt;聖地巡礼：GIRLS BAND CRY（川崎部分）&lt;/code&gt; 堂堂连载&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="聖地巡礼" scheme="https://kassadin.moe/tags/%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：v0.38.0 版本 MPV 播放器 OSC 消失</title>
+    <link href="https://kassadin.moe/2024/05/20/064-mpv-OSC-disappear-after-v0-38-0/"/>
+    <id>https://kassadin.moe/2024/05/20/064-mpv-OSC-disappear-after-v0-38-0/</id>
+    <published>2024-05-19T18:58:54.000Z</published>
+    <updated>2024-05-19T18:27:42.963Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;升级一下软件，mpv 的第三方 OSC 烂了&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记：破解 Sony DPT-RP1 &amp; 使用体验</title>
+    <link href="https://kassadin.moe/2024/05/06/063-Rooting-Sony-DPT-RP1/"/>
+    <id>https://kassadin.moe/2024/05/06/063-Rooting-Sony-DPT-RP1/</id>
+    <published>2024-05-06T09:17:10.000Z</published>
+    <updated>2024-05-07T10:40:39.949Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录一下破解 &lt;code&gt;Sony DPT-RP1&lt;/code&gt; 用到的资料，还有一点点使用体验&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>月记：2024-04</title>
+    <link href="https://kassadin.moe/2024/04/30/062-Log-of-Month-2024-04/"/>
+    <id>https://kassadin.moe/2024/04/30/062-Log-of-Month-2024-04/</id>
+    <published>2024-04-30T12:23:14.000Z</published>
+    <updated>2024-05-23T11:27:06.218Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;明明刚写完 3 月份月度总结（&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>月记：2024-03</title>
+    <link href="https://kassadin.moe/2024/04/28/061-Log-of-Month-2024-03/"/>
+    <id>https://kassadin.moe/2024/04/28/061-Log-of-Month-2024-03/</id>
+    <published>2024-04-27T15:16:36.000Z</published>
+    <updated>2024-05-23T11:27:08.528Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;时间来到 4 月底，3 月的月度总结终于开始动笔了…&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>阅读：人月神话</title>
@@ -76,7 +167,7 @@
     <link href="https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/"/>
     <id>https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/</id>
     <published>2024-02-12T08:27:54.000Z</published>
-    <updated>2024-03-24T13:33:25.906Z</updated>
+    <updated>2024-05-12T16:11:32.861Z</updated>
     
     
     <summary type="html">&lt;p&gt;全新系列之 &lt;code&gt;月度总结&lt;/code&gt;，堂堂连载！&lt;/p&gt;</summary>
@@ -85,6 +176,8 @@
     
     
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -101,9 +194,9 @@
     
     
     
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -295,97 +388,6 @@
     <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
     
     <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS从镜像文件安装软件</title>
-    <link href="https://kassadin.moe/2020/08/01/045-centos-local-repo/"/>
-    <id>https://kassadin.moe/2020/08/01/045-centos-local-repo/</id>
-    <published>2020-08-01T11:19:58.000Z</published>
-    <updated>2021-04-05T03:11:27.107Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;设置iso镜像文件为本地仓库，遇到的问题&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用软件</title>
-    <link href="https://kassadin.moe/2020/07/28/044-installed-softwares/"/>
-    <id>https://kassadin.moe/2020/07/28/044-installed-softwares/</id>
-    <published>2020-07-27T23:34:27.000Z</published>
-    <updated>2021-10-07T15:45:23.715Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;重装系统了，记录一下常用软件 (In Linux, Web browser and Android)&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux boot文件损坏</title>
-    <link href="https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/"/>
-    <id>https://kassadin.moe/2020/07/27/043-break-Manjaro-grub-files/</id>
-    <published>2020-07-27T10:45:47.000Z</published>
-    <updated>2021-04-05T02:56:28.450Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;人作死，就会死&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>042 Miners the horsekeeper and Pneumoconiosis</title>
-    <link href="https://kassadin.moe/2020/05/04/042-Miners-the-horsekeeper-and-Pneumoconiosis/"/>
-    <id>https://kassadin.moe/2020/05/04/042-Miners-the-horsekeeper-and-Pneumoconiosis/</id>
-    <published>2020-05-04T03:58:31.000Z</published>
-    <updated>2021-01-24T04:31:16.435Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;2019-公益-纪录片《矿民、马夫、尘肺病》&quot;&gt;&lt;a href=&quot;#2019-公益-纪录片《矿民、马夫、尘肺病》&quot; class=&quot;headerlink&quot; title=&quot;2019 公益-纪录片《矿民、马夫、尘肺病》&quot;&gt;&lt;/a&gt;2019 公益-纪录片《矿民、马夫、尘肺病》&lt;/h3&gt;</summary>
-    
-    
-    
-    
-    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转载：国王的名字</title>
-    <link href="https://kassadin.moe/2020/04/04/041-404-not-found/"/>
-    <id>https://kassadin.moe/2020/04/04/041-404-not-found/</id>
-    <published>2020-04-04T02:14:19.000Z</published>
-    <updated>2021-04-05T04:16:39.150Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;原文由&lt;code&gt;@粟添&lt;/code&gt;发表于微博，已被404&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
     
   </entry>
   
