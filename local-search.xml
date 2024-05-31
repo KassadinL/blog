@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>月记：2024-05</title>
+    <link href="/2024/05/31/066-Log-of-Month-2024-05/"/>
+    <url>/2024/05/31/066-Log-of-Month-2024-05/</url>
+    
+    <content type="html"><![CDATA[<p>也许是目前为止最准时的一篇月度总结</p><span id="more"></span><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>这个月稍微变更一下月记的结构</p><p>第一部分 <code>输入</code> 是想总结本月看过的、值得记录的内容<br>之前分为了 <code>Reading</code> <code>Anime</code> <code>Others</code> 三部分，但是发现最近看的几个 Youtube 教程不知该放在哪里</p><p>思考了一下，虽然看书和看动画都是输入，但这两类并不一样<br>前者更强调学习，看完会有感悟，有收获<br>后者大部分只是单纯的消费，放空大脑，看完后更多的是评价、感受</p><p>所以，<code>输入</code> 部分的结构稍微做点变更<br><code>Reading</code> 改为 <code>Learning</code>，强调 <code>学到了</code> 这种感觉，不限形式，书/小说/优秀文章，视频/播客，有收获就可以<br><code>Anime</code> <code>Others</code> 保持不变</p><ol><li><p>输入<br><del>Reading：专业书/小说/优秀文章，都算阅读</del><br>Learning：书/小说/优秀文章，视频/播客，不限形式，感觉看完有收获的内容<br>Anime：新番/老番，TV版/剧场版，记录一下自己看的动画<br>Others：电影、电视剧等，归入其他</p></li><li><p>胡思乱想<br>也许会记录一下所思所想</p></li><li><p>输出<br>也许是 Blog，但水平太菜，也许一个月都没什么输出（</p></li><li><p>游记<br>有去哪里玩就记一下，没有就算了</p></li><li><p>杂<br>不属于上面任何部分的零碎事项</p></li></ol><hr><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h3><h4 id="《インフラエンジニアの知識と実務がこれ1冊でしっかりわかる教科書》"><a href="#《インフラエンジニアの知識と実務がこれ1冊でしっかりわかる教科書》" class="headerlink" title="《インフラエンジニアの知識と実務がこれ1冊でしっかりわかる教科書》"></a>《インフラエンジニアの知識と実務がこれ1冊でしっかりわかる教科書》</h4><p>最近在看一本《インフラエンジニアの知識と実務がこれ1冊でしっかりわかる教科書》（这个书名和近代轻小说厕纸书名风格颇为接近，突出一句话概括全书主题/剧情）</p><p>前面部分的内容是インフラ的定义、工作内容，举了几个具体例子<br>インフラ需要的基础知识：网络、Linux、写脚本、AWS<br>考证的话，也是针对前面几项，可以考 CCNA、LPIC、AWS 的证书，日本 IPA 举办的国家考试也可以考虑<br>后面是インフラ概要、設計、構築、運用、保守，从上到下介绍一遍，还没看完<br>最后是一些インフラ发展方向</p><h4 id="Youtube-Simon-d’Entremont"><a href="#Youtube-Simon-d’Entremont" class="headerlink" title="Youtube - Simon d’Entremont"></a>Youtube - Simon d’Entremont</h4><h5 id="弱光环境下的拍摄建议"><a href="#弱光环境下的拍摄建议" class="headerlink" title="弱光环境下的拍摄建议"></a>弱光环境下的拍摄建议</h5><p>偶然看到一个摄影 Youtuber，Simon d’Entremont，一名居住在加拿大的野生动物/风光摄影师（a professional wildlife and nature photographer from Eastern Canada）<br>本来只是随便看看，但是讲的太好，忍不住看了好几个视频</p><p><a href="https://www.youtube.com/watch?v=kmgznHtTi78">Simon d’Entremont - The TRUTH about shooting at ISO 100 that the PROS know.</a><br><a href="https://www.youtube.com/watch?v=il28la8DRCU">Simon d’Entremont - Stop taking photos at the WRONG ISO!</a><br><a href="https://www.youtube.com/watch?v=sOdlDyolhr0">Simon d’Entremont - Extreme HIGH ISO photography tricks. Whatever you do, don’t do THIS!</a><br>这三个视频解答了一些我对弱光场景下怎么拍的疑问<br>之前我的观点是 <code>ISO 越高，噪点越多</code>，所以即使是弱光场景下，我也会尽量降低 ISO，为此甚至把 ISO auto 改为手动调整<br>但 Simon d’Entremont 的观点是 <strong>The high ISO is revealing that your image was noisy, not creating the noise. (高 ISO 不会带来噪点，只是把低 ISO 下同样会产生的噪点暴露出来而已)</strong></p><p>所以，当相机跳到高 ISO 的时候，说明当前环境光线确实太少了，解决办法只能是 <code>拉长曝光时间</code>、<code>扩大光圈</code><br>但是，如果快门速度和光圈都已经到无法调整的地步时，那就让相机放飞 ISO 吧</p><p>这三个视频看下来，Simon d’Entremont 的建议是</p><ul><li><code>Auto ISO</code>，设置自动 ISO，你调整快门光圈，让相机自动选择合适的 ISO</li><li><code>Overexposing</code>，稍微过曝，弱光环境下不能吝啬 ISO，稍微过曝，把直方图拉到右边，与 <code>先正确曝光，再通过后期拉曝光</code> 相比，稍微过曝的照片噪点会更少</li></ul><h5 id="给新手的建议"><a href="#给新手的建议" class="headerlink" title="给新手的建议"></a>给新手的建议</h5><p><a href="https://www.youtube.com/watch?v=vO4lhZjrWlY">Simon d’Entremont - Photography MISTAKES that all beginners make (but I wish I could have avoided).</a></p><p>Simon d’Entremont 的建议是 <code>HASTE</code>: </p><ul><li><p>Highlight<br>高光不要过曝，可以看直方图或设置斑马纹</p></li><li><p>And?<br>照片上只有光秃秃的主体并不好看，需要有合适的前景、背景，可以是光线、物体、事件，要考虑做加法让照片变得没那么单调</p></li><li><p>Subject<br>上一个建议是做加法，这条建议是做减法<br>照片必须要有明确的主体，元素太多时，主题必须足够明确，让人一眼就能知道视线应该放在哪里<br>使用引导线、拉近主体、相框遮挡、光线/颜色对比，尽量突出主体</p></li><li><p>Tree in head<br>注意树、电线杆、灯牌之类的东西，不要插在头顶<br>用好背景虚化的话，反而可以把插在头上的背景淡化成背景色，突出主体</p></li><li><p>Enough ISO<br>这个就是前面刚说过的内容，“高 ISO 不会带来噪点，只是把低 ISO 下同样会产生的噪点暴露出来而已”，弱光环境下不能吝啬 ISO，稍微过曝，把直方图拉到右边</p></li></ul><p>还看了一些其他视频<br><a href="https://www.youtube.com/watch?v=TrD3jQvm7NU">Simon d’Entremont - TOP 3 PRO LIGHTROOM techniques to rescue dull, lifeless photos!</a><br><a href="https://www.youtube.com/watch?v=x0Du7IwY52w">Simon d’Entremont - FULL SUN AND HARSH LIGHT Lightroom HACKS and field techniques!</a><br>学到一些 Lightroom 后期思路，主要就是增加对比、增加层次感，突出主体、弱化边缘</p><p>照片后期又是一门大学问，慢慢尝试吧</p><h5 id="斑马线使用方法"><a href="#斑马线使用方法" class="headerlink" title="斑马线使用方法"></a>斑马线使用方法</h5><p>上面提到防止高光裁切，可以看直方图，或设置斑马线<br>之前虽然听说过这个东西，但一直不明白怎么使用，于是抽空查了一下</p><p>根据 Sony 的官方教程 <a href="https://www.sony.com/zh-cn/electronics/support/articles/00077788">什么是斑马线，它的作用是什么？</a><br>斑马线功能可以突出显示当前画面亮度超过设定值的部分</p><p>具体使用案例：</p><ul><li><p>防止拍摄曝光过度<br>将斑马线设置为 “100+”，然后调节曝光，使得在画面的任何部分都不显示斑马线。</p></li><li><p>避免白色物体过暗，曝光不足<br>设置斑马线的值在90 至 95 之间，然后调节曝光，直至您希望拍摄的白色物体上出现斑马线。</p></li><li><p>使用最佳的亮度拍摄人像<br>设置斑马线的值在70 至 80 之间，然后调节曝光，直至斑马线出现在人物的脸部。</p></li></ul><h3 id="Anime"><a href="#Anime" class="headerlink" title="Anime"></a>Anime</h3><ul><li><p>5 月正在追番</p><ul><li><p>末日列车去往何方/終末トレインどこへいく？<br>四月三大原创之一，高密度对话，天马行空的展开，末日公路片的氛围，最对我电波的一部<br>第 6 话，果然说到末日肯定有僵尸啊<br>第 7 话，论脑洞还是得看水岛监督，大 脑 升 级<br>第 8 话，水岛监督亲自下场，剧情密度拉满，进展飞快，<del>大脑再次升级</del><br>第 9 话，终于来到黑长直的视角，仙人又来送道具</p></li><li><p>GIRLS BAND CRY<br>四月三大原创之一<br>第 7 话，感觉不太行，连续 2 次在 Live 片段拉胯，用心做动画，用脚做音乐<br>第 8 话，花田大老师，伟大，无需多言</p></li><li><p>迷宫饭/ダンジョン飯<br>第 17 话主角和武士打架对话的片段不错，战斗结束后妹妹蹬墙第一次没上去，又抓了几下才上去的片段作画很喜欢，力量感十足<br>看到两篇不错的评论文章：<br><a href="https://bgm.tv/blog/336554">bgm - 横向的生态与纵向的历史，进食的欲望与设定的冰山——不止美食的《地城饭》</a><br><a href="https://tianxianzi.me/2024/05/25/dungeon_meshi/">天仙子 - ダンジョン飯 | 迷宫饭</a></p></li><li><p>怪人的沙拉碗<br>锐评社会问题，低成本还能保证不错的质量，剧情有平坂读托底，足够有趣，</p></li><li><p>声优广播的台前幕后<br>制作崩，剧情还算有意思，继续看看吧</p></li><li><p>从Lv2开始开外挂的前勇者候补过着悠哉异世界生活<br>卖人设，钉宫大法，继续看</p></li><li><p>贵族凭鉴定技能扭转人生<br>第 7 话意外地很不错，作画稳定，情感渲染到位，生离死别的情节很容易打动人</p></li></ul></li></ul><ul><li><p>暂时搁置</p><ul><li><p>狼与香辛料<br>以后一定看（</p></li><li><p>无职转生<br>以后一定看（</p></li><li><p>Unnamed Memory<br>以后补小说</p></li><li><p>京吹3<br>以后肯定会看，不会咕咕咕（</p></li></ul></li><li><p>弃番</p><ul><li><p>怪兽8号<br>制作好，剧情/脚本拖后腿，该热血的时候突然插个无聊的搞笑片段<br>男主的人设不好看，智商也没有，卖腐只能靠男二了，感觉有点难<br><del>不带脑子继续看</del><br>第 7 话，强行煽情，节奏拖沓，残血不补刀，智商下线<br>看不下去了</p></li><li><p>单间，光照尚好，附带天使<br>卖人设，表情包不错，但有点无聊，不太想看了</p></li><li><p>THE NEW GATE<br>异世界厕纸，没活儿了</p></li><li><p>夜晚的水母不會游泳<br>无聊</p></li><li><p>恋语轻唱/ささやくように恋を唄う<br>制作太差了，剧情也不太感兴趣</p></li></ul></li></ul><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>最近看的电视剧/电影，点评尽量不涉及剧透</p><ul><li><p>青春１８×２ 君へと続く道<br>本来以为是公路片，因为 JR 有个 <a href="https://railway.jr-central.co.jp/tickets/youth18-ticket/">青春１８きっぷ</a>，名字差不多<br>但实际看下来主要是恋爱故事，两个人的互动太青春了，<del>流下羡慕的泪水</del><br>刚开头的片段差点以为又是<del>无病呻吟的青春伤痛文学</del>，但之后渐入佳境，时间线交错自然，剧情不错，能打动人心的优秀作品，可以推荐</p></li><li><p>雲のむこう、約束の場所<br>结尾部分，飞机冲出云层，关闭发动机，缓慢扇动螺旋桨(大扇叶?)在天空中滑行的样子，像展开翅膀滑翔的鸟类一样，很美的画面</p></li><li><p>デッドデッドデーモンズデデデデデストラクション 後章<br>便当大放送，好<br>现在这个断章其实就不错，不知道漫画结局是什么样，<del>如果不满意就把后章这里当作结局（</del><br>剧场版上下两章，每章 2 小时，总计 4 小时还没有改完漫画<br>根据网上情报，剩下的剧情会做成 TV 动画，总共 18 话，前面是剧场版分割，然后接着做漫画剧情，Crunchyroll 独家放送：<a href="https://www.crunchyroll.com/series/G8DHV7827/dead-dead-demons-dededede-destruction">Crunchyroll - DEAD DEAD DEMONS DEDEDEDE DESTRUCTION</a><br>但我看了一下出的第 0 话，剧情竟然是紧接剧场版后章，剧场版分割的动画实际是从第 1 话开始<br>如果先看第 0 话会猝不及防被剧透一脸，搞不懂为什么这么操作，Crunchyroll 下面评论第一也在警告新人不要看第 0 话，注意避坑</p></li></ul><h2 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h2><h3 id="河南说唱之神-《工厂》"><a href="#河南说唱之神-《工厂》" class="headerlink" title="河南说唱之神 -《工厂》"></a>河南说唱之神 -《工厂》</h3><p>偶然看到一个 MV，本来只是随便点开看看，刚看了一点开头就惊到了<br>MV 画面中每一个元素都自己能在回忆中找到相似的景色，歌词也并非矫揉做作地无病呻吟，感染力太强了</p><p>立马去网上找出处<br>bilibili（官方）：<a href="https://www.bilibili.com/video/BV1yE42157bX/">https://www.bilibili.com/video/BV1yE42157bX/</a><br>Youtube（非官方）：<a href="https://www.youtube.com/watch?v=RA--E7l4wyE">https://www.youtube.com/watch?v=RA--E7l4wyE</a></p><p>bilibili 视频简介</p><blockquote><p>河南说唱之神@河南说唱之神official<br>工厂（Official Music Video）<br>这首歌献给那些和我有同样境遇的姊妹兄弟<br>“我没有热爱这里 我只是出生在这个地方”<br>我想我永远也离不开这里<br>MV导演：XUAN@花导XUAN<br>制片：冬泳社STTOS<br>出品：wasted club@WASTEDCLUB </p></blockquote><p>简介中 <code>“我没有热爱这里 我只是出生在这个地方” 我想我永远也离不开这里</code><br>看这两句话，感到有些无力，一个人的命运，固然离不开个人奋斗，但也要考虑的历史的 <strong>退 程</strong> …</p><blockquote><p>不过我运气不错，已经离开了<br>I have no homeland ~</p></blockquote><h3 id="我亦是行人"><a href="#我亦是行人" class="headerlink" title="我亦是行人"></a>我亦是行人</h3><p>在推上看到一段话，写的蛮好</p><blockquote><p>只是我越来越多地发现，那些重要或重要过的人，都是带着一段旋律进入我的生活，最后又从那段旋律上剥离。一段真正的友谊，反而经得起争吵矛盾，最终变质褪色的原因，往往是你们不再拥有美学的共振。<br><a href="https://x.com/Jesoooor/status/1791155165774631391">https://x.com/Jesoooor/status/1791155165774631391</a></p></blockquote><p>大部分人都是生命中的过客，能陪你到最后的人只有你自己（<del>和纸片人</del></p><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><ul><li><a href="/2024/05/23/065-Junrei-GIRLS-BAND-CRY/" title="聖地巡礼：GIRLS BAND CRY">聖地巡礼：GIRLS BAND CRY</a> 堂堂发表</li><li><a href="/2024/05/20/064-mpv-OSC-disappear-after-v0-38-0/" title="笔记：v0.38.0 版本 MPV 播放器 OSC 消失">笔记：v0.38.0 版本 MPV 播放器 OSC 消失</a></li><li><a href="/2024/05/06/063-Rooting-Sony-DPT-RP1/" title="笔记：破解 Sony DPT-RP1 &amp; 使用体验">笔记：破解 Sony DPT-RP1 &amp; 使用体验</a></li></ul><p>这个月终于把前面攒的一些内容写出来了，<del>累人</del></p><h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><h3 id="川崎市役所展望台"><a href="#川崎市役所展望台" class="headerlink" title="川崎市役所展望台"></a>川崎市役所展望台</h3><p>新建成的市役所非常气派，让我想起来国内的市政府大楼（<br>之前偶然看到新市役所顶层的观景平台免费开放，本着 <code>交了那么多税金，不能浪费</code> 的想法，敲定了观景台之旅</p><img src="/2024/05/31/066-Log-of-Month-2024-05/01.jpg" class=""><p>川崎市役所 25 层观景台的导览牌，这个方向可以看到东京塔、晴空树</p><img src="/2024/05/31/066-Log-of-Month-2024-05/02.jpg" class=""><p>感觉有点理解为什么日本超高层公寓更贵了，登高望远的景色确实赏心悦目<br>远处能看到东京塔和晴空树</p><img src="/2024/05/31/066-Log-of-Month-2024-05/03.jpg" class=""><p>用长焦拍一下</p><img src="/2024/05/31/066-Log-of-Month-2024-05/04.jpg" class=""><p>观景台另一个方向，照片最中间的小塔是羽田空港管制塔</p><img src="/2024/05/31/066-Log-of-Month-2024-05/05_gbc.jpg" class=""><p>观景台内部展示板上还出现了 <code>GIRLS BAND CRY</code> 的海报</p><p>唯一的遗憾是这座观景台看不到富士山，被一座高楼挡得严严实实，残念</p><h3 id="河边散步"><a href="#河边散步" class="headerlink" title="河边散步"></a>河边散步</h3><img src="/2024/05/31/066-Log-of-Month-2024-05/06_night.jpg" class=""><p>能见度很高的夜空，即使完全入夜，还能清楚地看到云朵</p><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><p>似乎没什么要补充的</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>总算有一次按时完成的月度总结了，按照这个样子继续吧</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>游记</tag>
+      
+      <tag>月记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>聖地巡礼：GIRLS BAND CRY</title>
     <link href="/2024/05/23/065-Junrei-GIRLS-BAND-CRY/"/>
     <url>/2024/05/23/065-Junrei-GIRLS-BAND-CRY/</url>
@@ -73,9 +94,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -94,9 +115,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -176,9 +197,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -197,9 +218,9 @@
     
     <tags>
       
-      <tag>游记</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>游记</tag>
       
     </tags>
     
@@ -1367,7 +1388,7 @@
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<hr><p>森同学</p><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷Blender</p><p>欢迎交流，我的邮箱 <a href="mailto:&#x73;&#101;&#110;&#115;&#x65;&#110;&#115;&#101;&#110;&#115;&#x61;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x73;&#101;&#110;&#115;&#x65;&#110;&#115;&#101;&#110;&#115;&#x61;&#x6e;&#x40;&#103;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p><p>2019/06</p><hr><p>Linux真好玩</p><p>2019/12</p><hr><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死<br>2020/02/06</p></blockquote><hr><p>转职，初级程序猿✨</p><p>新的开始</p><p>2023</p><hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
+    <content type="html"><![CDATA[<hr><p>森同学</p><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷Blender</p><p>欢迎交流，我的邮箱 <a href="mailto:&#115;&#x65;&#x6e;&#115;&#x65;&#x6e;&#115;&#x65;&#110;&#x73;&#x61;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;">&#115;&#x65;&#x6e;&#115;&#x65;&#x6e;&#115;&#x65;&#110;&#x73;&#x61;&#x6e;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#x6f;&#109;</a></p><p>2019/06</p><hr><p>Linux真好玩</p><p>2019/12</p><hr><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死<br>2020/02/06</p></blockquote><hr><p>转职，初级程序猿✨</p><p>新的开始</p><p>2023</p><hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
     
   </entry>
   

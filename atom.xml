@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-05-23T11:27:17.551Z</updated>
+  <updated>2024-05-31T07:43:37.654Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月记：2024-05</title>
+    <link href="https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/"/>
+    <id>https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/</id>
+    <published>2024-05-31T06:04:42.000Z</published>
+    <updated>2024-05-31T07:43:37.654Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;也许是目前为止最准时的一篇月度总结&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>聖地巡礼：GIRLS BAND CRY</title>
@@ -82,9 +101,9 @@
     
     
     
-    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
-    
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
     
   </entry>
   
@@ -101,9 +120,9 @@
     
     
     
-    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
-    
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
     
   </entry>
   
@@ -175,9 +194,9 @@
     
     
     
-    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
-    
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
     
   </entry>
   
@@ -194,9 +213,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -369,25 +388,6 @@
     <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>046 Janpanese input on Ubuntu</title>
-    <link href="https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/"/>
-    <id>https://kassadin.moe/2020/08/03/046-Janpanese-input-on-Ubuntu/</id>
-    <published>2020-08-03T10:27:11.000Z</published>
-    <updated>2021-04-05T02:57:43.163Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Usage of Japanese Mozc on Ubuntu Gnome&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="notebook" scheme="https://kassadin.moe/tags/notebook/"/>
-    
-    <category term="Linux" scheme="https://kassadin.moe/tags/Linux/"/>
     
   </entry>
   
