@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-05-31T07:43:37.654Z</updated>
+  <updated>2024-07-02T17:38:40.992Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>月记：2024-06</title>
+    <link href="https://kassadin.moe/2024/07/03/067-Log-of-Month-2024-06/"/>
+    <id>https://kassadin.moe/2024/07/03/067-Log-of-Month-2024-06/</id>
+    <published>2024-07-02T15:47:48.000Z</published>
+    <updated>2024-07-02T17:38:40.992Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;六月结束，2024 已经过去一半，好快啊&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>月记：2024-05</title>
     <link href="https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/"/>
     <id>https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/</id>
     <published>2024-05-31T06:04:42.000Z</published>
-    <updated>2024-05-31T07:43:37.654Z</updated>
+    <updated>2024-07-02T16:11:57.962Z</updated>
     
     
     <summary type="html">&lt;p&gt;也许是目前为止最准时的一篇月度总结&lt;/p&gt;</summary>
@@ -362,25 +381,6 @@
     
     
     <summary type="html">&lt;p&gt;尝试编译Openwrt，困难重重(对我来说&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>047 Nextcloud build log</title>
-    <link href="https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/"/>
-    <id>https://kassadin.moe/2020/09/11/047-Nextcloud-build-log/</id>
-    <published>2020-09-11T10:58:20.000Z</published>
-    <updated>2021-04-05T03:40:13.943Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;尝试自建Nextcloud网盘，记录一下参考资料&lt;/p&gt;</summary>
     
     
     
