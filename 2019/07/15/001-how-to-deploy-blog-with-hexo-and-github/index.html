@@ -54,7 +54,7 @@
 <meta property="og:image" content="https://kassadin.moe/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/31aerror.png">
 <meta property="og:image" content="https://kassadin.moe/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/32nohttps.png">
 <meta property="article:published_time" content="2019-07-15T10:25:07.000Z">
-<meta property="article:modified_time" content="2023-05-26T16:53:07.902Z">
+<meta property="article:modified_time" content="2024-07-03T03:18:01.880Z">
 <meta property="article:author" content="森同学">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="技术">
@@ -229,7 +229,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      16k 字
+      17k 字
     </span>
   
 
@@ -238,7 +238,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      51 分钟
+      54 分钟
     </span>
   
 
@@ -271,7 +271,7 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2023-05-27
+                  本文最后更新于：2024-07-03
                 
               </p>
             
@@ -638,6 +638,26 @@
 <h5 id="2023-05-19-更新-2"><a href="#2023-05-19-更新-2" class="headerlink" title="2023/05/19 更新 2"></a>2023/05/19 更新 2</h5><p><code>hexo d</code> 要求输入 username 和 password</p>
 <p>博客的 <code>_config.yml</code> 配置文件，repo 地址使用 https 就会要求名称和密码，git 则会自动使用密钥<br>改回 git 地址就好了</p>
 <p>Ref:<br><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git/issues/175">hexo d must enter pwd | hexo deploy的时候一直需要输入密码</a></p>
+<hr>
+<h5 id="2024-07-03-更新"><a href="#2024-07-03-更新" class="headerlink" title="2024/07/03 更新"></a>2024/07/03 更新</h5><p>明明已经 deploy 文件到 GitHub，但迟迟没有看到博客更新<br>一度以为是 Hexo 坏了（<del>是时候迁移博客到 Hugo 了</del></p>
+<p>Blog 仓库 <code>Settings</code> -&gt; <code>Pages</code> 页面提示如下错误信息</p>
+<blockquote>
+<p>Actions is currently unavailable for your repository, and your Pages site requires a Jekyll build step.<br>To continue building your site on pushes, you need to enable Actions.</p>
+</blockquote>
+<p>鼓捣半天，发现原来是 GitHub 把 Pages 的部署换成用 <code>GitHub Actions</code> 来做</p>
+<p>解决办法：<br>Blog 仓库 <code>Settings</code> -&gt; <code>Actions</code> -&gt; <code>General</code><br>最上面 <code>Actions permissions</code>，选择第四个 <code>Allow name, and select non-name, actions and reusable workflows</code>，然后勾选出现的第一个框 <code>Allow actions created by GitHub</code><br>点击保存</p>
+<p>这时再次 <code>hexo deploy</code> 就没有问题了<br>看仓库的 commit history，博客更新时 <code>XXX committed xx minutes ago</code> 后面出现了 <code>✔️3/3</code> 的标志<br>之前是部署成功时是 <code>✔️2/2</code> 标志</p>
+<blockquote>
+<p>部署失败的没标志（</p>
+</blockquote>
+<p>鼓捣完之后，再回头看 GitHub 的文档，发现原来他们提到这件事了<br><a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/troubleshooting-jekyll-build-errors-for-github-pages-sites">Troubleshooting Jekyll build errors for GitHub Pages sites</a> 页面<br><code>Who can use this feature?</code> 小框里第二段文字</p>
+<blockquote>
+<p>All GitHub Pages builds will use GitHub Actions from June 30, 2024.<br>No other changes are required but GitHub Actions must be enabled in your repository for builds to continue.<br>For more information on enabling GitHub Actions, see “<a target="_blank" rel="noopener" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository">Managing GitHub Actions settings for a repository</a>.”</p>
+</blockquote>
+<p>从 6 月 30 号开始变更成 <code>GitHub Actions</code>，变更还没几天，着实坑了我一把…</p>
+<blockquote>
+<p>顺便，这种信息放在 <code>Who can use this feature?</code> 这个小框里面感觉不太恰当啊，前几次看文档页面，都是匆匆扫了眼开头，导致我忽略了第二段的提示信息</p>
+</blockquote>
 
             </div>
             <hr>
