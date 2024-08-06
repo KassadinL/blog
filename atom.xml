@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-07-03T02:39:21.637Z</updated>
+  <updated>2024-08-06T16:27:49.695Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -17,11 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>月记：2024-07</title>
+    <link href="https://kassadin.moe/2024/07/28/070-Log-of-Month-2024-07/"/>
+    <id>https://kassadin.moe/2024/07/28/070-Log-of-Month-2024-07/</id>
+    <published>2024-07-28T10:20:59.000Z</published>
+    <updated>2024-08-06T16:27:49.695Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2024 下半年开始了&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习： Python 学习资源推荐 &amp; 学习笔记</title>
+    <link href="https://kassadin.moe/2024/07/27/069-Learning-of-Python/"/>
+    <id>https://kassadin.moe/2024/07/27/069-Learning-of-Python/</id>
+    <published>2024-07-26T16:21:06.000Z</published>
+    <updated>2024-07-28T10:13:48.541Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;终于开始学习 Python 了，记录一下推荐的学习资源，顺带把笔记也放在这里&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="推荐" scheme="https://kassadin.moe/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="阅读" scheme="https://kassadin.moe/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阅读：软件随想录</title>
+    <link href="https://kassadin.moe/2024/07/11/068-Reading-More-Joel-on-Softwares/"/>
+    <id>https://kassadin.moe/2024/07/11/068-Reading-More-Joel-on-Softwares/</id>
+    <published>2024-07-11T06:00:37.000Z</published>
+    <updated>2024-08-06T16:35:59.287Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;又名 More Joel on Softwares（Joel谈软件），本篇作为阅读笔记，纯粹练笔&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="推荐" scheme="https://kassadin.moe/tags/%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="阅读" scheme="https://kassadin.moe/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>月记：2024-06</title>
     <link href="https://kassadin.moe/2024/06/30/067-Log-of-Month-2024-06/"/>
     <id>https://kassadin.moe/2024/06/30/067-Log-of-Month-2024-06/</id>
     <published>2024-06-30T13:47:48.000Z</published>
-    <updated>2024-07-03T02:39:21.637Z</updated>
+    <updated>2024-07-11T05:05:40.395Z</updated>
     
     
     <summary type="html">&lt;p&gt;六月结束，2024 已经过去一半，好快啊&lt;/p&gt;</summary>
@@ -95,7 +154,7 @@
     <link href="https://kassadin.moe/2024/05/06/063-Rooting-Sony-DPT-RP1/"/>
     <id>https://kassadin.moe/2024/05/06/063-Rooting-Sony-DPT-RP1/</id>
     <published>2024-05-06T09:17:10.000Z</published>
-    <updated>2024-05-07T10:40:39.949Z</updated>
+    <updated>2024-07-11T04:58:07.577Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一下破解 &lt;code&gt;Sony DPT-RP1&lt;/code&gt; 用到的资料，还有一点点使用体验&lt;/p&gt;</summary>
@@ -112,7 +171,7 @@
     <link href="https://kassadin.moe/2024/04/30/062-Log-of-Month-2024-04/"/>
     <id>https://kassadin.moe/2024/04/30/062-Log-of-Month-2024-04/</id>
     <published>2024-04-30T12:23:14.000Z</published>
-    <updated>2024-05-23T11:27:06.218Z</updated>
+    <updated>2024-07-11T04:56:48.105Z</updated>
     
     
     <summary type="html">&lt;p&gt;明明刚写完 3 月份月度总结（&lt;/p&gt;</summary>
@@ -131,7 +190,7 @@
     <link href="https://kassadin.moe/2024/04/28/061-Log-of-Month-2024-03/"/>
     <id>https://kassadin.moe/2024/04/28/061-Log-of-Month-2024-03/</id>
     <published>2024-04-27T15:16:36.000Z</published>
-    <updated>2024-05-23T11:27:08.528Z</updated>
+    <updated>2024-07-11T04:50:37.080Z</updated>
     
     
     <summary type="html">&lt;p&gt;时间来到 4 月底，3 月的月度总结终于开始动笔了…&lt;/p&gt;</summary>
@@ -150,7 +209,7 @@
     <link href="https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/"/>
     <id>https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/</id>
     <published>2024-04-17T17:58:55.000Z</published>
-    <updated>2024-04-17T17:31:24.189Z</updated>
+    <updated>2024-07-11T04:50:12.855Z</updated>
     
     
     <summary type="html">&lt;p&gt;2 月份看完一遍《人月神话》，划了一堆笔记，时隔两个月，终于稍微整理了一下笔记，专门开一篇 blog，推荐这本书&lt;/p&gt;</summary>
@@ -171,7 +230,7 @@
     <link href="https://kassadin.moe/2024/03/29/059-Keychron-Keyboard-Setup/"/>
     <id>https://kassadin.moe/2024/03/29/059-Keychron-Keyboard-Setup/</id>
     <published>2024-03-28T16:39:11.000Z</published>
-    <updated>2024-03-29T17:12:28.207Z</updated>
+    <updated>2024-07-11T04:54:20.590Z</updated>
     
     
     <summary type="html">&lt;p&gt;简单记录一下配置 Keychron 键盘的过程&lt;/p&gt;</summary>
@@ -205,7 +264,7 @@
     <link href="https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/"/>
     <id>https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/</id>
     <published>2024-02-12T08:27:54.000Z</published>
-    <updated>2024-05-12T16:11:32.861Z</updated>
+    <updated>2024-07-11T04:55:49.575Z</updated>
     
     
     <summary type="html">&lt;p&gt;全新系列之 &lt;code&gt;月度总结&lt;/code&gt;，堂堂连载！&lt;/p&gt;</summary>
@@ -331,63 +390,6 @@
     
     
     <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>050 Pantheon files install log</title>
-    <link href="https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/"/>
-    <id>https://kassadin.moe/2020/09/15/050-Pantheon-files-install-log/</id>
-    <published>2020-09-15T07:53:20.000Z</published>
-    <updated>2021-04-05T03:02:49.790Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;仿MacOS多栏式文件浏览器&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>049 Davinci Resolve install log</title>
-    <link href="https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/"/>
-    <id>https://kassadin.moe/2020/09/14/049-Davinci-Resolve-install-log/</id>
-    <published>2020-09-14T14:13:50.000Z</published>
-    <updated>2021-04-05T03:27:02.727Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Pop!_OS 20.04 LTS 安装 DaVinci Resolve 16.2.6，无法启动软件&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>048 Openwrt build log</title>
-    <link href="https://kassadin.moe/2020/09/11/048-Openwrt-build-log/"/>
-    <id>https://kassadin.moe/2020/09/11/048-Openwrt-build-log/</id>
-    <published>2020-09-11T10:58:53.000Z</published>
-    <updated>2021-04-05T03:32:21.790Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;尝试编译Openwrt，困难重重(对我来说&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

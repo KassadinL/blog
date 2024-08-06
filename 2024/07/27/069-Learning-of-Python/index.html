@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="终于开始学习 Python 了，记录一下推荐的学习资源，顺带把笔记也放在这里">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  <meta name="description" content="终于开始学习 Python 了，记录一下推荐的学习资源，顺带把笔记也放在这里">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习： Python 学习资源推荐 &amp; 学习笔记">
+<meta property="og:url" content="https://kassadin.moe/2024/07/27/069-Learning-of-Python/index.html">
+<meta property="og:site_name" content="Kassadin&#39;s Blog">
+<meta property="og:description" content="终于开始学习 Python 了，记录一下推荐的学习资源，顺带把笔记也放在这里">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-26T16:21:06.000Z">
+<meta property="article:modified_time" content="2024-07-28T10:13:48.541Z">
+<meta property="article:author" content="森同学">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="推荐">
+<meta property="article:tag" content="阅读">
+<meta name="twitter:card" content="summary_large_image">
+  
+  <title>学习： Python 学习资源推荐 &amp; 学习笔记 - Kassadin&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Kassadin's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Kassadin&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="学习： Python 学习资源推荐 &amp; 学习笔记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-07-27 00:21" pubdate>
+        2024-07-27
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      9.2k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">学习： Python 学习资源推荐 &amp; 学习笔记</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2024-07-28
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>终于开始学习 Python 了，记录一下推荐的学习资源，顺带把笔记也放在这里</p>
+<span id="more"></span>
+
+<h2 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.kawabangga.com/how-to-learn-python">卡瓦邦噶！ - 如何学Python？</a><br>一份非常详尽的 Python 学习资源推荐，零基础、进阶、深入理解、面试，各方面资料应有尽有</p>
+<blockquote>
+<p>博主还有另一个页面 <a target="_blank" rel="noopener" href="https://www.kawabangga.com/collection">卡瓦邦噶！ - 珍藏资料</a>，也有很多好东西</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman">Piglei - Python 工匠</a><br>Python 非常自由，但相应的代价就是上下限差距会很大，这本书讨论如何把 <code>能跑的代码</code> 改成 <code>优秀的代码</code>、如何利用 Python 语言特性写出更加 <code>Pythonic(Python风格)</code> 的代码<br>还介绍了一些不止 Python，任何语言都通用的知识，例如变量命名、大型项目里如何统一代码风格<br>内容通俗易懂，GitHub 版本可以免费阅读，如果感觉讲的不错可以购买书籍版，比 web 版更加翔实</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://docs.python.org/3">Python Documents</a><br>有时候看不知道了几手的资料怎么都看不明白，说不定翻一下官方文档就懂了，有能力可以多看文档<br><code>卡瓦邦噶！</code> 和 <code>Python 工匠</code> 里都提到推荐看一下 <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/itertools.html">Python Documents - itertools</a> 官方文档，了解标准库里的轮子，省的自己造</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://cs61a.org/">CS61A</a><br>大名鼎鼎的 <code>CS61A</code>，久闻其名，还没看</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pythonhunter.org/">捕蛇者说</a><br>一档播客节目，名字中的 <code>蛇</code> 当然就是 <code>Python</code> 啦，偶然听听，能发现许多新资源</p>
+<blockquote>
+<p>上面提到的 <code>卡瓦邦噶！</code> 博主 <code>laixintao</code> 就是主播之一</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><p>下面是学习 Python 过程中做的笔记，摘抄或复述看过的内容，加上一些感觉有价值的知识点，加深印象，还可以方便以后查找</p>
+<h3 id="None-or-is-None"><a href="#None-or-is-None" class="headerlink" title="== None or is None"></a><code>== None</code> or <code>is None</code></h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/2-if-else-block-secrets.md#1-%E4%B8%8E-None-%E5%80%BC%E7%9A%84%E6%AF%94%E8%BE%83">Python 工匠: 与 None 值的比较</a><br>On 2024.07.14</p>
+</blockquote>
+<h4 id="判断变量是否为-None-时，应该用-is-None"><a href="#判断变量是否为-None-时，应该用-is-None" class="headerlink" title="判断变量是否为 None 时，应该用 is None"></a>判断变量是否为 None 时，应该用 <code>is None</code></h4><p>在 Python 中，有两种比较变量的方法：<code>==</code> 和 <code>is</code><br>作者的解释：</p>
+<blockquote>
+<ul>
+<li><code>==</code>：表示二者所指向的的<strong>值</strong>是否一致</li>
+<li><code>is</code>：表示二者是否指向内存中的同一份内容，也就是 <code>id(x)</code> 是否等于 <code>id(y)</code></li>
+</ul>
+<p><code>None</code> 在 Python 语言中是一个单例对象，如果你要判断某个变量是否为 None 时，记得使用 <code>is</code> 而不是 <code>==</code>，因为只有 <code>is</code> 才能在严格意义上表示某个变量是否是 None。</p>
+</blockquote>
+<p><code>==</code> 实际上是调用 <code>__eq__</code> 魔法方法，可以通过自定义 <code>__eq__</code> 方法操作真伪值<br>判断变量是否为 None 时，应该用 <code>is</code> 而非 <code>==</code></p>
+<h4 id="需要重写-eq-魔法方法的案例"><a href="#需要重写-eq-魔法方法的案例" class="headerlink" title="需要重写 __eq__ 魔法方法的案例"></a>需要重写 <code>__eq__</code> 魔法方法的案例</h4><p>在 <a target="_blank" rel="noopener" href="https://book.douban.com/subject/35723705/">图书版 Python 工匠</a> <code>12.1.2　比较运算符重载</code> 章节，作者介绍了一个需要重写 <code>__eq__</code> 魔法方法的案例<br>例如，一个表示正方形的类 Square，接受一个边长作为参数，计算正方形面积</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span>:</span><br>    <span class="hljs-string">&quot;&quot;&quot;正方形</span><br><span class="hljs-string"></span><br><span class="hljs-string">    :param length: 边长</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, length</span>):</span><br>        self.length = length<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span>(<span class="hljs-params">self</span>):</span><br>        <span class="hljs-keyword">return</span> self.length ** <span class="hljs-number">2</span><br></code></pre></div></td></tr></table></figure>
+
+<p>显然，边长相等的两个正方形，可以看作一样的正方形<br>但默认情况下，Python 认为这两个正方形是不同对象，返回 <code>False</code></p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span>x = Square(<span class="hljs-number">4</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>y = Square(<span class="hljs-number">4</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>x == y<br><span class="hljs-literal">False</span><br></code></pre></div></td></tr></table></figure>
+
+<p>这时就需要重写 <code>__eq__</code> 方法，以及其他 5 个比较运算符 <code>__ne__</code>、<code>__lt__</code>、<code>__le__</code>、<code>__gt__</code>、<code>__ge__</code></p>
+<p>使用 <code>functools</code> 内置模块下的 <code>@total_ordering</code> 装饰器，可以减少工作量<br>只要重写 <code>__eq__</code>，外加 <code>__lt__</code>、<code>__le__</code>、<code>__gt__</code>、<code>__ge__</code> 中的一个方法</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-keyword">from</span> functools <span class="hljs-keyword">import</span> total_ordering<br><br><br><span class="hljs-meta">@total_ordering</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span>:</span><br>    <span class="hljs-string">&quot;&quot;&quot;正方形</span><br><span class="hljs-string"></span><br><span class="hljs-string">    :param length: 边长</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, length</span>):</span><br>        self.length = length<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span>(<span class="hljs-params">self</span>):</span><br>        <span class="hljs-keyword">return</span> self.length ** <span class="hljs-number">2</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__eq__</span>(<span class="hljs-params">self, other</span>):</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(other, self.__class__):<br>            <span class="hljs-keyword">return</span> self.length == other.length<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__lt__</span>(<span class="hljs-params">self, other</span>):</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(other, self.__class__):<br>            <span class="hljs-keyword">return</span> self.length &lt; other.length<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">NotImplemented</span><br></code></pre></div></td></tr></table></figure>
+
+<p>这个正方形类就可以做到正常比较大小了</p>
+<h3 id="可迭代对象-iterable-、迭代器-iterator"><a href="#可迭代对象-iterable-、迭代器-iterator" class="headerlink" title="可迭代对象(iterable)、迭代器(iterator)"></a>可迭代对象(iterable)、迭代器(iterator)</h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://www.piglei.com/book/ch06_loop.html#_3_%E5%8C%BA%E5%88%86%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%AF%B9%E8%B1%A1">Python 工匠: 区分迭代器与可迭代对象</a><br>On 2024.07.14</p>
+</blockquote>
+<h4 id="什么是可迭代对象-iterable"><a href="#什么是可迭代对象-iterable" class="headerlink" title="什么是可迭代对象(iterable)"></a>什么是可迭代对象(iterable)</h4><p>可迭代对象(iterable) 在 <a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-iterable">官方文档中的定义</a> 是</p>
+<blockquote>
+<p>An object capable of returning its members one at a time. Examples of iterables include all sequence types (such as list, str, and tuple) and some non-sequence types like dict, file objects, and objects of any classes you define with an <code>__iter__()</code> method or with a <code>__getitem__()</code> method that implements sequence semantics.</p>
+</blockquote>
+<p>所以可迭代对象指能够 <code>每次返回一个成员</code> 的对象类型<br>每迭代一次，可迭代对象就拿出来一个成员给你，直到可迭代对象从头到尾遍历完一遍位置</p>
+<p>显然 <code>list</code>、<code>str</code>、<code>tuple</code> 都能满足上述两个条件<br>至于文档里说 <code>dict</code>、<code>file objects</code> 也可以看作可迭代对象，似乎没什么问题（具体细节我不清楚<br>再有就是可以通过自定义 <code>__iter__()</code> 方法，把任意 <code>class</code> 变成可迭代对象</p>
+<blockquote>
+<p>本来以为 set(集合) 对象是无序的，应该不能迭代才对<br>但偶然看这篇 <a target="_blank" rel="noopener" href="https://docs.python.org/3/howto/functional.html#data-types-that-support-iterators">Python Documents: Howto - Functional</a>，发现 set 原来也可以迭代<br>查了查资料，set 不保证每次遍历时保持相同顺序，因为 set 元素顺序是由 hash 值决定的，当 set 发生变化时就有可能会改变原来的排序</p>
+</blockquote>
+<h4 id="区别于迭代器-iterator"><a href="#区别于迭代器-iterator" class="headerlink" title="区别于迭代器(iterator)"></a>区别于迭代器(iterator)</h4><p>知道了什么是可迭代对象，那就试一试吧，用 <code>next()</code> 方法迭代看看</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 定义一个简单 list</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>l = [<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 看看这个列表</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>l<br>[<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 嗯，没问题</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 迭代一下</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l)<br>Traceback (most recent call last):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;<br>TypeError: <span class="hljs-string">&#x27;list&#x27;</span> <span class="hljs-built_in">object</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> an iterator<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 报错： list 不是迭代器</span><br></code></pre></div></td></tr></table></figure>
+
+<p>怎么迭代不起来呢？</p>
+<p>回到文档，<a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-iterable">可迭代对象(iterable) 在官方文档中的定义</a> 还有第二段话</p>
+<blockquote>
+<p>Iterables can be used in a for loop and in many other places where a sequence is needed (zip(), map(), …). When an iterable object is passed as an argument to the built-in function iter(), it returns an iterator for the object. This iterator is good for one pass over the set of values. When using iterables, it is usually not necessary to call iter() or deal with iterator objects yourself. The for statement does that automatically for you, creating a temporary unnamed variable to hold the iterator for the duration of the loop.</p>
+<p>可迭代对象可以用在循环或其他各种需要序列的地方<br>把可迭代对象当参数传给 <code>iter()</code> 方法，会返回一个可迭代对象的 <code>迭代器(iterator)</code><br>迭代器适合用在一次性用途<br>使用可迭代对象(iterable)时，通常无须调用 <code>iter()</code> 或自己手搓 <code>迭代器(iterator)</code><br>例如，在使用 for 循环时，for 循环会帮你自动控制 <code>迭代器(iterator)</code>，方便省心</p>
+</blockquote>
+<p>因此，常见的 <code>for i in range(4):</code> 循环并不是在循环 <code>range(4)</code>，而是在循环 <code>iter(range(4))</code> 这个返回的迭代器<br>只不过 Python 的 for 循环可以自动控制这一过程而已</p>
+<p>用终端验证一下</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 接着刚才的 list</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>l<br>[<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 对 list 对象调用 iter()</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">iter</span>(l)<br>&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x7faffaac46d0</span>&gt;<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 创建了一个 list_iterator 对象</span><br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 对 iterator 使用 next()</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(l))<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 成功拿到 list 第一个值</span><br></code></pre></div></td></tr></table></figure>
+
+<p>对迭代器一直 next() 下去，就可以顺序拿到 list 里的值</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span>l<br>[<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">iter</span>(l)<br>&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x7faaf1ac46d0</span>&gt;<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(l))<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(l))<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(l))<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(<span class="hljs-built_in">iter</span>(l))<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><br></code></pre></div></td></tr></table></figure>
+
+<p>预想应该是 <code>4， 3， 2， 1</code> 才对，但每次 <code>next(iter(l))</code> 都拿到 list 的第一个值<br>出现这种问题，原因是 <code>next(iter(l))</code> 里的 <code>iter(l)</code><br>每使用一次 <code>iter(l)</code>，都会创建一个新 <code>迭代器(iterator)</code><br>所以 <code>next(iter(l))</code> 每次都是对一个崭新的迭代器取值，当然每次都只能拿到第一个值</p>
+<p>可以在终端里看一下</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">iter</span>(l)<br>&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x7faaf1ae4430</span>&gt;<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">iter</span>(l)<br>&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x7faaf1ac46d0</span>&gt;<br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">iter</span>(l)<br>&lt;list_iterator <span class="hljs-built_in">object</span> at <span class="hljs-number">0x7faaf1c2d240</span>&gt;<br></code></pre></div></td></tr></table></figure>
+
+<p>调用三次 <code>iter(l)</code>，返回了三个 <code>list_iterator</code> 对象（at 后面的地址不同）</p>
+<p>既然这样，要想 next 拿到迭代器的所有值，就找个中介吧</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 可迭代对象</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>l<br>[<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 调用 next 会报错</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l)<br>Traceback (most recent call last):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;<br>TypeError: <span class="hljs-string">&#x27;list&#x27;</span> <span class="hljs-built_in">object</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> an iterator<br><br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># 把迭代器对象赋值给 l_iterator</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>l_iterator = <span class="hljs-built_in">iter</span>(l)<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># next 它</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l_iterator)<br><span class="hljs-number">4</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l_iterator)<br><span class="hljs-number">3</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l_iterator)<br><span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l_iterator)<br><span class="hljs-number">1</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">next</span>(l_iterator)<br>Traceback (most recent call last):<br>  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;<br>StopIteration<br></code></pre></div></td></tr></table></figure>
+
+<p>这样就能拿到迭代器里的所有值了</p>
+<h4 id="生成器-generator-和-生成器表达式-generator-expression"><a href="#生成器-generator-和-生成器表达式-generator-expression" class="headerlink" title="生成器(generator) 和 生成器表达式(generator expression)"></a>生成器(generator) 和 生成器表达式(generator expression)</h4><p>迭代器似乎很好用，但一次性的消耗品，如果每次使用前都要一堆准备工作，就失去便捷的意义了<br>因此 Python 里有两种简单使用迭代器的方法</p>
+<ul>
+<li><p>生成器(generator)<br>在 function 里用 <code>yield</code> 代替 <code>return</code>，这样函数就能准备好一串 <code>序列</code>，等 <code>next()</code> 来拿</p>
+</li>
+<li><p>生成器表达式(generator expression)<br>常见的 <code>for i in range(4):</code> 就是一例</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-generator-expression">Python Documents: generator expression</a> 里给了另一个例子</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs Python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">sum</span>(i*i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))         <span class="hljs-comment"># sum of squares 0, 1, 4, ... 81</span><br><span class="hljs-number">285</span><br></code></pre></div></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="怎么计算迭代器-iterator-里有多少元素"><a href="#怎么计算迭代器-iterator-里有多少元素" class="headerlink" title="怎么计算迭代器(iterator)里有多少元素"></a>怎么计算迭代器(iterator)里有多少元素</h4><p>普通的列表可以用 <code>len(list)</code> 得到列表的元素个数<br>但迭代器是懒惰对象，不迭代一遍就没办法知道有多少个元素<br>一旦从头到尾迭代完一遍，这个迭代器也就失效了<br>数它有几个似乎意义不大（</p>
+<blockquote>
+<p><code>迭代器(iterator)</code> 是一次性消耗品，用完即弃<br>想要多次循环时，还是需要使用 list 之类的普通对象</p>
+</blockquote>
+<p>Ref:<br><a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-iterable">Python Documents: iterable</a><br><a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-iterator">Python Documents: iterator</a><br><a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-generator">Python Documents: generator</a><br><a target="_blank" rel="noopener" href="https://docs.python.org/3/glossary.html#term-generator-expression">Python Documents: generator expression</a></p>
+<h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://docs.python.org/3/howto/functional.html">Python Documents: Functional Programming HOWTO</a><br>On 2024.07.15</p>
+</blockquote>
+<p><del>省流，最后一段建议不要使用 lambda 表达式</del></p>
+<blockquote>
+<p>Fredrik Lundh once suggested the following set of rules for refactoring uses of lambda:</p>
+<ol>
+<li>Write a lambda function.</li>
+<li>Write a comment explaining what the heck that lambda does.</li>
+<li>Study the comment for a while, and think of a name that captures the essence of the comment.</li>
+<li>Convert the lambda to a def statement, using that name.</li>
+<li>Remove the comment.</li>
+</ol>
+<p>I really like these rules, but you’re free to disagree about whether this lambda-free style is better.<br>使用 lambda 表达式虽然可以少写两行代码，但理解成本直线上升<br>从可读性、理解成本角度考虑，不推荐使用函数式编程，朴实地用 def 和 for 循环就好</p>
+</blockquote>
+<p>这篇文章前面的介绍部分感觉不错，说编程语言解决问题的思路分四个流派：<br>Procedual：面向过程，例如 C、Pascal、Unix Shell<br>Declarative：SQL<br>Object-oriented：面向对象<br>Functional：函数式编程<br>Python 非常灵活，面向过程、面向对象、或者函数式编程，都能做到，可以根据场景选择不同的方式</p>
+<p>这篇文章里讲到许多 可迭代对象(iterable)、迭代器(iterator)、生成器(generator) 的例子，顺便复习了上一节的知识点<br>看到几个可能比较有用的函数</p>
+<ul>
+<li><p>filter(predicate, iter)<br>和 <code>(x for x in range(10) if is_even(x))</code> 生成器表达式效果一样</p>
+</li>
+<li><p>enumerate(iter, start=0)<br>经常用来同时取 index 和 value</p>
+</li>
+<li><p>any(iter) and all(iter)<br>判断迭代器里布尔值</p>
+</li>
+<li><p>zip(iterA, iterB, …, strict=False)<br>类似 Excel 里面行列转换，默认取最短的那个迭代器长度作为最后的长度<br>如果希望严格限制所有迭代器长度一样，可以设置 <code>strict=True</code></p>
+</li>
+<li><p>itertools.count(start, step)<br>能得到一个无限长度的迭代器</p>
+</li>
+<li><p>itertools.repeat(elem, [n])<br>重复 elem 元素 n 次</p>
+</li>
+<li><p>itertools.islice(iter, [start], stop, [step])<br>切片，一个参数是 stop，两个参数是 start 和 stop，三个参数是 start、stop、step</p>
+</li>
+<li><p>itertools.tee(iter, [n])<br>把一个迭代器复制成 n 份，查了查，似乎是用在数据分析、日志分析之类的地方<br>对同一组数据进行多次分析，可以用 tee 分出多个迭代器，各自分析</p>
+</li>
+<li><p>itertools.filterfalse(predicate, iter)<br>和 filter 相反</p>
+</li>
+<li><p>itertools.dropwhile(predicate, iter)<br>字面意思</p>
+</li>
+<li><p>itertools.combinations(iterable, r)<br>排列组合</p>
+<blockquote>
+<p>itertools.combinations([1, 2, 3, 4, 5], 2) =&gt;<br>(1, 2), (1, 3), (1, 4), (1, 5),<br>(2, 3), (2, 4), (2, 5),<br>(3, 4), (3, 5),<br>(4, 5)</p>
+</blockquote>
+</li>
+</ul>
+<p>这篇读完了，写的还挺有意思的</p>
+<blockquote>
+<p>补充一个 itertools.product(*iterables, repeat=1)，相当于循环嵌套</p>
+</blockquote>
+<h3 id="开发大型项目常用工具"><a href="#开发大型项目常用工具" class="headerlink" title="开发大型项目常用工具"></a>开发大型项目常用工具</h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://book.douban.com/subject/35723705/">图书版 Python 工匠</a> <code>13.1　开发大型项目常用工具介绍</code> 章节<br>On 2024.07.16</p>
+</blockquote>
+<p>Linter:</p>
+<ul>
+<li>flake8，检查代码风格，可自行定制</li>
+<li>black，更加严格的代码风格检查工具，几乎不可定制</li>
+<li>isort，分类 import 代码</li>
+<li>pre-commit，强制在 commit 前进行代码检查</li>
+<li>mypy，配合类型注解实现静态类型检查</li>
+</ul>
+<h3 id="四类常见内建容器类型"><a href="#四类常见内建容器类型" class="headerlink" title="四类常见内建容器类型"></a>四类常见内建容器类型</h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/4-mastering-container-types.md">Python 工匠：4. 容器的门道</a><br>On 2024.07.11</p>
+</blockquote>
+<p>Python 中，有四类最常见的内建容器类型：列表（list）、元组（tuple）、字典（dict）、集合（set）</p>
+<ul>
+<li>列表（List）：有序、可变、允许重复。适用于需要按顺序存储和访问数据的场景。</li>
+<li>元组（Tuple）：有序、不可变、允许重复。适用于需要存储不可变数据的场景。</li>
+<li>字典（Dictionary）：有序（Python 3.7+）、可变、键唯一。适用于需要通过键快速查找值的场景。</li>
+<li>集合（Set）：无序、可变、不允许重复。适用于需要存储唯一元素并进行集合操作（如交集、并集）的场景。</li>
+</ul>
+<h4 id="Python-工匠：写更快的代码"><a href="#Python-工匠：写更快的代码" class="headerlink" title="Python 工匠：写更快的代码"></a><a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/4-mastering-container-types.md#%E5%86%99%E6%9B%B4%E5%BF%AB%E7%9A%84%E4%BB%A3%E7%A0%81">Python 工匠：写更快的代码</a></h4><ol>
+<li><p>避免频繁扩充列表/创建新列表</p>
+<blockquote>
+<ul>
+<li>多用迭代器，<code>yield</code>、<code>生成器表达式</code></li>
+<li>尽量使用模块提供的懒惰对象：<ul>
+<li>使用 <code>re.finditer</code> 替代 <code>re.findall</code></li>
+<li>直接使用可迭代的文件对象： <code>for line in fp</code>，而不是 <code>for line in fp.readlines()</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>在列表头部操作多的场景使用 deque 模块</p>
+<blockquote>
+<p>列表是基于数组结构（Array）实现的，当你在列表的头部插入新成员（<code>list.insert(0, item)</code>）时，它后面的所有其他成员都需要被移动，操作的时间复杂度是 <code>O(n)</code>。这导致在列表的头部插入成员远比在尾部追加（<code>list.append(item)</code> 时间复杂度为 <code>O(1)</code>）要慢。</p>
+<p>如果你的代码需要执行很多次这类操作，请考虑使用 <a target="_blank" rel="noopener" href="https://docs.python.org/3.7/library/collections.html#collections.deque">collections.deque</a> 类型来替代列表。因为 deque 是基于双端队列实现的，无论是在头部还是尾部追加元素，时间复杂度都是 <code>O(1)</code>。</p>
+</blockquote>
+</li>
+<li><p>使用集合/字典来判断成员是否存在</p>
+<blockquote>
+<p>当你需要判断成员是否存在于某个容器时，用集合比列表更合适。因为 <code>item in [...]</code> 操作的时间复杂度是 <code>O(n)</code>，而 <code>item in &#123;...&#125;</code> 的时间复杂度是 <code>O(1)</code>。这是因为字典与集合都是基于哈希表（Hash Table）数据结构实现的。</p>
+<blockquote>
+<p>Hint: 强烈建议阅读 <a target="_blank" rel="noopener" href="https://wiki.python.org/moin/TimeComplexity">TimeComplexity - Python Wiki</a>，了解更多关于常见容器类型的时间复杂度相关内容。</p>
+<p>如果你对字典的实现细节感兴趣，也强烈建议观看 Raymond Hettinger 的演讲 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=p33CVV29OG8&t=1403s">Modern Dictionaries(YouTube)</a></p>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<h3 id="边界情况、海象操作符"><a href="#边界情况、海象操作符" class="headerlink" title="边界情况、海象操作符"></a>边界情况、海象操作符</h3><blockquote>
+<p>Reading <a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/15-thinking-in-edge-cases.md">Python 工匠：15. 在边界处思考</a><br>Reading <a target="_blank" rel="noopener" href="https://github.com/piglei/one-python-craftsman/blob/master/zh_CN/16-stmt-expr-and-walrus-operator.md">Python 工匠：16. 语句、表达式和海象操作符</a><br>On 2024.07.16</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://book.douban.com/subject/35723705/">图书版 Python 工匠</a> 没有收录这两章</p>
+<h4 id="在边界处思考"><a href="#在边界处思考" class="headerlink" title="在边界处思考"></a>在边界处思考</h4><p>作者认为最好可以利用语言特性更加优雅的处理边界情况，具体到 Python 中</p>
+<ul>
+<li>使用 <code>try 捕获异常</code> 而非 <code>if else</code> 来处理边界情况<br>Python 社区比起 <code>LBYL (Look Before You Leap)</code>，更倾向于 <code>EAFP (sEasier to Ask for Forgiveness than Permission)</code>，因为 Python 中抛出异常是很轻量的操作<br>作者推荐阅读 <a target="_blank" rel="noopener" href="https://jeffknupp.com/blog/2013/02/06/write-cleaner-python-use-exceptions/">Write Cleaner Python: Use Exceptions</a></li>
+<li>容器内容不存在时的处理<br><code>collections.defaultdict</code> 可以处理字典类型里 <code>键不存在</code> 的错误<br>使用 <code>setdefault</code> 取值并修改字典值<br>使用 <code>dict.pop</code> 删除不存在的键<br>列表切片不会抛出 Index 越界错误，无须做边界处理</li>
+<li>使用 <code>or</code> 短路求值特性设定默认值时，除了 <code>None</code>，空容器也会被判定为 <code>False</code>，用 <code>if</code> 来进行边界处理更准确</li>
+<li>不要手动做用户输入数据校验，使用 <a target="_blank" rel="noopener" href="https://pydantic-docs.helpmanual.io/">pydantic</a> 或框架自带的校验模块</li>
+<li>善用 <code>%</code>、<code>abs()</code>、<code>math.floor()</code></li>
+</ul>
+<h4 id="语句、表达式和海象操作符"><a href="#语句、表达式和海象操作符" class="headerlink" title="语句、表达式和海象操作符"></a>语句、表达式和海象操作符</h4><p><code>海象操作符 (walrus operator)</code> 结合了赋值和表达式两种功能<br>可以用于条件分支、循环、列表推导式中，有利于减少代码重复<br>但是海象操作符也提高了代码的理解成本，不宜盲目追求精炼</p>
+<blockquote>
+<p>感觉海象操作符有点类似函数式编程，精炼但增加理解成本</p>
+</blockquote>
+<hr>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8E%A8%E8%8D%90/">推荐</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%98%85%E8%AF%BB/">阅读</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处~
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/28/070-Log-of-Month-2024-07/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">月记：2024-07</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/07/11/068-Reading-More-Joel-on-Softwares/">
+                        <span class="hidden-mobile">阅读：软件随想录</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

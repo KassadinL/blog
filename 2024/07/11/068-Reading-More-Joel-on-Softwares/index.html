@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ghost_icon.png">
+  <link rel="icon" href="/img/ghost_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="又名 More Joel on Softwares（Joel谈软件），本篇作为阅读笔记，纯粹练笔">
+  <meta name="author" content="森同学">
+  <meta name="keywords" content="">
+  <meta name="description" content="又名 More Joel on Softwares（Joel谈软件），本篇作为阅读笔记，纯粹练笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阅读：软件随想录">
+<meta property="og:url" content="https://kassadin.moe/2024/07/11/068-Reading-More-Joel-on-Softwares/index.html">
+<meta property="og:site_name" content="Kassadin&#39;s Blog">
+<meta property="og:description" content="又名 More Joel on Softwares（Joel谈软件），本篇作为阅读笔记，纯粹练笔">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-11T06:00:37.000Z">
+<meta property="article:modified_time" content="2024-08-06T16:35:59.287Z">
+<meta property="article:author" content="森同学">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="推荐">
+<meta property="article:tag" content="阅读">
+<meta name="twitter:card" content="summary_large_image">
+  
+  <title>阅读：软件随想录 - Kassadin&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Kassadin's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Kassadin&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                RSS
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="阅读：软件随想录">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2024-07-11 14:00" pubdate>
+        2024-07-11
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      12k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      37 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">阅读：软件随想录</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2024-08-07
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>又名 More Joel on Softwares（Joel谈软件），本篇作为阅读笔记，纯粹练笔</p>
+<span id="more"></span>
+
+<h2 id="契机"><a href="#契机" class="headerlink" title="契机"></a>契机</h2><p>最开始在这篇博客 <a target="_blank" rel="noopener" href="https://limboy.me/posts/more-joel-on-software/">Limboy - 《软件随想录》小记</a> 里看到推荐<br>阮一峰老师博客上也有一篇文章：<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/12/chinese_version_of_mjos_is_on_sale.html">《Joel谈软件》出版了</a>，看底下评论似乎不错的样子</p>
+<p>本来只是想先随便看看这本书讲的什么，但内容实在有趣，忍不住继续读了下去，作者文字风趣幽默，甚至几个地方忍不住笑出声（例如第 25 章 Micro-ISV 里吐槽老东家微软高高在上的优越感<br>阮一峰老师的翻译也自然流畅，还添加了许多脚注，帮助理解一些英文梗</p>
+<p>《More Joel on Softwares》（Joel谈软件/软件随想录）这本并非专业技术书籍，更加类似随笔集，把 Joel 个人博客 <a target="_blank" rel="noopener" href="https://www.joelonsoftware.com/">Joel on Software</a> 上的精华文章集结成册<br>作者经历丰富，曾经在微软担任 Excel 开发小组的程序经理（微软的程序经理是选择小组中技术最强并且有人格魅力的人）<br>读到一半去查了查维基，Stack Overflow 也是他创办的（感謝 Joel 让我可以 <code>Ctrl C</code>、<code>Ctrl V</code><br>全书连贯性没有特别强，毕竟是博客文集，有些事情会重复讲到，但无伤大雅</p>
+<h2 id="书籍推荐"><a href="#书籍推荐" class="headerlink" title="书籍推荐"></a>书籍推荐</h2><p>这本书里提到一些书，还有人名<br>记下来，加入待看清单（<del>咕</del></p>
+<ul>
+<li>人件（Peopleware），大名鼎鼎（还没读</li>
+<li>人月神话，更加出名（这本读了 <a href="/2024/04/18/060-Reading-The-Mythical-Man-Month/" title="阅读：人月神话">阅读：人月神话</a></li>
+<li>MIT 6.001 <a target="_blank" rel="noopener" href="https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs">Structure and Interpretation of Computer Programs</a>，1996 年版本，下面的 <code>Resources</code> 里有 HTML 格式书籍全文，附加<a target="_blank" rel="noopener" href="https://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/">视频课程</a></li>
+</ul>
+<hr>
+<p>下面，正式开始笔记部分</p>
+<h2 id="第一部分-人员管理"><a href="#第一部分-人员管理" class="headerlink" title="第一部分  人员管理"></a>第一部分  人员管理</h2><h3 id="1-我的第一次Bi11G审查"><a href="#1-我的第一次Bi11G审查" class="headerlink" title="1 我的第一次Bi11G审查"></a>1 我的第一次Bi11G审查</h3><p>这里的 <code>BillG 审查</code> 是指比尔·盖茨审查<br>作者 1992 年在微软担任 Excel 小组程序经理，负责一个重要功能<br>审查前，作者还在研究自己提交的报告有没有任何纰漏，他发现 Excel 和 Basic 的日期和时间函数表现不一致，原因是 Excel 要兼容当时的 Lotus 格式<br>第二天的审查会上，作者发现自己一天前提交的 500 页报告，比尔·盖茨在每一页都写了评语<br>比尔·盖茨的提问越来越难，越来越细致，直到最后，比尔·盖茨问到了日期和时间函数，这样一个非常小的细节，作者回答上来，比尔·盖茨就结束了提问<br>作者感叹，不要试图糊弄比尔·盖茨，因为他是一个真正的程序员，对技术的了解令人惊叹<br>还顺便损了一下 Loutus，不懂编程的人管理软件公司，就好像不懂冲浪的人硬要去冲浪</p>
+<h3 id="2-寻找优秀的程序员"><a href="#2-寻找优秀的程序员" class="headerlink" title="2 寻找优秀的程序员"></a>2 寻找优秀的程序员</h3><p>作者判断，最好的程序员是不会出现在招聘市场上的<br>因为他们足够优秀，大学还没毕业就已经得到教授的推荐<br>如果这些人离职，也是因为要创业，或者跳槽，而且工作任他们挑选，根本不需要去投简历</p>
+<p>针对这种情况，作者的建议是</p>
+<ul>
+<li>走出去，去专门的技术社区、技术会议上寻找人才</li>
+<li>实习生，作者自己的公司就通过各种渠道联系离毕业还有一两年的大学生，给他们提供优异的实习机会，为的就是尽量拉拢人才，放长线钓大鱼</li>
+<li>建立社区，作者自己的博客读者多达 100 万，但这个方法没办法复制</li>
+</ul>
+<p>作者还提到，要小心员工推荐，原因是竞业协议，或者为了内推奖金无底线乱推</p>
+<h3 id="3-寻找优秀的程序员之实战指南"><a href="#3-寻找优秀的程序员之实战指南" class="headerlink" title="3 寻找优秀的程序员之实战指南"></a>3 寻找优秀的程序员之实战指南</h3><p>既然顶尖程序员不缺工作，那提升这份工作对顶点程序员的吸引力就成了关键<br>作者给出了一些建议</p>
+<ul>
+<li>私人办公室<br>效率更高，能感受到被重视</li>
+<li>工作环境<br>公司内干净整洁、物品崭新明亮，公司外设施齐全、环境优美</li>
+<li>玩具<br>具体指程序员的工作设备，大显示器、大桌子、随意订购技术书籍</li>
+<li>程序员的社交生活<br>公司如何对待程序员，当作螺丝钉还是核心人物<br>聪明、友善的同事<br>独立、自主，把工作交给聪明人，尊重他们的专业领域</li>
+<li>不搞政治<br>不要搞恶性政治，很多人选择编程的主要原因就是，他们宁愿把时间花在公平有序的地方，代码要么能运行，要么不能，清晰明了</li>
+<li>我干的是什么活<br>程序员喜欢有趣、看起来很酷的工作<br>甲骨文的方法是让一流员工挑选自己的想进入的项目<br>还可以放手让程序员使用他们感兴趣的新潮技术任何事，比如重写内部工具/非关键的新程序</li>
+<li>我能够认同公司吗<br>工作的意义，开源运动、自由软件运动、非营利性的社会事业、正面的品牌形象，都可以提高对公司的认同感</li>
+<li>程序员不在乎的一件事<br>除了上面的正向因素，作者还提到程序员并没有那么在乎钱<br>只要薪酬基本合理的情况下，薪水多少的重要性并没有上面那些因素高</li>
+</ul>
+<blockquote>
+<p>比较理想化的工作环境，但后面 Joel 确实创办 Fog Creek Software，进行了实践</p>
+</blockquote>
+<h3 id="4-三种管理方法"><a href="#4-三种管理方法" class="headerlink" title="4 三种管理方法"></a>4 三种管理方法</h3><p>公司里每个人都有自己私人的小目标，如何统合所有人，让大家尽量朝一个方向努力<br>作者在接下来的三章讨论了三种一般性的管理方案，分析其优缺点</p>
+<h3 id="5-军事化管理法"><a href="#5-军事化管理法" class="headerlink" title="5 军事化管理法"></a>5 军事化管理法</h3><p>很常见的管理办法，缺点很明显</p>
+<ul>
+<li>聪明人（或者大部分人）都不喜欢被命令来命令去</li>
+<li>军事化管理很难微操<br>军队里长官一声令下，跑三十圈，一队士兵跑圈就行了<br>但公司里每个人的职务不同，工作内容不同，项目经理很难有足够的时间和精力对每一个员工进行细致的管理<br>这往往造成一种 <code>打了就跑（hit and run）</code> 的抽风式管理方式</li>
+<li>在高科技公司中，负责干活的人比领导者掌握更多信息，他们才是做决策的最佳人选<br>作者提到他在微软时，负责人 Mike Maples 拒绝在技术问题上发表意见，而是将技术方案的决定权交给程序员</li>
+</ul>
+<h3 id="6-经济利益驱动法"><a href="#6-经济利益驱动法" class="headerlink" title="6 经济利益驱动法"></a>6 经济利益驱动法</h3><p>这个方案简单来说就是制定 KPI，进行经济奖励</p>
+<p>缺点是会将程序员 <code>想写出好代码，因为我想做出优秀的事业</code> 的内部激励转化成 <code>想写出好代码，因为我喜欢钱，想要奖金</code> 这样的外部激励，这实际上降低了程序员做出优异工作的愿望，此时如果停止支付奖金，他们就不再关心代码质量了</p>
+<p>另一个问题是，程序员/所有员工，都会开始和制度博弈，找漏洞或者利用制度缺陷，最后变成制度制定者和程序员之间的猫鼠游戏</p>
+<p>作者认为，<code>经济利益驱动法</code> 最大的问题是，这不是一种管理，而是管理的退位，是一种设计精巧的推卸责任方法<br>它表明管理层根本不知道如何引导人们做出更好的做，所以才让员工个人在制度框架下自己想办法将事情做好<br>例如写代码，正确的方式应该是训练员工，提高他们的编程水平，而非简单撒钱</p>
+<h3 id="7-认同法"><a href="#7-认同法" class="headerlink" title="7 认同法"></a>7 认同法</h3><p>认同法的作用是设法创造出内部激励</p>
+<p>一方面，增加员工对公司的认同感</p>
+<ul>
+<li>公司有远大、高尚的目标，员工就会为自己的工作感到自豪</li>
+<li>作者喜欢的方法是大家一起吃饭，作者认为这让人们感到公司就像一个大家庭，让员工喜欢上公司<blockquote>
+<p>emmm，不太好评价</p>
+</blockquote>
+</li>
+</ul>
+<p>另一方面，还要提供必要的信息，让员工了解公司决策背后的原因，这样可以使大家一起朝正确的方向前进</p>
+<h2 id="第二部分-写给未来程序员的建议"><a href="#第二部分-写给未来程序员的建议" class="headerlink" title="第二部分  写给未来程序员的建议"></a>第二部分  写给未来程序员的建议</h2><h3 id="8-学校只教Java的危险性"><a href="#8-学校只教Java的危险性" class="headerlink" title="8 学校只教Java的危险性"></a>8 学校只教Java的危险性</h3><blockquote>
+<p>关于这章的标题，阮一峰老师在博客 <a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/12/chinese_version_of_mjos_is_on_sale.html">《Joel谈软件》出版了</a> 里特别提到，摘录下来:</p>
+<p>中文版的书名叫《软件随想录》，还有一个副标题《程序员部落酋长 Joel谈软件》。</p>
+<p>不要问我为什么起这个名字，因为我也不知道。这是出版方的决定，可能是希望多争取一些非专业读者吧。</p>
+<p>此外，由于出版方有最终的决定权，所以一些句子的译法和某些篇目的名称都做了改动，我对此也无能为力。比如，《Java语言学校的危险性》一文，现在的名字是《学校只教Java的危险性》，智者见智吧。</p>
+</blockquote>
+<p>乍一看开头，以为作者又是老生常谈的 <code>现在的年轻人不行，不能吃苦，想当年我们...</code> 之类（笑<br>但实际看下来，作者想表达的意思是：Java 不够难，无法作为选拔手段，筛选出优秀计算机专业人才</p>
+<p>作者说他的观点同拉丁语支持者的观点没有不同：（拉丁语）训练你的思维，锻炼你的记忆。分析拉丁语的句法结构是思考能力的最佳练习，是真正的对智力的挑战，能够很好地培养逻辑能力。<br>作者认为指针和递归就像是计算机科学中的拉丁语</p>
+<p>作者也承认，现代软件开发中，绝大部分情况都不需要用到指针、函数式编程</p>
+<blockquote>
+<p>但如果不懂指针，一行 Linux 代码都看不懂，不懂函数式编程，就无法创造出 Google 的 MapReduce<br>更重要的是，指针和递归的真正价值是你在学习他们的过程中所得到的思维深度，以及你因为害怕在这些课程中被题材所产生的心理抗压能力<br>指针和递归要求一定水平的推理能力、抽象思考能力，以及最重要的，在若干个不同的抽象层次上同时审视同一个问题的能力<br>因此，是否真正理解指针和递归与是否是一个优秀程序员直接相关</p>
+</blockquote>
+<p>作者提到一些知识点：</p>
+<ul>
+<li>指针（pointer）</li>
+<li>递归（recursion）</li>
+<li>数据结构</li>
+<li>不动点定理（fitxed pointer theory）</li>
+<li>函数式编程（functional programming）</li>
+<li>MIT 6.001 <a target="_blank" rel="noopener" href="https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs">Structure and Interpretation of Computer Programs</a></li>
+</ul>
+<h3 id="9-在耶鲁大学的演讲"><a href="#9-在耶鲁大学的演讲" class="headerlink" title="9 在耶鲁大学的演讲"></a>9 在耶鲁大学的演讲</h3><p>和上一篇内容有点类似，都是说课程内容足够难才能筛选出真正适合学计算机的学生</p>
+<blockquote>
+<p>作者试听了一节 <code>动态逻辑</code> 课程就知道自己不是馆理论的料</p>
+</blockquote>
+<p>对于如何生产出更高质量的代码，作者把计算机界分为两派：<code>技术派（geek）</code> 和 <code>务实派（suits）</code><br><code>技术派（geek）</code> 指利用自动化技术提高软件质量，例如 <code>单元测试（unit testing）</code>、 <code>测试驱动开发（test-driven develoment）</code>、 <code>自动化测试（automated testing）</code><br><code>务实派（suits）</code> 则不太关心质量，只要能卖出去就行</p>
+<p>作者更加赞同 <code>务实派（suits）</code> 的观点，给出了两个理由：</p>
+<ol>
+<li>消灭代码中的 bug 是一件边际报酬递减的事情<br>只要软件质量达到一定的水准，可以解决实际问题，用户愿意掏钱买就足够了</li>
+<li><code>技术派（geek）</code> 对 <code>代码质量</code> 的定义过于狭隘，自动化技术能保证代码里面没有问题<br>但那些不能自动化测试的部分，例如 UI 是否美观，交互逻辑是否合理，这些被排除在 <code>代码质量</code> 之外<br>这时，<code>务实派（suits）</code> 对 <code>代码质量</code> 的定义就广泛的多，因为这些都关乎软件能不能卖钱</li>
+</ol>
+<hr>
+<p>世界上 80% 的程序员是内部程序员，开发公司内部使用的软件，作者建议警惕这种工作<br>因为内部程序员一般不会选用前沿技术，并且做出的产品仅要求 <code>能用就行</code>，不像对外销售的商品一样，需要不断加工、打磨、优化和改良<br>以及，内部程序员是公司要负担的成本，公司更喜欢能赚钱的人<br>技术落后、品味变差、没有议价权，做内部程序员非常被动</p>
+<hr>
+<p>作者认为，能不能写出清晰明了的技术文章决定了你是一个口齿不清的程序员还是一个领袖，所以写作能力非常重要</p>
+<h3 id="10-给计算机系学生的建议"><a href="#10-给计算机系学生的建议" class="headerlink" title="10 给计算机系学生的建议"></a>10 给计算机系学生的建议</h3><ol>
+<li>毕业前练好写作</li>
+<li>毕业前学好 C 语言</li>
+<li>毕业前学好微观经济学</li>
+<li>不要因为枯燥就不选修非计算机专业的课程</li>
+<li>选修有大量编程实践的课程</li>
+<li>别担心所有工作都被印度人抢走</li>
+<li>找一份好的暑假实习工作</li>
+</ol>
+<h2 id="第三部分-设计的作用"><a href="#第三部分-设计的作用" class="headerlink" title="第三部分  设计的作用"></a>第三部分  设计的作用</h2><h3 id="11-字体平滑、反锯齿和次像素渲染"><a href="#11-字体平滑、反锯齿和次像素渲染" class="headerlink" title="11 字体平滑、反锯齿和次像素渲染"></a>11 字体平滑、反锯齿和次像素渲染</h3><p>苹果的字体渲染方式更倾向终于字体的原始设计，即使有损清晰度也在所不惜<br>微软则倾向保证可读性，即使背离字体的原始设计</p>
+<blockquote>
+<p>如果你问人们喜欢什么样的风格和设计，除非受过专业训练，否则他们一般会选择自己最熟悉的品种</p>
+</blockquote>
+<h3 id="12-寸土必争"><a href="#12-寸土必争" class="headerlink" title="12 寸土必争"></a>12 寸土必争</h3><p>做优秀产品需要「强迫症」一样的精神</p>
+<blockquote>
+<p>为了发现可以改进的地方，你必须有一个思维定势，始终如一地用批判地眼光看世界<br>当你改正了一个又一个这样的小细节后，当你磨光、定型、擦亮、修饰你的产品的每一个小边角后，就会有神奇的事情发生。厘米变成分米，分米变成米，米变成了千米。你最后拿出来的是一件真正优秀的产品。它第一眼就让人觉得震撼，出类拔萃，工作起来完全符合直觉。就算 100 万个用户中有一个用户某天突然要用到一个他 100 万次使用中才会用到一次的罕见功能，他发现了这个功能不仅能用，而且还很美：在你的软件中，即使是看门人的小屋都铺着大理石地板，配有实心的橡木门和桃花心木的壁板。<br>就是在这个时候，你意识到这是一个优秀软件。*</p>
+</blockquote>
+<h3 id="13-大构想的陷阱"><a href="#13-大构想的陷阱" class="headerlink" title="13 大构想的陷阱"></a>13 大构想的陷阱</h3><p>这篇是作者对 Scott Resenberg 《梦断代码 (Dreaming in Code)》 一书的评论</p>
+<p>人们往往高估自己清晰判断事物的能力，总是觉得自己看到了全部，即使事实并非如此<br>在软件开发中，这种错觉会导致你感觉自己已经在头脑中形成了整体设计，每一步都清晰无比，这时立刻开始着手工作就会掉入两个陷阱：</p>
+<ol>
+<li>对自己的设想过于自信<br>认为自己不需要详细的说明书，直接开始写代码就行<blockquote>
+<p>生活中也经常有这样的情况，例如写博客，感觉脑海中想法很清晰，但实际坐下来打字时不是抓不住头绪、无从下笔，要不然就是思路混乱、废话连篇</p>
+</blockquote>
+</li>
+<li>在做产品设计之前就开始雇佣程序员<br>世界上只有一件事比你自己设计软件更困难，那就是一个团队一起设计软件<blockquote>
+<p>《人月神话》<code>贵族专制、民主政治和系统设计(Aristocracy, Democracy, and System Design)</code> 一节也讨论了类似主题：为了保持概念完整性需要在设计阶段实行「贵族专制统治」，一群人开会做决定只会拖累进度、降低品质</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="14-别给用户太多选择"><a href="#14-别给用户太多选择" class="headerlink" title="14 别给用户太多选择"></a>14 别给用户太多选择</h3><p>太多的选择限制了我们的自由，而不是解放了我们</p>
+<blockquote>
+<p>想到 《天真的人类学家：小泥屋笔记》 结尾主人公从非洲原始部落回到英国现代社会时的感受，选择过于丰富，就像被海量嘈杂信息淹没</p>
+</blockquote>
+<p>作者讨论了如何将 Windows 中 15 种关闭计算机的方法精简成一种，思考过程非常有趣，建议看原文<br>微软和大部分开源软件都有这样的问题，菜单设计的大而全，往往过于繁琐</p>
+<blockquote>
+<p>但总感觉苹果的理念是规定用户「你应该这样用」，如果自己的使用习惯恰好和苹果规则一致时很舒服，当你一旦想稍微偏离苹果的使用规则，那就抱歉了</p>
+</blockquote>
+<h3 id="15-易用性是不够的"><a href="#15-易用性是不够的" class="headerlink" title="15 易用性是不够的"></a>15 易用性是不够的</h3><p>社会化界面工程学 (social interface engineering)<br>社会上存在各种各样的人，想占便宜的、搞诈骗的、为非作歹的，社会化软件里也存在这类问题<br>例如，如何应该在论坛里发广告的人？<br>一种办法是弹出错误信息，禁止发广告<br>另一种办法是假装系统接收了用户发送的广告，他觉得目的达成，就会转到其他地方继续发广告</p>
+<h3 id="16-用软件搭建社区"><a href="#16-用软件搭建社区" class="headerlink" title="16 用软件搭建社区"></a>16 用软件搭建社区</h3><blockquote>
+<p>软件项目同建筑项目一样，设计规划非常重要，它能够决定在线社区的成败和它的类型。如果你让某个功能很容易操作，人们就愿意使用它。如果你让某个功能很难操作，人们就会避免使用它。通过这种方式，你能够暗中鼓励人们按照预想的方式表现，这决定了一个社区的特性和品质。<br>软件实现上的小细节会导致在线社区发展、运作、用户体验上的大差异。</p>
+</blockquote>
+<p>最近看到一个视频，提到动画和真人电影的区别，金敏说 <code>动画是从零开始，不带着意图就无法进行的创作</code>，所以动画的每一帧都是经过设计的<br>这似乎和软件也有点类似，同样是从零开始的作品，作品中的每一个细节都反映了创作者的意图<br>想要做出什么样的软件？<br>想要传达什么理念？<br>希望用户如何使用这个软件？<br>这些都需要创作者自己心中有答案</p>
+<p>这章内容里 Joel 对搭建高质量社区的一些思考值得一看</p>
+<h2 id="第四部分-管理大型项目"><a href="#第四部分-管理大型项目" class="headerlink" title="第四部分  管理大型项目"></a>第四部分  管理大型项目</h2><h3 id="17-火星人的耳机"><a href="#17-火星人的耳机" class="headerlink" title="17 火星人的耳机"></a>17 火星人的耳机</h3><p>本章讨论 <code>IE 7</code> 升级 <code>IE 8</code> 过程中为了符合 Web 标准，<code>理想主义阵营 (严格遵守新标准)</code> 和 <code>实用主义阵营 (兼容旧标准)</code> 之间爆发的口水大战<br>最终结果是 <code>IE 8</code> 默认使用新标准，但同时提供 <code>兼容性视图</code></p>
+<h3 id="18-为什么Microsoft-Office的文件格式如此复杂（以及一些对策）"><a href="#18-为什么Microsoft-Office的文件格式如此复杂（以及一些对策）" class="headerlink" title="18 为什么Microsoft Office的文件格式如此复杂（以及一些对策）"></a>18 为什么Microsoft Office的文件格式如此复杂（以及一些对策）</h3><p>稍微一窥 Excel、Word 的复杂性</p>
+<blockquote>
+<p>回顾整个历史，程序员无时无刻不想做出正确的事情，但是有时候你不得不向现实屈服。</p>
+</blockquote>
+<p>如果不得以要和 Office 打交道，作者给了两个对策：</p>
+<ol>
+<li>让 Office 为你干脏活</li>
+<li>用一种更简单的格式生成文件<br>生成 CSV 格式文件给 Excel 处理，HTML/RTF 格式给 Word 处理<br>而非想办法生成 Office 文件交给 Office 处理</li>
+</ol>
+<h3 id="19-要挣钱，就别怕脏"><a href="#19-要挣钱，就别怕脏" class="headerlink" title="19 要挣钱，就别怕脏"></a>19 要挣钱，就别怕脏</h3><p>解决轻而易举的事情是拿不到钱的</p>
+<blockquote>
+<p>但在日本怎么经常感觉 <code>这玩意儿也能卖钱？</code>、<code>这玩意儿也有人买？</code>（</p>
+</blockquote>
+<p>编写一个设计优雅、易于使用的应用程序，同解决「麻烦事」有相仿的效果。虽然看到成品的时候，你会觉得不难做，但实际上是很难的。就好比你在看精彩的芭蕾舞演出，你觉得演员跳起来很轻松，实际上换了你就困难无比。Jason 和他的 37signals 致力于做出优秀的设计，他们得到了回报。优秀的设计似乎是最容易复制的东西，但是做起来却又不是那么容易，你看看微软试图效仿 iPod 的例子，就会明白这一点。做出优秀的设计本身就是一件「麻烦事」，实际上能够提供牢固得令人震惊的竞争优势。</p>
+<h2 id="第五部分-编程建议"><a href="#第五部分-编程建议" class="headerlink" title="第五部分  编程建议"></a>第五部分  编程建议</h2><h3 id="20-循证式日程规划"><a href="#20-循证式日程规划" class="headerlink" title="20 循证式日程规划"></a>20 循证式日程规划</h3><p>如果日程规划是以「天」为单位，甚至以「周」为单位，我就认定它是没用的。你必须将日程规划先分解成一些非常小的任务，这些人物能够在以「小时」为单位的时间段中完成。不能有任何人物所需的时间超过 16 小时。</p>
+<p>保留好工作时间记录单。让你用在每项任务上的时间长度留下可以追踪的痕迹。以后，你就可以回过头来参考这些数据，估计一下新的任务相对需要的时间。</p>
+<ol>
+<li>只有第一线的程序员才能提出完成日期的估计值</li>
+<li>一发现错误就立即修正，将用时算入原始人物的用时之中</li>
+<li>防止管理层向程序员施加压力，要求加快开发速度</li>
+</ol>
+<p>有效的日程规划有许多很大的好处，其中之一就是你会被迫删去一些功能<br>删掉容易做的，或是有趣的功能，砍到不能再砍的地步，只保留能够把产品变成真正优秀产品的重要功能</p>
+<h3 id="21-关于战略问题的通信之六"><a href="#21-关于战略问题的通信之六" class="headerlink" title="21 关于战略问题的通信之六"></a>21 关于战略问题的通信之六</h3><p>有一些程序员将大量经理投入优化工作，要将程序变得更紧凑、更快速。某一天，他们醒来后发现，这种努力基本上是白忙一场。<br>从长远的观点来看，那些不关心效率、不关心程序是否臃肿、一个劲往软件中加入高级功能的程序员最终将拥有更好的产品。</p>
+<h3 id="22-你的编程语言做得到吗"><a href="#22-你的编程语言做得到吗" class="headerlink" title="22 你的编程语言做得到吗"></a>22 你的编程语言做得到吗</h3><p>这章讨论 <code>函数式编程 (functional programming)</code>，下面是一些摘抄：</p>
+<p>如果你不懂函数式编程，你就无法创造出 MapReduce，正式这种算法使得 Google 的可拓展性（scalable）达到如此巨大的规模。术语 <code>Map（映射）</code> 和 <code>Reduce（化简）</code> 分别来自于 Lisp 语言和函数式编程。回想起来，在类似 6.001 这样的编程课程中，都提到纯粹的函数式编程没有副作用，因此可以直接用于并行计算。任何人只要还记得这些内容，那么 MapReduce 对他来说就是显而易见的。发明 MapReduce 的公司是谷歌，而不是微软，这个简单的事实说出了原因，为什么微软至今还在追赶，还在试图提供最基本的搜索服务，而谷歌已经转向了下一个阶段，开发 Skynet，我的意思是，开发世界上只打的并行式超级计算机。我觉得，微软并没有完全明白在这一波竞争中它落后了多远。<br>好的，我希望到了这个时候，你已经深信不疑了。你确信，那些具备了 <code>第一类函数</code> 功能的编程语言，能够让你更容易地完成进一步抽象代码的任务。这意味着你的代码体积更小、更紧凑、更容易重复利用、更方便拓展。谷歌的许多应用程序都使用了 MapReduce 技术，所以一旦有人对底层的并行计算程序进行优化或消除 bug，那么所有这些应用程序都会受益。<br>说到这里，我有点动感情了，忍不住想站起来说，最优生产效率的编程环境是那些允许你在 <code>不同层次上进行抽象</code> 的编程环境。</p>
+<blockquote>
+<p>看得出来作者非常推崇这种编程方法/思考模式，最近学习 <code>JavaScript</code> 和 <code>Python</code> 的过程中也接触到了一些函数式编程内容，似乎能理解原理，但如何在实际中运用函数式编程方法，特别是 <code>如何设计程序</code> 以满足函数式编程思想，这方面还完全不了解，也许以后可以找 Lisp/Haskell 这类纯函数式编程相关的书籍来看看</p>
+</blockquote>
+<h3 id="23-让错误的代码显而易见"><a href="#23-让错误的代码显而易见" class="headerlink" title="23 让错误的代码显而易见"></a>23 让错误的代码显而易见</h3><p>作者讲述了程序员的 4 种境界：</p>
+<ol>
+<li>你分不清什么是干净的代码，什么是不干净的代码。</li>
+<li>你对干净的代码有一个肤浅的认识，主要看它们是不是符合代码书写规范。</li>
+<li>你开始能找出那些很隐秘的不干净代码，在干干净净的表面之下发现蛛丝马迹。但是，发现和修正不干净代码要花去你很长的时间，把你折磨得够呛。</li>
+<li>你精心构建代码，发挥洞察力，将它们写得清晰易懂，不容易出错。</li>
+</ol>
+<p>作者认为做好的做法是：<br>寻找一种代码的书写规范，让错误的代码变得更容易被看出。<br>让代码中的相关信息在显示屏上集中在一起，使你能够当场发现和改正某些种类的错误</p>
+<p>作者还批评了异常处理，认为这不是一个好工具</p>
+<blockquote>
+<p>这部分没太理解，作者给出了一些推荐阅读材料 <a target="_blank" rel="noopener" href="https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/">Making Wrong Code Look Wrong</a> 这篇博客最后 <code>More Reading</code> 部分<br>Raymond Chen’s essay: <a target="_blank" rel="noopener" href="https://devblogs.microsoft.com/oldnewthing/20050114-00/?p=36693">Cleaner, more elegant, and harder to recognize</a></p>
+</blockquote>
+<h2 id="第六部分-开办软件公司"><a href="#第六部分-开办软件公司" class="headerlink" title="第六部分  开办软件公司"></a>第六部分  开办软件公司</h2><h3 id="24-Eric-Sink-on-the-Business-of-Software的前言"><a href="#24-Eric-Sink-on-the-Business-of-Software的前言" class="headerlink" title="24 Eric Sink on the Business of Software的前言"></a>24 Eric Sink on the Business of Software的前言</h3><p>有趣的小故事，有一项不断成长的生意会让人非常有成就感（<del>顺便还吐槽了一波他遇到的垃圾人</del></p>
+<h3 id="25-Micro-ISV：From-Vision-to-Reality的前言"><a href="#25-Micro-ISV：From-Vision-to-Reality的前言" class="headerlink" title="25 Micro-ISV：From Vision to Reality的前言"></a>25 Micro-ISV：From Vision to Reality的前言</h3><p>开头大力吐槽微软高高在上的姿态，语言太幽默，忍不住笑出声</p>
+<p>作者对想创业的人给出三条建议：</p>
+<ol>
+<li>如果你说不清楚你的软件解决了什么棘手的问题，就不要去开软件公司。</li>
+<li>不要独自一人创办公司。</li>
+<li>一开始不要抱太高期望。</li>
+</ol>
+<p>作者描述创业的乐趣：</p>
+<blockquote>
+<p>总结一下，我所认为的创办软件公司的真正乐趣就是，创造一些东西，自己参与整个过程，悉心培育，不间断地劳作，不断地投入，看着它成长，看着自己一步步的到报偿。这是世界上最带劲的旅程，无论如何，我都不想错过它。</p>
+</blockquote>
+<h3 id="26-飙高音"><a href="#26-飙高音" class="headerlink" title="26 飙高音"></a>26 飙高音</h3><p>软件的复制成本为零，如果销售量很大，高价雇佣程序员的成本可以分摊到销量上，单位软件成本并不会显著上升</p>
+<p>优秀程序员的生产效率比普通程序员高 5 到 10 倍，那么是否可以用 5 个平庸程序员来代替 1 个优秀程序员呢？<br>答案是不能，不仅因为布鲁克斯法则（Brooks‘ Law）：向一个已经延误的软件项目增加人手，只会使它更加延误</p>
+<blockquote>
+<p>Brooks 就是《人月神话》（The Mythical Man-Month）的作者<br>而且平庸的程序员无论工作多长时间，他们做出来的东西也无法像优秀程序员一样好<br>一流的歌唱演员不管在什么时候，都可以很轻松地唱出高音，而平庸的歌唱演员就是永远做不到这一点</p>
+</blockquote>
+<h2 id="第七部分-经营软件公司"><a href="#第七部分-经营软件公司" class="headerlink" title="第七部分  经营软件公司"></a>第七部分  经营软件公司</h2><h3 id="27-仿生学办公室"><a href="#27-仿生学办公室" class="headerlink" title="27 仿生学办公室"></a>27 仿生学办公室</h3><p>作者开公司，他是一个真正的程序员，并且按照他的理想布置了适合程序员工作的办公空间，最终成本是人均 700$/月，非常舍得花钱<br>去 wiki 上看了看公司的后续，疫情期间被收购了，详细情况不太了解，但还是叹息，理想主义公司生存真是太困难了</p>
+<h3 id="28-他山之石，不可攻玉"><a href="#28-他山之石，不可攻玉" class="headerlink" title="28 他山之石，不可攻玉"></a>28 他山之石，不可攻玉</h3><p>将 FogBugz 许可证变为公开源代码的理由</p>
+<h3 id="29-简化性"><a href="#29-简化性" class="headerlink" title="29 简化性"></a>29 简化性</h3><p><code>简化</code> 并不是 <code>简陋</code><br>产品易于理解使用、外观简洁明快，都是加分项<br>但不能把 <code>简化</code> 理解为 <code>不提供大量功能</code> 或者 <code>只提供一种功能，并把这种功能完美实现</code></p>
+<h3 id="30-揉一揉，搓一搓"><a href="#30-揉一揉，搓一搓" class="headerlink" title="30 揉一揉，搓一搓"></a>30 揉一揉，搓一搓</h3><p>代码重构（refactoring）的原则：</p>
+<ol>
+<li>不添加任何新功能</li>
+<li>无论何时向源码库提交代码，都要保证程序依然能够完善地运行</li>
+<li>制作一些合乎逻辑的变换（logical transformation），几乎都是机械性的，而且能够立刻确定不会改变代码行为</li>
+</ol>
+<p>作者认为这样的重构有许多优点：</p>
+<ul>
+<li>耗时大大少于一次彻底的重写</li>
+<li>没有引入任何新错误</li>
+<li>在任何时间，如果有必要，都可以停下来，把程序交出去</li>
+<li>工作进度是完全可以预测的</li>
+<li>重构所花费的时间可以为之后的新功能开发节省时间</li>
+</ul>
+<h3 id="31-组织beta测试的十二个最高秘诀"><a href="#31-组织beta测试的十二个最高秘诀" class="headerlink" title="31 组织beta测试的十二个最高秘诀"></a>31 组织beta测试的十二个最高秘诀</h3><ol>
+<li>开放式的 Beta 测试是没用的</li>
+<li>要想找到那些能够向你反馈意见的测试者，最好的方法是诉诸他们 <code>言行一致</code> 的心理。你需要让他们自己承诺会向你发送反馈意见，或者更好的方法是，让他们自己申请参加 Beta 测试。</li>
+<li>不要妄想一次完整的 Beta 测试的所有步骤能够在少于 8~10 周的时间内完成</li>
+<li>不要妄想在测试中发布新的软件版本的频率能快于每两周一次</li>
+<li>一次 Beta 测试中计划发布的软件版本不要少于 4 个</li>
+<li>如果在测试过程中你为软件添加了一个功能，那么哪怕这个功能非常微小，整个 8 个星期的测试也要回到起点</li>
+<li>即使你有一个申请参加 Beta 测试的步骤，最后也只有五分之一的测试者会向你提交反馈意见</li>
+<li>我们制定了一条政策，所有向我们提交反馈意见的测试者都将免费获赠一份正版软件，不管反馈意见是正面还是负面</li>
+<li>你需要的严肃测试者（即那些会把反馈意见写成 3 页纸发送给你的人）的最小数量大约是 100 人左右</li>
+<li>根据第 7 条，即使你有一个申请参加 Beta 测试的步骤，最后也只有五分之一的测试者会向你提交反馈意见。那么，假定你有一个质量控制部门，里面一共有 3 个测试管理人员，这就意味着你必须批准 1500 份参加 Beta 测试的申请表，因为这样才能产生 300 个严肃测试者。</li>
+<li>大多数 Beta 测试的参与者只是在第一次拿到这个程序的时候才会去试用一下，然后就丧失了兴趣。你需要错开不同版本的测试对象，将所有 Beta 测试参与者分成四组，每次发布一个新版本的时候，就把一个新的组加入测试，这样就能保证每个版本都有第一次使用这个程序的测试者。</li>
+<li>不要混淆 <code>技术 Beta</code> 和 <code>市场 Beta</code>。上面这些都是针对 <code>技术 Beta</code>，它的目标是发现软件中的错误和得到及时的用户反馈意见。</li>
+</ol>
+<h3 id="32-建立优质客户服务的七个步骤"><a href="#32-建立优质客户服务的七个步骤" class="headerlink" title="32 建立优质客户服务的七个步骤"></a>32 建立优质客户服务的七个步骤</h3><ol>
+<li>每件事都有两种做法<br>一种是简单、快速的解决当前问题<br>另一种是把探究问题产生的原因，一劳永逸地解决这个问题。长此以往，所有常见的和容易的问题都被解决了，留下来的都是一些非常罕见和奇特的问题。这样可以节省常规性技术支持的成本。<br>当然，后一种办法对客服人员的要求更高，需要技术支持团队可以与开发团队直接沟通。</li>
+<li>建议吹掉灰尘<br>Raymond Chen 讲过一个小故事。有一次，客户打电话来抱怨键盘失灵，结果不出所料，原因是键盘没插好。但是如果你直接问客户键盘有没有插好，他们会觉得受到了侮辱，怒气冲冲地回答：“它当然插好了！难道我看上去像一个笨蛋吗？”而实际上，他们并没有检查过接口。<br>“你可以换一种说法，” Raymond Chen 建议改成这样说：“别着急，有时候键盘接口会有灰尘，导致接触不良。你能不能拔掉键盘插头，吹掉上面的灰尘，然后再把它插回去？”<br>“然后，客户爬到桌子底下，发现自己忘了插好插头（或者把插头插入错误的接口）。他们把灰尘吹掉，插入插头，回复你说：‘嗯，很好，问题解决了，谢谢。’”<br>很多时候，我们要求客户去检查某样东西，都可以这样表达。不是直接要求他们去检查某个设置，而是告诉他们先改变这个设置，然后再改回去，目的是 “确保这个设置被保存进了软件”。</li>
+<li>让客户迷上你<br>客户遇到问题，你帮他解决了，并且是以漂亮的、超过客户预期的方式解决这个问题后，客户实际上变得比没有问题时还要满意，很容易成为你的重视客户，还会向别人推荐。</li>
+<li>承受责备<br>坦诚地承认自己的错误</li>
+<li>学会说软话<br>和上条一样，承认自己的过失，并解决问题，防止他人对你火冒三丈</li>
+<li>学会做木偶<br>还是和上面类似，对事不对人，不要觉得别人的批评是对自己的人身攻击</li>
+<li>贪婪让你一无所获<br>作者的公司 Fog Creek 的客服从来没有遇到过愤怒的顾客，他们公司的退款政策是 “如果你是用我们的产品，不觉得异常欣喜，我们就不要你的钱”<br>这样顾客就不会有后顾之忧，大不了退钱。<br>作者公司设置这样异常慷慨的退款政策，6 年时间中，因为接受顾客退货儿导致的成本只占总成本的 2%。<br>如果把退款政策制定的很严格和苛刻，反而有可能会惹火一些顾客，损失潜在客源。</li>
+</ol>
+<ul>
+<li>附赠建议：为客服人员提供职业发展道路<br>作者安排了非常称职的人与客户交谈，Fog Creek 的销售人员对软件开发流程有丰富的经验<br>通过改进软件，他们已经把常见问题都消灭了，技术支持工作实际上变成了处理疑难杂症，需要经常对程序进行调试和除错<br>作者还为客户服务人员提供一条明确的职业发展道路，公司出钱让他们攻读哥伦比亚大学技术管理的硕士学位<br>这让作者招聘到有抱负、聪明的技术人才，尽管付出了超额成本，但也创造出了比一般水平多得多的价值</li>
+</ul>
+<h2 id="第八部分-发布软件"><a href="#第八部分-发布软件" class="headerlink" title="第八部分  发布软件"></a>第八部分  发布软件</h2><h3 id="33-挑选发布日期"><a href="#33-挑选发布日期" class="headerlink" title="33 挑选发布日期"></a>33 挑选发布日期</h3><p>制定软件开发周期的基本规则：</p>
+<ol>
+<li>确定发布日期，这个日期可以根据客观情况也可以根据主观情况进行选择</li>
+<li>列出软件要实现的功能，然后按照优先顺序排序</li>
+<li>每当你落后于预订进程时，就把排在最后的功能砍掉</li>
+</ol>
+<p>挑选软件发布日期的规则：</p>
+<ol>
+<li>经常发布稍作改进的版本。适合顾客人数较少的项目。</li>
+<li>每 12 个月到 18 个月发布一次。适合上架销售的商业软件和桌面应用程序，拥有大型开发团队和成千上万名顾客。</li>
+<li>每 3 到 5 年发布一次。常见于超级庞大的软件系统和平台。</li>
+</ol>
+<h3 id="34-软件定价"><a href="#34-软件定价" class="headerlink" title="34 软件定价"></a>34 软件定价</h3><p>作者讲到一些经济学概念，需求曲线、消费者剩余、市场分割/价格歧视（但价格歧视有可能会惹怒消费者）<br>讲了一大堆，最后作者说，你不可能发现需求曲线真实的样子，对定价这件事知道的越多，反而可能对它越不了解，读完这篇文章后，你甚至比读此文之前更不知道如何为软件定价了</p>
+<h2 id="第九部分-修订软件"><a href="#第九部分-修订软件" class="headerlink" title="第九部分  修订软件"></a>第九部分  修订软件</h2><h3 id="35-五个为什么"><a href="#35-五个为什么" class="headerlink" title="35 五个为什么"></a>35 五个为什么</h3><p>不要满足于解决眼前的问题，应该不断追问下去，找到问题发生的根本原因，并且思考如何通过优化流程来避免再次发生同样的问题<br>作者公司的对应方法是搭建一个网志，在网志上面实时记录每一次的服务中断，提供完整的事后分析，询问五个为什么，找到根本性的原因，告诉顾客为了防止类似故障再次发生所采取的举措</p>
+<h3 id="36-确定优先顺序"><a href="#36-确定优先顺序" class="headerlink" title="36 确定优先顺序"></a>36 确定优先顺序</h3><p>确定软件开发中各种任务的优先顺序时的减分操作：</p>
+<ul>
+<li>不要因为答应过一个顾客而开发某个功能，应该始终面向整个市场开发软件</li>
+<li>不要因为某些事情不得不做，你就去做。不得不做不是一个足够好的理由，要想清楚什么是眼下最重要的、必须马上做好的事情</li>
+</ul>
+<p>确定软件开发中各种任务的优先顺序的步骤：</p>
+<ol>
+<li>召集尽量不同观点/视角的团队：程序员、设计师、客服人员、销售人员、管理人员、文档作者、测试员，甚至包括客户。每个人都提出一些想要实现的功能，最后得到一份包含 50 项重大功能的清单</li>
+<li>审查这些功能，每个人进行表决，简单地表示 “赞成” 或是 “反对”，筛选过后，剩下 36 个功能</li>
+<li>为每个功能设定一个成本，用 1 到 10 表示，这一步只是区分小型任务、中型任务、大型任务，不需要精确计算实际开发所需的时间</li>
+<li>把 36 个功能和它们的成本做成一张菜单，每个人有 50 美元用来点菜。可以买半个功能，也可以同样功能买两个</li>
+<li>汇总每个功能的销售额，用 <code>销售额</code> 除以 <code>成本</code>，找出最受欢迎的功能</li>
+<li>最后可以根据功能之间的联系做一些调整</li>
+<li>优先顺序确定之后，按照清单从上往下进行开发，直到开发阶段结束，没有时间完成的功能就直接舍弃，或是留到下个版本开发</li>
+</ol>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>看一遍，复读一遍，特别是在学习了 Python 和 JavaScript 里函数式编程概念之后，对一些章节理解更加深刻了<br>不错，有收获</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8E%A8%E8%8D%90/">推荐</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%98%85%E8%AF%BB/">阅读</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-NC-ND 4.0协议</a> 。转载请注明出处~
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/07/27/069-Learning-of-Python/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">学习： Python 学习资源推荐 & 学习笔记</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/06/30/067-Log-of-Month-2024-06/">
+                        <span class="hidden-mobile">月记：2024-06</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'KassadinL/blog_comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":200})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
