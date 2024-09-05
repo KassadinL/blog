@@ -74,7 +74,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -253,7 +253,7 @@
             
             <div class="markdown-body">
               <p>在Blender里建模，使用切刀工具有时会切出来重复点，比如下图箭头指的这四个点，移动一个点后你会发现它下面还有一个点。</p>
-<img src="/2019/10/24/021-Duplicate-vertices-with-knife-tool/01points.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/10/24/021-Duplicate-vertices-with-knife-tool/01points.png" class="">
 
 <p>这些重复点在建模时很碍事，于是去网上查了查。<br>发现手册里就有提到这个问题 <span id="more"></span> - <a target="_blank" rel="noopener" href="https://docs.blender.org/manual/en/dev/modeling/meshes/editing/subdividing/knife.html#duplicate-vertices" title="link">切刀工具</a></p>
 <p>手册里说出现重复点可能是<code>Clip Start/End(近景/远景裁剪)</code>设置的数值太极端，可以适当提高<code>Clip Start(近景裁剪)</code>的距离<br>之前确实调过近景裁剪的距离，直接拉到最小了<br>这次不敢设置这么小，Blender默认是0.1m，我设置了0.05m，如果后面有需要再适当减一减</p>
@@ -310,7 +310,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -435,10 +435,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

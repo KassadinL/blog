@@ -76,7 +76,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -266,25 +266,25 @@
 <p>随便一个网格物体，进入编辑模式，删除所有顶点，选择<code>Poly Build（创建多边形）</code>工具</p>
 <ul>
 <li><p>填充建面<br>点一下可以创建一个点，点三个点按<code>F</code>可以建立三角面，四个点按<code>F</code>是四边面</p>
-<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/01fill.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/01fill.png" class=""></div>
 </li>
 <li><p>创建三角面<br>如果光标靠近四边面的边附近，边会被标记为品红色，此时点击鼠标，新创建的点会与组成被标记边两个点相连，创建一个三角面</p>
-<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/02edge.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/02edge.png" class=""></div>
 </li>
 <li><p>创建四边面<br>如果光标靠近四边面的点附近，点会被标记为品红色，此时点击鼠标，新创建的点会与被标记点的相邻点相连，创建一个四边面<br>（此处相邻点是指被标记点沿多边形外轮廓左右两边的点）</p>
-<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/03vertex.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/03vertex.png" class=""></div>
 </li>
 <li><p>删除点<br>光标靠近点附近，按住<code>Alt</code>点击鼠标，可以删除顶点</p>
 </li>
 <li><p>分割边<br>以边为基础创建三角面时，如果按住<code>Ctrl</code>，会分割被标记边，也就是说，新创建的点在被标记边上<br>如下图，左边是基于边创建三角面，右边是分割边</p>
-<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/04ctrl.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/04ctrl.png" class=""></div>
 
 </li>
 </ul>
 <hr>
 <h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><ul>
 <li><p>创建一个四边形，在边上拖拽，创建新的三角面，在边上<code>Ctrl</code>拖拽，变成四边面，重复几次，建立一排四边面<br>在这排四边面上方创建一个四边面，然后在顶点上拖拽，可以直接创建四边面</p>
-<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/05sample.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 60%; margin: auto"><img src="/2019/08/28/010-Poly-buil-tool-tips/05sample.png" class=""></div>
 </li>
 <li><p>配合镜像、缩裹修改器，可以给模型重拓扑<br>具体操作，可以看这个视频 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=RFJ2XqnL8I4" title="link">Using Poly Build Tool to Retopology in Blender 2 8 Tutorial</a></p>
 </li>
@@ -341,7 +341,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -466,10 +466,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

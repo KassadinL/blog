@@ -75,7 +75,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -263,12 +263,12 @@
 <li>下载nssm <a target="_blank" rel="noopener" href="https://nssm.cc/ci/nssm-2.24-101-g897c7ad.zip">https://nssm.cc/ci/nssm-2.24-101-g897c7ad.zip</a></li>
 <li>在nssm.exe所在的文件夹打开cmd，输入<code>nssm install v2ray</code><ul>
 <li><code>nssm install service_name</code>，这个<code>service_name</code>以后控制服务要经常输，所以最好不要太长，我这次安装的是<code>v2ray</code>，所以<code>nssm install v2ray</code>就可以</li>
-<li>以前都是<code>Windows R</code>输入<code>cmd</code>，然后再<code>cd</code>到目标目录，后来查了查，发现可以在文件夹的地址栏输入<code>cmd</code>…<img src="/2019/11/08/025-exe-to-service/01cmd.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>以前都是<code>Windows R</code>输入<code>cmd</code>，然后再<code>cd</code>到目标目录，后来查了查，发现可以在文件夹的地址栏输入<code>cmd</code>…<img src="/2019/11/08/025-exe-to-service/01cmd.png" class=""></li>
 </ul>
 </li>
-<li>在弹出的界面选好<code>wv2ray.exe</code>的路径，点击<code>install service</code><img src="/2019/11/08/025-exe-to-service/02path.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>在弹出的界面选好<code>wv2ray.exe</code>的路径，点击<code>install service</code><img src="/2019/11/08/025-exe-to-service/02path.png" class=""></li>
 <li><code>Win + R</code>运行<code>services.msc</code>，找到刚才注册的服务，改为自动启动，启动<ul>
-<li>2019/12/18 更新<br>在程序第二个标签就可以选择启动方式，按需选用<img src="/2019/11/08/025-exe-to-service/03startup.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>2019/12/18 更新<br>在程序第二个标签就可以选择启动方式，按需选用<img src="/2019/11/08/025-exe-to-service/03startup.png" class=""></li>
 </ul>
 </li>
 <li>现在V2Ray就可以开机启动了</li>
@@ -334,7 +334,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -459,10 +459,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

@@ -72,7 +72,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -260,12 +260,12 @@
 <li>设置好代理，方法详见 <a href="/2019/11/25/027-linux-network-proxy-settings/" title="笔记：Linux系统代理设置">笔记：Linux系统代理设置</a></li>
 <li>安装VirtualBox增强补丁，参考 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/VirtualBox#Install_the_Guest_Additions" title="link">ArchWiki - VirtualBox - 2.2 Install the Guest Additions</a> 这一节<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> pacman -S virtualbox-guest-utils<br><span class="hljs-attribute">sudo</span> pacman -S xf<span class="hljs-number">86</span>-video-vmware<br><span class="hljs-attribute">sudo</span> pacman -S linux-lts-headers<br></code></pre></div></td></tr></table></figure>
 <ul>
-<li>第一个命令要选择模块，没看到Wiki上说的<code>virtualbox-guest-modules-arch</code>，选了<code>12</code><img src="/2019/12/29/032-VirtualBox-auto-screen-size/01mod.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>第一个命令要选择模块，没看到Wiki上说的<code>virtualbox-guest-modules-arch</code>，选了<code>12</code><img src="/2019/12/29/032-VirtualBox-auto-screen-size/01mod.png" class=""></li>
 </ul>
 </li>
 <li>设置VirtualBox自动调整屏幕大小，参考 <a target="_blank" rel="noopener" href="https://unix.stackexchange.com/a/536056" title="link">Manjaro guest on VirtualBox not able to get the full resolution</a><ul>
 <li>shutdown虚拟机</li>
-<li>虚拟机设置，显示，图形控制，选择<code>VBoxVGA</code>，保存<img src="/2019/12/29/032-VirtualBox-auto-screen-size/02vga.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>虚拟机设置，显示，图形控制，选择<code>VBoxVGA</code>，保存<img src="/2019/12/29/032-VirtualBox-auto-screen-size/02vga.png" class=""></li>
 <li>启动虚拟机，窗口跑一跑，然后就黑屏了</li>
 <li><code>Ctrl Alt F2</code>再开一个控制台，登录账号</li>
 <li><code>sudo mhwd -r pci video-vmware</code></li>
@@ -335,7 +335,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -460,10 +460,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

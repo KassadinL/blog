@@ -98,7 +98,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -318,50 +318,50 @@
 <p><strong>Github是什么？</strong><br>GitHub是通过Git进行版本控制的托管服务平台（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/GitHub" title="Wiki百科">Wiki百科</a>）。不了解没关系，我们在这里只需要把Github理解为公开在网络中的云盘，你可以申请这个云盘并建立仓库，把你做好的网站放入仓库。这样，别人就可以通过Github访问你的个人网站。</p>
 <hr>
 <p><strong>接下来，我会使用Windows10自带的沙盒（Sandbox）来演示如何在全新的Windows系统下搭建博客</strong></p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/01sandbox.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/01sandbox.png" class=""></div>
 
 <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><h5 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h5><p>进入<a target="_blank" rel="noopener" href="https://nodejs.org/en/" title="Node.js官网">Node.js官网</a>，点击左边的<code>10/16/0 LTS</code>开始下载。<br>安装时全部默认即可。</p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/02nodejs.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/02nodejs.png" class=""></div>
 
 <h5 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h5><p>点击<a target="_blank" rel="noopener" href="https://git-scm.com/download/win" title="Git下载链接">Git下载链接</a>开始下载，但是由于众所周知的原因，前面这个链接的下载速度可能会很慢。你可以参考这个<a target="_blank" rel="noopener" href="https://github.com/waylau/git-for-win" title="Git for Windows 国内下载站">Git for Windows 国内下载站</a>，选择最新的<code>64-bit Git for Windows Setup</code>即可<br>    安装时一路默认即可。</p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/03git.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/03git.png" class=""></div>
 
 <h5 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h5><p>必备的组件安装好之后，可以开始安装Hexo了。<br>这一步非常简单，只需要在任何地方，比如说桌面的空白处，单击鼠标右键，在菜单中选择<code>Git Bash Here</code>。</p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/04rightclick.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/04rightclick.png" class=""></div>
 这会打开我们刚才安装的Git，看起来是一个令人生畏的命令行窗口，但是我们只需要输入20个字符，就可以命令他安装好Hexo。和安装前两个软件比起来工作量少了很多。
 观察这个黑漆漆的窗口，你会发现光标在一个 `$` 符号后闪烁。
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/05newgitbash.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/05newgitbash.png" class=""></div>
 下面，亮出你的键盘，敲下`npm install -g hexo-cli`
 窗口变成了这个样子
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/06installhexo.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/06installhexo.png" class=""></div>
 此时按下回车，你发现......没有变化，只是光标移到了下一行。
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/07enter.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/07enter.png" class=""></div>
 但其实他已经在后台开始安装Hexo了，等待一段时间（取决于网络状况），他会说明安装完成，安装了“hexo-cli 2.0.0”，花费了“105.03s”
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/08done.png" srcset="/img/loading.gif" lazyload class=""></div>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/08done.png" class=""></div>
 
 <p><strong>至此，准备工作已经完成了，接下来是在本地搭建博客</strong></p>
 <hr>
 <h4 id="本地搭建博客"><a href="#本地搭建博客" class="headerlink" title="本地搭建博客"></a>本地搭建博客</h4><h5 id="初始化文件夹"><a href="#初始化文件夹" class="headerlink" title="初始化文件夹"></a>初始化文件夹</h5><ul>
 <li>首先，我们需要建立一个文件夹，存放博客需要的各种文件。你可以在电脑中任何喜欢的地方新建文件夹，存放文件。比如，我在“文档”中新建文件夹，命名为“Blog”，存放我的博客文件。</li>
-<li>然后，我们打开这个空文件夹，右键，点击“Git Bash Here”。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/09folder.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<li>然后，我们打开这个空文件夹，右键，点击“Git Bash Here”。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/09folder.png" class=""></div></li>
 <li>又是这个小黑窗，不过我们这次操作更简单，只需要输入<code>hexo init</code>，然后按下回车，他会初始化我们的“Blog”文件夹，生成博客需要的框架文件（就是PPT模板）。这个过程可能会长一些，稍作等待。<div style="width: 95%; margin: auto"></div></li>
-<li>经过几分钟的等待，我们的文件夹已经初始化完成，可以看到多了这么多文件。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/11initing.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>接下来，不要关这个窗口，继续输入<code>npm install</code>，回车。这次很快，出现了两个警告，但是似乎没有影响，我们继续。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/13done.png" srcset="/img/loading.gif" lazyload class=""></div>
+<li>经过几分钟的等待，我们的文件夹已经初始化完成，可以看到多了这么多文件。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/11initing.png" class=""></div></li>
+<li>接下来，不要关这个窗口，继续输入<code>npm install</code>，回车。这次很快，出现了两个警告，但是似乎没有影响，我们继续。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/13done.png" class=""></div>
 
 </li>
 </ul>
 <h5 id="生成、部署网页"><a href="#生成、部署网页" class="headerlink" title="生成、部署网页"></a>生成、部署网页</h5><ul>
-<li>输入<code>hexo g</code>，回车。（这个命令是<code>hexo generate</code>的缩写，意思是命令Hexo生成网页文件）<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/14gen.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>窗口一顿输出<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/15done.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<li>输入<code>hexo g</code>，回车。（这个命令是<code>hexo generate</code>的缩写，意思是命令Hexo生成网页文件）<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/14gen.png" class=""></div></li>
+<li>窗口一顿输出<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/15done.png" class=""></div></li>
 <li>输入<code>hexo s</code>，回车。（这个命令是<code>hexo server</code>的缩写，意思是命令Hexo部署网页文件）</li>
-<li>Windows弹出窗口，询问是否允许Node.js的网络连接，允许即可。观察小黑窗，他说<br><code>Hexo is running at http://localhost:4000</code><div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/16server.png" srcset="/img/loading.gif" lazyload class=""></div>
+<li>Windows弹出窗口，询问是否允许Node.js的网络连接，允许即可。观察小黑窗，他说<br><code>Hexo is running at http://localhost:4000</code><div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/16server.png" class=""></div>
 
 
 </li>
 </ul>
 <h5 id="见证奇迹"><a href="#见证奇迹" class="headerlink" title="见证奇迹"></a>见证奇迹</h5><ul>
 <li>打开浏览器，在地址栏输入<code>localhost:4000</code>，回车。你也可以点击 <a target="_blank" rel="noopener" href="http://localhost:4000/" title="这个链接">localhost:4000</a></li>
-<li>WOW<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/17wow.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<li>WOW<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/17wow.png" class=""></div></li>
 <li>这里Hexo已经为你创建了第一篇Blog： <code>Hello World</code></li>
 </ul>
 <blockquote>
@@ -372,31 +372,31 @@
 <h4 id="托管到GitHub"><a href="#托管到GitHub" class="headerlink" title="托管到GitHub"></a>托管到GitHub</h4><h5 id="申请账号，新建仓库"><a href="#申请账号，新建仓库" class="headerlink" title="申请账号，新建仓库"></a>申请账号，新建仓库</h5><ul>
 <li>首先，申请一个Github账号，点击这个链接 <a target="_blank" rel="noopener" href="https://github.com/join" title="申请账号">申请账号</a></li>
 <li>然后，新建一个仓库，点击这个链接 <a target="_blank" rel="noopener" href="https://github.com/new" title="新建仓库">新建仓库</a></li>
-<li>注意，这个仓库的名称必须为<code>username.github.io</code>，比如我的名字叫<code>KassadinL</code>，仓库的名字就必须为<code>KassadinL.github.io</code>。至于大小写，是无所谓的，最后都会解析为小写字母。点击创建仓库。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/18newrepo.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>点击你创建的仓库，在页面中找到最右边的<code>settings</code>，点击<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/23reposet.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>往下拉，找到<code>Github Pages</code>，打开这项功能，打开之后应该是这样的。（这个步骤是否是必要的并不太清楚，但是因为我不想再注册一个Github账号确认，所以大家可以试一下）<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/24gitpage.png" srcset="/img/loading.gif" lazyload class=""></div>
+<li>注意，这个仓库的名称必须为<code>username.github.io</code>，比如我的名字叫<code>KassadinL</code>，仓库的名字就必须为<code>KassadinL.github.io</code>。至于大小写，是无所谓的，最后都会解析为小写字母。点击创建仓库。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/18newrepo.png" class=""></div></li>
+<li>点击你创建的仓库，在页面中找到最右边的<code>settings</code>，点击<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/23reposet.png" class=""></div></li>
+<li>往下拉，找到<code>Github Pages</code>，打开这项功能，打开之后应该是这样的。（这个步骤是否是必要的并不太清楚，但是因为我不想再注册一个Github账号确认，所以大家可以试一下）<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/24gitpage.png" class=""></div>
 
 </li>
 </ul>
 <h5 id="链接Git和Github"><a href="#链接Git和Github" class="headerlink" title="链接Git和Github"></a>链接Git和Github</h5><p>Git为了将本地的文件推送到Github上，需要通过Github的认证，证明他确实是这个GitHub账号的主人，有权利上传文件。为了完成这个认证，我们需要几步操作。</p>
 <ul>
 <li>首先，在空白处单击右键，打开Git Bash，输入<code>git config --global user.name &quot;你的GitHub用户名&quot;</code>，比如我的用户名是<code>KassadinL</code>，应该输入<code>git config --global user.name &quot;KassadinL&quot;</code>，回车</li>
-<li>然后，继续输入<code>git config --global user.email &quot;你的GitHub注册邮箱&quot;</code>，比如我的注册邮箱是<code>sensensensan@gmail.com</code>，那就输入<code>git config --global user.email &quot;sensensensan@gmail.com&quot;</code>，回车<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/19keygen.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<li>然后，继续输入<code>git config --global user.email &quot;你的GitHub注册邮箱&quot;</code>，比如我的注册邮箱是<code>sensensensan@gmail.com</code>，那就输入<code>git config --global user.email &quot;sensensensan@gmail.com&quot;</code>，回车<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/19keygen.png" class=""></div></li>
 <li>这两步将你的GitHub账号信息记录在Git里，下一步将用这两条信息生成密钥文件</li>
 <li>输入<code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code>，比如我的注册邮箱是<code>sensensensan@gmail.com</code>，那就输入<code>ssh-keygen -t rsa -C &quot;sensensensan@gmail.com&quot;</code>，回车，再加三个回车</li>
-<li>他有提示你生成的文件在哪里，打开C盘&gt;&gt;users&gt;&gt;用户名&gt;&gt;.ssh，找到”id_rsa.pub”这个文件，用记事本打开，复制所有内容<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/20key.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys" title="Github_Settings_keys">Github_Settings_keys</a>，点击<code>New SSH key</code>，Title随意填，比如“Blog”，把刚才复制的内容粘贴在下面的<code>Key</code>文本框中，点击<code>Add SSH key</code><div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/21ssh.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>回到Git Bash中，检测密钥是否正常工作，输入<code>ssh git@github.com</code>，稍等片刻，如果出现下图的字样，说明设置成功。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/22test.png" srcset="/img/loading.gif" lazyload class=""></div>
+<li>他有提示你生成的文件在哪里，打开C盘&gt;&gt;users&gt;&gt;用户名&gt;&gt;.ssh，找到”id_rsa.pub”这个文件，用记事本打开，复制所有内容<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/20key.png" class=""></div></li>
+<li>打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys" title="Github_Settings_keys">Github_Settings_keys</a>，点击<code>New SSH key</code>，Title随意填，比如“Blog”，把刚才复制的内容粘贴在下面的<code>Key</code>文本框中，点击<code>Add SSH key</code><div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/21ssh.png" class=""></div></li>
+<li>回到Git Bash中，检测密钥是否正常工作，输入<code>ssh git@github.com</code>，稍等片刻，如果出现下图的字样，说明设置成功。<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/22test.png" class=""></div>
 
 </li>
 </ul>
 <h5 id="推送本地网页到Github"><a href="#推送本地网页到Github" class="headerlink" title="推送本地网页到Github"></a>推送本地网页到Github</h5><ul>
 <li><p>为了推送本地网页到Github，我们需要让Hexo知道应该把文件送到哪。因此我们打开本地Blog文件夹，找到下图<code>_config.yml</code>这个文件，这个是网站的配置文件。</p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/25config.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/25config.png" class=""></div></li>
 <li><p>用记事本打开，在文件最后修改</p>
 <figure class="highlight dts"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">	type:</span> git<br><span class="hljs-symbol">	repo:</span> 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br><span class="hljs-symbol">	branch:</span> master<br></code></pre></div></td></tr></table></figure></li>
 <li><p>更改如下：</p>
-<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/26deploy.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/26deploy.png" class=""></div></li>
 <li><p>注意：</p>
 <ul>
 <li>第三行网址后记得加<code>.git</code></li>
@@ -428,8 +428,8 @@
 </blockquote>
 <h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><h5 id="定制博客"><a href="#定制博客" class="headerlink" title="定制博客"></a>定制博客</h5><ul>
 <li>更改博客的标题、副标题、语言等设置<ul>
-<li>打开本地Blog文件夹，找到<code>_config.yml</code>这个文件，用记事本打开，可以修改标题、副标题、语言、时区等<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/27title.png" srcset="/img/loading.gif" lazyload class=""></div></li>
-<li>比如，我更改<code>title</code>、<code>subtitle</code>、<code>language</code>，博客换了标题、副标题、语言<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/28work.png" srcset="/img/loading.gif" lazyload class=""></div></li>
+<li>打开本地Blog文件夹，找到<code>_config.yml</code>这个文件，用记事本打开，可以修改标题、副标题、语言、时区等<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/27title.png" class=""></div></li>
+<li>比如，我更改<code>title</code>、<code>subtitle</code>、<code>language</code>，博客换了标题、副标题、语言<div style="width: 95%; margin: auto"><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/28work.png" class=""></div></li>
 <li>更多设置可以参考其他的教程，这里就不一一列举了</li>
 </ul>
 </li>
@@ -552,12 +552,12 @@
 <li><p>CloudFlare里<code>A type record</code>或<code>CNAME type record</code>，只能选一种指向GitHub Pages</p>
 <ul>
 <li>但是如果用<code>A type record</code>，会有下面这个错误，证书无效</li>
-<li>我也不知道怎么解决这个问题，只能用<code>CNAME type record</code><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/31aerror.png" srcset="/img/loading.gif" lazyload class="">
+<li>我也不知道怎么解决这个问题，只能用<code>CNAME type record</code><img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/31aerror.png" class="">
 </li>
 </ul>
 </li>
 <li><p>仓库设置里，GitHub Pages部分，无法开启<code>Enforce HTTPS</code></p>
-<img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/32nohttps.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/32nohttps.png" class="">
 <ul>
 <li>去网上搜一搜，<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/56575838" title="link">通过github搭建的Hexo博客如何添加免费的SSL证书？ - 知乎</a>这个问题里有人说要等24个小时，但我等了3天还是不能勾上这个<code>Enforce HTTPS</code></li>
 <li>参考 <a target="_blank" rel="noopener" href="https://razeencheng.com/post/https-githubpages.html" title="link">GitHub Pages自定义域名开启HTTPS</a>，外加在CloudFlare面板里把看起来有用的功能全部开启，终于可以强制<code>HTTPS</code></li>
@@ -710,7 +710,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -835,10 +835,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

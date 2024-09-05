@@ -72,7 +72,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -301,7 +301,7 @@
 <p>上面配置第21、22行<br>#This option is not set by default, and thus will write screenshots to the directory from which mpv was started.<br>#<a target="_blank" rel="noopener" href="https://mpv.io/manual/stable/#options-screenshot-directory">https://mpv.io/manual/stable/#options-screenshot-directory</a><br>原本有个bug，自定义截屏路径会导致打开mpv时自动截两张图<br>但这次配置好之后似乎没这个bug了</p>
 </blockquote>
 <h3 id="bug-something-something-hello-world"><a href="#bug-something-something-hello-world" class="headerlink" title="bug: something something hello world"></a>bug: something something hello world</h3><p>结果配置好之后，打开一个油管视频，画面上面有奇怪的水印</p>
-<img src="/2020/03/12/038-MPV-configuration/01lua.jpg" srcset="/img/loading.gif" lazyload class="">
+<img src="/2020/03/12/038-MPV-configuration/01lua.jpg" class="">
 
 <p>本来以为是在线视频的问题，但是换硬盘里的视频也有这些水印<br>上网查了查，没有找到同样的问题</p>
 <p>排查了一下config file，没问题<br>又看了看lua scripts，发现是<code>osd-test.lua</code>的问题…禁用禁用</p>
@@ -386,7 +386,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -511,10 +511,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

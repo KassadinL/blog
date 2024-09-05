@@ -76,7 +76,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -265,22 +265,22 @@
 <p>以上都是废话，下面进入正题</p>
 <p>第二节课，创建圆形。或许是代码变动，一些节点的功能发生了细微变化，其他的还好，只有<code>获取列表长度，自动生成多边形</code>这步出现了问题<br>按照文档里连接<code>list range</code>到<code>viewer draw</code>会出错</p>
 <p>如下图，创建四个顶点没有问题</p>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/01ver.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/01ver.png" class="">
 
 <p>但是生成列表，连接到面会出现错误</p>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/02error.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/02error.png" class="">
 
 <p>使用节点查看输出，可以看出，手写的列表输出<code>[[[0,1,2,3]]]</code>，生成的列表输出却是<code>[[0,1,2,3]]</code>，少了一对方括号</p>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/03ste_check.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/03ste_check.png" class="">
 
 <p>用<code>viewer text</code>节点看的话，更加明显，生成的列表分成了四个</p>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/04vt_check.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/04vt_check.png" class="">
 
 <p>解决方法是使用<code>list join</code>节点，勾选<code>wrap</code>，这样列表就合并为一个了，再连到<code>viewer draw</code>就没问题了</p>
 <blockquote>
 <p>2019/11/09 更新<br>另一种解决方法是把<code>list join</code>节点的<code>joinlevel lists</code>改为3，这样也可以把四个数据打包成一个</p>
 </blockquote>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/05normal.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/05normal.png" class="">
 
 <hr>
 <p>还差一节就看完文档里的案例了，看完之后也许会写一个笔记，整理一下学的东西<br>（有点奇怪，为什么Sverchok没有什么名气，明明Animation Node还挺多人知道的</p>
@@ -288,7 +288,7 @@
 <p>2019/11/09 更新</p>
 <p>发现一个会导致Blender崩溃的bug，由<code>Viewer text mk3</code>节点引起<br>此节点有输入，并且勾选自动刷新时，试图删除Sverchok生成的模型会导致Blender崩溃</p>
 <p>如下图，删除这个立方体会导致Blender崩溃</p>
-<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/06bug.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/11/07/024-Sverchok-list-join-for-faces-building/06bug.png" class="">
 
 <p>Blender版本 v2.82.1 daily build(11/08)<br>Sverchok版本 0.6.0.0</p>
 <p>已在GitHub提交issue：  <a target="_blank" rel="noopener" href="https://github.com/nortikin/sverchok/issues/2662" title="link">Viewer text mk3 node bug </a></p>
@@ -347,7 +347,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -472,10 +472,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

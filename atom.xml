@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-08-06T16:37:37.351Z</updated>
+  <updated>2024-09-05T05:26:23.947Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>月记：2024-08</title>
+    <link href="https://kassadin.moe/2024/09/03/071-Log-of-Month-2024-08/"/>
+    <id>https://kassadin.moe/2024/09/03/071-Log-of-Month-2024-08/</id>
+    <published>2024-09-03T07:45:19.000Z</published>
+    <updated>2024-09-05T05:26:23.947Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;8 月结束，2024 进度条已经走过 2/3&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>月记：2024-07</title>
     <link href="https://kassadin.moe/2024/07/28/070-Log-of-Month-2024-07/"/>
     <id>https://kassadin.moe/2024/07/28/070-Log-of-Month-2024-07/</id>
     <published>2024-07-28T10:20:59.000Z</published>
-    <updated>2024-08-06T16:37:37.351Z</updated>
+    <updated>2024-09-04T17:43:37.911Z</updated>
     
     
     <summary type="html">&lt;p&gt;2024 下半年开始了&lt;/p&gt;</summary>
@@ -99,7 +118,7 @@
     <link href="https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/"/>
     <id>https://kassadin.moe/2024/05/31/066-Log-of-Month-2024-05/</id>
     <published>2024-05-31T06:04:42.000Z</published>
-    <updated>2024-07-03T01:46:05.226Z</updated>
+    <updated>2024-09-04T17:48:59.857Z</updated>
     
     
     <summary type="html">&lt;p&gt;也许是目前为止最准时的一篇月度总结&lt;/p&gt;</summary>
@@ -291,9 +310,9 @@
     
     
     
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -371,25 +390,6 @@
     
     
     <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转载：墨茶Offical</title>
-    <link href="https://kassadin.moe/2021/01/24/051-MoCha-Offical/"/>
-    <id>https://kassadin.moe/2021/01/24/051-MoCha-Offical/</id>
-    <published>2021-01-24T04:35:41.000Z</published>
-    <updated>2021-04-05T03:00:11.567Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;21号晚上在贴吧了解到&lt;code&gt;墨茶&lt;/code&gt;的事情，去他的&lt;a href=&quot;https://space.bilibili.com/212535360/dynamic&quot;&gt;主页&lt;/a&gt;看了看。&lt;br&gt;想说点什么，但……说不出话。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;留下一点&lt;code&gt;不正确记忆&lt;/code&gt;吧&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="incorrect_memory" scheme="https://kassadin.moe/tags/incorrect-memory/"/>
     
   </entry>
   

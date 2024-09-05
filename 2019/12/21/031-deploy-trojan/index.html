@@ -72,7 +72,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -271,9 +271,9 @@
 <h4 id="解析DNS"><a href="#解析DNS" class="headerlink" title="解析DNS"></a>解析DNS</h4><p>这里我是用 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/" title="link">CloudFlare</a> ，免费版完全ok</p>
 <ul>
 <li>第一步，申请账号，完成之后它会让你添加域名，把你刚才申请的域名填上去</li>
-<li>第二步，要使用CloudFlare的服务，需要去你的域名后台更改<code>nameservers</code><br>改成CloudFlare指定的，如下图（可能每个人的都不一样）<img src="/2019/12/21/031-deploy-trojan/01ns.png" srcset="/img/loading.gif" lazyload class="">
+<li>第二步，要使用CloudFlare的服务，需要去你的域名后台更改<code>nameservers</code><br>改成CloudFlare指定的，如下图（可能每个人的都不一样）<img src="/2019/12/21/031-deploy-trojan/01ns.png" class="">
 （更改之后需要一段时间生效，休息一下（我这里大概不到10分钟就ok了</li>
-<li>第三步，在CloudFlare的面板里，设置你的域名解析<br>上面一排设置，点<code>DNS</code>，<code>Add record</code>，添加一条<code>A Type</code>记录<br><code>Name</code>为你的域名，<code>Content</code>是做代理的VPS主机IP，后面的<code>Proxy status</code>那个小云朵一定要设置灰色的<code>DNS only</code>，只解析DNS就可以（橙色云朵的话trojan会有问题<img src="/2019/12/21/031-deploy-trojan/02record.png" srcset="/img/loading.gif" lazyload class="">
+<li>第三步，在CloudFlare的面板里，设置你的域名解析<br>上面一排设置，点<code>DNS</code>，<code>Add record</code>，添加一条<code>A Type</code>记录<br><code>Name</code>为你的域名，<code>Content</code>是做代理的VPS主机IP，后面的<code>Proxy status</code>那个小云朵一定要设置灰色的<code>DNS only</code>，只解析DNS就可以（橙色云朵的话trojan会有问题<img src="/2019/12/21/031-deploy-trojan/02record.png" class="">
 
 </li>
 </ul>
@@ -418,7 +418,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -543,10 +543,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 

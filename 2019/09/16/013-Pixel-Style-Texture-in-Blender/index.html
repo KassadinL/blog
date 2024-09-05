@@ -78,7 +78,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"kassadin.moe","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":200}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":false,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -257,21 +257,21 @@
             
             <div class="markdown-body">
               <h4 id="效果如图"><a href="#效果如图" class="headerlink" title="效果如图"></a>效果如图</h4><p>左边是正常图片，右边是像素化效果 <span id="more"></span> </p>
-<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/07effect.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/07effect.png" class="">
 
 <p>靠近像素化效果，可以看到，每一个立方体都有独立的颜色</p>
-<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/08detail.png" srcset="/img/loading.gif" lazyload class="">
+<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/08detail.png" class="">
 
 <p>这个效果的核心在于如何使每个小立方体只显示单一颜色<br>（方法来自于 <code>Ducky 3D</code> 的教程 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=0H2siET9zAQ" title="link">“Blender - Easy Blinking Lights Animation in Cycles and Eevee”</a>，方法很巧妙，我只是个复读机</p>
 <hr>
 <h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><ul>
-<li>给立方体添加阵列修改器，数量和距离合适就可以（我是根据图片比例设置的数量<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/01array.png" srcset="/img/loading.gif" lazyload class=""></li>
+<li>给立方体添加阵列修改器，数量和距离合适就可以（我是根据图片比例设置的数量<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/01array.png" class=""></li>
 <li>依次应用修改器（这个很重要，这样才能把每个立方体视为独立元素</li>
-<li>编辑模式，切换顶视图，<code>U</code> 展UV，选择 <code>Project from view</code> 从视图投射UV<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/02project.png" srcset="/img/loading.gif" lazyload class=""></li>
-<li>在UV编辑器，可以看到，阵列的UV从顶视图投射到平面上（右边是放大的视图，一个个小方块排列成左边的效果<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/03uv.png" srcset="/img/loading.gif" lazyload class=""></li>
-<li>切换 <code>Pivot</code> 轴心点为 <code>Individual Origin</code>，<code>S</code> 缩放0（这样会以每个立方体会沿各自的质心点缩放到最小<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/04pivot.png" srcset="/img/loading.gif" lazyload class=""></li>
-<li>每个立方体的UV都缩成了一个点<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/05points.png" srcset="/img/loading.gif" lazyload class=""></li>
-<li>然后加材质，可以用内置的程序化材质，也可以加贴图（随便拖进来一张图，举个栗子<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/06node.png" srcset="/img/loading.gif" lazyload class="">
+<li>编辑模式，切换顶视图，<code>U</code> 展UV，选择 <code>Project from view</code> 从视图投射UV<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/02project.png" class=""></li>
+<li>在UV编辑器，可以看到，阵列的UV从顶视图投射到平面上（右边是放大的视图，一个个小方块排列成左边的效果<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/03uv.png" class=""></li>
+<li>切换 <code>Pivot</code> 轴心点为 <code>Individual Origin</code>，<code>S</code> 缩放0（这样会以每个立方体会沿各自的质心点缩放到最小<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/04pivot.png" class=""></li>
+<li>每个立方体的UV都缩成了一个点<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/05points.png" class=""></li>
+<li>然后加材质，可以用内置的程序化材质，也可以加贴图（随便拖进来一张图，举个栗子<img src="/2019/09/16/013-Pixel-Style-Texture-in-Blender/06node.png" class="">
 
 </li>
 </ul>
@@ -332,7 +332,7 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
+              <article class="comments" id="comments">
                 
                   
                 
@@ -457,10 +457,6 @@
   <script  src="/js/local-search.js" ></script>
 
 
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
 
 
 
