@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-09-30T14:17:12.593Z</updated>
+  <updated>2024-11-18T16:07:11.926Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月记：2024-10</title>
+    <link href="https://kassadin.moe/2024/11/19/073-Log-of-Month-2024-10/"/>
+    <id>https://kassadin.moe/2024/11/19/073-Log-of-Month-2024-10/</id>
+    <published>2024-11-18T16:48:24.000Z</published>
+    <updated>2024-11-18T16:07:11.926Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;人为什么要工作（叹气&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>月记：2024-09</title>
@@ -369,25 +388,6 @@
     
     
     <category term="教程" scheme="https://kassadin.moe/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pixel 3 开启电信SIM卡支持</title>
-    <link href="https://kassadin.moe/2021/08/18/053-Enable-China-Telecom-Support-for-Pixel-3/"/>
-    <id>https://kassadin.moe/2021/08/18/053-Enable-China-Telecom-Support-for-Pixel-3/</id>
-    <published>2021-08-18T13:49:01.000Z</published>
-    <updated>2023-05-26T17:00:14.232Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;2021年，我准备把 Pixel 3 当主力机&lt;/p&gt;</summary>
-    
-    
-    
     
     <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
     
