@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2024-12-09T16:13:56.190Z</updated>
+  <updated>2025-01-19T17:41:33.459Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月记：2024-12</title>
+    <link href="https://kassadin.moe/2025/01/04/075-Log-of-Month-2024-12/"/>
+    <id>https://kassadin.moe/2025/01/04/075-Log-of-Month-2024-12/</id>
+    <published>2025-01-04T10:16:30.000Z</published>
+    <updated>2025-01-19T17:41:33.459Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;新年假期开始前计划的 12 月总结以及 2024 年度总结，直到假期结束还没动笔，&lt;del&gt;不也挺好吗.jpg&lt;/del&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>月记：2024-11</title>
@@ -370,25 +389,6 @@
     <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：三星 Galaxy SCR01 随身 Wi-Fi</title>
-    <link href="https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/"/>
-    <id>https://kassadin.moe/2023/09/03/055-Samsung-Galaxy-SCR01/</id>
-    <published>2023-09-03T14:42:35.000Z</published>
-    <updated>2024-08-16T18:03:21.942Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近拿到一台三星 &lt;code&gt;Galaxy SCR01&lt;/code&gt; 随身 Wi-Fi，折腾一下&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="技术" scheme="https://kassadin.moe/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
