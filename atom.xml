@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2025-01-19T17:41:33.459Z</updated>
+  <updated>2025-02-10T16:00:54.831Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024 年终总结</title>
+    <link href="https://kassadin.moe/2025/02/09/076-Log-of-Year-2024/"/>
+    <id>https://kassadin.moe/2025/02/09/076-Log-of-Year-2024/</id>
+    <published>2025-02-08T16:55:34.000Z</published>
+    <updated>2025-02-10T16:00:54.831Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;创建博客第 7 个年头，终于迎来了第一篇年度总结&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>月记：2024-12</title>
@@ -29,9 +44,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -48,9 +63,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -67,9 +82,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -86,9 +101,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -105,9 +120,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -183,9 +198,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -202,9 +217,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -274,9 +289,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -293,9 +308,9 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
   </entry>
   
@@ -359,7 +374,7 @@
     <link href="https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/"/>
     <id>https://kassadin.moe/2024/02/12/057-Log-of-Month-2024-01/</id>
     <published>2024-02-12T08:27:54.000Z</published>
-    <updated>2024-07-11T04:55:49.575Z</updated>
+    <updated>2025-01-26T16:06:12.137Z</updated>
     
     
     <summary type="html">&lt;p&gt;全新系列之 &lt;code&gt;月度总结&lt;/code&gt;，堂堂连载！&lt;/p&gt;</summary>
@@ -367,26 +382,7 @@
     
     
     
-    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
-    
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记：带猫出国过程</title>
-    <link href="https://kassadin.moe/2023/12/09/056-Fly-my-cat-to-Japan/"/>
-    <id>https://kassadin.moe/2023/12/09/056-Fly-my-cat-to-Japan/</id>
-    <published>2023-12-09T13:47:56.000Z</published>
-    <updated>2024-02-06T13:09:14.913Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;出国也不能落下我的小猫咪😼&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
     
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
