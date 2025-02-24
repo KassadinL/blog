@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>月记：2025-01</title>
+    <link href="/2025/02/25/077-Log-of-Month-2025-01/"/>
+    <url>/2025/02/25/077-Log-of-Month-2025-01/</url>
+    
+    <content type="html"><![CDATA[<p>月记系列 Season 2，堂堂连载！</p><span id="more"></span><h2 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h2><ol><li><p>输入<br>Learning：书/小说/优秀文章，视频/播客，不限形式，感觉看完有收获的内容<br>Anime：新番/老番，TV版/剧场版，记录一下自己看的动画<br>Others：电影、电视剧等，归入其他</p></li><li><p>胡思乱想<br>也许会记录一下所思所想</p></li><li><p>输出<br>也许是 Blog，但水平太菜，也许一个月都没什么输出（</p></li><li><p>游记<br>有去哪里玩就记一下，没有就算了</p></li><li><p>杂<br>不属于上面任何部分的零碎事项</p></li></ol><hr><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h3><h4 id="Elixir-Documents"><a href="#Elixir-Documents" class="headerlink" title="Elixir Documents"></a><a href="https://hexdocs.pm/elixir/introduction.html">Elixir Documents</a></h4><p>文档看的差不多了，但只是简单过一遍而已，<code>Mix &amp; OTP</code> 多线程部分的示例代码还要自己动手敲一遍才行</p><blockquote><p>想起来 <a href="https://pragprog.com/titles/cdc-elixir/learn-functional-programming-with-elixir/">《Learn Functional Programming with Elixir》</a> 里后边部分的代码也还没敲，一块练一下</p></blockquote><h4 id="《Eloquent-JavaScript》"><a href="#《Eloquent-JavaScript》" class="headerlink" title="《Eloquent JavaScript》"></a><a href="https://eloquentjavascript.net/index.html">《Eloquent JavaScript》</a></h4><p>偶尔回顾书里的部分章节，但主要看下面的 MDN JavaScript 文档</p><h4 id="《MDN-JavaScript-reference》"><a href="#《MDN-JavaScript-reference》" class="headerlink" title="《MDN - JavaScript reference》"></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">《MDN - JavaScript reference》</a></h4><p>看 Mozilla 文档，发现 JavaScript 可以通过 <code>Reduce</code> 实现类似 Elixir 里 Pipe Operator <code>|&gt;</code> 的效果，太有意思了<br>具体方法在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#function_sequential_piping">Array.prototype.reduce() - Function sequential piping</a> 这篇里</p><p>不过文档里 <code>pipe</code> 的第一个参数是 <code>funcitons</code>，第二个参数是 <code>initialValue</code>，使用起来就是 <code>pipe(increment, double)(4)</code> 的形式<br>总感觉有点拗口，如果改成 <code>pipe(4)(increment, double)</code> 会不会更符合直觉呢？<br>这样从左到右，意思就是「pipe 4 这个数字，依次加一，乘二….」</p><p>我修改之后的代码如下</p><figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs JavaScript"><span class="hljs-keyword">let</span> pipeItem = <br>    <span class="hljs-function">(<span class="hljs-params">initialValue</span>) =&gt;</span><br>    <span class="hljs-function">(<span class="hljs-params">...functions</span>) =&gt;</span> &#123;<br>        <span class="hljs-keyword">return</span> functions.reduce(<span class="hljs-function">(<span class="hljs-params">acc, fn</span>) =&gt;</span> fn(acc), initialValue)<br>    &#125;<br><br><span class="hljs-keyword">let</span> increment = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x + <span class="hljs-number">1</span> <br><span class="hljs-keyword">let</span> double = <span class="hljs-function">(<span class="hljs-params">x</span>) =&gt;</span> x * <span class="hljs-number">2</span> <br></code></pre></div></td></tr></table></figure><p>使用方式：</p><figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs JavaScript">&gt;&gt; pipeItem(<span class="hljs-number">4</span>)(increment, double)<br><span class="hljs-number">10</span><br>&gt;&gt; pipeItem(<span class="hljs-number">4</span>)(double, increment)<br><span class="hljs-number">9</span><br>&gt;&gt; pipeItem(<span class="hljs-number">4</span>)(double, increment, double)<br><span class="hljs-number">18</span> <br></code></pre></div></td></tr></table></figure><p>还可以拓展一下，对 Array 进行 pipe</p><figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs JavaScript"><span class="hljs-keyword">let</span> pipeArray = <br>    <span class="hljs-function">(<span class="hljs-params">list</span>) =&gt;</span><br>    <span class="hljs-function">(<span class="hljs-params">...functions</span>) =&gt;</span> &#123;<br>        <span class="hljs-keyword">return</span> list.map(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> pipeItem(item)(...functions))<br>    &#125;<br></code></pre></div></td></tr></table></figure><p>用起来是这个感觉</p><figure class="highlight javascript"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs JavaScript">&gt;&gt; pipeArray([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>])(increment, double)<br><span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>) [ <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">10</span> ]<br><br>&gt;&gt; pipeArray([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>])(double, increment)<br><span class="hljs-built_in">Array</span>(<span class="hljs-number">3</span>) [ <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span> ]<br></code></pre></div></td></tr></table></figure><p>优雅~</p><h4 id="Architecture-of-a-Database-System"><a href="#Architecture-of-a-Database-System" class="headerlink" title="Architecture of a Database System"></a><a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a></h4><p>想了解一些数据库的知识，<a href="https://teachyourselfcs.com/">Teach Yourself Computer Science</a> 里推荐了这篇论文，说是能建立起对 <code>relational database management systems (RDBMS)</code> 的总体认识<br>看了二三十页，似乎对我来说有点难</p><h3 id="Anime"><a href="#Anime" class="headerlink" title="Anime"></a>Anime</h3><h4 id="新作"><a href="#新作" class="headerlink" title="新作"></a>新作</h4><ul><li>花は咲く、修羅の如く<br>制作精致，两段朗读片段氛围拉满，目前最期待</li><li>日本へようこそ、エルフさん<br>太羡慕男主这项技能了，不用睡觉还能保持精力饱满，人生体验翻倍<br>以及，白毛精灵真不错</li><li>Magic Maker<br>真骨科？小小年纪就约定终生，这靠谱吗？<br>看了几集发现这部动画有在认真讲故事，从零开始创造魔法体系，有点意思<br>剧中的开明家长很好，愿意配合小孩子看似荒唐的胡闹，而不是「小孩子懂个屁」一句话扑灭他们的兴趣</li><li>残業受付嬢<br>高桥李依单口相声，女主人设好看，故事非常一般，不期待</li><li>天鹰推理事件<br>看了两三话，还算有趣</li><li>S 级怪兽被当作小猫<br>没意思，一集弃</li><li>和班级里最讨厌的女生结婚<br>好典，一集弃</li></ul><h4 id="续作"><a href="#续作" class="headerlink" title="续作"></a>续作</h4><ul><li>薬屋のひとりごと<br>第一季后半部分（13 集之后）还没看，需要补前作，一定会看（</li><li>アオのハコ<br>会看的，会看的（心虚</li></ul><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>最近看的电视剧/电影，点评尽量不涉及剧透</p><h4 id="リズと青い鳥"><a href="#リズと青い鳥" class="headerlink" title="リズと青い鳥"></a>リズと青い鳥</h4><p>制作精致，情感细腻，非常优秀的电影<br>庆幸自己第一次观赏这部作品是在电影院，沉浸感极强</p><p>最后一段合奏，用无言的音乐代替话语，告诉对方自己的选择，非常浪漫的一幕<br>结束时 <code>鎧塚霙(よろいづか みぞれ)</code> （好难记的名字）不再需要跟随别人的脚步，独自一人上楼梯、开门，脚步坚定有力，向自己的目标迈进，太棒了</p><h4 id="機動戦士Gundam-GQuuuuuuX"><a href="#機動戦士Gundam-GQuuuuuuX" class="headerlink" title="機動戦士Gundam GQuuuuuuX"></a>機動戦士Gundam GQuuuuuuX</h4><p>首映日上座率高的可怕，庵野秀明 + 日升 + Gundam，恐怖如斯</p><p>电影前半场高达简史，以为进错片场了，这和 PV 完全不一样啊<br>可惜高达我只看过 <code>Seed</code> 和 <code>水星的魔女</code>，正史剧情完全不了解，梗都 get 不到</p><blockquote><p>后面看 bgm 评论才知道前半部分是庵野主笔的扎古胜利 if 线，<del>最强同人</del></p></blockquote><p>后半终于是 PV 内容，一句话总结剧情：大 AI 时代，没开过高达不要怕，只要 998/月，只要 998，立即解锁我们的最新款 AI 驾驶辅助功能 (Copilot Pro-Max-Ultra-Plus Model)，零经验也能秀操作，秒杀对面零氪穷鬼玩家（</p><h2 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h2><p>新年假期一晃而过，什么都没干就结束了</p><p>本想尝试滑雪，但计划了一冬天都没去成，估计又是明年再说了（</p><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>一篇 <a href="/2025/02/09/076-Log-of-Year-2024/" title="2024 年终总结">2024 年终总结</a> 从一月写到二月，差点难产<br>也许是没有 ddl 的原因，总感觉明天再写也行，拖啊拖，不知不觉拖了近两个月<br>写博客虽然有趣，但这样耗费太多时间和精力，以及总积攒着没写完博客的心理压力，感觉不太可行<br>需要想想办法，给自己设定时间限制或是其他手段，改善一下这个问题</p><h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><h3 id="初詣"><a href="#初詣" class="headerlink" title="初詣"></a>初詣</h3><p>川崎大師初詣，1 号没起来，2 号去的（完美复刻去年剧本）<br>天气很好，阳光照在身上暖洋洋非常舒服，走了一会儿就开始冒汗<br>室外光线太强，相机的 LCD 背屏看不清楚，经朋友提醒才想到可以看取景器（原来取景器是这么用的</p><p>拿着相机拍拍拍</p><img src="/2025/02/25/077-Log-of-Month-2025-01/01.jpg" class=""><p>謹賀新年</p><img src="/2025/02/25/077-Log-of-Month-2025-01/02.jpg" class=""><p>参拜的人巨多，但好在寺庙大，人群流动得也快，投了 5 块钱，<del>许愿世界和平</del></p><img src="/2025/02/25/077-Log-of-Month-2025-01/03.jpg" class=""><p>拍到了鸽群掠过尖塔的瞬间</p><img src="/2025/02/25/077-Log-of-Month-2025-01/04.jpg" class=""><p>大师寺旁边的沈阳庭院，站在 C 位的<del>野生群友</del></p><img src="/2025/02/25/077-Log-of-Month-2025-01/05.jpg" class=""><p>神社挂着许多有趣的絵馬，这个很可爱</p><img src="/2025/02/25/077-Log-of-Month-2025-01/06.jpg" class=""><p>電車 or 新幹線？创意十足</p><img src="/2025/02/25/077-Log-of-Month-2025-01/07.jpg" class=""><p>这个更厉害，一个陶器小蛇，甚至还比了个心♥️</p><blockquote><p>背着相机走一天，好累（<del>我要买 GR3</del></p></blockquote><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><p>好像没有什么特别要说的，略过</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>新年第一篇月记就成功拖到了 2 月底（<br>明明文字部分月中就写好，只剩简单修一下照片，贴上去就可以，却迟迟没有动手<br>眼看 2 月份都要过完了，赶紧从图库里翻几张照片，先把 1 月月记发出去再说</p><p><code>姑且充实的 JS &amp; Elixir 学习</code> + <code>浪费生命般的工作内容</code>，诞生出这篇潦草而简陋的月记<br>さらば、2025 年第一个月</p><blockquote><p><del>一刻也没有为月记发布而感到开心，马上赶到战场的是 2 月月记哒</del></p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>游记</tag>
+      
+      <tag>月记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024 年终总结</title>
     <link href="/2025/02/09/076-Log-of-Year-2024/"/>
     <url>/2025/02/09/076-Log-of-Year-2024/</url>
@@ -33,9 +54,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -54,9 +75,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -75,9 +96,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -96,9 +117,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -117,9 +138,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -203,9 +224,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -224,9 +245,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -304,9 +325,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -325,9 +346,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -407,9 +428,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -428,9 +449,9 @@
     
     <tags>
       
-      <tag>游记</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>游记</tag>
       
     </tags>
     
@@ -1598,7 +1619,7 @@
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h2 id="About-me-in-15-seconds"><a href="#About-me-in-15-seconds" class="headerlink" title="About me in 15 seconds"></a>About me in 15 seconds</h2><p>森同学 / Kassadin</p><ul><li>冻鳗低手：每季度追新番</li><li>技术小白：半路出家野生程序猿</li></ul><p>欢迎交流，邮箱 <a href="mailto:&#115;&#101;&#x6e;&#x73;&#101;&#110;&#x73;&#x65;&#x6e;&#x73;&#97;&#x6e;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#115;&#101;&#x6e;&#x73;&#101;&#110;&#x73;&#x65;&#x6e;&#x73;&#97;&#x6e;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a></p><hr><h2 id="About-me-in-timeline"><a href="#About-me-in-timeline" class="headerlink" title="About me in timeline"></a>About me in timeline</h2><h3 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h3><p>新开 <a href="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/">月记</a> 系列，记录生活</p><p>以及，虽然有点晚，我觉得应该记录一下这个博客的初衷</p><h4 id="为什么要写博客？"><a href="#为什么要写博客？" class="headerlink" title="为什么要写博客？"></a>为什么要写博客？</h4><ol><li>记录，对抗遗忘</li><li>回顾，方便未来回看自己曾经的所思所想</li><li>练习写作技能，练习如何将脑中的想法转换成文字</li></ol><h4 id="为什么使用自建博客的形式？（而非-微博-Twitter-等第三方服务）"><a href="#为什么使用自建博客的形式？（而非-微博-Twitter-等第三方服务）" class="headerlink" title="为什么使用自建博客的形式？（而非 微博/Twitter 等第三方服务）"></a>为什么使用自建博客的形式？（而非 <code>微博</code>/<code>Twitter</code> 等第三方服务）</h4><ol><li>听起来很酷</li><li>折腾技术，闲的</li><li>没有审查，不需要自我阉割，不用担心被平台封号删帖</li><li>数据自主可控</li></ol><hr><h3 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h3><p>转职，初级程序猿✨</p><p>新的开始</p><h4 id="2023-年代表文章"><a href="#2023-年代表文章" class="headerlink" title="2023 年代表文章"></a>2023 年代表文章</h4><a href="/2023/12/09/056-Fly-my-cat-to-Japan/" title="笔记：带猫出国过程">笔记：带猫出国过程</a><p><del>我带猫咪</del> 猫咪带我来日本</p><hr><h3 id="2020-02-06"><a href="#2020-02-06" class="headerlink" title="2020-02-06"></a>2020-02-06</h3><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死</p></blockquote><h4 id="2020-年代表文章"><a href="#2020-年代表文章" class="headerlink" title="2020 年代表文章"></a>2020 年代表文章</h4><a href="/2020/03/12/036-Ai-Fen/" title="转载：发哨子的人">转载：发哨子的人</a>，疫情的开始<hr><h3 id="2019-12"><a href="#2019-12" class="headerlink" title="2019-12"></a>2019-12</h3><p>Linux 真好玩</p><hr><h3 id="2019-06"><a href="#2019-06" class="headerlink" title="2019-06"></a>2019-06</h3><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷 Blender</p><h4 id="2019-年代表文章"><a href="#2019-年代表文章" class="headerlink" title="2019 年代表文章"></a>2019 年代表文章</h4><a href="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/" title="教程： 如何使用Hexo加Github搭建个人博客">教程： 如何使用Hexo加Github搭建个人博客</a>，这个博客的起点<hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="About-me-in-15-seconds"><a href="#About-me-in-15-seconds" class="headerlink" title="About me in 15 seconds"></a>About me in 15 seconds</h2><p>森同学 / Kassadin</p><ul><li>冻鳗低手：每季度追新番</li><li>技术小白：半路出家野生程序猿</li></ul><p>欢迎交流，邮箱 <a href="mailto:&#x73;&#x65;&#x6e;&#115;&#101;&#x6e;&#115;&#101;&#110;&#x73;&#97;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x73;&#x65;&#x6e;&#115;&#101;&#x6e;&#115;&#101;&#110;&#x73;&#97;&#110;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p><hr><h2 id="About-me-in-timeline"><a href="#About-me-in-timeline" class="headerlink" title="About me in timeline"></a>About me in timeline</h2><h3 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h3><p>新开 <a href="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/">月记</a> 系列，记录生活</p><p>以及，虽然有点晚，我觉得应该记录一下这个博客的初衷</p><h4 id="为什么要写博客？"><a href="#为什么要写博客？" class="headerlink" title="为什么要写博客？"></a>为什么要写博客？</h4><ol><li>记录，对抗遗忘</li><li>回顾，方便未来回看自己曾经的所思所想</li><li>练习写作技能，练习如何将脑中的想法转换成文字</li></ol><h4 id="为什么使用自建博客的形式？（而非-微博-Twitter-等第三方服务）"><a href="#为什么使用自建博客的形式？（而非-微博-Twitter-等第三方服务）" class="headerlink" title="为什么使用自建博客的形式？（而非 微博/Twitter 等第三方服务）"></a>为什么使用自建博客的形式？（而非 <code>微博</code>/<code>Twitter</code> 等第三方服务）</h4><ol><li>听起来很酷</li><li>折腾技术，闲的</li><li>没有审查，不需要自我阉割，不用担心被平台封号删帖</li><li>数据自主可控</li></ol><hr><h3 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h3><p>转职，初级程序猿✨</p><p>新的开始</p><h4 id="2023-年代表文章"><a href="#2023-年代表文章" class="headerlink" title="2023 年代表文章"></a>2023 年代表文章</h4><a href="/2023/12/09/056-Fly-my-cat-to-Japan/" title="笔记：带猫出国过程">笔记：带猫出国过程</a><p><del>我带猫咪</del> 猫咪带我来日本</p><hr><h3 id="2020-02-06"><a href="#2020-02-06" class="headerlink" title="2020-02-06"></a>2020-02-06</h3><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死</p></blockquote><h4 id="2020-年代表文章"><a href="#2020-年代表文章" class="headerlink" title="2020 年代表文章"></a>2020 年代表文章</h4><a href="/2020/03/12/036-Ai-Fen/" title="转载：发哨子的人">转载：发哨子的人</a>，疫情的开始<hr><h3 id="2019-12"><a href="#2019-12" class="headerlink" title="2019-12"></a>2019-12</h3><p>Linux 真好玩</p><hr><h3 id="2019-06"><a href="#2019-06" class="headerlink" title="2019-06"></a>2019-06</h3><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷 Blender</p><h4 id="2019-年代表文章"><a href="#2019-年代表文章" class="headerlink" title="2019 年代表文章"></a>2019 年代表文章</h4><a href="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/" title="教程： 如何使用Hexo加Github搭建个人博客">教程： 如何使用Hexo加Github搭建个人博客</a>，这个博客的起点<hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
     
   </entry>
   
