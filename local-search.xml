@@ -4,19 +4,40 @@
   
   
   <entry>
-    <title>月记：2025-02</title>
-    <link href="/2025/03/30/078-Log-of-Month-2025-02/"/>
-    <url>/2025/03/30/078-Log-of-Month-2025-02/</url>
+    <title>月记：2025-03</title>
+    <link href="/2025/04/30/079-Log-of-Month-2025-03/"/>
+    <url>/2025/04/30/079-Log-of-Month-2025-03/</url>
     
-    <content type="html"><![CDATA[<p>3 月低发布的二月月记</p><span id="more"></span><h2 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h2><ol><li><p>输入<br>Learning：书/小说/优秀文章，视频/播客，不限形式，感觉看完有收获的内容<br>Anime：新番/老番，TV版/剧场版，记录一下自己看的动画<br>Others：电影、电视剧等，归入其他</p></li><li><p>胡思乱想<br>也许会记录一下所思所想</p></li><li><p>输出<br>也许是 Blog，但水平太菜，也许一个月都没什么输出（</p></li><li><p>游记<br>有去哪里玩就记一下，没有就算了</p></li><li><p>杂<br>不属于上面任何部分的零碎事项</p></li></ol><hr><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h3><h4 id="Phoenix-Documents"><a href="#Phoenix-Documents" class="headerlink" title="Phoenix Documents"></a><a href="https://hexdocs.pm/phoenix/overview.html">Phoenix Documents</a></h4><p>这个月开始看基于 <code>Elixir</code> 的前端框架 <code>Phoenix</code><br><code>Phoenix</code> 默认用 <code>Postgres</code>，要先安装、配置数据库，但我却被这个看起来简单（实际也非常简单的）步骤卡了一小时…</p><p>参考 <a href="https://wiki.archlinux.org/title/PostgreSQL">Arch Wiki - PostgreSQL</a></p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">[postgres]$ initdb -D /var/lib/postgres/data --data-checksums<br><br>Success. You can now start the database server using:<br><br>      pg_ctl -D /var/lib/postgres/data -l logfile start<br></code></pre></div></td></tr></table></figure><p>看起来成功了，只需要 <code>pg_ctl -D /var/lib/postgres/data -l logfile start</code> 启动服务<br>但执行这个命令会报权限错误</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">waiting <span class="hljs-keyword">for</span> server to start..../bin/sh: line 1: logfile: Permission denied<br>stopped waiting<br>pg_ctl: could not start server<br></code></pre></div></td></tr></table></figure><p>看文档，查论坛，问 AI，试了各种方案都不行<br>直到最后，发现 <code>Arch Wiki</code> 下面还有一行小字 <code>Finally, start and enable the postgresql.service.</code><br>被自己蠢到…<br>原来是用 <code>systemctl</code> 控制的…</p><h4 id="《Eloquent-JavaScript》"><a href="#《Eloquent-JavaScript》" class="headerlink" title="《Eloquent JavaScript》"></a><a href="https://eloquentjavascript.net/index.html">《Eloquent JavaScript》</a></h4><p>感觉 <code>Eloquent JavaScript</code> 里 <code>异步</code> 章节讲解不是很清晰，看了好几遍都没怎么理解 <code>Promise</code>、<code>async/await</code>，准备配合 MDN 文档作为补充资料</p><h3 id="Anime"><a href="#Anime" class="headerlink" title="Anime"></a>Anime</h3><ul><li><p>追番</p><ul><li>花は咲く、修羅の如く<br>制作优秀</li><li>残業受付嬢<br>观感持续下滑，没什么新意，弃番</li><li>日本へようこそ、エルフさん<br>制作有点贫穷，但温馨日常还是挺好看的</li><li>Magic Maker<br>制作贫穷，故事姑且还能看吧</li></ul></li><li><p>新看</p><ul><li>想星のアクエリオン<br>OP 太出名了，看了一点，感觉剧本应该有点东西</li><li>灰色：幻影扳机<br>随便点开一集，感觉还不错</li><li>Ubel Blatt<br>中文圈里完全没有讨论度，逛 Animate 才发现这部作品<br>原作黑深残复仇剧，故事看起来有点深度，可惜惨遭动画化，制作异常贫穷<blockquote><p>作者看到这种水平的动画化会开心吗….</p></blockquote></li></ul></li></ul><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>最近看的电视剧/电影，点评尽量不涉及剧透</p><h4 id="劇場版-少女☆歌劇-レヴュースタァライト"><a href="#劇場版-少女☆歌劇-レヴュースタァライト" class="headerlink" title="劇場版　少女☆歌劇 レヴュースタァライト"></a>劇場版　少女☆歌劇 レヴュースタァライト</h4><p>新文芸坐隔几个月就会重映 <code>少歌剧场版</code>，来日本后第一次看少歌就是在这里<br>时隔一年左右，再次来看重映，影片内容当然没什么好说的，一如既往眩しい✨</p><p>这次想说的是新文艺座的 <code>WSBライティング上映</code><br>简单说，这个就是在放映厅挂满 RGB 灯条（<del>光污染机箱</del>），配合荧幕画面实时控制灯光效果，烘托气氛<br>放映前主持人惯例暖场时提到这个灯光是手动控制的，灯光师在会后面的放映室和大家一起看电影，同时控制灯光，因此每场放映会的灯光效果都不会完全一样<br>主持人是以非常自豪的语气说这些话的，但我听到之后第一时间想到的是「手动控制灯光？这怎么保证质量？手动控制的话不会延迟很高吗？」<br>疑问一旦生根就不会消失，整场电影里都在下意识地注意这个灯光，「嗯，确实有点延迟」、「这里效果有点一言难尽啊…」、「这个地方效果还可以」诸如此类的想法不断涌现，分散我的注意力<br>例如，<code>皆殺しのRevue</code> 地铁场景效果很好，路灯接连不断，突破荧幕闪过整个放映厅，模拟车窗外灯光飞掠的效果，有一点整个影厅都进入舞台中的感觉，沉浸感++<br>但还有些场景探照灯甩来甩去，晃得睁不开眼（物理意义上眩しい）</p><p>最后看下来，感觉灯光弊大于利，太分散注意力了，我更希望可以正常欣赏影片<br>顺便附上这篇帖子 <a href="https://note.com/willow_4c/n/n2ee5410a7bda#767251bb-62f7-4157-b9fe-2493cb6aceb7">『劇場版 少女☆歌劇レヴュースタァライト』 初見でWSBライティング上映を浴びた感想 - ①ライトアップ上映の感想</a>，文章中对影院坚持手动控制灯光效果的解释我很喜欢，是我没有想到的角度</p><blockquote><p>今思えば、態々こういった手間のかかる演出をして下さったのは「全く同じ舞台は二度と訪れない」という、スタァライトの秘めるメッセージ性を体現するためだったのかな……<br>大致翻译：现在回想起来，特地使用这种费时费力的表现方式，也是为了呼应少女歌剧「完全相同的舞台不会再度出现」这一暗示吧</p></blockquote><h2 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h2><h3 id="想换工作"><a href="#想换工作" class="headerlink" title="想换工作"></a>想换工作</h3><p>理想中的派遣：体验各种工作，积累不同行业、编程语言经验<br>实际上的派遣：外行指导内行，最下游工作，不需要（并且日本人也不想让你）动脑子，纯搬砖</p><p>现在的工作再做十年也只是单纯重复而已，根本不能提高技术</p><blockquote><p>最起码编程水平是很难提高的，能进步的只有 Excel 技术，毕竟日本人均 Excel 仙人，每天 <code>面向 Excel 编程</code>（</p></blockquote><p>太没意思了，想找一份能磨炼技术的工作</p><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><ul><li><a href="https://github.com/KassadinL/dungeon_crawl">Github - KassadinL/dungeon_crawl</a><br>把 <a href="https://pragprog.com/titles/cdc-elixir/learn-functional-programming-with-elixir/">Learn Functional Programming with Elixir</a> 最后的示例动手敲了一遍<br>虽然只是个简单的命令行小游戏，看的时候感觉「嗯，懂了懂了」，但实际做起来还是丢三落四，熟练度完全没有<blockquote><p>书和文档看了这么多，是时候随便做点什么东西把 Elixir 用起来了</p></blockquote></li></ul><h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><h3 id="散步"><a href="#散步" class="headerlink" title="散步"></a>散步</h3><p>又是拿来凑数的多摩川散步时间（</p><img src="/2025/03/30/078-Log-of-Month-2025-02/01.jpg" class=""><p>似乎是梅花？</p><img src="/2025/03/30/078-Log-of-Month-2025-02/02.jpg" class=""><img src="/2025/03/30/078-Log-of-Month-2025-02/03.jpg" class=""><p>两张图放一起，枝头赏月</p><img src="/2025/03/30/078-Log-of-Month-2025-02/04.jpg" class=""><p>一般见到的 <code>止まれ</code> 都是代表危险的红色牌子，偶然看到一个锈迹斑斑的灰色牌子，尤其是在色彩丰富的背景中突然出现一个完全没有色彩的物体，格格不入到好像是 PS 出来的，感觉很有趣</p><img src="/2025/03/30/078-Log-of-Month-2025-02/05.jpg" class=""><p>左上漂亮的蓝粉色云朵，右下斑驳水泥建筑<br>清水混凝土外墙本来应该是冷冷清清、高级感十足的，但黑色污渍加上去就变成一块<del>脏脏的破抹布了</del></p><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><h3 id="花粉症、襲来"><a href="#花粉症、襲来" class="headerlink" title="花粉症、襲来"></a>花粉症、襲来</h3><p>又到了花粉肆虐的季节<br>眼睛肿、流鼻涕、嗓子痛，一套组合拳打下来，每天起床都是噩梦的开始<br>吃药、戴口罩效果都聊胜于无，鼻涕从起床开始流到工位，通勤途中几分钟不擦鼻涕就要流嘴里了</p><blockquote><p>有时候真的担心鼻涕流太多会不会脱水</p></blockquote><p>垃圾工作 + 鼻涕连天，工作日精神状态堪忧😇</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>拖更拖出新高度，三月底才写完二月份的月记<br>想一想，其实并没有特别难的部分，刚开始只是修图和少歌的评论需要花点时间，但一旦开始迟延 –&gt; 二月的记忆逐渐模糊 –&gt; 由于回忆模糊而难以下笔 –&gt; 继续拖延，变成了这样的恶性循环，越拖越难，越难越拖…<br>比如动画部分的评论，二月份还在追的动画，有几部现在已感觉索然无味，没看下去了，但因为是二月份月记，还需要忠实地记录当时的感受，结果就是在三月底回想已经远去的二月份记忆，并且还要小心地剔除三月份记忆的影响</p><p>太难了，下次不能这么拖了（<del>flag</del></p>]]></content>
+    <content type="html"><![CDATA[<p>鹦吹雪，鹦鹉的鹦</p><span id="more"></span><h2 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h2><ol><li><p>输入<br>Learning：书/小说/优秀文章，视频/播客，不限形式，感觉看完有收获的内容<br>Anime：新番/老番，TV版/剧场版，记录一下自己看的动画<br>Others：电影、电视剧等，归入其他</p></li><li><p>胡思乱想<br>也许会记录一下所思所想</p></li><li><p>输出<br>也许是 Blog，但水平太菜，也许一个月都没什么输出（</p></li><li><p>游记<br>有去哪里玩就记一下，没有就算了</p></li><li><p>杂<br>不属于上面任何部分的零碎事项</p></li></ol><hr><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h3><h4 id="Phoenix-Documents"><a href="#Phoenix-Documents" class="headerlink" title="Phoenix Documents"></a><a href="https://hexdocs.pm/phoenix/overview.html">Phoenix Documents</a></h4><p>继续看了点 <code>Phoenix</code> 文档</p><h4 id="Designing-Data-Intensive-Applications"><a href="#Designing-Data-Intensive-Applications" class="headerlink" title="Designing Data-Intensive Applications"></a><a href="https://dataintensive.net/">Designing Data-Intensive Applications</a></h4><p>这本也是 <a href="https://teachyourselfcs.com/">Teach Yourself Computer Science</a> 里强烈推荐的书，因为被分类在 <code>Distributed Systems</code> 下面，听起来就很难的样子，一直没有看<br>实际读了一点，发现没想象中那么深奥，而且正是我现在需要的知识</p><p>之前就有疑惑，市面上一大堆数据库软件都有什么区别，应该选哪个？总不能因为 <code>MySQL 免费</code> 这一个理由吧<br>直到开始看这本书，总算稍微了解了一点技术选型的知识</p><p>简单记一下知识点</p><ul><li>数据库类型：Relational Database, Document Database, Graph Database</li><li>应用场景：OLTP (On-line Transcation Processing), OLAP (On-line Analytics Processing)</li><li>存储：LSM (Log Struct Merge Tree), b-Tree, Column-oriented Storage</li><li>分布式：Single Leader, Multi Leader, Leaderless</li></ul><blockquote><p>上个月只看了二十来页就搁置的 <a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf">Architecture of a Database System</a> 竟然也有一些帮助<br>至少知道作者说 「SQL 抽象非常成功」、解释器、执行器、并行之类概念时不会一头雾水</p></blockquote><p>前面几章印象最深刻的是，作者说「让我们设计一个数据库吧」，我想「完蛋，开始玩硬核的了」<br>本以为会是一大堆名词和代码袭来，结果作者两行 bash 命令「好，我们的数据库做好了」<br>这都可以？这就行了？<br>太惊艳了</p><p>目前读到分布式存储章节，暂时告一段落，再往后的知识似乎目前用不上</p><blockquote><p>偶然在推上看到这本书外号叫 <code>黑犀牛</code>，还有个称呼叫 <code>后端圣经</code>，原来这么有名<br>不过确实能看出作者有种举重若轻的大师风范，各种技术娓娓道来，甚至还花心思在每章开头画好玩的技术地图</p></blockquote><h4 id="SICP"><a href="#SICP" class="headerlink" title="SICP"></a>SICP</h4><p>3 月底开始看 SICP，也挺有意思</p><p>简单记下前言里的一个观点：<br>-在当前（entry-level）阶段，我们最需要关注的不是特定的语法细节，不是优雅、高效的算法，而是如何控制大型软件工程的复杂度`</p><blockquote><p>Our design of this introductory computer-science subject reflects two major concerns.<br>First, we want to establish the idea that a computer language is not just a way of getting a computer to perform operations but rather that it is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute.<br>Second, we believe that the essential material to be addressed by a subject at this level is not the syntax of particular programming-language constructs, nor clever algorithms for computing particular functions efficiently, nor even the mathematical analysis of algorithms and the foundations of computing, but rather the techniques used to control the intellectual complexity of large software systems.</p></blockquote><h3 id="Anime"><a href="#Anime" class="headerlink" title="Anime"></a>Anime</h3><ul><li><p>追完</p><ul><li>悪役令嬢転生おじさん<br><del>也许是我也变成了中登的缘故</del>，最近新欢是这部 <code>大叔转生恶役大小姐</code><br>制作资源充足，温馨与搞笑剧情相得益彰，适合放松休闲随便一看<br>结局感觉也不错，埋下更多悬念，应该会有第二季吧？</li><li>日本へようこそ、エルフさん<br>温馨日常，制作水平一般<br>感觉龙娘比女主香</li></ul></li><li><p>以后补番（</p><ul><li>薬屋のひとりごと</li><li>アオのハコ</li><li>花は咲く、修羅の如く</li></ul><p>这三部都是很好的作品，但最近没空看（当然不至于忙到看动画的时间都没有，但总会感觉好作品需要静下心来欣赏，但 <code>静下心</code> 的时间却每每找不到（</p><ul><li>想星のアクエリオン</li><li>灰色：幻影扳机</li></ul><p>这两部也是有点意思的作品，看了一两话，也许以后会补番</p></li><li><p>弃番</p><ul><li>Magic Maker<br>制作越发贫穷，怠惰病之后的剧情很无聊</li><li>Ubel Blatt<br>新鲜劲儿过去，有点审美疲劳了<br>嘴炮、圣母，观感一般</li></ul></li></ul><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>最近看的电视剧/电影，点评尽量不涉及剧透</p><h4 id="バンパイアハンターD"><a href="#バンパイアハンターD" class="headerlink" title="バンパイアハンターD"></a>バンパイアハンターD</h4><p>作画 MAD 常客，本来预期是看画面，对剧情没抱太大期待<br>实际上作画确实华丽，大饱眼福，更加惊讶的是剧情也超出期待，不落俗套（不像许多新番剧情一眼望到底）<br>结局男主遵守约定，远远送别的情节很棒，含蓄克制，没有感情线加分</p><h4 id="GHOST-IN-THE-SHELL"><a href="#GHOST-IN-THE-SHELL" class="headerlink" title="GHOST IN THE SHELL"></a>GHOST IN THE SHELL</h4><p>感觉剧情没太看懂，结局是意识融合了吗，融合之后少佐还是少佐吗</p><h4 id="イノセンス"><a href="#イノセンス" class="headerlink" title="イノセンス"></a>イノセンス</h4><p>开头 3D 模仿上一部的义体制造流程，但感觉有点难看（<br>整部片一股意识流氛围，像是做了场梦，直呼看不懂</p><h2 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h2><h3 id="找工作好难"><a href="#找工作好难" class="headerlink" title="找工作好难"></a>找工作好难</h3><p>投了两个 Elixir 招聘，石沉大海，连面试机会都没有<br>技术不强，日语也不太能拿出手，太难了</p><blockquote><p>也许再做点个人项目，积累一些经验再去找工作会好点？<br>不然总是被当作小白（虽然也确实小白就是了）</p></blockquote><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>全部都没有~</p><h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><h3 id="鹦吹雪，鹦鹉的鹦"><a href="#鹦吹雪，鹦鹉的鹦" class="headerlink" title="鹦吹雪，鹦鹉的鹦"></a>鹦吹雪，鹦鹉的鹦</h3><img src="/2025/04/30/079-Log-of-Month-2025-03/01.jpg" class=""><p>偶遇 <code>鹦吹雪</code>：一群鹦鹉在糟蹋樱花</p><blockquote><p>第一次在街上看到鹦鹉，日本有野生鹦鹉吗？真不是从动物园或谁家里跑出来的？</p></blockquote><img src="/2025/04/30/079-Log-of-Month-2025-03/02.jpg" class=""><p>正常的 <code>桜吹雪</code> 是花瓣自然掉落，但这群鹦鹉却是把整朵花咬下来，太坏了<br>也不是饿了吃东西，单纯为了好玩<br>而且破坏力惊人，周围几颗樱花树全部惨遭毒手，根本没有停下来的意思</p><img src="/2025/04/30/079-Log-of-Month-2025-03/03.jpg" class=""><p>樱花掉在草丛里，还以为是什么小草开花了</p><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><h3 id="花粉症"><a href="#花粉症" class="headerlink" title="花粉症"></a>花粉症</h3><h4 id="鼻腔喷雾救我狗命"><a href="#鼻腔喷雾救我狗命" class="headerlink" title="鼻腔喷雾救我狗命"></a>鼻腔喷雾救我狗命</h4><p>鼻涕停不下来，<del>飞流直下三千尺</del><br>实在扛不住，医生开了个喷鼻子的喷雾，效果极好，喷了两天就不怎么流鼻涕了<br>早知如此，何必硬扛那么久</p><h4 id="科普文章"><a href="#科普文章" class="headerlink" title="科普文章"></a>科普文章</h4><p>看到一篇比较全面的科普文章： <a href="https://1q43.blog/post/1353/">20 年老过敏性鼻炎患者的最全备忘录</a></p><p>回忆了一下我的症状，似乎和文章里说的一样，放着不管症状会越来越严重<br>所以不要硬扛，及时诊断并吃药</p><p>好消息是，现在的处方药基本没有抗药性，不会发生吃一段时间就效果减弱的情况<br>坏消息是，需要终身服药…</p><blockquote><p><del>大郎，该吃药了</del></p></blockquote><h3 id="终于拿到驾照"><a href="#终于拿到驾照" class="headerlink" title="终于拿到驾照"></a>终于拿到驾照</h3><p>漫长的 <code>换驾照之旅</code> 终于结束，从开始预约到拿到驾照历时 9 个月，效率惊人（贬义）</p><h4 id="为什么要这么久"><a href="#为什么要这么久" class="headerlink" title="为什么要这么久"></a>为什么要这么久</h4><p>换驾照 9 个月中，真正换驾照的时间只有几天，剩下全是等待</p><ol><li>等笔试<br>神奈川県预约笔试需要跑到 <code>免許センター</code> 当场预约，换驾照业务异常火爆，笔试先排队 3 个月</li><li>等路考<br><code>极其简单的笔试</code> 通过后是（考场内）路考，这个可以网上预约，排期大约 1.5 个月<br>笔试成绩有限期半年，有效期内没考过路考可再次预约，超过半年就要重新笔试了<br>路考合格与否，考官有一票否决权，极其不透明，据（小红书）说神奈川県合格率惨不忍睹<br>结果是我考了 3 次才通过</li></ol><h4 id="有捷径吗？"><a href="#有捷径吗？" class="headerlink" title="有捷径吗？"></a>有捷径吗？</h4><ol><li>老司机<br>如果是驾驶经验丰富的老司机，笔试（3 个月）和路考（1.5 个月）一次通过，应该能半年内拿证<br>但老司机又不能太老，很多国内司机开车很久，但驾驶习惯不好，我遇到一个人，他说自己在国内开货车，结果考了五次还没过</li><li>搬到东京都内<br>东京都内有 3 个换驾照场地，大概会比只有一个考场的神奈川県快一些</li><li>考驾照<br>放弃换驾照，交 30w+ 日元合宿考驾照，两周拿证（钞能力~</li></ol><h4 id="拿驾照"><a href="#拿驾照" class="headerlink" title="拿驾照"></a>拿驾照</h4><p>考试合格当天发驾照，本以为是个小本本（类似中国驾照），但实际就是跟在留卡差不多的小卡片</p><p>发驾照的考官建议不要立马去开车，先找个驾驶经验丰富的老司机带一带<br>还专门强调，不管多小的事故都要通报警察，即使是撞到自家墙壁</p><blockquote><p>所以日本警察这么闲吗？</p></blockquote><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>再次拖到了最后一天<br>下次一定早点（咕</p>]]></content>
     
     
     
     <tags>
       
+      <tag>游记</tag>
+      
       <tag>月记</tag>
       
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>月记：2025-02</title>
+    <link href="/2025/03/30/078-Log-of-Month-2025-02/"/>
+    <url>/2025/03/30/078-Log-of-Month-2025-02/</url>
+    
+    <content type="html"><![CDATA[<p>3 月底发布的二月月记</p><span id="more"></span><h2 id="文章结构"><a href="#文章结构" class="headerlink" title="文章结构"></a>文章结构</h2><ol><li><p>输入<br>Learning：书/小说/优秀文章，视频/播客，不限形式，感觉看完有收获的内容<br>Anime：新番/老番，TV版/剧场版，记录一下自己看的动画<br>Others：电影、电视剧等，归入其他</p></li><li><p>胡思乱想<br>也许会记录一下所思所想</p></li><li><p>输出<br>也许是 Blog，但水平太菜，也许一个月都没什么输出（</p></li><li><p>游记<br>有去哪里玩就记一下，没有就算了</p></li><li><p>杂<br>不属于上面任何部分的零碎事项</p></li></ol><hr><h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h3><h4 id="Phoenix-Documents"><a href="#Phoenix-Documents" class="headerlink" title="Phoenix Documents"></a><a href="https://hexdocs.pm/phoenix/overview.html">Phoenix Documents</a></h4><p>这个月开始看基于 <code>Elixir</code> 的前端框架 <code>Phoenix</code><br><code>Phoenix</code> 默认用 <code>Postgres</code>，要先安装、配置数据库，但我却被这个看起来简单（实际也非常简单的）步骤卡了一小时…</p><p>参考 <a href="https://wiki.archlinux.org/title/PostgreSQL">Arch Wiki - PostgreSQL</a></p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">[postgres]$ initdb -D /var/lib/postgres/data --data-checksums<br><br>Success. You can now start the database server using:<br><br>      pg_ctl -D /var/lib/postgres/data -l logfile start<br></code></pre></div></td></tr></table></figure><p>看起来成功了，只需要 <code>pg_ctl -D /var/lib/postgres/data -l logfile start</code> 启动服务<br>但执行这个命令会报权限错误</p><figure class="highlight bash"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bash">waiting <span class="hljs-keyword">for</span> server to start..../bin/sh: line 1: logfile: Permission denied<br>stopped waiting<br>pg_ctl: could not start server<br></code></pre></div></td></tr></table></figure><p>看文档，查论坛，问 AI，试了各种方案都不行<br>直到最后，发现 <code>Arch Wiki</code> 下面还有一行小字 <code>Finally, start and enable the postgresql.service.</code><br>被自己蠢到…<br>原来是用 <code>systemctl</code> 控制的…</p><h4 id="《Eloquent-JavaScript》"><a href="#《Eloquent-JavaScript》" class="headerlink" title="《Eloquent JavaScript》"></a><a href="https://eloquentjavascript.net/index.html">《Eloquent JavaScript》</a></h4><p>感觉 <code>Eloquent JavaScript</code> 里 <code>异步</code> 章节讲解不是很清晰，看了好几遍都没怎么理解 <code>Promise</code>、<code>async/await</code>，准备配合 MDN 文档作为补充资料</p><h3 id="Anime"><a href="#Anime" class="headerlink" title="Anime"></a>Anime</h3><ul><li><p>追番</p><ul><li>花は咲く、修羅の如く<br>制作优秀</li><li>残業受付嬢<br>观感持续下滑，没什么新意，弃番</li><li>日本へようこそ、エルフさん<br>制作有点贫穷，但温馨日常还是挺好看的</li><li>Magic Maker<br>制作贫穷，故事姑且还能看吧</li></ul></li><li><p>新看</p><ul><li>想星のアクエリオン<br>OP 太出名了，看了一点，感觉剧本应该有点东西</li><li>灰色：幻影扳机<br>随便点开一集，感觉还不错</li><li>Ubel Blatt<br>中文圈里完全没有讨论度，逛 Animate 才发现这部作品<br>原作黑深残复仇剧，故事看起来有点深度，可惜惨遭动画化，制作异常贫穷<blockquote><p>作者看到这种水平的动画化会开心吗….</p></blockquote></li></ul></li></ul><h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>最近看的电视剧/电影，点评尽量不涉及剧透</p><h4 id="劇場版-少女☆歌劇-レヴュースタァライト"><a href="#劇場版-少女☆歌劇-レヴュースタァライト" class="headerlink" title="劇場版　少女☆歌劇 レヴュースタァライト"></a>劇場版　少女☆歌劇 レヴュースタァライト</h4><p>新文芸坐隔几个月就会重映 <code>少歌剧场版</code>，来日本后第一次看少歌就是在这里<br>时隔一年左右，再次来看重映，影片内容当然没什么好说的，一如既往眩しい✨</p><p>这次想说的是新文艺座的 <code>WSBライティング上映</code><br>简单说，这个就是在放映厅挂满 RGB 灯条（<del>光污染机箱</del>），配合荧幕画面实时控制灯光效果，烘托气氛<br>放映前主持人惯例暖场时提到这个灯光是手动控制的，灯光师在会后面的放映室和大家一起看电影，同时控制灯光，因此每场放映会的灯光效果都不会完全一样<br>主持人是以非常自豪的语气说这些话的，但我听到之后第一时间想到的是「手动控制灯光？这怎么保证质量？手动控制的话不会延迟很高吗？」<br>疑问一旦生根就不会消失，整场电影里都在下意识地注意这个灯光，「嗯，确实有点延迟」、「这里效果有点一言难尽啊…」、「这个地方效果还可以」诸如此类的想法不断涌现，分散我的注意力<br>例如，<code>皆殺しのRevue</code> 地铁场景效果很好，路灯接连不断，突破荧幕闪过整个放映厅，模拟车窗外灯光飞掠的效果，有一点整个影厅都进入舞台中的感觉，沉浸感++<br>但还有些场景探照灯甩来甩去，晃得睁不开眼（物理意义上眩しい）</p><p>最后看下来，感觉灯光弊大于利，太分散注意力了，我更希望可以正常欣赏影片<br>顺便附上这篇帖子 <a href="https://note.com/willow_4c/n/n2ee5410a7bda#767251bb-62f7-4157-b9fe-2493cb6aceb7">『劇場版 少女☆歌劇レヴュースタァライト』 初見でWSBライティング上映を浴びた感想 - ①ライトアップ上映の感想</a>，文章中对影院坚持手动控制灯光效果的解释我很喜欢，是我没有想到的角度</p><blockquote><p>今思えば、態々こういった手間のかかる演出をして下さったのは「全く同じ舞台は二度と訪れない」という、スタァライトの秘めるメッセージ性を体現するためだったのかな……<br>大致翻译：现在回想起来，特地使用这种费时费力的表现方式，也是为了呼应少女歌剧「完全相同的舞台不会再度出现」这一暗示吧</p></blockquote><h2 id="胡思乱想"><a href="#胡思乱想" class="headerlink" title="胡思乱想"></a>胡思乱想</h2><h3 id="想换工作"><a href="#想换工作" class="headerlink" title="想换工作"></a>想换工作</h3><p>理想中的派遣：体验各种工作，积累不同行业、编程语言经验<br>实际上的派遣：外行指导内行，最下游工作，不需要（并且日本人也不想让你）动脑子，纯搬砖</p><p>现在的工作再做十年也只是单纯重复而已，根本不能提高技术</p><blockquote><p>最起码编程水平是很难提高的，能进步的只有 Excel 技术，毕竟日本人均 Excel 仙人，每天 <code>面向 Excel 编程</code>（</p></blockquote><p>太没意思了，想找一份能磨炼技术的工作</p><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><ul><li><a href="https://github.com/KassadinL/dungeon_crawl">Github - KassadinL/dungeon_crawl</a><br>把 <a href="https://pragprog.com/titles/cdc-elixir/learn-functional-programming-with-elixir/">Learn Functional Programming with Elixir</a> 最后的示例动手敲了一遍<br>虽然只是个简单的命令行小游戏，看的时候感觉「嗯，懂了懂了」，但实际做起来还是丢三落四，熟练度完全没有<blockquote><p>书和文档看了这么多，是时候随便做点什么东西把 Elixir 用起来了</p></blockquote></li></ul><h2 id="游记"><a href="#游记" class="headerlink" title="游记"></a>游记</h2><h3 id="散步"><a href="#散步" class="headerlink" title="散步"></a>散步</h3><p>又是拿来凑数的多摩川散步时间（</p><img src="/2025/03/30/078-Log-of-Month-2025-02/01.jpg" class=""><p>似乎是梅花？</p><img src="/2025/03/30/078-Log-of-Month-2025-02/02.jpg" class=""><img src="/2025/03/30/078-Log-of-Month-2025-02/03.jpg" class=""><p>两张图放一起，枝头赏月</p><img src="/2025/03/30/078-Log-of-Month-2025-02/04.jpg" class=""><p>一般见到的 <code>止まれ</code> 都是代表危险的红色牌子，偶然看到一个锈迹斑斑的灰色牌子，尤其是在色彩丰富的背景中突然出现一个完全没有色彩的物体，格格不入到好像是 PS 出来的，感觉很有趣</p><img src="/2025/03/30/078-Log-of-Month-2025-02/05.jpg" class=""><p>左上漂亮的蓝粉色云朵，右下斑驳水泥建筑<br>清水混凝土外墙本来应该是冷冷清清、高级感十足的，但黑色污渍加上去就变成一块<del>脏脏的破抹布了</del></p><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><h3 id="花粉症、襲来"><a href="#花粉症、襲来" class="headerlink" title="花粉症、襲来"></a>花粉症、襲来</h3><p>又到了花粉肆虐的季节<br>眼睛肿、流鼻涕、嗓子痛，一套组合拳打下来，每天起床都是噩梦的开始<br>吃药、戴口罩效果都聊胜于无，鼻涕从起床开始流到工位，通勤途中几分钟不擦鼻涕就要流嘴里了</p><blockquote><p>有时候真的担心鼻涕流太多会不会脱水</p></blockquote><p>垃圾工作 + 鼻涕连天，工作日精神状态堪忧😇</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>拖更拖出新高度，三月底才写完二月份的月记<br>想一想，其实并没有特别难的部分，刚开始只是修图和少歌的评论需要花点时间，但一旦开始迟延 –&gt; 二月的记忆逐渐模糊 –&gt; 由于回忆模糊而难以下笔 –&gt; 继续拖延，变成了这样的恶性循环，越拖越难，越难越拖…<br>比如动画部分的评论，二月份还在追的动画，有几部现在已感觉索然无味，没看下去了，但因为是二月份月记，还需要忠实地记录当时的感受，结果就是在三月底回想已经远去的二月份记忆，并且还要小心地剔除三月份记忆的影响</p><p>太难了，下次不能这么拖了（<del>flag</del></p>]]></content>
+    
+    
+    
+    <tags>
+      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -35,9 +56,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -75,9 +96,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -96,9 +117,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -117,9 +138,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -138,9 +159,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -159,9 +180,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -245,9 +266,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -266,9 +287,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -346,9 +367,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -367,9 +388,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -449,9 +470,9 @@
     
     <tags>
       
-      <tag>月记</tag>
-      
       <tag>游记</tag>
+      
+      <tag>月记</tag>
       
     </tags>
     
@@ -491,9 +512,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -512,11 +533,11 @@
     
     <tags>
       
+      <tag>笔记</tag>
+      
       <tag>教程</tag>
       
       <tag>技术</tag>
-      
-      <tag>笔记</tag>
       
     </tags>
     
@@ -535,9 +556,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -594,9 +615,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -615,9 +636,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -636,9 +657,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -657,9 +678,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -699,9 +720,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -720,9 +741,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -741,9 +762,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -863,9 +884,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -903,9 +924,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -924,9 +945,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -945,9 +966,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -966,9 +987,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -987,9 +1008,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1008,9 +1029,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1029,9 +1050,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1050,9 +1071,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1071,9 +1092,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1113,9 +1134,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1155,9 +1176,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1277,9 +1298,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1567,9 +1588,9 @@
     
     <tags>
       
-      <tag>技术</tag>
-      
       <tag>笔记</tag>
+      
+      <tag>技术</tag>
       
     </tags>
     
@@ -1640,7 +1661,7 @@
     <link href="/"/>
     <url>/</url>
     
-    <content type="html"><![CDATA[<h2 id="About-me-in-15-seconds"><a href="#About-me-in-15-seconds" class="headerlink" title="About me in 15 seconds"></a>About me in 15 seconds</h2><p>森同学 / Kassadin</p><ul><li>冻鳗低手：每季度追新番</li><li>技术小白：半路出家野生程序猿</li></ul><p>欢迎交流，邮箱 <a href="mailto:&#x73;&#x65;&#x6e;&#115;&#x65;&#110;&#115;&#x65;&#x6e;&#x73;&#x61;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x73;&#x65;&#x6e;&#115;&#x65;&#110;&#115;&#x65;&#x6e;&#x73;&#x61;&#x6e;&#64;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p><hr><h2 id="About-me-in-timeline"><a href="#About-me-in-timeline" class="headerlink" title="About me in timeline"></a>About me in timeline</h2><h3 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h3><p>新开 <a href="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/">月记</a> 系列，记录生活</p><ul><li>2024 代表文章： <a href="/2025/02/09/076-Log-of-Year-2024/" title="2024 年终总结">2024 年终总结</a></li></ul><hr><p>以及，虽然有点晚，我觉得应该记录一下这个博客的初衷</p><ul><li><p>为什么要写博客？</p><ol><li>记录，对抗遗忘</li><li>回顾，方便未来回看自己曾经的所思所想</li><li>练习写作技能，练习如何将脑中的想法转换成文字</li></ol></li><li><p>为什么使用自建博客的形式？（而非 <code>微博</code>/<code>Twitter</code> 等第三方服务）</p><ol><li>听起来很酷</li><li>折腾技术，闲的</li><li>没有审查，不需要自我阉割，不用担心被平台封号删帖</li><li>数据自主可控</li></ol></li></ul><hr><h3 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h3><p>转职，初级程序猿✨</p><p>新的开始</p><ul><li>2023 年代表文章： <a href="/2023/12/09/056-Fly-my-cat-to-Japan/" title="笔记：带猫出国过程">笔记：带猫出国过程</a>，<del>我带猫咪</del> 猫咪带我来日本</li></ul><hr><h3 id="2020-02-06"><a href="#2020-02-06" class="headerlink" title="2020-02-06"></a>2020-02-06</h3><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死</p></blockquote><ul><li>2020 年代表文章： <a href="/2020/03/12/036-Ai-Fen/" title="转载：发哨子的人">转载：发哨子的人</a>，疫情的开始</li></ul><hr><h3 id="2019-12"><a href="#2019-12" class="headerlink" title="2019-12"></a>2019-12</h3><p>Linux 真好玩</p><hr><h3 id="2019-06"><a href="#2019-06" class="headerlink" title="2019-06"></a>2019-06</h3><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷 Blender</p><ul><li>2019 年代表文章： <a href="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/" title="教程： 如何使用Hexo加Github搭建个人博客">教程： 如何使用Hexo加Github搭建个人博客</a>，这个博客的起点</li></ul><hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="About-me-in-15-seconds"><a href="#About-me-in-15-seconds" class="headerlink" title="About me in 15 seconds"></a>About me in 15 seconds</h2><p>森同学 / Kassadin</p><ul><li>冻鳗低手：每季度追新番</li><li>技术小白：半路出家野生程序猿</li></ul><p>欢迎交流，邮箱 <a href="mailto:&#115;&#101;&#110;&#115;&#x65;&#110;&#x73;&#101;&#110;&#115;&#97;&#x6e;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#101;&#110;&#115;&#x65;&#110;&#x73;&#101;&#110;&#115;&#97;&#x6e;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p><hr><h2 id="About-me-in-timeline"><a href="#About-me-in-timeline" class="headerlink" title="About me in timeline"></a>About me in timeline</h2><h3 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h3><p>新开 <a href="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/">月记</a> 系列，记录生活</p><ul><li>2024 代表文章： <a href="/2025/02/09/076-Log-of-Year-2024/" title="2024 年终总结">2024 年终总结</a></li></ul><hr><p>以及，虽然有点晚，我觉得应该记录一下这个博客的初衷</p><ul><li><p>为什么要写博客？</p><ol><li>记录，对抗遗忘</li><li>回顾，方便未来回看自己曾经的所思所想</li><li>练习写作技能，练习如何将脑中的想法转换成文字</li></ol></li><li><p>为什么使用自建博客的形式？（而非 <code>微博</code>/<code>Twitter</code> 等第三方服务）</p><ol><li>听起来很酷</li><li>折腾技术，闲的</li><li>没有审查，不需要自我阉割，不用担心被平台封号删帖</li><li>数据自主可控</li></ol></li></ul><hr><h3 id="2023"><a href="#2023" class="headerlink" title="2023"></a>2023</h3><p>转职，初级程序猿✨</p><p>新的开始</p><ul><li>2023 年代表文章： <a href="/2023/12/09/056-Fly-my-cat-to-Japan/" title="笔记：带猫出国过程">笔记：带猫出国过程</a>，<del>我带猫咪</del> 猫咪带我来日本</li></ul><hr><h3 id="2020-02-06"><a href="#2020-02-06" class="headerlink" title="2020-02-06"></a>2020-02-06</h3><p>没有一个人是无辜的</p><blockquote><p>记李文亮医生之死</p></blockquote><ul><li>2020 年代表文章： <a href="/2020/03/12/036-Ai-Fen/" title="转载：发哨子的人">转载：发哨子的人</a>，疫情的开始</li></ul><hr><h3 id="2019-12"><a href="#2019-12" class="headerlink" title="2019-12"></a>2019-12</h3><p>Linux 真好玩</p><hr><h3 id="2019-06"><a href="#2019-06" class="headerlink" title="2019-06"></a>2019-06</h3><ul><li>冻鳗低手</li><li>技术小白</li><li>设计萌新</li></ul><p>目前沉迷 Blender</p><ul><li>2019 年代表文章： <a href="/2019/07/15/001-how-to-deploy-blog-with-hexo-and-github/" title="教程： 如何使用Hexo加Github搭建个人博客">教程： 如何使用Hexo加Github搭建个人博客</a>，这个博客的起点</li></ul><hr><p><font color=#F0F0F0 size=2><center>每个人都是一座孤岛</center></font></p>]]></content>
     
   </entry>
   
