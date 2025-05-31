@@ -6,7 +6,7 @@
   <link href="https://kassadin.moe/atom.xml" rel="self"/>
   
   <link href="https://kassadin.moe/"/>
-  <updated>2025-04-29T15:03:12.139Z</updated>
+  <updated>2025-05-31T14:21:31.327Z</updated>
   <id>https://kassadin.moe/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>月记：2025-04</title>
+    <link href="https://kassadin.moe/2025/06/01/080-Log-of-Month-2025-04/"/>
+    <id>https://kassadin.moe/2025/06/01/080-Log-of-Month-2025-04/</id>
+    <published>2025-05-31T15:11:38.000Z</published>
+    <updated>2025-05-31T14:21:31.327Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;四月新番来了，也就是说 2025 已经过去一个季度了（&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
+    
+    <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>月记：2025-03</title>
@@ -370,27 +389,6 @@
     <category term="游记" scheme="https://kassadin.moe/tags/%E6%B8%B8%E8%AE%B0/"/>
     
     <category term="月记" scheme="https://kassadin.moe/tags/%E6%9C%88%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阅读：人月神话</title>
-    <link href="https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/"/>
-    <id>https://kassadin.moe/2024/04/18/060-Reading-The-Mythical-Man-Month/</id>
-    <published>2024-04-17T17:58:55.000Z</published>
-    <updated>2024-07-11T04:50:12.855Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;2 月份看完一遍《人月神话》，划了一堆笔记，时隔两个月，终于稍微整理了一下笔记，专门开一篇 blog，推荐这本书&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="笔记" scheme="https://kassadin.moe/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="推荐" scheme="https://kassadin.moe/tags/%E6%8E%A8%E8%8D%90/"/>
-    
-    <category term="阅读" scheme="https://kassadin.moe/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
